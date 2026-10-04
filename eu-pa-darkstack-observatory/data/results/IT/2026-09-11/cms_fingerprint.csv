@@ -1,0 +1,501 @@
+hostname,comune,regione,codice_ipa,http_status_fingerprint,http_errore_fingerprint,n_software_rilevati,software_rilevato,categorie_software,versioni_rilevate,licenze_rilevate,tutti_open_source,pagina_probabilmente_bloccata
+giochi24.it,Milano,Lombardia,013E014U,403,,0,,,,,False,True
+ic1marconidiano.edu.it,Pozzuoli,Campania,01X13U84,200,,2,Bootstrap Italia / Design System Italia;Apache HTTP Server,framework;server_web,,Apache-2.0;BSD-3-Clause,True,False
+san-leo.it,San Leo,Emilia-Romagna,02IKT4NA,403,,0,,,,,False,False
+cesenaticoservizi.it,Cesenatico,Emilia-Romagna,02ZMKEL0,200,,1,WordPress,cms,WordPress:5.1.19,GPL-2.0-or-later,True,False
+fnofi.it,Siena,Toscana,03YBQ4C7,200,,1,nginx,server_web,nginx:1.24.0,BSD-2-Clause,True,False
+montagnebiellesi.it,Casapinta,Piemonte,044QEGSD,200,,2,WordPress;Umbraco,cms,WordPress:6.9.5,GPL-2.0-or-later;MIT,True,False
+bitrigas.it,Biccari,Puglia,048X8EU7,200,,3,WordPress;ASP.NET;Microsoft IIS,cms;framework;server_web,WordPress:6.7.7;Microsoft IIS:10.0,GPL-2.0-or-later;MIT;proprietaria,False,False
+ictitoliviofiorelli.edu.it,Napoli,Campania,04UY8I1H,200,,3,WordPress;Bootstrap Italia / Design System Italia;PHP,cms;framework,PHP:8.3.33,BSD-3-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+uslumbria1.it,Perugia,Umbria,054,200,,2,WordPress;Bootstrap Italia / Design System Italia,cms;framework,WordPress:7.0.4,BSD-3-Clause;GPL-2.0-or-later,True,False
+uslumbria2.it,Terni,Umbria,055,200,,2,ASP.NET;Microsoft IIS,framework;server_web,Microsoft IIS:8.0,MIT;proprietaria,False,False
+asl.vt.it,Viterbo,Lazio,056,200,,0,,,,,False,False
+aslroma5.it,Tivoli,Lazio,058,,ConnectionError,0,,,,,,False
+casaospitalita.it,Venezia,Veneto,05GYSWFH,200,,2,WordPress;Apache HTTP Server,cms;server_web,WordPress:7.1;Apache HTTP Server:2.4.68,Apache-2.0;GPL-2.0-or-later,True,False
+iiscolomboroma.edu.it,Roma,Lazio,05O3YE9M,200,,2,Bootstrap Italia / Design System Italia;nginx,framework;server_web,nginx:1.26.1,BSD-2-Clause;BSD-3-Clause,True,False
+capitalelavoro.it,Roma,Lazio,05O9EJDW,200,,3,Drupal;PHP;Apache HTTP Server,cms;framework;server_web,Drupal:9;PHP:7.4.24;Apache HTTP Server:2.4.6,Apache-2.0;GPL-2.0-or-later;PHP License 3.01,True,False
+monzamobilita.it,Monza,Lombardia,05TY94LO,200,,2,WordPress;nginx,cms;server_web,WordPress:7.1,BSD-2-Clause;GPL-2.0-or-later,True,False
+dogresrl.it,Perugia,Umbria,07WB8QXR,200,,1,WordPress,cms,,GPL-2.0-or-later,True,False
+asp.rc.it,Reggio di Calabria,Calabria,080,200,,1,Bootstrap Italia / Design System Italia,framework,,BSD-3-Clause,True,False
+comprensivodellatorre.edu.it,Gradisca d'Isonzo,Friuli-Venezia Giulia,085AGQ61,200,,2,Bootstrap Italia / Design System Italia;nginx,framework;server_web,nginx:1.26.1,BSD-2-Clause;BSD-3-Clause,True,False
+iclevimontalcini.edu.it,Bellaria-Igea Marina,Emilia-Romagna,08RQFFO1,200,,3,WordPress;Bootstrap Italia / Design System Italia;nginx,cms;framework;server_web,,BSD-2-Clause;BSD-3-Clause;GPL-2.0-or-later,True,False
+aobrotzu.it,Cagliari,Sardegna,092,200,,2,WordPress;Bootstrap Italia / Design System Italia,cms;framework,,BSD-3-Clause;GPL-2.0-or-later,True,False
+asfo.sanita.fvg.it,Pordenone,Friuli-Venezia Giulia,093,200,,1,Bootstrap Italia / Design System Italia,framework,,BSD-3-Clause,True,False
+ic2piacenza.edu.it,Piacenza,Emilia-Romagna,09Q0MK8F,200,,3,WordPress;Bootstrap Italia / Design System Italia;nginx,cms;framework;server_web,WordPress:7.1,BSD-2-Clause;BSD-3-Clause;GPL-2.0-or-later,True,False
+saprodir.it,Rieti,Lazio,0AIQ5Z0T,200,,3,WordPress;PHP;nginx,cms;framework;server_web,WordPress:7.1;PHP:8.3.30,BSD-2-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+investimentispa.it,Roma,Lazio,0BLX4BBP,200,,3,WordPress;PHP;nginx,cms;framework;server_web,WordPress:7.0.4;PHP:8.2.33,BSD-2-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+parcamservizi.portaletrasparenza.net,Milano,Lombardia,0D7QKFH5,200,,1,Bootstrap Italia / Design System Italia,framework,,BSD-3-Clause,True,False
+liceoboccioni.edu.it,Napoli,Campania,0DWK5DFK,200,,2,Bootstrap Italia / Design System Italia;Apache HTTP Server,framework;server_web,,Apache-2.0;BSD-3-Clause,True,False
+agrorisorse.it,Lodi,Lombardia,0E843YSW,200,,2,WordPress;Apache HTTP Server,cms;server_web,WordPress:7.1,Apache-2.0;GPL-2.0-or-later,True,False
+tecnopolomediterraneo.it,Taranto,Puglia,0FDQX1EL,200,,2,WordPress;PHP,cms;framework,WordPress:7.1;PHP:8.3.33,GPL-2.0-or-later;PHP License 3.01,True,False
+biologitoscanaumbria.it,Firenze,Toscana,0HD8JCF4,403,,1,nginx,server_web,,BSD-2-Clause,True,False
+ganenergia.it,Palermo,Sicilia,0IIBJU7X,200,,1,WordPress,cms,,GPL-2.0-or-later,True,False
+acer.re.it,Reggio nell'Emilia,Emilia-Romagna,0LWWUVBK,200,,3,WordPress;PHP;nginx,cms;framework;server_web,WordPress:6.1.12;PHP:7.4.33,BSD-2-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+asecospa.com,Bari,Puglia,0M9HV9B8,200,,3,WordPress;PHP;Apache HTTP Server,cms;framework;server_web,PHP:8.3.33,Apache-2.0;GPL-2.0-or-later;PHP License 3.01,True,False
+serics.eu,Fisciano,Campania,0N7FO552,200,,2,WordPress;Apache HTTP Server,cms;server_web,,Apache-2.0;GPL-2.0-or-later,True,False
+asitaranto.it,Taranto,Puglia,0PH5RCJW,200,,2,WordPress;Apache HTTP Server,cms;server_web,WordPress:7.0.4,Apache-2.0;GPL-2.0-or-later,True,False
+ptpcatanzaro.edu.it,Catanzaro,Calabria,0PYATICV,200,,2,WordPress;Bootstrap Italia / Design System Italia,cms;framework,WordPress:7.0.4,BSD-3-Clause;GPL-2.0-or-later,True,False
+cfi.it,Roma,Lazio,0Q81OFDZ,200,,1,Apache HTTP Server,server_web,,Apache-2.0,True,False
+fitstic.it,Cesena,Emilia-Romagna,0QBSMAW1,403,,1,nginx,server_web,,BSD-2-Clause,True,False
+geropa.it,Frascati,Lazio,0SGNV76C,200,,3,WordPress;PHP;nginx,cms;framework;server_web,PHP:8.3.30,BSD-2-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+ilvc.it,Potenza,Basilicata,0T2GMPK6,200,,1,Microsoft IIS,server_web,Microsoft IIS:10.0,proprietaria,False,False
+msengineering.it,Assago,Lombardia,0TAQ7B02,200,,1,Apache HTTP Server,server_web,,Apache-2.0,True,False
+scuoladaostabari.edu.it,Bari,Puglia,0TK07ISH,200,,1,WordPress,cms,WordPress:7.1,GPL-2.0-or-later,True,False
+fondazionemilano.eu,Milano,Lombardia,0UE9CQ9Y,200,,1,Apache HTTP Server,server_web,Apache HTTP Server:2.4.58,Apache-2.0,True,False
+entesviluppoagricolo.it,Palermo,Sicilia,0W0FXX80,200,,2,Bootstrap Italia / Design System Italia;nginx,framework;server_web,,BSD-2-Clause;BSD-3-Clause,True,False
+siespa.net,Catania,Sicilia,0WCM8EAW,200,,0,,,,,False,False
+srrcatanianord.it,Acireale,Sicilia,0WHKRWPA,200,,1,WordPress,cms,WordPress:4.9.26,GPL-2.0-or-later,True,False
+mercoglianoservizi.av.it,Mercogliano,Campania,0WPRWL10,200,,1,Apache HTTP Server,server_web,,Apache-2.0,True,False
+unionecomunicittadellamaiella.it,San Valentino in Abruzzo Citeriore,Abruzzo,0XEC4X1B,200,,2,Bootstrap Italia / Design System Italia;nginx,framework;server_web,,BSD-2-Clause;BSD-3-Clause,True,False
+evi-spa.it,Ischia,Campania,0YNSXWD5,200,,1,nginx,server_web,,BSD-2-Clause,True,False
+aspvv.it,Vibo Valentia,Calabria,102,,ConnectionError,0,,,,,,False
+treesseitalia.it,Supino,Lazio,109B2JPX,200,,1,WordPress,cms,,GPL-2.0-or-later,True,False
+fieresantalucia.it,Santa Lucia di Piave,Veneto,10KC4JL1,200,,2,WordPress;Apache HTTP Server,cms;server_web,WordPress:6.3.10;Apache HTTP Server:2.4.29,Apache-2.0;GPL-2.0-or-later,True,False
+icciampino1.edu.it,Ciampino,Lazio,111WOAN5,200,,2,Bootstrap Italia / Design System Italia;Apache HTTP Server,framework;server_web,,Apache-2.0;BSD-3-Clause,True,False
+atervicenza.it,Vicenza,Veneto,11B2JNFL,200,,1,Bootstrap Italia / Design System Italia,framework,,BSD-3-Clause,True,False
+dunas.it,Cremona,Lombardia,11NFGEUX,200,,2,TYPO3;Apache HTTP Server,cms;server_web,Apache HTTP Server:2.4.68,Apache-2.0;GPL-2.0-or-later,True,False
+ecoennaservizi.it,Enna,Sicilia,13WYVHQO,200,,4,WordPress;Bootstrap Italia / Design System Italia;PHP;nginx,cms;framework;server_web,WordPress:7.0.4;PHP:7.4.33,BSD-2-Clause;BSD-3-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+savlmarradi.it,Marradi,Toscana,15U5YKAC,200,,0,,,,,False,False
+premiaterme.com,Premia,Piemonte,15UTHMTL,200,,2,PHP;nginx,framework;server_web,PHP:8.0.30,BSD-2-Clause;PHP License 3.01,True,False
+scuolacriscuolopagani.edu.it,Pagani,Campania,15ZKCDR0,200,,2,WordPress;Bootstrap Italia / Design System Italia,cms;framework,,BSD-3-Clause;GPL-2.0-or-later,True,False
+isontinambiente.it,Gorizia,Friuli-Venezia Giulia,16IODWCU,200,,1,nginx,server_web,nginx:1.14.2,BSD-2-Clause,True,False
+atcesercizio.it,La Spezia,Liguria,1B2LU14W,200,,1,WordPress,cms,WordPress:5.7,GPL-2.0-or-later,True,False
+supercomputing-icsc.it,Casalecchio di Reno,Emilia-Romagna,1C8SJSJP,200,,3,WordPress;PHP;nginx,cms;framework;server_web,WordPress:7.1;PHP:8.4.25,BSD-2-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+cmvalledelliri.it,Arce,Lazio,1CMVL,200,,3,WordPress;PHP;Apache HTTP Server,cms;framework;server_web,PHP:7.4.33,Apache-2.0;GPL-2.0-or-later;PHP License 3.01,True,False
+patrimoniosettimo.it,Settimo Torinese,Piemonte,1FG1N2LG,200,,2,WordPress;Apache HTTP Server,cms;server_web,WordPress:7.0.4,Apache-2.0;GPL-2.0-or-later,True,False
+setaspa.com,Settimo Torinese,Piemonte,1G20JNNY,200,,1,Joomla!,cms,,GPL-2.0-or-later,True,False
+icfalconeborsellinocarelli.edu.it,Conversano,Puglia,1JRW5QXG,200,,2,Joomla!;nginx,cms;server_web,,BSD-2-Clause;GPL-2.0-or-later,True,False
+amiu.genova.it,Genova,Liguria,1K9JKE4Y,,ConnectionError,0,,,,,,False
+adespa.it,Parma,Emilia-Romagna,1KG9Y6D4,200,,2,WordPress;Apache HTTP Server,cms;server_web,,Apache-2.0;GPL-2.0-or-later,True,False
+itstela.it,Salerno,Campania,1KUZ447N,200,,2,WordPress;Apache HTTP Server,cms;server_web,WordPress:7.1,Apache-2.0;GPL-2.0-or-later,True,False
+consorziopiave.it,Montebelluna,Veneto,1MF1PZD3,200,,2,WordPress;Apache HTTP Server,cms;server_web,,Apache-2.0;GPL-2.0-or-later,True,False
+potenziamentoreteospedaliera.sicilia.it,Palermo,Sicilia,1MPXMKGE,200,,3,WordPress;Bootstrap Italia / Design System Italia;Apache HTTP Server,cms;framework;server_web,WordPress:6.1.1;Apache HTTP Server:2.4.65,Apache-2.0;BSD-3-Clause;GPL-2.0-or-later,True,False
+asmmolfetta.it,Molfetta,Puglia,1NQCFG5W,200,,2,ASP.NET;Microsoft IIS,framework;server_web,Microsoft IIS:10.0,MIT;proprietaria,False,False
+itsgreenenergypuglia.it,Troia,Puglia,1NXXKA3W,200,,2,WordPress;Apache HTTP Server,cms;server_web,WordPress:7.1,Apache-2.0;GPL-2.0-or-later,True,False
+icsanmarcobonitocosenza.edu.it,Castellammare di Stabia,Campania,1OASUY2U,200,,2,Bootstrap Italia / Design System Italia;Apache HTTP Server,framework;server_web,,Apache-2.0;BSD-3-Clause,True,False
+odcecvelletri.it,Velletri,Lazio,1ODBWQ8Z,200,,2,WordPress;nginx,cms;server_web,WordPress:7.1,BSD-2-Clause;GPL-2.0-or-later,True,False
+federnuoto.it,Roma,Lazio,1P25K07V,503,,0,,,,,False,True
+farmacap.info,Roma,Lazio,1P3G1MD5,200,,1,WordPress,cms,WordPress:7.1,GPL-2.0-or-later,True,False
+jobsfactory.org,Milano,Lombardia,1PMKZZPT,200,,2,WordPress;PHP,cms;framework,WordPress:6.9.7;PHP:8.3.33,GPL-2.0-or-later;PHP License 3.01,True,False
+istitutotecnicomarconipilla.edu.it,Campobasso,Molise,1QMBM9KB,200,,3,WordPress;PHP;Apache HTTP Server,cms;framework;server_web,WordPress:6.7.7;PHP:8.1.34,Apache-2.0;GPL-2.0-or-later;PHP License 3.01,True,False
+cobon1tp.it,Trapani,Sicilia,1R25HBXU,200,,4,WordPress;Bootstrap Italia / Design System Italia;ASP.NET;Microsoft IIS,cms;framework;server_web,WordPress:5.6;Microsoft IIS:10.0,BSD-3-Clause;GPL-2.0-or-later;MIT;proprietaria,False,False
+altapianuraveneta.eu,San Bonifacio,Veneto,1R9VQFM0,200,,3,WordPress;PHP;nginx,cms;framework;server_web,WordPress:7.1;PHP:8.1.34,BSD-2-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+collegiostetricheagcl.it,Agrigento,Sicilia,1SCXYSW4,200,,2,WordPress;nginx,cms;server_web,WordPress:7.0.2;nginx:1.31.1,BSD-2-Clause;GPL-2.0-or-later,True,False
+asmv.it,Vigevano,Lombardia,1T08N3AZ,200,,3,Joomla!;Bootstrap Italia / Design System Italia;nginx,cms;framework;server_web,,BSD-2-Clause;BSD-3-Clause;GPL-2.0-or-later,True,False
+sisiacque.it,Alba,Piemonte,1TCBA2KR,200,,1,WordPress,cms,,GPL-2.0-or-later,True,False
+icoutsourcing.it,Padova,Veneto,1TDVNB2B,200,,2,WordPress;Apache HTTP Server,cms;server_web,Apache HTTP Server:2.4.58,Apache-2.0;GPL-2.0-or-later,True,False
+consorziodibonificasudanagni.it,Anagni,Lazio,1TISW5ZN,200,,1,Apache HTTP Server,server_web,,Apache-2.0,True,False
+deamicisnapoli.edu.it,Napoli,Campania,1TPZT8B2,200,,2,Bootstrap Italia / Design System Italia;nginx,framework;server_web,nginx:1.26.1,BSD-2-Clause;BSD-3-Clause,True,False
+acerravenna.it,Ravenna,Emilia-Romagna,1UMEMOPN,200,,2,Bootstrap Italia / Design System Italia;Apache HTTP Server,framework;server_web,Apache HTTP Server:2.4.58,Apache-2.0;BSD-3-Clause,True,False
+ramspa.it,Roma,Lazio,1VO9PWVQ,200,,2,Drupal;nginx,cms;server_web,Drupal:10;nginx:1.26.1,BSD-2-Clause;GPL-2.0-or-later,True,False
+cbldistribuzionesrl.it,Mede,Lombardia,1YI8V232,200,,2,ASP.NET;Microsoft IIS,framework;server_web,Microsoft IIS:8.5,MIT;proprietaria,False,False
+isdecaprariis.edu.it,Atripalda,Campania,1YY999AI,200,,3,WordPress;Bootstrap Italia / Design System Italia;PHP,cms;framework,PHP:8.3.33,BSD-3-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+scuolaninomartoglio.edu.it,Belpasso,Sicilia,1Z6GFCFA,200,,2,Bootstrap Italia / Design System Italia;Apache HTTP Server,framework;server_web,,Apache-2.0;BSD-3-Clause,True,False
+manzonimottola.edu.it,Mottola,Puglia,1ZEHMGHD,200,,2,Bootstrap Italia / Design System Italia;nginx,framework;server_web,nginx:1.26.1,BSD-2-Clause;BSD-3-Clause,True,False
+measpa.it,Melegnano,Lombardia,1ZPNFOZP,200,,0,,,,,False,False
+aziendaspecialecarlentini.it,Carlentini,Sicilia,20FCHW7B,200,,1,WordPress,cms,WordPress:7.1,GPL-2.0-or-later,True,False
+icsancirodeamicispioxii.edu.it,Foggia,Puglia,20IURH3M,200,,3,WordPress;Bootstrap Italia / Design System Italia;PHP,cms;framework,PHP:8.2.33,BSD-3-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+pascoliaversa.edu.it,Aversa,Campania,217XZ2VA,200,,2,Bootstrap Italia / Design System Italia;Apache HTTP Server,framework;server_web,,Apache-2.0;BSD-3-Clause,True,False
+latina.cri.it,Latina,Lazio,219TJPHO,200,,1,WordPress,cms,WordPress:7.0,GPL-2.0-or-later,True,False
+farmaciecomunalicrema.com,Crema,Lombardia,21M650RW,200,,1,WordPress,cms,WordPress:7.0.4,GPL-2.0-or-later,True,False
+alberghieroerice.edu.it,Erice,Sicilia,21W263TE,,ConnectionError,0,,,,,,False
+aldrovandirubbiani.edu.it,Bologna,Emilia-Romagna,22GDHE59,200,,2,Bootstrap Italia / Design System Italia;nginx,framework;server_web,nginx:1.26.1,BSD-2-Clause;BSD-3-Clause,True,False
+srtspa.it,Novi Ligure,Piemonte,23QSUC3X,200,,1,Bootstrap Italia / Design System Italia,framework,,BSD-3-Clause,True,False
+fondoagricat.it,Roma,Lazio,245FNRH5,,ConnectionError,0,,,,,,False
+liside-cabrini.edu.it,Taranto,Puglia,25BSWEKR,200,,2,WordPress;Bootstrap Italia / Design System Italia,cms;framework,WordPress:7.0.4,BSD-3-Clause;GPL-2.0-or-later,True,False
+ctmcagliari.it,Cagliari,Sardegna,28B1JW1G,200,,1,WordPress,cms,,GPL-2.0-or-later,True,False
+salernopompeinapolispa.it,Torino,Piemonte,28WXF4F1,200,,3,WordPress;PHP;nginx,cms;framework;server_web,WordPress:6.9;PHP:8.1.34,BSD-2-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+sisamspa.it,Castel Goffredo,Lombardia,2A85YKMU,200,,2,PHP;Apache HTTP Server,framework;server_web,PHP:5.6.40;Apache HTTP Server:2.2.22,Apache-2.0;PHP License 3.01,True,False
+atm.it,Milano,Lombardia,2BLMCDR6,200,,0,,,,,False,False
+comune.jesi.an.it,Jesi,Marche,2BLS82OD,200,,2,Bootstrap Italia / Design System Italia;nginx,framework;server_web,,BSD-2-Clause;BSD-3-Clause,True,False
+liceogbvico.edu.it,Laterza,Puglia,2CD2IUF8,200,,2,WordPress;Bootstrap Italia / Design System Italia,cms;framework,WordPress:7.1,BSD-3-Clause;GPL-2.0-or-later,True,False
+autostradealtoadriatico.it,Trieste,Friuli-Venezia Giulia,2CYUF4OU,403,,1,nginx,server_web,,BSD-2-Clause,True,False
+leserre.org,Grugliasco,Piemonte,2EFDYO1W,200,,0,,,,,False,False
+acerimini.it,Rimini,Emilia-Romagna,2EG4IZK1,200,,0,,,,,False,False
+senigalliaservizi.it,Senigallia,Marche,2FATC529,200,,1,WordPress,cms,WordPress:6.9.7,GPL-2.0-or-later,True,False
+trieste.aterfvg.it,Trieste,Friuli-Venezia Giulia,2FE009RQ,200,,2,Bootstrap Italia / Design System Italia;nginx,framework;server_web,,BSD-2-Clause;BSD-3-Clause,True,False
+cataniamultiservizi.it,Catania,Sicilia,2FF8D5S2,200,,0,,,,,False,False
+cemambiente.it,Cavenago di Brianza,Lombardia,2HA2I22L,200,,1,WordPress,cms,WordPress:4.5.4,GPL-2.0-or-later,True,False
+nattadeambrosis.edu.it,Sestri Levante,Liguria,2IVU9LJG,200,,2,Bootstrap Italia / Design System Italia;nginx,framework;server_web,nginx:1.26.1,BSD-2-Clause;BSD-3-Clause,True,False
+fondazioneartea.org,Caraglio,Piemonte,2J459ZOC,200,,3,WordPress;PHP;nginx,cms;framework;server_web,WordPress:4.9.26;PHP:7.4.33,BSD-2-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+jac-its.it,Bergamo,Lombardia,2JEE5H6J,200,,2,WordPress;PHP,cms;framework,WordPress:6.9.7;PHP:8.3.33,GPL-2.0-or-later;PHP License 3.01,True,False
+icgiovannixxiiimoro.edu.it,Mesagne,Puglia,2KZ74LLK,200,,2,Bootstrap Italia / Design System Italia;nginx,framework;server_web,nginx:1.26.1,BSD-2-Clause;BSD-3-Clause,True,False
+mercafir.it,Firenze,Toscana,2LP4NWTB,200,,1,WordPress,cms,WordPress:7.1,GPL-2.0-or-later,True,False
+millerivoli.it,Rivoli,Piemonte,2LUUWYB7,200,,1,WordPress,cms,WordPress:6.2.2,GPL-2.0-or-later,True,False
+portsecuritypiombino.it,Livorno,Toscana,2M053FUA,200,,0,,,,,False,False
+atc3potenza.it,Sant'Arcangelo,Basilicata,2M9NZFR2,200,,1,WordPress,cms,WordPress:7.1,GPL-2.0-or-later,True,False
+aps.sv.it,Savona,Liguria,2N6F7AT3,200,,2,WordPress;Apache HTTP Server,cms;server_web,WordPress:7.0.4,Apache-2.0;GPL-2.0-or-later,True,False
+fapautoservizi.it,San Donà di Piave,Veneto,2NGFCWZO,,ConnectionError,0,,,,,,False
+vareserowing.com,Varese,Lombardia,2OYCYTVM,200,,1,WordPress,cms,,GPL-2.0-or-later,True,False
+ambientetecnologia.it,Enna,Sicilia,2POFUSZD,200,,4,WordPress;Bootstrap Italia / Design System Italia;PHP;nginx,cms;framework;server_web,WordPress:7.0.4;PHP:7.4.33,BSD-2-Clause;BSD-3-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+fnofi.it,Palermo,Sicilia,2Q3P0F1M,200,,1,nginx,server_web,nginx:1.24.0,BSD-2-Clause,True,False
+scuolamediacante.edu.it,Giugliano in Campania,Campania,2QP82DEV,200,,3,WordPress;Bootstrap Italia / Design System Italia;PHP,cms;framework,PHP:8.3.33,BSD-3-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+ferrovieudinecividale.it,Udine,Friuli-Venezia Giulia,2QR9KMNO,200,,2,WordPress;Apache HTTP Server,cms;server_web,WordPress:7.0.2;Apache HTTP Server:2.4.52,Apache-2.0;GPL-2.0-or-later,True,False
+puntozeroscarl.it,Perugia,Umbria,2QTJX32V,200,,3,WordPress;Bootstrap Italia / Design System Italia;Apache HTTP Server,cms;framework;server_web,WordPress:6.0,Apache-2.0;BSD-3-Clause;GPL-2.0-or-later,True,False
+apuliadigitalmaker.it,Foggia,Puglia,2R3HRI01,200,,0,,,,,False,False
+fondoprofessioni.it,Roma,Lazio,2TX6NDU6,200,,1,WordPress,cms,WordPress:6.9.7,GPL-2.0-or-later,True,False
+consorzioirriguo-chivasso.it,Chivasso,Piemonte,2UCZLMB1,200,,0,,,,,False,False
+ordine-crotone.cnpi.eu,Crotone,Calabria,2US6PK0U,200,,1,WordPress,cms,WordPress:7.1,GPL-2.0-or-later,True,False
+conservatoriomaderna.it,Cesena,Emilia-Romagna,2WTZ8MT1,429,,0,,,,,False,True
+icsangiovanniboscogiordani.edu.it,Manfredonia,Puglia,2Y1NXHIH,200,,3,WordPress;Bootstrap Italia / Design System Italia;nginx,cms;framework;server_web,,BSD-2-Clause;BSD-3-Clause;GPL-2.0-or-later,True,False
+artemedia.srl,Bisceglie,Puglia,2YNKW2LR,200,,2,PHP;nginx,framework;server_web,PHP:8.3.32,BSD-2-Clause;PHP License 3.01,True,False
+aralspa.it,Alessandria,Piemonte,2YOQHVIP,200,,3,WordPress;PHP;nginx,cms;framework;server_web,WordPress:7.1;PHP:8.1.34,BSD-2-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+atcbmatera.it,Stigliano,Basilicata,2Z7G71Y3,200,,2,WordPress;Apache HTTP Server,cms;server_web,,Apache-2.0;GPL-2.0-or-later,True,False
+sgspiombino.it,Piombino,Toscana,30ZOZMYY,200,,3,WordPress;PHP;nginx,cms;framework;server_web,PHP:7.4.33,BSD-2-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+foncoop.coop,Roma,Lazio,34D70TTH,200,,3,WordPress;PHP;Apache HTTP Server,cms;framework;server_web,WordPress:6.9;PHP:8.2.24;Apache HTTP Server:2.4.62,Apache-2.0;GPL-2.0-or-later;PHP License 3.01,True,False
+itsagnesi.it,Roma,Lazio,34QPYWJ0,200,,1,WordPress,cms,WordPress:7.0,GPL-2.0-or-later,True,False
+parcam.it,Milano,Lombardia,34WTOIJ0,200,,2,WordPress;Apache HTTP Server,cms;server_web,WordPress:7.1,Apache-2.0;GPL-2.0-or-later,True,False
+tradelab.it,Milano,Lombardia,354G06HD,200,,1,WordPress,cms,WordPress:6.9.6,GPL-2.0-or-later,True,False
+fnofi.it,Piacenza,Emilia-Romagna,35EC5V1A,200,,1,nginx,server_web,nginx:1.24.0,BSD-2-Clause,True,False
+gruppoamag.it,Alessandria,Piemonte,35GVD3QF,200,,2,WordPress;Apache HTTP Server,cms;server_web,WordPress:6.1.1,Apache-2.0;GPL-2.0-or-later,True,False
+iisdipascafortunatopz.edu.it,Potenza,Basilicata,35L7OZCL,200,,3,Bootstrap Italia / Design System Italia;ASP.NET;Microsoft IIS,framework;server_web,Microsoft IIS:10.0,BSD-3-Clause;MIT;proprietaria,False,False
+iismatteucci.edu.it,Roma,Lazio,35OYU5O6,200,,2,WordPress;Bootstrap Italia / Design System Italia,cms;framework,WordPress:7.1,BSD-3-Clause;GPL-2.0-or-later,True,False
+toscana-aeroporti.com,Firenze,Toscana,38WHGZZB,200,,0,,,,,False,False
+adriafer.com,Trieste,Friuli-Venezia Giulia,392P3CJB,200,,2,WordPress;nginx,cms;server_web,nginx:1.22.1,BSD-2-Clause;GPL-2.0-or-later,True,False
+comune.moransengotonengo.at.it,nan,nan,3BEP4ZAX,200,,4,DNN (DotNetNuke);Bootstrap Italia / Design System Italia;ASP.NET;Microsoft IIS,cms;framework;server_web,Microsoft IIS:10.0,BSD-3-Clause;MIT;proprietaria,False,False
+asiteonline.it,Fermo,Marche,3CRB3CUM,200,,3,WordPress;PHP;nginx,cms;framework;server_web,WordPress:6.7.2;PHP:8.3.33,BSD-2-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+asl5oristano.it,Oristano,Sardegna,3EYJH0BU,200,,3,WordPress;Bootstrap Italia / Design System Italia;PHP,cms;framework,WordPress:7.1;PHP:7.4.33,BSD-3-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+seab.bz.it,Bolzano,Trentino-Alto Adige/Südtirol,3FZOB8MI,200,,3,Drupal;PHP;nginx,cms;framework;server_web,Drupal:10;PHP:8.2.33;nginx:1.23.4,BSD-2-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+fnofi.it,Caltanissetta,Sicilia,3FZT9K8P,200,,1,nginx,server_web,nginx:1.24.0,BSD-2-Clause,True,False
+bonificacspuglia.it,Bari,Puglia,3HCVQGVQ,200,,1,WordPress,cms,WordPress:6.9.4,GPL-2.0-or-later,True,False
+arena.it,Verona,Veneto,3I9VYT5F,200,,1,Apache HTTP Server,server_web,Apache HTTP Server:2.4.68,Apache-2.0,True,False
+aziendasolidalia.it,Romano di Lombardia,Lombardia,3IMS74Z9,200,,3,Drupal;Bootstrap Italia / Design System Italia;Apache HTTP Server,cms;framework;server_web,Drupal:9,Apache-2.0;BSD-3-Clause;GPL-2.0-or-later,True,False
+donmoschetta.it,Caorle,Veneto,3JN4ZMWH,200,,1,Apache HTTP Server,server_web,,Apache-2.0,True,False
+madoniegal.it,Castellana Sicula,Sicilia,3JPPAJDM,200,,1,Joomla!,cms,,GPL-2.0-or-later,True,False
+brta.camcom.it,Taranto,Puglia,3KAFLSAH,,ConnectionError,0,,,,,,False
+retisrl.it,Novi Ligure,Piemonte,3KCOWSBJ,200,,1,WordPress,cms,WordPress:6.9.7,GPL-2.0-or-later,True,False
+scuolecarduccilivorno.edu.it,Livorno,Toscana,3KJ3AED2,200,,1,WordPress,cms,WordPress:7.1,GPL-2.0-or-later,True,False
+acque.net,Empoli,Toscana,3KO8VIGW,200,,1,WordPress,cms,WordPress:6.7.7,GPL-2.0-or-later,True,False
+campaniaict.it,Napoli,Campania,3KQC0ABI,200,,1,WordPress,cms,,GPL-2.0-or-later,True,False
+notarangelorosati-giannonemasi.edu.it,Foggia,Puglia,3M1FNDMP,200,,1,Bootstrap Italia / Design System Italia,framework,,BSD-3-Clause,True,False
+goriacqua.com,Ercolano,Campania,3MR8D7NT,200,,2,ASP.NET;Microsoft IIS,framework;server_web,Microsoft IIS:10.0,MIT;proprietaria,False,False
+wabes.it,Vadena,Trentino-Alto Adige/Südtirol,3NJRG27J,200,,2,WordPress;nginx,cms;server_web,WordPress:5.7.17,BSD-2-Clause;GPL-2.0-or-later,True,False
+galgargano.com,Monte Sant'Angelo,Puglia,3NSUJWLC,200,,1,WordPress,cms,WordPress:6.3.1,GPL-2.0-or-later,True,False
+velletriservizi.it,Velletri,Lazio,3PQ9TZW5,200,,1,WordPress,cms,,GPL-2.0-or-later,True,False
+comune.misiliscemi.tp.it,nan,nan,3PS17TYB,200,,2,WordPress;Bootstrap Italia / Design System Italia,cms;framework,WordPress:7.0.4,BSD-3-Clause;GPL-2.0-or-later,True,False
+enit.it,Roma,Lazio,3RF8YLNL,200,,1,PHP,framework,PHP:8.4.24,PHP License 3.01,True,False
+roccaservizi.it,Roccarainola,Campania,3S94F5QD,200,,0,,,,,False,False
+fnofi.it,Cittadella,Veneto,3SBF3PUB,200,,1,nginx,server_web,nginx:1.24.0,BSD-2-Clause,True,False
+icvalleserinasanpellegrinoterme.edu.it,San Pellegrino Terme,Lombardia,3T9KJCT0,200,,3,WordPress;Bootstrap Italia / Design System Italia;PHP,cms;framework,PHP:8.3.33,BSD-3-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+ecolanspa.it,Lanciano,Abruzzo,3VMLWXGX,200,,0,,,,,False,False
+asmfossano.it,Fossano,Piemonte,3VZPQX9H,200,,2,ASP.NET;Microsoft IIS,framework;server_web,Microsoft IIS:8.5,MIT;proprietaria,False,False
+icfornelligiovannixxiiicorato.edu.it,Corato,Puglia,3WW5MNR3,200,,3,WordPress;Bootstrap Italia / Design System Italia;PHP,cms;framework,PHP:8.3.33,BSD-3-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+asfautolinee.it,Como,Lombardia,3X3CPIT8,200,,1,WordPress,cms,WordPress:7.1,GPL-2.0-or-later,True,False
+atc1potenza.it,Rionero in Vulture,Basilicata,3XIN54S7,200,,1,WordPress,cms,WordPress:4.5.32,GPL-2.0-or-later,True,False
+gorgovivo.it,Serra San Quirico,Marche,3XOF2207,200,,1,nginx,server_web,,BSD-2-Clause,True,False
+adriatica.zes.gov.it,Roma,Lazio,3XXKMLQ8,,ConnectTimeout,0,,,,,,False
+palaexpo.it,Roma,Lazio,3YOCS45V,200,,2,ASP.NET;Microsoft IIS,framework;server_web,Microsoft IIS:10.0,MIT;proprietaria,False,False
+arcasvevaofantina.it,Andria,Puglia,3ZDDLRZA,200,,2,WordPress;Bootstrap Italia / Design System Italia,cms;framework,WordPress:7.0.4,BSD-3-Clause;GPL-2.0-or-later,True,False
+comune.sovizzo.vi.it,nan,nan,40B59AWR,200,,3,WordPress;Bootstrap Italia / Design System Italia;Apache HTTP Server,cms;framework;server_web,WordPress:7.1,Apache-2.0;BSD-3-Clause;GPL-2.0-or-later,True,False
+endaspiemonte.it,Torino,Piemonte,419QPJZE,200,,2,WordPress;PHP,cms;framework,WordPress:6.8.3;PHP:7.4.33,GPL-2.0-or-later;PHP License 3.01,True,False
+cdsangiovannibosco.edu.it,Manfredonia,Puglia,41M5YBG2,,ConnectionError,0,,,,,,False
+ismea.it,Roma,Lazio,41ODRLU5,200,,1,Bootstrap Italia / Design System Italia,framework,,BSD-3-Clause,True,False
+https:www.ausino.it,Cava de' Tirreni,Campania,446W9J1Y,,InvalidURL,0,,,,,,False
+fondazioneteatrococcia.it,Novara,Piemonte,46BR227J,200,,1,Apache HTTP Server,server_web,,Apache-2.0,True,False
+icmondragone2.edu.it,Mondragone,Campania,47SSOC18,200,,2,Bootstrap Italia / Design System Italia;Apache HTTP Server,framework;server_web,,Apache-2.0;BSD-3-Clause,True,False
+ordineveterinaribenevento.it,Benevento,Campania,48JYY1FM,200,,3,WordPress;PHP;Apache HTTP Server,cms;framework;server_web,WordPress:6.5.10;PHP:7.4.33,Apache-2.0;GPL-2.0-or-later;PHP License 3.01,True,False
+ordinebiologiplv.it,Torino,Piemonte,48LQPAQ6,200,,3,Joomla!;PHP;nginx,cms;framework;server_web,PHP:8.3.33,BSD-2-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+beccaristeiner.edu.it,Torino,Piemonte,48MUH68H,403,,1,Apache HTTP Server,server_web,Apache HTTP Server:2.2.15,Apache-2.0,True,False
+fondirigenti.it,Roma,Lazio,4A91UEHP,,ConnectionError,0,,,,,,False
+bolognaservizicimiteriali.it,Bologna,Emilia-Romagna,4C6P4HP6,200,,1,Apache HTTP Server,server_web,,Apache-2.0,True,False
+artwoodacademy.it,Lentate sul Seveso,Lombardia,4C88A8DV,200,,3,WordPress;PHP;Apache HTTP Server,cms;framework;server_web,WordPress:7.1;PHP:8.3.33,Apache-2.0;GPL-2.0-or-later;PHP License 3.01,True,False
+asespoleto.it,Spoleto,Umbria,4CFJTTLW,200,,4,WordPress;Bootstrap Italia / Design System Italia;PHP;nginx,cms;framework;server_web,WordPress:7.1;PHP:8.4.25,BSD-2-Clause;BSD-3-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+ancona-airport.com,Falconara Marittima,Marche,4CTAAQDI,200,,3,WordPress;PHP;Apache HTTP Server,cms;framework;server_web,WordPress:6.7.2;PHP:7.4.15,Apache-2.0;GPL-2.0-or-later;PHP License 3.01,True,False
+fondazionemessinaperlacultura.it,Messina,Sicilia,4DCNS5QF,200,,3,WordPress;PHP;nginx,cms;framework;server_web,WordPress:7.1;PHP:8.4.25,BSD-2-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+fondazionepiccolomini.it,Roma,Lazio,4E1NJHKT,200,,3,WordPress;PHP;Apache HTTP Server,cms;framework;server_web,WordPress:7.1;PHP:8.3.33,Apache-2.0;GPL-2.0-or-later;PHP License 3.01,True,False
+fondopmi.com,Roma,Lazio,4E74TB2S,200,,3,WordPress;PHP;Apache HTTP Server,cms;framework;server_web,WordPress:7.1;PHP:8.3.33,Apache-2.0;GPL-2.0-or-later;PHP License 3.01,True,False
+icdonuvacosmai.edu.it,Bisceglie,Puglia,4EMXGJX3,200,,3,WordPress;Bootstrap Italia / Design System Italia;PHP,cms;framework,WordPress:6.8.8;PHP:8.4.24,BSD-3-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+gruppohera.it,Trieste,Friuli-Venezia Giulia,4EVBLVBD,200,,0,,,,,False,False
+liceomagistralepanzecacaccamo.edu.it,Caccamo,Sicilia,4FGHPC8A,200,,3,WordPress;Bootstrap Italia / Design System Italia;PHP,cms;framework,PHP:8.3.33,BSD-3-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+farmaciesona.it,Sona,Veneto,4FKOGXPC,200,,1,nginx,server_web,,BSD-2-Clause,True,False
+gemeinde.muehlwald.bz.it,Selva dei Molini,Trentino-Alto Adige/Südtirol,4FTGOO9Q,200,,1,Bootstrap Italia / Design System Italia,framework,,BSD-3-Clause,True,False
+pasubiotecnologia.it,Schio,Veneto,4I5ECKIA,200,,2,Bootstrap Italia / Design System Italia;nginx,framework;server_web,nginx:1.17.8,BSD-2-Clause;BSD-3-Clause,True,False
+regione.sicilia.it,Palermo,Sicilia,4ICNTMCY,,ConnectionError,0,,,,,,False
+getet.it,Roma,Lazio,4JTCHUHK,200,,3,WordPress;PHP;nginx,cms;framework;server_web,WordPress:6.9.7;PHP:7.3.33,BSD-2-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+enteportogiulianova.it,Giulianova,Abruzzo,4KM8UAYZ,200,,2,WordPress;nginx,cms;server_web,WordPress:6.7.5;nginx:1.30.4,BSD-2-Clause;GPL-2.0-or-later,True,False
+grimolise.it,Campobasso,Molise,4NW5PUS6,200,,2,WordPress;nginx,cms;server_web,WordPress:7.1,BSD-2-Clause;GPL-2.0-or-later,True,False
+itsmarcopolo.it,Venezia,Veneto,4PBKMXZT,200,,1,WordPress,cms,WordPress:7.1,GPL-2.0-or-later,True,False
+policlinicogemelli.it,Roma,Lazio,4PKGIX8K,200,,2,WordPress;nginx,cms;server_web,WordPress:7.1,BSD-2-Clause;GPL-2.0-or-later,True,False
+casariposoquaglia.it,Diano Castello,Liguria,4Q7W3LTX,200,,0,,,,,False,False
+atb.bergamo.it,Bergamo,Lombardia,4QTL3EL5,200,,1,Bootstrap Italia / Design System Italia,framework,,BSD-3-Clause,True,False
+mirabilianetwork.eu,Roma,Lazio,4QYODNC5,200,,3,WordPress;PHP;Apache HTTP Server,cms;framework;server_web,WordPress:6.4.1;PHP:7.3.14,Apache-2.0;GPL-2.0-or-later;PHP License 3.01,True,False
+its-ictpiemonte.it,Torino,Piemonte,4S9LK3NS,200,,2,WordPress;Apache HTTP Server,cms;server_web,,Apache-2.0;GPL-2.0-or-later,True,False
+commissario.risanamento.me.it,Messina,Sicilia,4SK10CDN,200,,4,WordPress;Bootstrap Italia / Design System Italia;PHP;nginx,cms;framework;server_web,WordPress:7.1;PHP:7.4.33,BSD-2-Clause;BSD-3-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+aziendaspecialeama.it,Monte Argentario,Toscana,4VD0KVZ6,200,,2,WordPress;Bootstrap Italia / Design System Italia,cms;framework,WordPress:6.5.10,BSD-3-Clause;GPL-2.0-or-later,True,False
+rsa-srl.it,Balangero,Piemonte,4VSXCZLC,404,,0,,,,,False,False
+ilcastellodinovara.it,Novara,Piemonte,4WH03GS8,200,,3,WordPress;PHP;nginx,cms;framework;server_web,WordPress:6.9.7;PHP:8.4.25,BSD-2-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+giordanicaserta.edu.it,Caserta,Campania,4YP9RIEW,200,,3,WordPress;Bootstrap Italia / Design System Italia;PHP,cms;framework,PHP:8.3.33,BSD-3-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+itsleonardoacademy.it,Bergamo,Lombardia,4YQGU40D,200,,3,WordPress;PHP;nginx,cms;framework;server_web,WordPress:7.1;PHP:8.0.30,BSD-2-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+comune.seriate.bg.it,Seriate,Lombardia,4ZKKQNKQ,200,,4,WordPress;Bootstrap Italia / Design System Italia;PHP;nginx,cms;framework;server_web,WordPress:7.1;PHP:8.5.10,BSD-2-Clause;BSD-3-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+iscasellipalizzi.edu.it,Napoli,Campania,50U27N8K,200,,2,Bootstrap Italia / Design System Italia;Apache HTTP Server,framework;server_web,,Apache-2.0;BSD-3-Clause,True,False
+liceoderuggieri.edu.it,Massafra,Puglia,51XXY94X,200,,2,WordPress;Bootstrap Italia / Design System Italia,cms;framework,,BSD-3-Clause;GPL-2.0-or-later,True,False
+calso.org,Dogliani,Piemonte,52F9D08Y,200,,2,WordPress;nginx,cms;server_web,WordPress:7.1,BSD-2-Clause;GPL-2.0-or-later,True,False
+fondazione.unisa.it,Fisciano,Campania,53S1QVDP,,ConnectionError,0,,,,,,False
+federpesistica.it,Roma,Lazio,545AQBJC,403,,1,nginx,server_web,,BSD-2-Clause,True,False
+tep.pr.it,Parma,Emilia-Romagna,558BFEXP,200,,3,WordPress;Bootstrap Italia / Design System Italia;nginx,cms;framework;server_web,WordPress:5.5.20,BSD-2-Clause;BSD-3-Clause;GPL-2.0-or-later,True,False
+ecoambientesalerno.it,Salerno,Campania,55N6KWMK,200,,2,WordPress;Bootstrap Italia / Design System Italia,cms;framework,,BSD-3-Clause;GPL-2.0-or-later,True,False
+oirmsantanna.piemonte.it,Torino,Piemonte,56FG6XPQ,200,,1,Apache HTTP Server,server_web,Apache HTTP Server:2.4.58,Apache-2.0,True,False
+itsturismo.it,Jesolo,Veneto,56WKLHOX,200,,3,WordPress;PHP;nginx,cms;framework;server_web,PHP:8.3.33,BSD-2-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+carduccisancataldo.edu.it,San Cataldo,Sicilia,58O75BTG,200,,2,WordPress;Bootstrap Italia / Design System Italia,cms;framework,WordPress:7.1,BSD-3-Clause;GPL-2.0-or-later,True,False
+patrimoniopisa.it,Pisa,Toscana,59VIG8L0,200,,1,WordPress,cms,WordPress:7.0.4,GPL-2.0-or-later,True,False
+aircampania.it,Napoli,Campania,5A0F9XHL,200,,3,WordPress;Bootstrap Italia / Design System Italia;nginx,cms;framework;server_web,WordPress:7.1;nginx:1.10.3,BSD-2-Clause;BSD-3-Clause;GPL-2.0-or-later,True,False
+veronapadova.it,Vicenza,Veneto,5AG3ZH7V,200,,2,WordPress;nginx,cms;server_web,,BSD-2-Clause;GPL-2.0-or-later,True,False
+acquirenteunico.it,Roma,Lazio,5AHQNT4T,200,,3,Drupal;PHP;Apache HTTP Server,cms;framework;server_web,Drupal:7;PHP:7.4.28,Apache-2.0;GPL-2.0-or-later;PHP License 3.01,True,False
+salernosolidale.it,Salerno,Campania,5AMFGRN8,200,,3,WordPress;Bootstrap Italia / Design System Italia;Apache HTTP Server,cms;framework;server_web,Apache HTTP Server:2,Apache-2.0;BSD-3-Clause;GPL-2.0-or-later,True,False
+reaspa.it,Rosignano Marittimo,Toscana,5AXRUUI0,200,,3,WordPress;PHP;nginx,cms;framework;server_web,PHP:7.4.33,BSD-2-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+capoterra2.edu.it,Capoterra,Sardegna,5B67E3T4,200,,3,WordPress;Bootstrap Italia / Design System Italia;PHP,cms;framework,PHP:8.3.33,BSD-3-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+secif.info,Argenta,Emilia-Romagna,5B6CJIEW,200,,1,WordPress,cms,,GPL-2.0-or-later,True,False
+iccoriano.edu.it,Coriano,Emilia-Romagna,5B9J9SUG,,ConnectionError,0,,,,,,False
+laziodigital.it,Roma,Lazio,5BWCL08M,200,,1,WordPress,cms,WordPress:7.1,GPL-2.0-or-later,True,False
+asl1sassari.it,Sassari,Sardegna,5DNNOS0T,200,,2,WordPress;Bootstrap Italia / Design System Italia,cms;framework,,BSD-3-Clause;GPL-2.0-or-later,True,False
+datiniprato.edu.it,Prato,Toscana,5DQHOLMZ,200,,3,WordPress;Bootstrap Italia / Design System Italia;PHP,cms;framework,PHP:8.3.33,BSD-3-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+umbriafilmcommission.it,Perugia,Umbria,5DVYPGTK,,ConnectionError,0,,,,,,False
+iismeuccimattei.edu.it,Cagliari,Sardegna,5EHNYROS,200,,2,WordPress;Bootstrap Italia / Design System Italia,cms;framework,,BSD-3-Clause;GPL-2.0-or-later,True,False
+triestetrasporti.it,Trieste,Friuli-Venezia Giulia,5EYBRCDR,,ConnectionError,0,,,,,,False
+sigspa.com,Penne,Abruzzo,5GCX4M0S,,ConnectionError,0,,,,,,False
+ursus.trieste.it,Trieste,Friuli-Venezia Giulia,5GOPE0AP,200,,2,Bootstrap Italia / Design System Italia;nginx,framework;server_web,,BSD-2-Clause;BSD-3-Clause,True,False
+icboscomorofioreterlizzi.edu.it,Terlizzi,Puglia,5I8RW1NM,200,,3,WordPress;Bootstrap Italia / Design System Italia;nginx,cms;framework;server_web,,BSD-2-Clause;BSD-3-Clause;GPL-2.0-or-later,True,False
+itsagroalimentarepuglia.it,Locorotondo,Puglia,5LWDEPQX,200,,1,WordPress,cms,WordPress:7.1,GPL-2.0-or-later,True,False
+pacinottitaranto.edu.it,Taranto,Puglia,5M1SBOLO,200,,2,WordPress;Bootstrap Italia / Design System Italia,cms;framework,,BSD-3-Clause;GPL-2.0-or-later,True,False
+pagopa.it,Roma,Lazio,5N2TR557,200,,0,,,,,False,False
+galpontelama.it,Bisceglie,Puglia,5QOB2CIY,200,,0,,,,,False,False
+bmti.it,Roma,Lazio,5QRGRGTP,403,,1,nginx,server_web,,BSD-2-Clause,True,False
+atcllazio.it,Roma,Lazio,5QZY1GA0,200,,1,WordPress,cms,WordPress:7.0.4,GPL-2.0-or-later,True,False
+sailpost.it,Vecchiano,Toscana,5RY8ZQSZ,200,,3,WordPress;PHP;nginx,cms;framework;server_web,WordPress:6.6.7;PHP:7.4.14;nginx:1.16.1,BSD-2-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+arcaregionepuglia.it,Bari,Puglia,5S9EYT2J,200,,2,WordPress;Bootstrap Italia / Design System Italia,cms;framework,WordPress:7.0.4,BSD-3-Clause;GPL-2.0-or-later,True,False
+sielte.it,San Gregorio di Catania,Sicilia,5ST98L52,,ConnectionError,0,,,,,,False
+itscasacampania.it,Napoli,Campania,5SY2NIM3,200,,1,WordPress,cms,WordPress:7.1,GPL-2.0-or-later,True,False
+assoservizi.net,Roma,Lazio,5TX38ION,200,,0,,,,,False,False
+consorziofabre.it,Pisa,Toscana,5V3ZMCFD,200,,3,WordPress;PHP;nginx,cms;framework;server_web,WordPress:7.1;PHP:7.4.30;nginx:1.30.4,BSD-2-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+alilauro.it,Napoli,Campania,5WEQOI7K,200,,3,WordPress;PHP;Apache HTTP Server,cms;framework;server_web,PHP:8.1.29,Apache-2.0;GPL-2.0-or-later;PHP License 3.01,True,False
+liceocopertino.edu.it,Copertino,Puglia,5YV1BPFK,200,,2,WordPress;Bootstrap Italia / Design System Italia,cms;framework,WordPress:7.1,BSD-3-Clause;GPL-2.0-or-later,True,False
+https:sistemaambientelucca.it,Lucca,Toscana,6006VSSS,,InvalidURL,0,,,,,,False
+fpi.it,Roma,Lazio,609OPZNV,503,,0,,,,,False,True
+steat.it,Fermo,Marche,62XLEE38,200,,3,WordPress;PHP;nginx,cms;framework;server_web,PHP:8.1.34,BSD-2-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+cittalia.it,Roma,Lazio,633CP49E,200,,1,WordPress,cms,WordPress:5.3.20,GPL-2.0-or-later,True,False
+fnofi.it,Catania,Sicilia,63X8KW43,200,,1,nginx,server_web,nginx:1.24.0,BSD-2-Clause,True,False
+ipsdacquistobagheria.edu.it,Bagheria,Sicilia,641NUAR3,200,,3,WordPress;Bootstrap Italia / Design System Italia;PHP,cms;framework,PHP:8.3.33,BSD-3-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+its-energiaeambiente.it,Colle di Val d'Elsa,Toscana,64G6NIHR,200,,2,Joomla!;Apache HTTP Server,cms;server_web,Apache HTTP Server:2.4.41,Apache-2.0;GPL-2.0-or-later,True,False
+taletespa.eu,Viterbo,Lazio,682WDFH2,200,,3,WordPress;PHP;Apache HTTP Server,cms;framework;server_web,WordPress:6.6.2;PHP:8.2.24;Apache HTTP Server:2.4.62,Apache-2.0;GPL-2.0-or-later;PHP License 3.01,True,False
+cstsistemisud.it,Capaccio Paestum,Campania,6CSCG00Q,200,,3,WordPress;Bootstrap Italia / Design System Italia;Apache HTTP Server,cms;framework;server_web,Apache HTTP Server:2.4.62,Apache-2.0;BSD-3-Clause;GPL-2.0-or-later,True,False
+exegesi.it,Torino,Piemonte,6CY4731G,200,,2,ASP.NET;nginx,framework;server_web,,BSD-2-Clause;MIT,True,False
+iissgiuliocesare.edu.it,Bari,Puglia,6D4BRU39,200,,3,WordPress;Bootstrap Italia / Design System Italia;PHP,cms;framework,PHP:8.3.33,BSD-3-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+icdonmilanigaribaldileone.edu.it,Trinitapoli,Puglia,6F18K2W9,200,,2,WordPress;Bootstrap Italia / Design System Italia,cms;framework,WordPress:7.1,BSD-3-Clause;GPL-2.0-or-later,True,False
+albisolaservizi.it,Albisola Superiore,Liguria,6G739KU9,200,,4,WordPress;Bootstrap Italia / Design System Italia;ASP.NET;Microsoft IIS,cms;framework;server_web,Microsoft IIS:10.0,BSD-3-Clause;GPL-2.0-or-later;MIT;proprietaria,False,False
+direzionesanfrancesco.edu.it,Altamura,Puglia,6GF796UD,200,,2,Joomla!;nginx,cms;server_web,,BSD-2-Clause;GPL-2.0-or-later,True,False
+altascuola.org,Perugia,Umbria,6I7YUOEO,200,,2,WordPress;Apache HTTP Server,cms;server_web,WordPress:6.6.7,Apache-2.0;GPL-2.0-or-later,True,False
+scuolabartolena.edu.it,Livorno,Toscana,6JBIWZ80,200,,2,WordPress;Bootstrap Italia / Design System Italia,cms;framework,WordPress:7.1,BSD-3-Clause;GPL-2.0-or-later,True,False
+ic17angiulli.edu.it,Napoli,Campania,6MEKAFH6,200,,2,Bootstrap Italia / Design System Italia;Apache HTTP Server,framework;server_web,,Apache-2.0;BSD-3-Clause,True,False
+agenziavalledelsarno.com,Nocera Inferiore,Campania,6N07RMJW,200,,1,WordPress,cms,,GPL-2.0-or-later,True,False
+ateraq.it,L'Aquila,Abruzzo,6PAVRHY5,200,,2,WordPress;Bootstrap Italia / Design System Italia,cms;framework,WordPress:6.5.4,BSD-3-Clause;GPL-2.0-or-later,True,False
+innovaprofessioni.it,Milano,Lombardia,6RAXEBMY,200,,2,WordPress;Apache HTTP Server,cms;server_web,,Apache-2.0;GPL-2.0-or-later,True,False
+asemanfredonia.it,Manfredonia,Puglia,6TAN6PRP,200,,2,WordPress;nginx,cms;server_web,WordPress:7.0.4;nginx:1.22.1,BSD-2-Clause;GPL-2.0-or-later,True,False
+dmodolomiti.it,Belluno,Veneto,6TIT8ALQ,200,,2,PHP;nginx,framework;server_web,PHP:8.1.13,BSD-2-Clause;PHP License 3.01,True,False
+agritechcenter.it,Napoli,Campania,6U598X6H,200,,1,WordPress,cms,WordPress:7.0.3,GPL-2.0-or-later,True,False
+chironisatta.edu.it,Nuoro,Sardegna,6UPF0YUZ,200,,4,WordPress;Bootstrap Italia / Design System Italia;PHP;nginx,cms;framework;server_web,WordPress:7.1;PHP:8.1.34,BSD-2-Clause;BSD-3-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+teatrovalentinogaravani.it,Voghera,Lombardia,6UZKD69P,200,,2,WordPress;PHP,cms;framework,WordPress:7.1;PHP:8.3.33,GPL-2.0-or-later;PHP License 3.01,True,False
+itsacademysi.it,Salerno,Campania,6WECXT3I,200,,1,WordPress,cms,WordPress:7.1,GPL-2.0-or-later,True,False
+rodari-giovanni23.edu.it,Palagiano,Puglia,6X1RDWV0,200,,2,WordPress;Bootstrap Italia / Design System Italia,cms;framework,WordPress:7.1,BSD-3-Clause;GPL-2.0-or-later,True,False
+trusttechnologies.it,Pomezia,Lazio,6Y5X0OIY,200,,1,nginx,server_web,nginx:1.25.5,BSD-2-Clause,True,False
+ordineveterinariarezzo.it,Arezzo,Toscana,6YJWRKS1,200,,1,WordPress,cms,WordPress:7.1,GPL-2.0-or-later,True,False
+unionemonferratopianalto.it,Villanova d'Asti,Piemonte,6ZTPE07R,200,,4,DNN (DotNetNuke);Bootstrap Italia / Design System Italia;ASP.NET;Microsoft IIS,cms;framework;server_web,Microsoft IIS:10.0,BSD-3-Clause;MIT;proprietaria,False,False
+regione.sardegna.it,Cagliari,Sardegna,70RBCZQ5,200,,0,,,,,False,False
+stepservizi.net,Sorso,Sardegna,710VMN1T,200,,0,,,,,False,False
+camera-arbitrale.it,Milano,Lombardia,7176DSEB,200,,0,,,,,False,False
+vigilanzasport.it,Roma,Lazio,721S6ANG,200,,2,ASP.NET;Microsoft IIS,framework;server_web,Microsoft IIS:10.0,MIT;proprietaria,False,False
+ater.rovigo.it,Rovigo,Veneto,72CDTS77,403,,1,nginx,server_web,,BSD-2-Clause,True,False
+fnofi.it,Pavia,Lombardia,72DW9NBP,200,,1,nginx,server_web,nginx:1.24.0,BSD-2-Clause,True,False
+icpompei1.edu.it,Pompei,Campania,74XC7YU2,200,,2,Bootstrap Italia / Design System Italia;Apache HTTP Server,framework;server_web,,Apache-2.0;BSD-3-Clause,True,False
+fondazionemarchecultura.it,Ancona,Marche,75KEEH9Y,200,,3,WordPress;PHP;nginx,cms;framework;server_web,WordPress:7.1;PHP:8.3.33,BSD-2-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+gandhilunigiana.edu.it,Aulla,Toscana,7746IORT,200,,3,WordPress;Bootstrap Italia / Design System Italia;PHP,cms;framework,PHP:8.2.33,BSD-3-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+fissw.com,Milano,Lombardia,78EKNPP3,200,,3,WordPress;PHP;nginx,cms;framework;server_web,PHP:8.3.33,BSD-2-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+acda.it,Cuneo,Piemonte,798627NV,200,,2,WordPress;Apache HTTP Server,cms;server_web,WordPress:7.0.4;Apache HTTP Server:2.4.25,Apache-2.0;GPL-2.0-or-later,True,False
+boscogiovanni23carducci.edu.it,Ruvo di Puglia,Puglia,79EGY04C,200,,2,Bootstrap Italia / Design System Italia;nginx,framework;server_web,nginx:1.26.1,BSD-2-Clause;BSD-3-Clause,True,False
+icfoscolostoccolma.edu.it,Cagliari,Sardegna,79JAO2H1,200,,2,WordPress;Bootstrap Italia / Design System Italia,cms;framework,WordPress:7.0.2,BSD-3-Clause;GPL-2.0-or-later,True,False
+autolineecasciato.it,Borrello,Abruzzo,79OSTV8M,200,,2,WordPress;nginx,cms;server_web,WordPress:7.1;nginx:1.18.0,BSD-2-Clause;GPL-2.0-or-later,True,False
+acquaenna.it,Enna,Sicilia,79URAT5P,,ConnectionError,0,,,,,,False
+formiarifiutizero.it,Formia,Lazio,7AD641XZ,200,,2,WordPress;PHP,cms;framework,WordPress:6.7.7;PHP:8.1.34,GPL-2.0-or-later;PHP License 3.01,True,False
+nuovasalentoenergia.it,Lecce,Puglia,7CWQ8IV2,200,,2,ASP.NET;Microsoft IIS,framework;server_web,Microsoft IIS:8.5,MIT;proprietaria,False,False
+donmilanipertinimorante.edu.it,Grottaglie,Puglia,7CYTCUK9,200,,2,WordPress;Bootstrap Italia / Design System Italia,cms;framework,WordPress:6.8.8,BSD-3-Clause;GPL-2.0-or-later,True,False
+secondocircologubbio.edu.it,Gubbio,Umbria,7DUP2M8Y,200,,2,Bootstrap Italia / Design System Italia;nginx,framework;server_web,nginx:1.26.1,BSD-2-Clause;BSD-3-Clause,True,False
+padovattiva.it,Padova,Veneto,7EIMQDFE,,ConnectionError,0,,,,,,False
+3-i.gov.it,Roma,Lazio,7FKYBH9E,200,,0,,,,,False,False
+euromilano.net,Milano,Lombardia,7GOVGT25,200,,2,WordPress;Apache HTTP Server,cms;server_web,WordPress:5.2.26;Apache HTTP Server:2.4.39,Apache-2.0;GPL-2.0-or-later,True,False
+apricaspa.it,Brescia,Lombardia,7H3CLLM0,200,,1,Drupal,cms,,GPL-2.0-or-later,True,False
+alea-ambiente.it,Forlì,Emilia-Romagna,7HP3V1V6,200,,1,WordPress,cms,WordPress:7.0.4,GPL-2.0-or-later,True,False
+itsturismoecultura.it,Mosciano Sant'Angelo,Abruzzo,7HQKKCIS,200,,0,,,,,False,False
+istitutocomprensivo2.edu.it,Piombino,Toscana,7HSE7NE1,200,,3,WordPress;Bootstrap Italia / Design System Italia;PHP,cms;framework,PHP:8.3.33,BSD-3-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+sandonnino.it,Fidenza,Emilia-Romagna,7IW8ELTH,200,,1,WordPress,cms,,GPL-2.0-or-later,True,False
+diocesisanmarcoscalea.it,San Marco Argentano,Calabria,7JD299SA,,ConnectionError,0,,,,,,False
+scitecvita.it,Napoli,Campania,7KXPDU26,200,,1,WordPress,cms,WordPress:7.1,GPL-2.0-or-later,True,False
+neutalia.it,Busto Arsizio,Lombardia,7LAQH02E,200,,3,Drupal;PHP;Apache HTTP Server,cms;framework;server_web,Drupal:10;PHP:8.3.33,Apache-2.0;GPL-2.0-or-later;PHP License 3.01,True,False
+icmandes-montidauni.edu.it,Pietramontecorvino,Puglia,7LOZOO0S,200,,3,WordPress;Bootstrap Italia / Design System Italia;PHP,cms;framework,PHP:8.3.33,BSD-3-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+cassaprevidenza-mit.it,Roma,Lazio,7OB84U7Z,200,,1,WordPress,cms,WordPress:6.8.2,GPL-2.0-or-later,True,False
+edmaretigas.it,Ancona,Marche,7OGVI29G,404,,1,nginx,server_web,,BSD-2-Clause,True,False
+flynetwork.it,Lustra,Campania,7P67KQRT,200,,3,WordPress;PHP;nginx,cms;framework;server_web,WordPress:7.1;PHP:8.2.33,BSD-2-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+arapservizi.it,Cepagatti,Abruzzo,7P9NB79B,200,,1,Bootstrap Italia / Design System Italia,framework,,BSD-3-Clause,True,False
+iczimarino.edu.it,Casalbordino,Abruzzo,7PH1CDSJ,200,,3,WordPress;Bootstrap Italia / Design System Italia;PHP,cms;framework,PHP:8.1.34,BSD-3-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+ligurcapital.it,Genova,Liguria,7PJKGTET,,ConnectTimeout,0,,,,,,False
+istitutodagomari.edu.it,Prato,Toscana,7PWNLBMQ,200,,3,WordPress;Bootstrap Italia / Design System Italia;nginx,cms;framework;server_web,,BSD-2-Clause;BSD-3-Clause;GPL-2.0-or-later,True,False
+cassamutuacancellieri.it,Roma,Lazio,7QCUI616,200,,3,WordPress;ASP.NET;Microsoft IIS,cms;framework;server_web,WordPress:4.7;Microsoft IIS:10.0,GPL-2.0-or-later;MIT;proprietaria,False,False
+letunnel.com,Saint-Rhémy-en-Bosses,Valle d'Aosta/Vallée d'Aoste,7RIG1C6B,200,,1,WordPress,cms,WordPress:7.1,GPL-2.0-or-later,True,False
+solofraservizi.it,Solofra,Campania,7S2HQA9E,200,,1,WordPress,cms,WordPress:6.7.7,GPL-2.0-or-later,True,False
+ospedalegiglio.it,Cefalù,Sicilia,7S3QTPXP,,ConnectionError,0,,,,,,False
+trenitaliatper.it,Bologna,Emilia-Romagna,7S7BGX0F,200,,0,,,,,False,False
+asl3nuoro.it,Nuoro,Sardegna,7T093CG4,200,,3,WordPress;Bootstrap Italia / Design System Italia;PHP,cms;framework,WordPress:7.1;PHP:7.4.33,BSD-3-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+italyexpo2025osaka.it,Roma,Lazio,7TA5W3S2,200,,2,Drupal;Bootstrap Italia / Design System Italia,cms;framework,,BSD-3-Clause;GPL-2.0-or-later,True,False
+provinciasulcisiglesiente.it,Carbonia,Sardegna,7U0QFN0C,200,,1,Bootstrap Italia / Design System Italia,framework,,BSD-3-Clause,True,False
+gruppoandreani.it,Corridonia,Marche,7U83R2FL,200,,2,WordPress;nginx,cms;server_web,,BSD-2-Clause;GPL-2.0-or-later,True,False
+cmcalabresiliquidazioni.it,Reggio di Calabria,Calabria,7UG4CTPM,,ConnectionError,0,,,,,,False
+pluchinotta.edu.it,Sant'Agata li Battiati,Sicilia,7UKG69R2,200,,2,WordPress;nginx,cms;server_web,,BSD-2-Clause;GPL-2.0-or-later,True,False
+casaatcservizi.it,Torino,Piemonte,7VKA95UA,200,,3,WordPress;Bootstrap Italia / Design System Italia;nginx,cms;framework;server_web,WordPress:7.1,BSD-2-Clause;BSD-3-Clause;GPL-2.0-or-later,True,False
+misericordiadiantignano.it,Livorno,Toscana,7VONFACG,200,,1,WordPress,cms,WordPress:5.4.21,GPL-2.0-or-later,True,False
+galcapodileuca.it,Tricase,Puglia,7VP4POF9,200,,2,Joomla!;Apache HTTP Server,cms;server_web,Apache HTTP Server:2.4.29,Apache-2.0;GPL-2.0-or-later,True,False
+asi-srl.it,Camposampiero,Veneto,7WO6BFIT,200,,2,WordPress;Bootstrap Italia / Design System Italia,cms;framework,WordPress:7.0.2,BSD-3-Clause;GPL-2.0-or-later,True,False
+autostradestato.it,Roma,Lazio,7XE4GJP3,200,,0,,,,,False,False
+consorziostradearcidosso.altervista.org,Arcidosso,Toscana,7ZHXNWHL,200,,2,WordPress;Apache HTTP Server,cms;server_web,WordPress:6.9.4,Apache-2.0;GPL-2.0-or-later,True,False
+sirentina.it,Secinaro,Abruzzo,817BQG20,200,,3,WordPress;Bootstrap Italia / Design System Italia;PHP,cms;framework,WordPress:7.1;PHP:7.4.33,BSD-3-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+veloceindustry.it,Argelato,Emilia-Romagna,81J321XP,200,,2,WordPress;PHP,cms;framework,WordPress:7.1;PHP:8.2.33,GPL-2.0-or-later;PHP License 3.01,True,False
+regione.basilicata.it,Potenza,Basilicata,82SGXOP7,200,,3,WordPress;PHP;Apache HTTP Server,cms;framework;server_web,WordPress:6.6.2;PHP:8.0.30;Apache HTTP Server:2.4.53,Apache-2.0;GPL-2.0-or-later;PHP License 3.01,True,False
+cacip.it,Cagliari,Sardegna,84IX3L0P,200,,2,WordPress;Apache HTTP Server,cms;server_web,Apache HTTP Server:2.4.38,Apache-2.0;GPL-2.0-or-later,True,False
+5t.torino.it,Torino,Piemonte,85FQR8X2,200,,2,WordPress;Apache HTTP Server,cms;server_web,,Apache-2.0;GPL-2.0-or-later,True,False
+cosmarimc.it,Tolentino,Marche,85X474AS,,ConnectionError,0,,,,,,False
+istitutocomprensivodeliceto.edu.it,Deliceto,Puglia,876UN3AE,200,,2,WordPress;nginx,cms;server_web,,BSD-2-Clause;GPL-2.0-or-later,True,False
+iceboli1matteoripa.edu.it,Eboli,Campania,8ATK48M4,200,,2,Bootstrap Italia / Design System Italia;nginx,framework;server_web,nginx:1.26.1,BSD-2-Clause;BSD-3-Clause,True,False
+agenzia.roma.it,Roma,Lazio,8D20RCTE,200,,0,,,,,False,False
+consorziobimaq.it,Avezzano,Abruzzo,8D75X2F2,200,,1,Apache HTTP Server,server_web,Apache HTTP Server:2.4.10,Apache-2.0,True,False
+bronistradellapubblica.it,Stradella,Lombardia,8DLHBH1N,200,,2,WordPress;nginx,cms;server_web,WordPress:7.0.4,BSD-2-Clause;GPL-2.0-or-later,True,False
+nos.ospedale.siracusa.it,Siracusa,Sicilia,8FL5MZFG,200,,2,WordPress;Apache HTTP Server,cms;server_web,WordPress:6.5.10,Apache-2.0;GPL-2.0-or-later,True,False
+giffoni.it,Giffoni Valle Piana,Campania,8G9SP94T,403,,1,nginx,server_web,,BSD-2-Clause,True,False
+aslgallura.it,Olbia,Sardegna,8HFG1ZY6,,ConnectionError,0,,,,,,False
+auditorium.com,Roma,Lazio,8HTD8P8I,200,,3,WordPress;PHP;nginx,cms;framework;server_web,PHP:8.2.29;nginx:1.26.3,BSD-2-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+compa.fvg.it,Udine,Friuli-Venezia Giulia,8HZUP2DE,200,,3,WordPress;PHP;nginx,cms;framework;server_web,WordPress:7.1;PHP:8.0.30,BSD-2-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+bonificavenetorientale.it,San Donà di Piave,Veneto,8JIS2RBA,200,,1,Apache HTTP Server,server_web,,Apache-2.0,True,False
+jaci.edu.it,Messina,Sicilia,8KA77F34,200,,2,WordPress;Bootstrap Italia / Design System Italia,cms;framework,WordPress:7.1,BSD-3-Clause;GPL-2.0-or-later,True,False
+ipseoacastrovillari.edu.it,Castrovillari,Calabria,8KUY7XYE,200,,3,WordPress;Bootstrap Italia / Design System Italia;PHP,cms;framework,PHP:8.3.33,BSD-3-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+itsrossellini.it,Roma,Lazio,8KY9MNU7,200,,3,WordPress;PHP;Apache HTTP Server,cms;framework;server_web,WordPress:7.1;PHP:7.4.33,Apache-2.0;GPL-2.0-or-later;PHP License 3.01,True,False
+andriamultiservice.com,Andria,Puglia,8N7ZS3K4,200,,1,WordPress,cms,WordPress:6.1,GPL-2.0-or-later,True,False
+biologitriveneto.it,Padova,Veneto,8O2ZYX7O,403,,1,nginx,server_web,,BSD-2-Clause,True,False
+casavallardi.it,Appiano Gentile,Lombardia,8O5HCUTY,200,,2,WordPress;nginx,cms;server_web,,BSD-2-Clause;GPL-2.0-or-later,True,False
+sun.novara.it,Novara,Piemonte,8P1G45WH,200,,0,,,,,False,False
+iissdelloliocosmai.edu.it,Bisceglie,Puglia,8QHCKCN6,200,,3,WordPress;Bootstrap Italia / Design System Italia;PHP,cms;framework,PHP:8.3.33,BSD-3-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+liceostampacchia.edu.it,Tricase,Puglia,8SH4634M,,ConnectionError,0,,,,,,False
+tsm.tn.it,Trento,Trentino-Alto Adige/Südtirol,8U5DDGY9,403,,1,nginx,server_web,,BSD-2-Clause,True,False
+infrastrutturemilanocortina2026.it,Roma,Lazio,8UIFPO9K,200,,1,WordPress,cms,WordPress:7.0.4,GPL-2.0-or-later,True,False
+scuolecollegno3.edu.it,Collegno,Piemonte,8UYS28RD,200,,2,WordPress;Bootstrap Italia / Design System Italia,cms;framework,,BSD-3-Clause;GPL-2.0-or-later,True,False
+econlivlab.eu,Zevio,Veneto,8VK4TQHC,200,,3,WordPress;PHP;Apache HTTP Server,cms;framework;server_web,WordPress:7.1;PHP:7.4.33,Apache-2.0;GPL-2.0-or-later;PHP License 3.01,True,False
+agenziaitaliameteo.it,Roma,Lazio,8W0Q4VWZ,200,,2,WordPress;Bootstrap Italia / Design System Italia,cms;framework,WordPress:7.0.1,BSD-3-Clause;GPL-2.0-or-later,True,False
+sirioenergia.it,Frattaminore,Campania,8XD7AIGW,200,,2,WordPress;Apache HTTP Server,cms;server_web,WordPress:7.1,Apache-2.0;GPL-2.0-or-later,True,False
+icvaldilana.edu.it,Valdilana,Piemonte,8Y6XD6TV,200,,2,Bootstrap Italia / Design System Italia;nginx,framework;server_web,nginx:1.26.1,BSD-2-Clause;BSD-3-Clause,True,False
+fondazioneaquileia.it,Aquileia,Friuli-Venezia Giulia,8Y9TOFFS,200,,2,Drupal;Apache HTTP Server,cms;server_web,Drupal:7,Apache-2.0;GPL-2.0-or-later,True,False
+afragola1marconirocco.edu.it,Afragola,Campania,8YG3A9B5,200,,2,Bootstrap Italia / Design System Italia;Apache HTTP Server,framework;server_web,,Apache-2.0;BSD-3-Clause,True,False
+donluigisturzobagheria.edu.it,Bagheria,Sicilia,8Z5P4LQM,200,,0,,,,,False,False
+itsmeccatronicolazio.it,Frosinone,Lazio,8ZHA4Y1N,200,,3,WordPress;PHP;Apache HTTP Server,cms;framework;server_web,WordPress:7.1;PHP:8.3.33,Apache-2.0;GPL-2.0-or-later;PHP License 3.01,True,False
+cavourmazziniconvitto.edu.it,Marsala,Sicilia,91ADN2SF,200,,2,WordPress;nginx,cms;server_web,,BSD-2-Clause;GPL-2.0-or-later,True,False
+icgiannone.edu.it,Ischitella,Puglia,91NN57DH,200,,3,WordPress;Bootstrap Italia / Design System Italia;nginx,cms;framework;server_web,,BSD-2-Clause;BSD-3-Clause;GPL-2.0-or-later,True,False
+chietisolidale.it,Chieti,Abruzzo,91WAXW2Z,200,,1,WordPress,cms,,GPL-2.0-or-later,True,False
+atcbra.it,San Vito dei Normanni,Puglia,92XZZZRE,200,,2,ASP.NET;Microsoft IIS,framework;server_web,Microsoft IIS:10.0,MIT;proprietaria,False,False
+fnofi.it,Genova,Liguria,946EX1QI,200,,1,nginx,server_web,nginx:1.24.0,BSD-2-Clause,True,False
+flaviaservizi.it,Ladispoli,Lazio,94P7AWW0,200,,2,WordPress;Bootstrap Italia / Design System Italia,cms;framework,WordPress:7.1,BSD-3-Clause;GPL-2.0-or-later,True,False
+firenzesmart.it,Firenze,Toscana,94WZYBC7,502,,1,Apache HTTP Server,server_web,,Apache-2.0,True,False
+icmadreteresadicalcutta.edu.it,Belpasso,Sicilia,954L4IVP,200,,3,WordPress;Bootstrap Italia / Design System Italia;PHP,cms;framework,PHP:8.3.33,BSD-3-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+caan.it,Volla,Campania,955B3556,200,,1,WordPress,cms,WordPress:5.8.15,GPL-2.0-or-later,True,False
+gaiaservizi.eu,Bollate,Lombardia,95PB7XFM,200,,0,,,,,False,False
+vepromex.it,Venezia,Veneto,9AXJSAEX,,ConnectionError,0,,,,,,False
+acquedottiscpa.com,Orta di Atella,Campania,9BB8MUC4,200,,1,WordPress,cms,WordPress:6.8.8,GPL-2.0-or-later,True,False
+scherillopirandellosvevo.edu.it,Napoli,Campania,9EAEVWRB,200,,2,WordPress;Bootstrap Italia / Design System Italia,cms;framework,,BSD-3-Clause;GPL-2.0-or-later,True,False
+atcamatera.it,Matera,Basilicata,9ENSOTX8,200,,0,,,,,False,False
+fondazionecantiere.it,Montepulciano,Toscana,9H1HPVVP,200,,1,WordPress,cms,WordPress:7.1,GPL-2.0-or-later,True,False
+valenzaretegas.it,Valenza,Piemonte,9H9P0MGS,,ConnectionError,0,,,,,,False
+liceoleonardo.edu.it,Giarre,Sicilia,9IDG0APG,,ConnectionError,0,,,,,,False
+progettoambientespa.it,Aprilia,Lazio,9IDNX1G3,200,,3,WordPress;PHP;Apache HTTP Server,cms;framework;server_web,WordPress:5.7.17;PHP:7.4,Apache-2.0;GPL-2.0-or-later;PHP License 3.01,True,False
+ipeistituto.it,Napoli,Campania,9JRJHYSM,200,,2,WordPress;PHP,cms;framework,WordPress:7.1;PHP:8.2.33,GPL-2.0-or-later;PHP License 3.01,True,False
+pattonordbareseofantino.it,Barletta,Puglia,9K1N4U94,200,,3,WordPress;ASP.NET;Microsoft IIS,cms;framework;server_web,WordPress:6.2;Microsoft IIS:10.0,GPL-2.0-or-later;MIT;proprietaria,False,False
+amgasfoggiaweb.it,Foggia,Puglia,9LSXXA51,200,,1,Joomla!,cms,,GPL-2.0-or-later,True,False
+liceomontalcini.edu.it,Casarano,Puglia,9M9DRXI6,200,,3,WordPress;Bootstrap Italia / Design System Italia;PHP,cms;framework,PHP:8.3.33,BSD-3-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+calabria.zes.gov.it,Lamezia Terme,Calabria,9MQ4OG7D,,ConnectTimeout,0,,,,,,False
+tecnoborsa.com,Roma,Lazio,9NOWRM5S,200,,2,WordPress;Bootstrap Italia / Design System Italia,cms;framework,WordPress:7.1,BSD-3-Clause;GPL-2.0-or-later,True,False
+ieo.it,Milano,Lombardia,9NWJC70B,200,,0,,,,,False,False
+sstchioggia.it,Chioggia,Veneto,9ODSLB9I,,ConnectTimeout,0,,,,,,False
+1circolomercatosanseverino.edu.it,Mercato San Severino,Campania,9P9LCBMX,200,,2,WordPress;Bootstrap Italia / Design System Italia,cms;framework,,BSD-3-Clause;GPL-2.0-or-later,True,False
+galcarso.eu,Trieste,Friuli-Venezia Giulia,9RNBB1Z2,403,,1,nginx,server_web,,BSD-2-Clause,True,False
+icaldomoro.edu.it,Vallo della Lucania,Campania,9RWGTNVG,200,,3,WordPress;Bootstrap Italia / Design System Italia;nginx,cms;framework;server_web,,BSD-2-Clause;BSD-3-Clause;GPL-2.0-or-later,True,False
+tno.camcom.it,Viareggio,Toscana,9RY1HG7E,200,,2,Drupal;Apache HTTP Server,cms;server_web,Drupal:9,Apache-2.0;GPL-2.0-or-later,True,False
+costaemontisaraceni.me.it,Piraino,Sicilia,9SCBBGBC,200,,2,PHP;Apache HTTP Server,framework;server_web,PHP:5.6.31;Apache HTTP Server:2.4.23,Apache-2.0;PHP License 3.01,True,False
+iissvieste.edu.it,Vieste,Puglia,9SNABNQ4,200,,2,WordPress;Bootstrap Italia / Design System Italia,cms;framework,WordPress:7.1,BSD-3-Clause;GPL-2.0-or-later,True,False
+unionedeicomuniareainternaditroina.it,Troina,Sicilia,9T6I3DO8,200,,1,nginx,server_web,,BSD-2-Clause,True,False
+montagnamarsicana.it,Avezzano,Abruzzo,9U4KVE3R,200,,3,WordPress;Bootstrap Italia / Design System Italia;nginx,cms;framework;server_web,WordPress:7.1,BSD-2-Clause;BSD-3-Clause;GPL-2.0-or-later,True,False
+studioradiologico.com,Varese,Lombardia,9UQVTN4B,200,,3,WordPress;PHP;nginx,cms;framework;server_web,WordPress:7.0.4;PHP:8.3.30,BSD-2-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+masullotheti.edu.it,Nola,Campania,9VML3M92,200,,2,Bootstrap Italia / Design System Italia;nginx,framework;server_web,nginx:1.26.1,BSD-2-Clause;BSD-3-Clause,True,False
+asmcastelleone.it,Castelleone,Lombardia,9VU26R0T,200,,1,WordPress,cms,,GPL-2.0-or-later,True,False
+scarabelli-ghini.edu.it,Imola,Emilia-Romagna,9W4KE9LW,200,,2,Bootstrap Italia / Design System Italia;nginx,framework;server_web,nginx:1.26.1,BSD-2-Clause;BSD-3-Clause,True,False
+adriaferrailservices.com,Trieste,Friuli-Venezia Giulia,9WQ8OC8R,200,,3,WordPress;PHP;nginx,cms;framework;server_web,WordPress:6.7.7;PHP:8.2.33,BSD-2-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+portoimmobiliare.it,Livorno,Toscana,9WXB6T8O,200,,1,WordPress,cms,WordPress:7.0.4,GPL-2.0-or-later,True,False
+leretispa.it,Como,Lombardia,9X4DJYVC,200,,1,nginx,server_web,nginx:1.22.0,BSD-2-Clause,True,False
+acoset.com,Catania,Sicilia,9XSEMYNU,,ConnectionError,0,,,,,,False
+eutalia.eu,Roma,Lazio,9YBY9CC5,200,,2,WordPress;Apache HTTP Server,cms;server_web,WordPress:7.0.4,Apache-2.0;GPL-2.0-or-later,True,False
+tangenzialedinapoli.it,Napoli,Campania,9Z35T315,530,,0,,,,,False,False
+inpsservizi.it,Roma,Lazio,9ZP5G19P,404,,0,,,,,False,False
+hermesrc.it,Reggio di Calabria,Calabria,9ZSH8PEB,200,,3,Bootstrap Italia / Design System Italia;ASP.NET;Microsoft IIS,framework;server_web,Microsoft IIS:8.5,BSD-3-Clause;MIT;proprietaria,False,False
+rossisidoli.com,Compiano,Emilia-Romagna,a_034,200,,1,nginx,server_web,,BSD-2-Clause,True,False
+asmbasilicata.it,Matera,Basilicata,a_077,200,,2,WordPress;Bootstrap Italia / Design System Italia,cms;framework,WordPress:7.1,BSD-3-Clause;GPL-2.0-or-later,True,False
+asp.rg.it,Ragusa,Sicilia,a_088,200,,1,Joomla!,cms,,GPL-2.0-or-later,True,False
+asp.crotone.it,Crotone,Calabria,a_101,200,,3,WordPress;Bootstrap Italia / Design System Italia;nginx,cms;framework;server_web,,BSD-2-Clause;BSD-3-Clause;GPL-2.0-or-later,True,False
+asrem.molise.it,Campobasso,Molise,a_cb,200,,1,WordPress,cms,WordPress:6.8.2,GPL-2.0-or-later,True,False
+asp.cl.it,Caltanissetta,Sicilia,a_cl,200,,2,Drupal;Bootstrap Italia / Design System Italia,cms;framework,Drupal:10,BSD-3-Clause;GPL-2.0-or-later,True,False
+aspct.it,Catania,Sicilia,a_ct,200,,1,Bootstrap Italia / Design System Italia,framework,,BSD-3-Clause,True,False
+asp.sr.it,Siracusa,Sicilia,a_sr,200,,2,Bootstrap Italia / Design System Italia;nginx,framework;server_web,,BSD-2-Clause;BSD-3-Clause,True,False
+aulss1.veneto.it,Belluno,Veneto,a1_025,200,,1,Apache HTTP Server,server_web,Apache HTTP Server:2.4.41,Apache-2.0,True,False
+aslnapoli1centro.it,Napoli,Campania,a1_na,200,,1,Apache HTTP Server,server_web,Apache HTTP Server:2.4.62,Apache-2.0,True,False
+atssardegna.it,Sassari,Sardegna,a1_ss,200,,2,WordPress;Bootstrap Italia / Design System Italia,cms;framework,,BSD-3-Clause;GPL-2.0-or-later,True,False
+asl.novara.it,Novara,Piemonte,a13_f952,,ReadTimeout,0,,,,,,False
+studioradiologicobernasconi.it,Seregno,Lombardia,A1AOQXZA,200,,2,Drupal;Apache HTTP Server,cms;server_web,Drupal:10,Apache-2.0;GPL-2.0-or-later,True,False
+ambientespa.net,Spoltore,Abruzzo,A1ZKMT58,200,,0,,,,,False,False
+atam-rc.it,Reggio di Calabria,Calabria,A3MPM8EP,,ConnectionError,0,,,,,,False
+aslteramo.it,Teramo,Abruzzo,a4_te,200,,2,WordPress;Apache HTTP Server,cms;server_web,,Apache-2.0;GPL-2.0-or-later,True,False
+comune.bascape.pv.it,Bascapè,Lombardia,A690_bpe,,ConnectionError,0,,,,,,False
+aterrieti.it,Rieti,Lazio,A6BF9LF1,200,,1,Joomla!,cms,,GPL-2.0-or-later,True,False
+icsborgesepartannamondello.edu.it,Palermo,Sicilia,A6E9WZKL,200,,3,WordPress;Bootstrap Italia / Design System Italia;PHP,cms;framework,PHP:8.3.33,BSD-3-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+ammi.education,Monza,Lombardia,A6N7IW0N,429,,0,,,,,False,False
+aspdestrasecchia.it,Ostiglia,Lombardia,A86RQ42W,200,,2,Bootstrap Italia / Design System Italia;nginx,framework;server_web,,BSD-2-Clause;BSD-3-Clause,True,False
+aulss2.veneto.it,Treviso,Veneto,a9_tv,503,,0,,,,,False,False
+fierafoggia.it,Foggia,Puglia,A9AHBMJJ,200,,1,WordPress,cms,,GPL-2.0-or-later,True,False
+geat.it,Riccione,Emilia-Romagna,A9OYQOCS,200,,1,Apache HTTP Server,server_web,,Apache-2.0,True,False
+mercurioriscossioni.it,L'Aquila,Abruzzo,A9PEYSMG,200,,2,WordPress;nginx,cms;server_web,,BSD-2-Clause;GPL-2.0-or-later,True,False
+servizicivicispa.it,Fiumicino,Lazio,A9W40RY5,200,,2,Bootstrap Italia / Design System Italia;nginx,framework;server_web,,BSD-2-Clause;BSD-3-Clause,True,False
+icsiragusa.edu.it,Palermo,Sicilia,AA5602E4,200,,3,WordPress;Bootstrap Italia / Design System Italia;PHP,cms;framework,PHP:8.3.33,BSD-3-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+albertina.academy,Torino,Piemonte,aaba_001,200,,1,WordPress,cms,,GPL-2.0-or-later,True,False
+atocaloreirpino.it,Avellino,Campania,aaci_,200,,1,Joomla!,cms,,GPL-2.0-or-later,True,False
+atoambiente-cl2.it,Gela,Sicilia,aacsl,200,,1,WordPress,cms,WordPress:7.0.4,GPL-2.0-or-later,True,False
+atoambientecl1.it,Caltanissetta,Sicilia,aacsl1,200,,1,WordPress,cms,WordPress:5.2.21,GPL-2.0-or-later,True,False
+arlas.campania.it,Napoli,Campania,aaill_,200,,0,,,,,False,False
+ales-spa.com,Roma,Lazio,aalss,200,,3,WordPress;PHP;Microsoft IIS,cms;framework;server_web,PHP:8.1.21;Microsoft IIS:10.0,GPL-2.0-or-later;PHP License 3.01;proprietaria,False,False
+operapiasgobbanoci.it,Noci,Puglia,aamsc,200,,1,WordPress,cms,WordPress:5.9.16,GPL-2.0-or-later,True,False
+turismotorino.org,Torino,Piemonte,aapl_001,200,,0,,,,,False,False
+areacom.eu,L'Aquila,Abruzzo,aaric,200,,3,Drupal;PHP;nginx,cms;framework;server_web,Drupal:7;PHP:7.3.20,BSD-2-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+altoadigeriscossioni.it,Bolzano,Trentino-Alto Adige/Südtirol,aarspa,200,,0,,,,,False,False
+inaples.it,Napoli,Campania,aasct_na,200,,0,,,,,False,False
+sferisterio.it,Macerata,Marche,aasmc,200,,3,WordPress;PHP;nginx,cms;framework;server_web,PHP:8.2.33,BSD-2-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+aseaenergia.eu,Benevento,Campania,aasp,200,,2,WordPress;Apache HTTP Server,cms;server_web,WordPress:6.2.2,Apache-2.0;GPL-2.0-or-later,True,False
+anconambiente.it,Ancona,Marche,aaspa,200,,3,WordPress;PHP;nginx,cms;framework;server_web,PHP:8.0.20,BSD-2-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+termoli.net,Termoli,Molise,aast,200,,2,WordPress;nginx,cms;server_web,WordPress:7.1,BSD-2-Clause;GPL-2.0-or-later,True,False
+aziendaturismopositano.it,Positano,Campania,aastp,200,,2,WordPress;PHP,cms;framework,WordPress:7.1;PHP:8.2.33,GPL-2.0-or-later;PHP License 3.01,True,False
+atorifiutitorinese.it,Torino,Piemonte,aatgr_to,,ConnectionError,0,,,,,,False
+ato1acqua.marche.it,Pesaro,Marche,aato1mnp,,ConnectionError,0,,,,,,False
+aato2.marche.it,Jesi,Marche,aato2mca,200,,1,Apache HTTP Server,server_web,,Apache-2.0,True,False
+consigliodibacinolv.it,Venezia,Veneto,aatolv,200,,1,Apache HTTP Server,server_web,,Apache-2.0,True,False
+atoacquemessina@pec.it,Messina,Sicilia,aatom,200,,0,,,,,False,False
+ato3marche.it,Macerata,Marche,aaton_,200,,3,WordPress;Bootstrap Italia / Design System Italia;nginx,cms;framework;server_web,,BSD-2-Clause;BSD-3-Clause;GPL-2.0-or-later,True,False
+atoidrico1palermo.it,Palermo,Sicilia,aatopa,200,,2,WordPress;Bootstrap Italia / Design System Italia,cms;framework,WordPress:7.1,BSD-3-Clause;GPL-2.0-or-later,True,False
+aato4.it,Sant'Elpidio a Mare,Marche,aatoq,200,,1,WordPress,cms,WordPress:7.1,GPL-2.0-or-later,True,False
+comunebedollo.it,Bedollo,Trentino-Alto Adige/Südtirol,ab,200,,1,Bootstrap Italia / Design System Italia,framework,,BSD-3-Clause,True,False
+agrariavallecupola.it,Rocca Sinibalda,Lazio,AB286R67,200,,2,Bootstrap Italia / Design System Italia;nginx,framework;server_web,,BSD-2-Clause;BSD-3-Clause,True,False
+accademiasironi.it,Sassari,Sardegna,aba_090,200,,1,WordPress,cms,WordPress:7.1,GPL-2.0-or-later,True,False
+abarc.it,Reggio di Calabria,Calabria,aba_80,200,,1,WordPress,cms,WordPress:7.1,GPL-2.0-or-later,True,False
+ababo.it,Bologna,Emilia-Romagna,abab_037,200,,0,,,,,False,False
+accademiabelleartiba.it,Bari,Puglia,abab_072,200,,1,Joomla!,cms,,GPL-2.0-or-later,True,False
+abacatania.it,Catania,Sicilia,abac,200,,2,WordPress;Bootstrap Italia / Design System Italia,cms;framework,,BSD-3-Clause;GPL-2.0-or-later,True,False
+accademiacarrara.it,Carrara,Toscana,abac_045,200,,3,WordPress;PHP;nginx,cms;framework;server_web,WordPress:7.1;PHP:8.2.33,BSD-2-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+abacatanzaro.it,Catanzaro,Calabria,abac_079,200,,1,WordPress,cms,WordPress:7.1,GPL-2.0-or-later,True,False
+accademia.firenze.it,Firenze,Toscana,abaf_048,200,,3,Joomla!;PHP;nginx,cms;framework;server_web,PHP:5.6.40,BSD-2-Clause;GPL-2.0-or-later;PHP License 3.01,True,False
+accademiabellearti.fr.it,Frosinone,Lazio,abaf_060,200,,0,,,,,False,False

@@ -1,0 +1,73 @@
+country_code: EE
+country_name: "Estonia"
+status: ready
+source_type: site_crawl # api_json
+source_name: "RIHA / Data Portal (RIA)"
+source_url: "https://riha.eesti.ee/riha/api/"   # RIHA in dismissione fine 2026: verificare se usare gia' il nuovo Data Portal RIA
+records_path: ""
+license: "aperta"
+field_mapping:
+  hostname: ""
+  comune: ""
+  regione: ""
+  codice_ipa: ""
+  sector: ""
+notes: >
+  ATTENZIONE: RIHA sarà dismesso a fine 2026 con migrazione al nuovo Data
+  Portal (RIA - Information System Authority): verificare quale dei due
+  sistemi sia attivo al momento dell'implementazione e usare quello. eesti.ee
+  funge da directory servizi ed è una fonte complementare per gli URL.
+
+# TLD "di fiducia" per continuare a esplorare un dominio anche se non e'
+# elencato esplicitamente in 'allowed_domains' (si somma ad essa, non la
+# sostituisce): un dominio scoperto durante il crawl e' considerato
+# "interno" (e quindi esplorato anche ai livelli successivi) se il suo
+# TLD nazionale o un label 'gov' compaiono tra i suoi label. Usato solo
+# da source_type: site_crawl; innocuo per gli altri source_type.
+allowed_tlds:
+  - "ee"
+  - "gov"
+
+allowed_tlds:
+  - "pl"
+  - "gov"
+
+seeds_file: "seeds.txt"
+crawl_depth: 8
+
+# ...poi, a ogni pagina visitata, raccoglie i link USCENTI (siti ufficiali
+# degli enti che hanno pubblicato l'annuncio), escludendo i social:
+exclude_domains:
+exclude_domains:
+  - "facebook.com"
+  - "twitter.com"
+  - "x.com"
+  - "linkedin.com"
+  - "xing.com"
+  - "instagram.com"
+  - "youtube.com"
+  - "tiktok.com"
+  - "pinterest.com"
+  - "reddit.com"
+  - "tumblr.com"
+  - "flickr.com"
+  - "paypal.com"
+  - "amazon.com"
+  - "ebay.com"
+  - "wikipedia.org"
+  - "wikimedia.org"
+  - "wikidata.org" 
+  - "archive.org"
+  - "web.archive.org"
+  - "aliexpress.com"
+  - "etsy.com"
+  - "twitch.tv"
+  - "alibaba.com"
+  - "medium.com"
+  - "maps.google.com"
+  - "google.com"
+
+max_pages_per_level: 15000     # tetto di sicurezza: alzare per una copertura più ampia
+sleep_seconds: 1.0           # pausa tra le richieste (cortesia verso il server)
+input_filename: "crawl_service_bund.json"
+license: "n/a (harvesting di URL pubblici, nessun contenuto riprodotto)"

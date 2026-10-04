@@ -1,0 +1,59 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "1. Fetch IPA comuni (Lombardia)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/01_fetch_ipa_comuni.py",
+            "args": ["--regione", "Lombardia"],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "2. Sonda infrastrutturale (test rapido, 20 host)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/02_probe_infra.py",
+            "args": ["--limit", "20"],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "3. Analisi/HHI",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/03_analyze.py",
+            "args": [],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "5. Dark stack + cookie (test rapido, 20 host)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/05_scrape_dark_stack.py",
+            "args": ["--limit", "20"],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "6. Censimento software/licenze (test rapido, 20 host)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/06_fingerprint_cms.py",
+            "args": ["--limit", "20"],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "Pipeline completa (test rapido, Lombardia, 20 host)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/run_pipeline.py",
+            "args": ["--regione", "Lombardia", "--limit", "20"],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}

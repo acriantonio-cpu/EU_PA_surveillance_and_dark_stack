@@ -1,0 +1,19 @@
+{
+  "timestamp_utc": "2026-09-16T21:56:18.056619+00:00",
+  "paese": "FR",
+  "run_id": "2026-09-16",
+  "n_righe_da_processare_questo_run": 1500,
+  "n_hostname_normalizzati": 62542,
+  "n_hostname_scartati_invalidi": 27227,
+  "scartate_hostname_invalido_path": "Q:\\dark stack\\dark_stack_toolkit\\dst\\data\\results\\FR\\2026-09-16\\tipo_ente_scartate_hostname_invalido.csv",
+  "resume": true,
+  "rules_file": "Q:\\dark stack\\dark_stack_toolkit\\dst\\data\\rules\\tipo_ente_rules.yaml",
+  "n_categorie": 11,
+  "n_parole_chiave_totali": 446,
+  "max_bytes": 2000000,
+  "http_user_agent": "Mozilla/5.0 (compatible; osservatorio-tipo-ente/1.0)",
+  "python_version": "3.12.10",
+  "os": "Windows-11-10.0.22631-SP0",
+  "script": "08_classifica_tipo_ente.py",
+  "limite_metodologico": "Classificatore a parole chiave su testo statico (HTML pre-JavaScript), non un modello linguistico. Un ente che non si autodichiara nella homepage resta 'non_classificato'. Le 24 lingue UE coperte hanno profondità di copertura diversa, vedi data/rules/tipo_ente_rules.yaml."
+}

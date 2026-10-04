@@ -1,0 +1,187 @@
+country_code: BE
+country_name: "Belgio"
+status: ready
+source_type: site_crawl
+source_name: "Crawl a livelli sui portali ufficiali del Belgio (federali + regionali + enti)"
+
+# I SEMI (livello 0) si leggono da data/input/BE/seeds.txt (un URL per
+# riga): modifica QUEL file per cambiare/ampliare la lista dei portali da
+# investigare, senza toccare questo YAML. 'seed_urls' qui sotto resta solo
+# come fallback/riferimento se il file non esistesse.
+seeds_file: "seeds.txt"
+seed_urls:
+  - "https://www.belgium.be"
+  - "https://www.monarchie.be"
+  - "https://www.ejustice.just.fgov.be"
+  - "https://data.gov.be"
+  - "https://chancellery.belgium.be"
+  - "https://diplomatie.belgium.be"
+  - "https://www.ibz.be"
+  - "https://finances.belgium.be"
+  - "https://justice.belgium.be"
+  - "https://economie.fgov.be"
+  - "https://health.belgium.be"
+  - "https://mobilit.belgium.be"
+  - "https://employment.belgium.be"
+  - "https://socialsecurity.belgium.be"
+  - "https://www.vlaanderen.be"
+  - "https://www.wallonie.be"
+  - "https://be.brussels"
+  - "https://www.federation-wallonie-bruxelles.be"
+  - "https://www.ostbelgienlive.be"
+  - "https://www.nbb.be"
+  - "https://kbopub.economie.fgov.be"
+  - "https://statbel.fgov.be"
+
+# Domini "di casa": le pagine su questi domini (e i loro SOTTODOMINI, match
+# per suffisso: "belgium.be" copre anche "finances.belgium.be",
+# "fgov.be" copre sia "economie.fgov.be" sia "kbopub.economie.fgov.be")
+# vengono esplorate ANCHE ai livelli successivi (cioe' il crawler continua
+# a "investigare" i link trovati su questi domini). Bastano poche voci
+# grazie al match per suffisso.
+allowed_domains:
+  - "belgium.be"
+  - "fgov.be"
+  - "gov.be"
+  - "monarchie.be"
+  - "ibz.be"
+  - "vlaanderen.be"
+  - "wallonie.be"
+  - "be.brussels"
+  - "federation-wallonie-bruxelles.be"
+  - "ostbelgienlive.be"
+  - "nbb.be"
+
+# TLD "di fiducia" per continuare a esplorare un dominio anche se non e'
+# elencato esplicitamente in 'allowed_domains' (si somma ad essa, non la
+# sostituisce): un dominio scoperto durante il crawl e' considerato
+# "interno" (e quindi esplorato anche ai livelli successivi) se il suo
+# TLD nazionale o un label 'gov' compaiono tra i suoi label. Usato solo
+# da source_type: site_crawl; innocuo per gli altri source_type.
+allowed_tlds:
+  - "be"
+  - "gov"
+
+# DEFAULT DA CONFERMARE (vedi messaggio): quanti livelli e quante pagine per
+# livello. Con 21 semi che sono grandi portali, gia' 2 livelli possono
+# produrre parecchie migliaia di link: parti con un test piccolo (vedi §5).
+crawl_depth: 8
+max_pages_per_level: 10000
+sleep_seconds: 1.0
+
+# Registra in output SIA i link "interni" (verso i domini sopra, utili per
+# scoprire pagine/enti specifici dentro i portali) SIA quelli "esterni"
+# (verso domini nuovi non elencati: spesso le scoperte piu' utili, es.
+# un'agenzia specifica non elencata esplicitamente). Distinti dal campo
+# 'tipo_link' ("interno"/"esterno").
+record_internal_links: true
+
+exclude_domains:
+  - "facebook.com"
+  - "twitter.com"
+  - "x.com"
+  - "linkedin.com"
+  - "instagram.com"
+  - "youtube.com"
+  - "tiktok.com"
+  - "facebook.com"
+  - "twitter.com"
+  - "x.com"
+  - "linkedin.com"
+  - "xing.com"
+  - "instagram.com"
+  - "youtube.com"
+  - "tiktok.com"
+  - "pinterest.com"
+  - "reddit.com"
+  - "tumblr.com"
+  - "flickr.com"
+  - "paypal.com"
+  - "amazon.com"
+  - "ebay.com"
+  - "wikipedia.org"
+  - "wikimedia.org"
+  - "wikidata.org" 
+  - "archive.org"
+  - "web.archive.org"
+  - "aliexpress.com"
+  - "etsy.com"
+  - "twitch.tv"
+  - "alibaba.com"
+  - "medium.com"
+  - "maps.google.com"
+  - "google.com"
+
+input_filename: "crawl_belgium.json"
+license: "n/a (harvesting di URL pubblici, nessun contenuto riprodotto)"
+
+field_mapping:
+  hostname: "external_url"
+  tipo_link: "scope"          # "interno" (dominio in allowed_domains) o "esterno"; anche "redirect"
+  dominio_radice: "external_domain"
+  host_osservati: "observed_hosts"   # FQDN realmente linkati per quel dominio (separati da '|'): servono a chi deve aprire il sito
+  found_on: "found_on"        # pagina da cui e' stato trovato il link (utile per audit)
+  source_seed: "source_seed"
+  tls_error: "tls_error"      # "si" se il certificato TLS non era verificabile
+  # 'sector' e 'codice_ipa' NON sono piu' usati dal crawler: prima contenevano
+  # found_on / external_domain, colonne con altro significato. 'sector' e' ora
+  # riservato al tipo di ente (vedi classify_sites.py).
+  sector: ""
+  codice_ipa: ""
+  comune: ""
+  regione: ""
+
+dedupe_by: hostname             # ridondante ma innocuo: il fetcher ora deduplica GIA' per dominio radice (vedi notes)
+
+notes: >
+  FIX APPLICATI (13/09/2026) dopo un run reale con alcuni errori:
+  (1) CORRETTO il dominio della Regione di Bruxelles-Capitale:
+  "www.brussels.brussels" (che avevo nella lista iniziale) NON ESISTE —
+  quello corretto, verificato via ricerca web, è "be.brussels". Aggiornato
+  sia in data/input/BE/seeds.txt sia in 'allowed_domains' qui sotto.
+  (2) Gli header HTTP di default sono ora più "da browser" (vedi
+  src/base_fetcher.py) per ridurre i blocchi generici di WAF/firewall
+  (osservato su chancellery.belgium.be: 403; ibz.be: connessione
+  interrotta) che spesso non sono un rifiuto deliberato della ricerca, ma
+  solo un filtro automatico su User-Agent/header non riconosciuti. Se un
+  dominio continua a rispondere 403/connessione rifiutata anche con questi
+  header, è probabile un blocco anti-bot più avanzato o deliberato: in tal
+  caso valuta se procedere sia appropriato (vedi anche il disclaimer su
+  robots.txt più sotto), sapendo che comunque non blocca l'intero run — la
+  pagina viene solo saltata e il dominio resta comunque in output come
+  seed.
+
+  OUTPUT A LIVELLO DI DOMINIO RADICE (aggiornamento): l'output di questo
+  crawler è la lista dei DOMINI RADICE (eTLD+1, calcolati con tldextract,
+  gestisce correttamente casi come "finances.belgium.be" -> "belgium.be" e
+  "kbopub.economie.fgov.be" -> "fgov.be") coinvolti, SENZA DUPLICATI — un
+  dominio compare una sola volta anche se raggiunto/scoperto tramite più
+  pagine diverse. Include anche i domini radice dei 21 seed stessi
+  (scope="seed"), non solo le scoperte fatte durante il crawl
+  (scope="interno"/"esterno").
+
+  GENERALIZZAZIONE: questo fetcher (site_crawl) legge i semi da
+  data/input/BE/seeds.txt anziché solo dallo YAML — vedi §6 nel README
+  per come attivare/riconfigurare la stessa strategia su qualunque altro
+  paese semplicemente creando/modificando quel file, senza toccare codice
+  o config.
+
+  DA CONFERMARE PRIMA DI UN RUN COMPLETO: 'crawl_depth' e
+  'max_pages_per_level' sono impostati a valori PRUDENTI di default (2
+  livelli, 100 pagine/livello) perche' con 21 grandi portali come semi il
+  crawl puo' crescere in fretta (ogni homepage ministeriale ha spesso
+  centinaia di link). Aumenta questi valori solo dopo aver verificato con
+  un run piccolo (vedi il messaggio con le istruzioni passo-passo) che i
+  risultati sono quelli attesi.
+
+  COME FUNZIONA: livello 1 = link trovati sulle pagine seed; livello 2 =
+  link trovati sulle pagine di livello 1 CHE APPARTENGONO ai domini in
+  'allowed_domains' (gli altri vengono comunque registrati come scoperte,
+  ma non ulteriormente esplorati, per restare in un perimetro gestibile
+  invece di rischiare di espandersi su tutto il web belga). Ogni link
+  registrato riporta 'tipo_link'="interno" se il suo dominio e' in
+  allowed_domains, "esterno" altrimenti.
+
+  Il crawler legge e rispetta robots.txt di ogni host ('respect_robots: true',
+  default; 'false' per disattivarlo). Restano da verificare i termini d'uso dei
+  singoli portali prima di un run su larga scala.

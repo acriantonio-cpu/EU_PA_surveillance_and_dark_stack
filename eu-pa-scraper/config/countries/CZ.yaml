@@ -1,0 +1,78 @@
+country_code: CZ
+country_name: "Repubblica Ceca"
+status: ready
+source_type: site_crawl # bulk_xml
+source_name: "Seznam organu verejne moci (SOVM / Czech POINT, DIA)"
+source_url: "https://www.czechpoint.cz/"   # sostituire con URL diretto del file indice XML SOVM
+input_filename: "sovm_index.xml"
+record_xpath: ".//OVM"            # verificare tag reale nel file indice
+field_xpaths:
+  nazev: "Nazev"
+  ico: "ICO"
+  obec: "Obec"
+  typ: "Typ"
+  web: "Web"                      # presente solo nei file di dettaglio: se assente, lasciare vuoto e integrare in fase 2
+license: "aperta"
+field_mapping:
+  hostname: "web"
+  comune: "obec"
+  regione: ""
+  codice_ipa: "ico"
+  sector: "typ"
+notes: >
+  SOVM pubblica un file indice XML + file di dettaglio per ogni singolo OVM.
+  Questo config assume che il campo web sia presente nell'indice; se non lo
+  è, serve un secondo step che scarica il dettaglio per ogni ICO e ne
+  estrae il sito web (da implementare come custom_module 'cz' se necessario).
+  Territorialità incrociabile con RÚIAN (ČÚZK).
+
+# TLD "di fiducia" per continuare a esplorare un dominio anche se non e'
+# elencato esplicitamente in 'allowed_domains' (si somma ad essa, non la
+# sostituisce): un dominio scoperto durante il crawl e' considerato
+# "interno" (e quindi esplorato anche ai livelli successivi) se il suo
+# TLD nazionale o un label 'gov' compaiono tra i suoi label. Usato solo
+# da source_type: site_crawl; innocuo per gli altri source_type.
+allowed_tlds:
+  - "cz"
+  - "gov"
+
+
+seeds_file: "seeds.txt"
+crawl_depth: 8
+
+# ...poi, a ogni pagina visitata, raccoglie i link USCENTI (siti ufficiali
+# degli enti che hanno pubblicato l'annuncio), escludendo i social:
+exclude_domains:
+exclude_domains:
+  - "facebook.com"
+  - "twitter.com"
+  - "x.com"
+  - "linkedin.com"
+  - "xing.com"
+  - "instagram.com"
+  - "youtube.com"
+  - "tiktok.com"
+  - "pinterest.com"
+  - "reddit.com"
+  - "tumblr.com"
+  - "flickr.com"
+  - "paypal.com"
+  - "amazon.com"
+  - "ebay.com"
+  - "wikipedia.org"
+  - "wikimedia.org"
+  - "wikidata.org" 
+  - "archive.org"
+  - "web.archive.org"
+  - "aliexpress.com"
+  - "etsy.com"
+  - "twitch.tv"
+  - "alibaba.com"
+  - "medium.com"
+  - "maps.google.com"
+  - "google.com"
+
+max_pages_per_level: 15000     # tetto di sicurezza: alzare per una copertura più ampia
+sleep_seconds: 1.0           # pausa tra le richieste (cortesia verso il server)
+input_filename: "crawl_service_bund.json"
+license: "n/a (harvesting di URL pubblici, nessun contenuto riprodotto)"

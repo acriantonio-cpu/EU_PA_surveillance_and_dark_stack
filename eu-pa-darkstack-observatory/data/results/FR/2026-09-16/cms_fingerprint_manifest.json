@@ -1,0 +1,17 @@
+{
+  "timestamp_utc": "2026-09-16T21:32:21.449071+00:00",
+  "paese": "FR",
+  "run_id": "2026-09-16",
+  "n_righe_da_processare_questo_run": 1500,
+  "n_hostname_normalizzati": 62542,
+  "n_hostname_scartati_invalidi": 27227,
+  "scartate_hostname_invalido_path": "Q:\\dark stack\\dark_stack_toolkit\\dst\\data\\results\\FR\\2026-09-16\\cms_fingerprint_scartate_hostname_invalido.csv",
+  "resume": true,
+  "rules_file": "Q:\\dark stack\\dark_stack_toolkit\\dst\\data\\rules\\cms_signatures.yaml",
+  "n_regole": 23,
+  "http_user_agent": "Mozilla/5.0 (compatible; osservatorio-software-pa/1.0)",
+  "python_version": "3.12.10",
+  "os": "Windows-11-10.0.22631-SP0",
+  "script": "06_fingerprint_cms.py",
+  "limite_metodologico": "Fingerprint da tracce esterne (HTML/header HTTP), non ispezione del codice installato. Misura 'software in uso e licenza generale', non conformità legale agli obblighi della licenza (attribuzione, ridistribuzione modifiche, ecc.)."
+}

@@ -1,0 +1,136 @@
+# Regole di classificazione dei domini di terze parti rilevati nell'HTML dei
+# siti sondati (05_scrape_dark_stack.py). Ogni regola:
+#   pattern: sottostringa cercata nel dominio della risorsa (case-insensitive)
+#   categoria: cdn_font | analytics | captcha | cookie_banner | chat_supporto
+#              | video | sdk_generico | altro_terzo_parte
+#   vendor: nome leggibile per i report
+#   organizzazione_madre: OPZIONALE (seconda passata, settembre 2026) — la
+#     società che controlla davvero il vendor, SOLO quando è un fatto noto
+#     e non ambiguo (es. Google Fonts -> Google). Se assente, i report la
+#     trattano come uguale al vendor. Usata per calcolare la concentrazione
+#     (HHI) dei tracker per organizzazione madre invece che per singolo
+#     dominio/vendor (vedi summarize_tracker_hhi() in 03_analyze.py) — non
+#     aggiungerla per una congettura societaria non verificata: meglio
+#     lasciarla assente (= vendor) che sbagliata.
+#
+# Vince la PRIMA regola che matcha: mettere i pattern più specifici (es. un
+# sottodominio preciso) prima di quelli generici (es. il dominio radice dello
+# stesso vendor), altrimenti il generico "ruba" il match.
+#
+# File pensato per essere esteso dalla community: aggiungere una voce non
+# richiede toccare il codice Python.
+
+- pattern: "fonts.googleapis.com"
+  categoria: cdn_font
+  vendor: "Google Fonts"
+  organizzazione_madre: "Google"
+- pattern: "fonts.gstatic.com"
+  categoria: cdn_font
+  vendor: "Google Fonts"
+  organizzazione_madre: "Google"
+- pattern: "cdnjs.cloudflare.com"
+  categoria: cdn_font
+  vendor: "cdnjs (Cloudflare)"
+  organizzazione_madre: "Cloudflare"
+- pattern: "cdn.jsdelivr.net"
+  categoria: cdn_font
+  vendor: "jsDelivr"
+- pattern: "unpkg.com"
+  categoria: cdn_font
+  vendor: "unpkg"
+- pattern: "use.fontawesome.com"
+  categoria: cdn_font
+  vendor: "Font Awesome"
+- pattern: "maxcdn.bootstrapcdn.com"
+  categoria: cdn_font
+  vendor: "BootstrapCDN"
+- pattern: "stackpath.bootstrapcdn.com"
+  categoria: cdn_font
+  vendor: "BootstrapCDN"
+
+- pattern: "google-analytics.com"
+  categoria: analytics
+  vendor: "Google Analytics"
+  organizzazione_madre: "Google"
+- pattern: "googletagmanager.com"
+  categoria: analytics
+  vendor: "Google Tag Manager"
+  organizzazione_madre: "Google"
+- pattern: "connect.facebook.net"
+  categoria: analytics
+  vendor: "Meta Pixel"
+  organizzazione_madre: "Meta"
+- pattern: "facebook.net"
+  categoria: analytics
+  vendor: "Meta (Facebook) SDK"
+  organizzazione_madre: "Meta"
+- pattern: "hotjar.com"
+  categoria: analytics
+  vendor: "Hotjar"
+- pattern: "clarity.ms"
+  categoria: analytics
+  vendor: "Microsoft Clarity"
+  organizzazione_madre: "Microsoft"
+- pattern: "matomo.cloud"
+  categoria: analytics
+  vendor: "Matomo Cloud"
+
+- pattern: "google.com/recaptcha"
+  categoria: captcha
+  vendor: "Google reCAPTCHA"
+  organizzazione_madre: "Google"
+- pattern: "gstatic.com/recaptcha"
+  categoria: captcha
+  vendor: "Google reCAPTCHA"
+  organizzazione_madre: "Google"
+- pattern: "challenges.cloudflare.com"
+  categoria: captcha
+  vendor: "Cloudflare Turnstile"
+  organizzazione_madre: "Cloudflare"
+- pattern: "hcaptcha.com"
+  categoria: captcha
+  vendor: "hCaptcha"
+
+- pattern: "cookiebot.com"
+  categoria: cookie_banner
+  vendor: "Cookiebot"
+- pattern: "iubenda.com"
+  categoria: cookie_banner
+  vendor: "iubenda"
+- pattern: "onetrust.com"
+  categoria: cookie_banner
+  vendor: "OneTrust"
+
+- pattern: "tawk.to"
+  categoria: chat_supporto
+  vendor: "Tawk.to"
+- pattern: "zdassets.com"
+  categoria: chat_supporto
+  vendor: "Zendesk"
+- pattern: "intercom.io"
+  categoria: chat_supporto
+  vendor: "Intercom"
+
+- pattern: "youtube.com"
+  categoria: video
+  vendor: "YouTube"
+  organizzazione_madre: "Google"
+- pattern: "ytimg.com"
+  categoria: video
+  vendor: "YouTube"
+  organizzazione_madre: "Google"
+- pattern: "vimeo.com"
+  categoria: video
+  vendor: "Vimeo"
+- pattern: "vimeocdn.com"
+  categoria: video
+  vendor: "Vimeo"
+
+- pattern: "googleapis.com"
+  categoria: sdk_generico
+  vendor: "Google APIs"
+  organizzazione_madre: "Google"
+- pattern: "gstatic.com"
+  categoria: sdk_generico
+  vendor: "Google (statico)"
+  organizzazione_madre: "Google"

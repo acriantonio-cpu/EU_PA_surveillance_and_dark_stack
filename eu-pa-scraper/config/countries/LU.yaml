@@ -1,0 +1,34 @@
+country_code: LU
+country_name: "Lussemburgo"
+status: todo
+source_type: html_scrape
+source_name: "annuaire.public.lu + data.public.lu"
+source_url: "https://annuaire.public.lu/fr.html"   # individuare la struttura di navigazione reale (elenco per categoria/lettera)
+list_selector: "TODO-selettore-CSS"
+field_selectors:
+  nazev: "TODO"
+  web: "a::attr(href)"
+license: "CC BY 4.0"
+field_mapping:
+  hostname: "web"
+  comune: ""
+  regione: ""
+  codice_ipa: ""
+  sector: ""
+notes: >
+  annuaire.public.lu è l'annuario ufficiale (HTML/PDF, da raschiare) per gli
+  URL. data.public.lu (portale udata/Etalab con API REST) è complementare.
+  Il dataset "Administrations, Services et Etablissements publics" del
+  Service Central de Legislation è in PDF ed è obsoleto (2021): NON usare
+  come fonte primaria. Comuni con codici LAU2 disponibili via cadastre
+  (GeoJSON) su data.public.lu.
+
+# TLD "di fiducia" per continuare a esplorare un dominio anche se non e'
+# elencato esplicitamente in 'allowed_domains' (si somma ad essa, non la
+# sostituisce): un dominio scoperto durante il crawl e' considerato
+# "interno" (e quindi esplorato anche ai livelli successivi) se il suo
+# TLD nazionale o un label 'gov' compaiono tra i suoi label. Usato solo
+# da source_type: site_crawl; innocuo per gli altri source_type.
+allowed_tlds:
+  - "lu"
+  - "gov"

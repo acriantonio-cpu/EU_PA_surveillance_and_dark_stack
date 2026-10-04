@@ -1,0 +1,191 @@
+# Firme per il riconoscimento del software (CMS/framework/server) usato dal
+# sito, lette da 06_fingerprint_cms.py. Ogni regola:
+#   pattern: sottostringa cercata (case-insensitive) nella fonte indicata
+#   fonte: html | header_server | header_powered_by
+#   software: nome leggibile per i report
+#   categoria: cms | framework | server_web | libreria_js
+#   licenza: identificativo SPDX se open source, "proprietaria" altrimenti,
+#            "sconosciuta" se non determinabile in generale (dipende dalla
+#            distribuzione/versione, es. molti CMS commerciali white-label)
+#   open_source: true/false/null (null = dipende, non generalizzabile)
+#   version_regex: espressione regolare opzionale con UN gruppo di cattura,
+#                  applicata alla stessa fonte del pattern, per estrarre la
+#                  versione se esposta (spesso non lo è, per motivi di
+#                  sicurezza: version_rilevata resta vuota in quel caso, non
+#                  è un errore)
+#
+# LIMITE METODOLOGICO (va tenuto a mente leggendo i risultati): questo è un
+# fingerprint da tracce esterne (markup HTML, header HTTP), NON un'ispezione
+# del codice sorgente installato. Misura "quale software risulta in uso e se
+# quel software, IN GENERALE, è open source con quale licenza": non stabilisce
+# se l'ente rispetta gli obblighi di quella licenza (es. attribuzione,
+# ridistribuzione delle modifiche per licenze copyleft) — quello richiede
+# accesso al codice e non è automatizzabile da fuori. Va letto come "censimento
+# tecnologico", non come audit di conformità legale.
+#
+# File pensato per essere esteso senza toccare il codice Python.
+
+- pattern: "wp-content"
+  fonte: html
+  software: "WordPress"
+  categoria: cms
+  licenza: "GPL-2.0-or-later"
+  open_source: true
+  version_regex: "content=\"WordPress ([0-9.]+)"
+- pattern: "wp-includes"
+  fonte: html
+  software: "WordPress"
+  categoria: cms
+  licenza: "GPL-2.0-or-later"
+  open_source: true
+
+- pattern: "/media/jui/"
+  fonte: html
+  software: "Joomla!"
+  categoria: cms
+  licenza: "GPL-2.0-or-later"
+  open_source: true
+- pattern: "content=\"joomla"
+  fonte: html
+  software: "Joomla!"
+  categoria: cms
+  licenza: "GPL-2.0-or-later"
+  open_source: true
+  version_regex: "content=\"joomla! ([0-9.]+)"
+
+- pattern: "sites/default/files"
+  fonte: html
+  software: "Drupal"
+  categoria: cms
+  licenza: "GPL-2.0-or-later"
+  open_source: true
+- pattern: "content=\"drupal"
+  fonte: html
+  software: "Drupal"
+  categoria: cms
+  licenza: "GPL-2.0-or-later"
+  open_source: true
+  version_regex: "content=\"drupal ([0-9.]+)"
+
+- pattern: "typo3conf"
+  fonte: html
+  software: "TYPO3"
+  categoria: cms
+  licenza: "GPL-2.0-or-later"
+  open_source: true
+
+- pattern: "/++resource++plone"
+  fonte: html
+  software: "Plone"
+  categoria: cms
+  licenza: "GPL-2.0-or-later"
+  open_source: true
+
+- pattern: "/html/js/liferay"
+  fonte: html
+  software: "Liferay"
+  categoria: cms
+  licenza: "LGPL-2.1"
+  open_source: true
+- pattern: "liferay.portal"
+  fonte: html
+  software: "Liferay"
+  categoria: cms
+  licenza: "LGPL-2.1"
+  open_source: true
+
+- pattern: "__dnn"
+  fonte: html
+  software: "DNN (DotNetNuke)"
+  categoria: cms
+  licenza: "MIT"
+  open_source: true
+- pattern: "/desktopmodules/"
+  fonte: html
+  software: "DNN (DotNetNuke)"
+  categoria: cms
+  licenza: "MIT"
+  open_source: true
+
+- pattern: "umbraco"
+  fonte: html
+  software: "Umbraco"
+  categoria: cms
+  licenza: "MIT"
+  open_source: true
+
+- pattern: "/typo3temp/"
+  fonte: html
+  software: "TYPO3"
+  categoria: cms
+  licenza: "GPL-2.0-or-later"
+  open_source: true
+
+# Design System Italia / Bootstrap Italia: non un CMS ma il kit di interfaccia
+# ufficiale per i siti della PA italiana (developers.italia.it), rilevante
+# perché è FOSS mantenuto da AgID/Team Digitale.
+- pattern: "bootstrap-italia"
+  fonte: html
+  software: "Bootstrap Italia / Design System Italia"
+  categoria: framework
+  licenza: "BSD-3-Clause"
+  open_source: true
+- pattern: "it-header-slim-wrapper"
+  fonte: html
+  software: "Bootstrap Italia / Design System Italia"
+  categoria: framework
+  licenza: "BSD-3-Clause"
+  open_source: true
+
+- pattern: "sitecore"
+  fonte: html
+  software: "Sitecore"
+  categoria: cms
+  licenza: "proprietaria"
+  open_source: false
+
+- pattern: "x-powered-by: sitecore"
+  fonte: header_powered_by
+  software: "Sitecore"
+  categoria: cms
+  licenza: "proprietaria"
+  open_source: false
+
+- pattern: "php/"
+  fonte: header_powered_by
+  software: "PHP"
+  categoria: framework
+  licenza: "PHP License 3.01"
+  open_source: true
+  version_regex: "php/([0-9.]+)"
+
+- pattern: "asp.net"
+  fonte: header_powered_by
+  software: "ASP.NET"
+  categoria: framework
+  licenza: "MIT"
+  open_source: true
+
+- pattern: "apache"
+  fonte: header_server
+  software: "Apache HTTP Server"
+  categoria: server_web
+  licenza: "Apache-2.0"
+  open_source: true
+  version_regex: "apache/([0-9.]+)"
+
+- pattern: "nginx"
+  fonte: header_server
+  software: "nginx"
+  categoria: server_web
+  licenza: "BSD-2-Clause"
+  open_source: true
+  version_regex: "nginx/([0-9.]+)"
+
+- pattern: "microsoft-iis"
+  fonte: header_server
+  software: "Microsoft IIS"
+  categoria: server_web
+  licenza: "proprietaria"
+  open_source: false
+  version_regex: "microsoft-iis/([0-9.]+)"

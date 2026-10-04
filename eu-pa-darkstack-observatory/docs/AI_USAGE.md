@@ -1,0 +1,39 @@
+# Uso di IA generativa in questo progetto
+
+Questo file documenta dove e come è stata usata IA generativa (LLM) nella
+preparazione di questo codice, seguendo lo spirito della policy NLnet sulla
+trasparenza nell'uso di GenAI nei progetti finanziati
+(https://nlnet.nl/foundation/policies/generativeAI/).
+
+**Compila/aggiorna tu questa tabella** man mano che lavori al progetto —
+questo è solo un punto di partenza con l'uso già fatto finora.
+
+## Log di provenienza
+
+| Data       | Modello                | Cosa è stato generato                                                                 | Revisione umana                                                        |
+| ---------- | ----------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| 2026-09-07 | Claude (Anthropic)       | Struttura iniziale dei tre script Python (`01_fetch_ipa_comuni.py`, `02_probe_infra.py`, `03_analyze.py`), README, guide in `docs/` | *Da completare: annota qui quando li hai letti, capiti, testati e modificati con le tue mani* |
+| 2026-09-10 | Claude (Anthropic)       | Analisi dei risultati preliminari (`risultati.csv`, 699 righe) e ottimizzazioni di `02_probe_infra.py`/`05_scrape_dark_stack.py`: nuovo modulo `src/asn_bulk.py` (risoluzione ASN in blocco via Team Cymru con fallback RDAP), pipeline a tre fasi con parallelismo (`ThreadPoolExecutor`) al posto del ciclo sequenziale, nuovi flag `asn_metodo`/`concorrenza`/`--chunk-size`. Testato con mock di rete (nessuna chiamata reale a whois.cymru.com o RDAP fatta durante lo sviluppo: l'ambiente di sviluppo non aveva accesso in uscita a quella porta) — **da validare tu con un run reale su un campione piccolo prima di lanciarlo sul campione nazionale**, in particolare il comportamento del bulk Cymru live e il tls_grade/tls_protocolli_deboli_attivi (logica invariata, solo riorganizzata in funzioni separate). | *Da completare* |
+| 2026-09-10 | Claude (Anthropic)       | Seconda passata, a valle di una revisione critica: `asn_bulk.LimitatorePerBlocco` (tetto di connessioni simultanee per blocco IP, nuovo flag `concorrenza_per_provider`), retry con backoff sul bulk Cymru, `try/except` attorno alla fase 2 (niente più crash dell'intero run su un errore imprevisto), "canary check" che avvisa se il bulk sta fallendo quasi sempre, resolver DNS riusato per thread (ThreadPoolExecutor ora persistente per l'intero run, non ricreato a ogni chunk), contatore di risposte 403/429/503. Anche questa passata testata solo con mock — **stesso avviso della riga sopra**: valida su un campione piccolo prima del run nazionale, in particolare che `--concorrenza-per-provider` si comporti come atteso sulla tua rete reale (testato qui solo con thread simulati, non con connessioni TCP vere in parallelo). | *Da completare* |
+| 2026-09-10 | Claude (Anthropic)       | Terza passata: "audit a freddo" della seconda passata, con l'obiettivo esplicito di trovare bug prima che li trovi un run reale. Trovati e corretti: (1) `--concorrenza 0` o negativo mandava in crash `ThreadPoolExecutor` con un errore poco chiaro — ora clampato a 1 con avviso; stesso fix per `--concorrenza-per-provider`; (2) `--delay` negativo faceva fallire ogni singolo host con un'eccezione invece di un errore chiaro a inizio run — ora clampato a 0 con avviso; (3) `05_scrape_dark_stack.py` istanziava il resolver ASN bulk a livello di modulo, PRIMA di caricare config.yaml: il flag `asn_metodo: rdap` impostato dall'utente veniva ignorato silenziosamente da questo script (mentre 02 lo rispettava) — spostata l'istanziazione dentro `main()`, aggiunto anche `--asn-metodo` come flag CLI di 05 per coerenza con 02; (4) `run_pipeline.py` non inoltrava i nuovi flag (`--concorrenza`, `--concorrenza-per-provider`, `--chunk-size`, `--asn-metodo`) a 02/05 — aggiunti; (5) un riferimento a una funzione già rimossa (`resolve_asn_cached`) era rimasto in un punto del README ("Limiti noti") — corretto; (6) il warning "risoluzione ASN in blocco fallita" veniva ristampato a OGNI chunk in caso di errore sistematico (non transitorio), rischiando di inondare il log su un run lungo — ora compare una sola volta per run. Riscritte anche le sezioni "Quickstart" e "Tempi di esecuzione" del README, che erano rimaste ferme alla versione pre-ottimizzazione (descrivevano ancora RDAP-per-IP con cache come comportamento normale, e stimavano tempi ormai superati) — ora includono anche una guida passo-passo esplicita (giro piccolo → giro medio per tarare i parametri → campione nazionale) invece del solo elenco di comandi. Tutte le correzioni ri-testate con gli stessi mock delle passate precedenti (nessuna regressione). | *Da completare* |
+| 2026-09-11 | Claude (Anthropic)       | Quarta passata ("PICO"): implementata la "suggested implementation order" concordata nella bozza di proposta di finanziamento — nuovi moduli `src/errors.py` (tassonomia canonica di errore + retry/backoff generico), `src/rate_limiter.py` (token bucket condiviso), fallback RIPEstat in `src/asn_bulk.py` fra il bulk Cymru e l'RDAP finale, esecuzioni con timestamp (`data/results/<paese>/<run-id>/` + puntatore `latest_run.json`, propagato in modo coordinato da `run_pipeline.py` a tutti i passi), concentrazione dei tracker per organizzazione madre in `03_analyze.py` (`summarize_tracker_hhi`, dati già raccolti da 05, nessuna rete in più), e un modulo sperimentale `src/as_hegemony.py` (spento di default) per la dipendenza dall'AS di transito. Due bug trovati e corretti PRIMA di consegnare, non dopo: (1) una prima bozza di `as_hegemony.py` puntava a un endpoint RIPEstat inesistente — corretto dopo verifica della documentazione reale, che ha mostrato che la metrica è servita da IHR (Internet Health Report, IIJ Research Lab), un progetto diverso con un'API diversa (per ASN di origine, non per IP); (2) `--resume` a cavallo della mezzanotte UTC avrebbe aperto silenziosamente un nuovo run vuoto invece di riprendere quello interrotto — corretto in tutti gli script coinvolti. Testato con mock locali che riproducono la forma di risposta DOCUMENTATA dei servizi reali (RIPEstat, IHR) — nessuna chiamata di rete reale possibile in questo ambiente di sviluppo, stesso limite delle passate precedenti. Dettaglio completo di ogni test in `docs/AUDIT_IMPLEMENTAZIONE.md`, sezione "Audit — ottimizzazioni PICO (round 3)". **Da validare con un run reale piccolo (`--limit 20`) prima del run nazionale**, in particolare i fallback RIPEstat/AS-hegemony contro i servizi reali. | *Da completare* |
+
+## Note per te
+
+- La policy NLnet (versione in vigore da gennaio 2026) richiede che tu
+  **capisca e possa spiegare** ogni parte del codice che consegni, non solo
+  che lo copi. Prima di usare questi script nel progetto reale:
+  - Leggi ogni funzione e verifica che il comportamento sia quello che ti
+    aspetti (i test manuali fatti in fase di sviluppo sono descritti nella
+    cronologia della conversazione con l'assistente, non in questo repo —
+    vale la pena rifarli tu in prima persona su un campione tuo).
+  - Modifica almeno le parti che ti sembrano più fragili (es. l'euristica
+    di join comune→regione, il rate limiting, la gestione errori) così da
+    "farle tue" davvero, non solo di facciata.
+- Se in fase di scrittura della proposta userai un LLM per bozze di testo,
+  tieni un log separato dei prompt (modello, data/ora, prompt, output non
+  modificato) come richiesto dal modulo di proposta NLnet.
+- Controlla, prima di sottomettere, se è uscita una nuova versione della
+  policy GenAI di NLnet: al momento della stesura di questo file, NLnet
+  aveva annunciato una revisione in arrivo con requisiti di trasparenza più
+  stringenti.

@@ -1,0 +1,76 @@
+country_code: CY
+country_name: "Cipro"
+status: ready
+source_type: site_crawl # html_scrape
+source_name: "gov.cy (directory siti ministeri/dipartimenti) + data.gov.cy (DKAN)"
+source_url: "https://www.gov.cy/en/"   # individuare la pagina indice ministeri/dipartimenti/enti
+list_selector: "TODO-selettore-CSS"    # ispezionare con DevTools (sito bilingue EL/EN)
+field_selectors:
+  nazev: "TODO"
+  web: "a::attr(href)"
+license: "aperta"
+field_mapping:
+  hostname: "web"
+  comune: ""
+  regione: ""
+  codice_ipa: ""
+  sector: ""
+notes: >
+  gov.cy è la directory ufficiale dei siti PA (da raschiare per gli URL);
+  data.gov.cy (portale DKAN, Datastore API + data.json DCAT-US) va usato
+  come fonte complementare per anagrafica/codici enti, da unire per nome
+  ente. Sito bilingue EL/EN.
+
+# TLD "di fiducia" per continuare a esplorare un dominio anche se non e'
+# elencato esplicitamente in 'allowed_domains' (si somma ad essa, non la
+# sostituisce): un dominio scoperto durante il crawl e' considerato
+# "interno" (e quindi esplorato anche ai livelli successivi) se il suo
+# TLD nazionale o un label 'gov' compaiono tra i suoi label. Usato solo
+# da source_type: site_crawl; innocuo per gli altri source_type.
+allowed_tlds:
+  - "cy"
+  - "gov"
+
+allowed_tlds:
+  - "pl"
+  - "gov"
+
+seeds_file: "seeds.txt"
+crawl_depth: 8
+
+# ...poi, a ogni pagina visitata, raccoglie i link USCENTI (siti ufficiali
+# degli enti che hanno pubblicato l'annuncio), escludendo i social:
+exclude_domains:
+exclude_domains:
+  - "facebook.com"
+  - "twitter.com"
+  - "x.com"
+  - "linkedin.com"
+  - "xing.com"
+  - "instagram.com"
+  - "youtube.com"
+  - "tiktok.com"
+  - "pinterest.com"
+  - "reddit.com"
+  - "tumblr.com"
+  - "flickr.com"
+  - "paypal.com"
+  - "amazon.com"
+  - "ebay.com"
+  - "wikipedia.org"
+  - "wikimedia.org"
+  - "wikidata.org" 
+  - "archive.org"
+  - "web.archive.org"
+  - "aliexpress.com"
+  - "etsy.com"
+  - "twitch.tv"
+  - "alibaba.com"
+  - "medium.com"
+  - "maps.google.com"
+  - "google.com"
+
+max_pages_per_level: 15000     # tetto di sicurezza: alzare per una copertura più ampia
+sleep_seconds: 1.0           # pausa tra le richieste (cortesia verso il server)
+input_filename: "crawl_service_bund.json"
+license: "n/a (harvesting di URL pubblici, nessun contenuto riprodotto)"

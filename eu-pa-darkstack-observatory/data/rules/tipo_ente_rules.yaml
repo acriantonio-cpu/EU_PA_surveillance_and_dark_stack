@@ -1,0 +1,345 @@
+# tipo_ente_rules.yaml — parole chiave per riconoscere il TIPO DI ENTE
+# (comune, provincia, scuola, ospedale, polizia, ecc.) dal testo della
+# homepage, in tutte le 24 lingue ufficiali UE + inglese come lingua franca.
+#
+# Usato da src/08_classifica_tipo_ente.py: NON serve sapere in che lingua è
+# il sito, lo script confronta il testo con TUTTE le liste di parole chiave
+# di TUTTE le lingue (un comune bilingue, es. in Alto Adige/Südtirol o in
+# Finlandia, può usare più di una lingua nella stessa pagina). Le parole
+# chiave vanno lette come "sottostringa case-insensitive", non regex: usa
+# spazi/trattini per evitare match troppo larghi (es. "e la" non è una parola
+# chiave valida, "gemeinde " con lo spazio finale evita match dentro parole
+# più lunghe come "Gemeindeverband" quando serve una forma esatta, ma qui si
+# preferisce comunque il match permissivo: un falso positivo occasionale è
+# preferibile a mancare varianti/declinazioni non previste).
+#
+# Non esaustivo per costruzione (24 lingue x 11 categorie): estendibile senza
+# toccare il codice, stesso principio già usato per cms_signatures.yaml e
+# dark_stack_rules.yaml. Le lingue con copertura più debole in questa prima
+# versione (irlandese, maltese, lettone, estone) hanno solo i termini più
+# comuni: un mancato riconoscimento in quei casi è più probabile che altrove.
+#
+# Peso dei tre punti di lettura della pagina (usato dal codice, non qui):
+# titolo/tag <title> e meta description contano di più del testo del corpo,
+# perché un ente pubblico tipicamente si autodichiara lì ("Comune di X",
+# "Ministry of ..."); il corpo pesa meno ma copre i casi in cui
+# l'autodichiarazione è solo nell'intestazione visibile della pagina.
+
+categorie:
+
+  comune:
+    it: ["comune di", "città di", "comune "]
+    fr: ["mairie", "commune de", "ville de", "hôtel de ville"]
+    es: ["ayuntamiento", "concello de", "ajuntament de", "udal"]
+    de: ["gemeinde", "stadtgemeinde", "marktgemeinde", "rathaus"]
+    nl: ["gemeente"]
+    pt: ["câmara municipal", "município de"]
+    sv: ["kommun"]
+    da: ["kommune"]
+    fi: ["kunta", "kaupunki"]
+    pl: ["gmina", "urząd miasta", "urząd gminy", "urząd miejski"]
+    cs: ["obecní úřad", "městský úřad", "obec "]
+    sk: ["obecný úrad", "mestský úrad", "obec "]
+    hu: ["önkormányzat", "polgármesteri hivatal"]
+    ro: ["primăria", "primaria"]
+    bg: ["община"]
+    el: ["δήμος"]
+    hr: ["gradska uprava", "općina"]
+    sl: ["občina", "mestna občina"]
+    lt: ["savivaldybė"]
+    lv: ["novada dome", "pašvaldība"]
+    et: ["vallavalitsus", "linnavalitsus"]
+    mt: ["kunsill lokali"]
+    ga: ["comhairle cathrach", "comhairle baile"]
+    en: ["city council", "town council", "borough council", "municipal council"]
+
+  provincia:
+    it: ["provincia di", "città metropolitana di"]
+    fr: ["conseil départemental", "département de"]
+    es: ["diputación provincial", "diputación de"]
+    de: ["landkreis", "bezirkshauptmannschaft"]
+    nl: ["provincie"]
+    pt: ["distrito de"]
+    pl: ["starostwo powiatowe", "powiat "]
+    cs: ["krajský úřad"]
+    sk: ["okresný úrad"]
+    hu: ["megyei önkormányzat", "megyei jogú város"]
+    ro: ["consiliul județean"]
+    bg: ["областна администрация"]
+    el: ["περιφερειακή ενότητα", "νομαρχία"]
+    hr: ["županija"]
+    sl: ["upravna enota"]
+    lt: ["apskrities administracija"]
+    en: ["county council", "provincial council", "county government"]
+
+  regione:
+    it: ["regione ", "giunta regionale", "consiglio regionale"]
+    fr: ["conseil régional", "région "]
+    es: ["junta de", "generalitat", "comunidad autónoma", "gobierno de"]
+    de: ["landesregierung", "bundesland", "land "]
+    pt: ["região autónoma", "governo regional"]
+    pl: ["urząd marszałkowski", "województwo"]
+    ro: ["consiliul regional"]
+    el: ["περιφέρεια"]
+    fi: ["maakunta", "aluehallintovirasto"]
+    sv: ["region "]
+    da: ["region "]
+    en: ["regional council", "regional government"]
+
+  scuola:
+    it: ["istituto comprensivo", "scuola", "liceo", "istituto tecnico", "istituto omnicomprensivo"]
+    fr: ["école primaire", "collège ", "lycée", "établissement scolaire"]
+    es: ["colegio", "instituto de educación secundaria", "escuela"]
+    de: ["schule", "gymnasium", "hauptschule", "mittelschule"]
+    nl: ["basisschool", "middelbare school", "school voor"]
+    pt: ["escola", "agrupamento de escolas"]
+    sv: ["skola", "gymnasieskola", "grundskola"]
+    da: ["skole", "gymnasium"]
+    fi: ["koulu", "lukio", "peruskoulu"]
+    pl: ["szkoła podstawowa", "liceum", "zespół szkół"]
+    cs: ["základní škola", "střední škola", "gymnázium"]
+    sk: ["základná škola", "stredná škola", "gymnázium"]
+    hu: ["általános iskola", "gimnázium", "középiskola"]
+    ro: ["școala gimnazială", "liceul teoretic", "școala "]
+    bg: ["училище", "гимназия"]
+    el: ["δημοτικό σχολείο", "λύκειο", "γυμνάσιο"]
+    hr: ["osnovna škola", "srednja škola"]
+    sl: ["osnovna šola", "srednja šola"]
+    lt: ["mokykla", "gimnazija"]
+    lv: ["pamatskola", "vidusskola"]
+    et: ["põhikool", "gümnaasium"]
+    mt: ["skola"]
+    ga: ["scoil"]
+    en: ["primary school", "secondary school", "high school", "academy trust"]
+
+  universita:
+    it: ["università degli studi", "università", "ateneo"]
+    fr: ["université de", "université "]
+    es: ["universidad de", "universidad "]
+    de: ["universität", "hochschule", "fachhochschule"]
+    nl: ["universiteit", "hogeschool"]
+    pt: ["universidade de", "universidade "]
+    sv: ["universitet", "högskola"]
+    da: ["universitet"]
+    fi: ["yliopisto", "korkeakoulu"]
+    pl: ["uniwersytet", "politechnika"]
+    cs: ["univerzita", "vysoká škola"]
+    sk: ["univerzita"]
+    hu: ["egyetem"]
+    ro: ["universitatea"]
+    bg: ["университет"]
+    el: ["πανεπιστήμιο"]
+    hr: ["sveučilište"]
+    sl: ["univerza"]
+    lt: ["universitetas"]
+    lv: ["universitāte"]
+    et: ["ülikool"]
+    mt: ["università"]
+    ga: ["ollscoil"]
+    en: ["university of", "university "]
+
+  sanita:
+    it: ["ospedale", "azienda sanitaria", "azienda ospedaliera", "asl ", "ausl"]
+    fr: ["hôpital", "centre hospitalier", "chu de", "agence régionale de santé"]
+    es: ["hospital", "servicio de salud", "centro de salud", "área sanitaria"]
+    de: ["krankenhaus", "klinikum", "gesundheitsamt", "spital"]
+    nl: ["ziekenhuis", "ggd "]
+    pt: ["hospital", "centro de saúde", "unidade local de saúde"]
+    sv: ["sjukhus", "vårdcentral", "region " ]
+    da: ["sygehus", "hospital", "sundhedscenter"]
+    fi: ["sairaala", "terveyskeskus", "hyvinvointialue"]
+    pl: ["szpital", "przychodnia", "centrum zdrowia"]
+    cs: ["nemocnice", "zdravotnické zařízení"]
+    sk: ["nemocnica"]
+    hu: ["kórház", "egészségügyi"]
+    ro: ["spitalul", "spitalul județean"]
+    bg: ["болница"]
+    el: ["νοσοκομείο", "κέντρο υγείας"]
+    hr: ["bolnica", "dom zdravlja"]
+    sl: ["bolnišnica", "zdravstveni dom"]
+    lt: ["ligoninė", "poliklinika"]
+    lv: ["slimnīca"]
+    et: ["haigla"]
+    mt: ["sptar"]
+    ga: ["ospidéal"]
+    en: ["hospital", "health authority", "nhs trust", "health board"]
+
+  polizia:
+    it: ["polizia locale", "polizia municipale", "polizia di stato", "carabinieri", "questura"]
+    fr: ["police nationale", "police municipale", "gendarmerie", "commissariat de police"]
+    es: ["policía nacional", "policía local", "guardia civil", "mossos d'esquadra"]
+    de: ["polizei", "polizeidirektion", "polizeiinspektion", "landespolizei"]
+    nl: ["politie"]
+    pt: ["polícia de segurança pública", "guarda nacional republicana", "psp "]
+    sv: ["polisen", "polismyndigheten"]
+    da: ["politi"]
+    fi: ["poliisi", "poliisilaitos"]
+    pl: ["policja", "komenda policji", "komenda powiatowa policji"]
+    cs: ["policie české republiky", "městská policie"]
+    sk: ["policajný zbor", "mestská polícia"]
+    hu: ["rendőrség", "rendőrkapitányság"]
+    ro: ["poliția română", "poliția locală", "jandarmeria"]
+    bg: ["полиция"]
+    el: ["ελληνική αστυνομία", "αστυνομικό τμήμα"]
+    hr: ["policijska uprava", "policijska postaja"]
+    sl: ["policijska postaja", "policija"]
+    lt: ["policijos komisariatas"]
+    lv: ["valsts policija"]
+    et: ["politseijaoskond"]
+    mt: ["pulizija"]
+    ga: ["garda síochána", "gardaí"]
+    en: ["police department", "police service", "constabulary", "metropolitan police"]
+
+  vigili_fuoco:
+    it: ["vigili del fuoco", "vigili fuoco", "comando provinciale vigili"]
+    fr: ["sapeurs-pompiers", "service départemental d'incendie"]
+    es: ["bomberos", "cuerpo de bomberos"]
+    de: ["feuerwehr", "berufsfeuerwehr", "freiwillige feuerwehr"]
+    nl: ["brandweer"]
+    pt: ["bombeiros", "corpo de bombeiros"]
+    sv: ["brandkår", "räddningstjänst"]
+    da: ["brandvæsen", "beredskab"]
+    fi: ["palokunta", "pelastuslaitos"]
+    pl: ["straż pożarna", "komenda straży pożarnej"]
+    cs: ["hasičský záchranný sbor", "hasiči"]
+    sk: ["hasičský a záchranný zbor", "hasiči"]
+    hu: ["tűzoltóság", "tűzoltó parancsnokság"]
+    ro: ["pompieri", "inspectoratul pentru situații de urgență"]
+    bg: ["пожарна безопасност"]
+    el: ["πυροσβεστική υπηρεσία"]
+    hr: ["vatrogasna postrojba", "javna vatrogasna"]
+    sl: ["gasilska brigada", "gasilci"]
+    lt: ["priešgaisrinė gelbėjimo"]
+    lv: ["ugunsdzēsēju"]
+    et: ["päästeamet", "tuletõrje"]
+    mt: ["tifi tan-nar"]
+    ga: ["briogáid dóiteáin"]
+    en: ["fire brigade", "fire department", "fire and rescue"]
+
+  camera_commercio:
+    it: ["camera di commercio"]
+    fr: ["chambre de commerce"]
+    es: ["cámara de comercio"]
+    de: ["handelskammer", "wirtschaftskammer", "industrie- und handelskammer"]
+    nl: ["kamer van koophandel"]
+    pt: ["câmara de comércio"]
+    sv: ["handelskammare"]
+    da: ["handelskammer"]
+    fi: ["kauppakamari"]
+    pl: ["izba handlowa", "izba gospodarcza"]
+    cs: ["hospodářská komora"]
+    sk: ["obchodná komora"]
+    hu: ["kereskedelmi kamara"]
+    ro: ["camera de comerț"]
+    bg: ["търговска камара"]
+    el: ["εμπορικό επιμελητήριο"]
+    hr: ["gospodarska komora"]
+    sl: ["gospodarska zbornica"]
+    en: ["chamber of commerce"]
+
+  ministero:
+    it: ["ministero ", "agenzia delle entrate", "agenzia nazionale", "presidenza del consiglio"]
+    fr: ["ministère de", "ministère "]
+    es: ["ministerio de", "ministerio "]
+    de: ["bundesministerium", "ministerium für", "bundesamt für"]
+    nl: ["ministerie van"]
+    pt: ["ministério da", "ministério do"]
+    sv: ["regeringskansliet", "ministeriet"]
+    da: ["ministeriet for", "ministeriet"]
+    fi: ["ministeriö"]
+    pl: ["ministerstwo "]
+    cs: ["ministerstvo "]
+    sk: ["ministerstvo "]
+    hu: ["minisztérium"]
+    ro: ["ministerul "]
+    bg: ["министерство на"]
+    el: ["υπουργείο "]
+    hr: ["ministarstvo "]
+    sl: ["ministrstvo za"]
+    lt: ["ministerija"]
+    lv: ["ministrija"]
+    et: ["ministeerium"]
+    en: ["ministry of", "department for", "department of", "government of"]
+
+  giustizia:
+    it: ["tribunale di", "corte d'appello", "procura della repubblica"]
+    fr: ["tribunal judiciaire", "cour d'appel de", "tribunal de "]
+    es: ["juzgado de", "audiencia provincial", "tribunal superior de justicia"]
+    de: ["amtsgericht", "landgericht", "oberlandesgericht"]
+    nl: ["rechtbank"]
+    pt: ["tribunal judicial", "tribunal da relação"]
+    sv: ["tingsrätt", "domstol"]
+    da: ["byret", "domstol"]
+    fi: ["käräjäoikeus", "hovioikeus"]
+    pl: ["sąd rejonowy", "sąd okręgowy", "sąd apelacyjny"]
+    cs: ["okresní soud", "krajský soud"]
+    sk: ["okresný súd", "krajský súd"]
+    hu: ["törvényszék", "járásbíróság"]
+    ro: ["judecătoria", "tribunalul "]
+    bg: ["районен съд", "окръжен съд"]
+    el: ["πρωτοδικείο", "εφετείο"]
+    hr: ["općinski sud", "županijski sud"]
+    sl: ["okrožno sodišče", "okrajno sodišče"]
+    en: ["district court", "court of appeal", "magistrates' court"]
+
+# --------------------------------------------------------------------------
+# Segnali di ente NON PUBBLICO (possibile errore nella lista di partenza).
+# --------------------------------------------------------------------------
+# Uso previsto: data/processed/<paese>/siti.csv può contenere hostname finiti
+# lì per errore di raccolta o perché l'indice di partenza stesso include
+# soggetti privati (esempio REALE trovato in data/processed/IT/siti.csv:
+# "Giochi24 S.r.l." con sector=camera_commercio, codice_categoria L37 — le
+# camere di commercio hanno fra gli iscritti anche aziende private, non solo
+# uffici pubblici). Questi segnali NON dimostrano da soli che un hostname sia
+# "sbagliato": una "società partecipata" pubblica (es. "Farmacie Comunali
+# S.p.A.", "ATM S.p.A.") ha legittimamente una forma societaria privata pur
+# essendo a controllo pubblico. Vanno letti come una lista di CANDIDATI da
+# rivedere a mano, non come un filtro automatico da applicare senza guardare.
+#
+# forme_societarie: suffissi di forma societaria privata, tipicamente in
+# fondo al <title> o nella riga di copyright a piè di pagina ("© 2024 Rossi
+# S.r.l."). Vanno cercati come parola SEPARATA (il codice aggiunge i confini
+# di parola), non come sottostringa libera come le altre categorie: "sa" o
+# "ab" da soli comparirebbero troppo spesso dentro altre parole.
+forme_societarie:
+  it: ["s.r.l.", "srl", "s.p.a.", "spa", "s.n.c.", "s.a.s.", "società cooperativa"]
+  fr: ["sarl", "sas", "sasu", "eurl", "s.a."]
+  es: ["s.l.", "s.l.u.", "s.a.", "s.a.u."]
+  de: ["gmbh", "ag", "kg", "ohg", "e.k."]
+  nl: ["b.v.", "n.v."]
+  pt: ["lda", "lda.", "s.a."]
+  sv: ["ab"]
+  da: ["a/s", "aps"]
+  fi: ["oy", "oyj"]
+  pl: ["sp. z o.o.", "s.a."]
+  cs: ["s.r.o.", "a.s."]
+  sk: ["s.r.o.", "a.s."]
+  hu: ["kft.", "zrt.", "nyrt."]
+  ro: ["s.r.l.", "s.a."]
+  bg: ["оод", "еад"]
+  el: ["α.ε.", "ε.π.ε.", "ι.κ.ε."]
+  hr: ["d.o.o.", "d.d."]
+  sl: ["d.o.o.", "d.d."]
+  lt: ["uab", "ab"]
+  lv: ["sia", "as"]
+  et: ["oü", "as"]
+  en: ["ltd", "plc", "llc", "inc.", "corp."]
+
+# commerciale: terminologia da e-commerce/vetrina commerciale, un segnale
+# indipendente dalla forma societaria (una onlus o un'associazione senza
+# S.r.l. nel nome può comunque essere chiaramente un sito commerciale/non
+# istituzionale). Copertura più leggera (non tutte le 24 lingue): i termini
+# più diffusi bastano a intercettare la maggior parte dei casi, il resto
+# resta comunque coperto dal segnale forme_societarie sopra.
+commerciale:
+  it: ["aggiungi al carrello", "acquista ora", "spedizione gratuita", "partita iva"]
+  en: ["add to cart", "buy now", "free shipping", "shopping cart"]
+  fr: ["ajouter au panier", "livraison gratuite", "acheter maintenant"]
+  de: ["in den warenkorb", "kostenloser versand", "jetzt kaufen"]
+  es: ["añadir al carrito", "envío gratis", "comprar ahora"]
+  pt: ["adicionar ao carrinho", "envio grátis", "comprar agora"]
+  nl: ["toevoegen aan winkelwagen", "gratis verzending"]
+  pl: ["dodaj do koszyka", "darmowa dostawa"]
+  ro: ["adaugă în coș", "livrare gratuită"]
+  sv: ["lägg i varukorgen"]
+

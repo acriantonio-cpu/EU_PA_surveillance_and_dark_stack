@@ -1,0 +1,63 @@
+# Configurazione di classify_sites.py (classificazione natura + tipo di ente).
+#
+# TUTTI gli stadi sono DISATTIVATI per default: si attivano qui (enabled: true) oppure a riga
+# di comando (--stages 0,2,3,4). Nessuno stadio viene eseguito "per sbaglio".
+#
+# Stadi (dal più economico al più costoso; ogni stadio lavora solo sui siti ancora incerti):
+#   stage0  hostname/suffisso: regole, zero rete
+#   stage2  Wikidata: sito ufficiale (P856) -> classi dell'entità
+#   stage3  homepage: pacchetto di evidenza + regole pesate multilingue (lessico in config/classify_lexicon.yaml)
+#   stage4  LLM locale (Ollama) sul pacchetto di evidenza, solo sul residuo
+#
+# (Gli stadi 1 "join con i registri ufficiali" e 5 "revisione umana" non sono implementati:
+#  la colonna 'da_rivedere' dell'output marca i casi da guardare a mano.)
+
+lexicon: "config/classify_lexicon.yaml"
+
+stages:
+  stage0:
+    enabled: true
+
+  stage2:
+    enabled: true
+    endpoint: "https://query.wikidata.org/sparql"
+    language: "en"           # lingua delle etichette di classe restituite (il lessico è in inglese)
+    batch_size: 20           # host per richiesta SPARQL
+    sleep_seconds: 1.0
+
+  stage3:
+    enabled: false
+    workers: 8               # thread paralleli (solo in questo modulo: il crawler resta sequenziale)
+    per_host_delay: 1.5      # secondi minimi tra due richieste allo STESSO host
+    max_bytes: 400000        # tetto di lettura per pagina
+    read_timeout: 10.0
+    max_attempts: 5          # varianti provate: host osservati/www/apex, https poi http
+    fetch_legal_page: true   # un solo salto verso Impressum/Mentions légales/... se la homepage non basta
+    legal_page_below: 0.6
+    respect_robots: true     # true (default) = legge robots.txt e rispetta divieti e Crawl-delay; false = lo ignora
+    identify_crawler: true   # true (default) = User-Agent identificabile "eu-pa-scraper/1.0 (+contatto)"; false = header da browser
+    contact: null            # email o URL nell'User-Agent (oppure SCRAPER_CONTACT nel file .env)
+    max_crawl_delay: 30      # tetto (secondi) al Crawl-delay richiesto da un sito
+    user_agent: null         # UA personalizzato, usato solo con identify_crawler: false
+
+  stage4:
+    enabled: false
+    ollama_url: "http://localhost:11434"
+    model: "gemma4:e2b_q8"   # deve esistere in 'ollama list'; lo stadio lo verifica all'avvio
+    only_if_below: 0.8       # chiama l'LLM solo se la confidenza (natura o tipo) è sotto questa soglia
+    confidence: 0.65         # confidenza attribuita al voto dell'LLM (i modelli piccoli sono mal calibrati)
+    timeout: 120
+    num_ctx: 4096
+    workers: 1
+
+# Uscita anticipata: un sito con natura E tipo sopra questa confidenza non passa agli stadi successivi.
+stop_confidence: 0.8
+# Soglie per la colonna 'da_rivedere'
+review_below_natura: 0.6
+review_below_tipo: 0.5
+
+# Validità della cache (data/input/{ISO}/classify_cache.jsonl): un risultato più vecchio viene rifatto.
+cache_ttl_days: 90
+
+# Domini in più da trattare come "infrastruttura" (oltre a quelli in src/web_signals.py)
+extra_infrastructure_domains: []

@@ -1,0 +1,20 @@
+{
+  "timestamp_utc": "2026-09-11T19:52:14.181194+00:00",
+  "paese": "IT",
+  "run_id": "2026-09-11",
+  "n_righe_da_processare_questo_run": 500,
+  "resume": false,
+  "misurazioni": {
+    "dark_stack_terze_parti": true,
+    "cookie_tracker": true
+  },
+  "rules_file": "Q:\\dark stack\\dark_stack_toolkit\\dst\\data\\rules\\dark_stack_rules.yaml",
+  "n_regole": 31,
+  "cookie_rules_file": "Q:\\dark stack\\dark_stack_toolkit\\dst\\data\\rules\\cookie_rules.yaml",
+  "n_cookie_regole": 34,
+  "http_user_agent": "Mozilla/5.0 (compatible; osservatorio-dark-stack/1.0)",
+  "python_version": "3.12.10",
+  "os": "Windows-11-10.0.22631-SP0",
+  "script": "05_scrape_dark_stack.py",
+  "limite_metodologico": "Analisi statica dell'HTML/risposta HTTP restituiti dal server; non cattura risorse o cookie iniettati via JavaScript dopo il caricamento, né cookie impostati solo dopo il consenso su un banner (servirebbe un browser headless). La classificazione tecnico/profilazione dei cookie è un'euristica sul nome, non una valutazione giuridica GDPR."
+}

@@ -1,0 +1,33 @@
+country_code: FI
+country_name: "Finlandia"
+status: ready
+source_type: api_json
+source_name: "Suomi.fi-palvelutietovaranto (PTV) - DVV"
+source_url: "https://api.palvelutietovaranto.suomi.fi/api/v11/PublicOrganizations"  # verificare versione/endpoint esatti nella doc PTV corrente
+records_path: "itemList"
+paginate: true
+page_param: "page"
+page_size: 100
+max_pages: 200
+license: "CC0"
+field_mapping:
+  hostname: "webPages.0.url"      # struttura reale da verificare (array di canali web)
+  comune: "municipality.name.fi"
+  regione: ""
+  codice_ipa: "id"
+  sector: "organizationType"
+notes: >
+  PTV ha una REST API JSON ben documentata (CC0) e include canali web delle
+  organizzazioni: verificare la struttura esatta della risposta (spesso
+  richiede una seconda chiamata per il dettaglio organizzazione/canali) e
+  adattare 'field_mapping' o passare a un custom_module se necessario.
+
+# TLD "di fiducia" per continuare a esplorare un dominio anche se non e'
+# elencato esplicitamente in 'allowed_domains' (si somma ad essa, non la
+# sostituisce): un dominio scoperto durante il crawl e' considerato
+# "interno" (e quindi esplorato anche ai livelli successivi) se il suo
+# TLD nazionale o un label 'gov' compaiono tra i suoi label. Usato solo
+# da source_type: site_crawl; innocuo per gli altri source_type.
+allowed_tlds:
+  - "fi"
+  - "gov"

@@ -1,0 +1,69 @@
+country_code: EU
+country_name: "European Union"
+status: ready
+source_type: site_crawl # bulk_xml
+source_name: ""
+source_url: "european-union.europa.eu"   # sostituire con URL diretto del file indice XML SOVM
+input_filename: ""
+record_xpath: ""            # verificare tag reale nel file indice
+field_xpaths:
+  nazev: "Nazev"
+  ico: ""
+  obec: ""
+  typ: ""
+  web: ""                      # presente solo nei file di dettaglio: se assente, lasciare vuoto e integrare in fase 2
+license: "aperta"
+field_mapping:
+  hostname: "web"
+  comune: ""
+  regione: ""
+  codice_ipa: ""
+  sector: ""
+notes: >
+
+allowed_tlds:
+  - "eu"
+  - "europa.eu"
+  - "eib.org"
+  - "eui.eu"
+
+
+seeds_file: "seeds.txt"
+crawl_depth: 8
+
+# ...poi, a ogni pagina visitata, raccoglie i link USCENTI (siti ufficiali
+# degli enti che hanno pubblicato l'annuncio), escludendo i social:
+exclude_domains:
+exclude_domains:
+  - "facebook.com"
+  - "twitter.com"
+  - "x.com"
+  - "linkedin.com"
+  - "xing.com"
+  - "instagram.com"
+  - "youtube.com"
+  - "tiktok.com"
+  - "pinterest.com"
+  - "reddit.com"
+  - "tumblr.com"
+  - "flickr.com"
+  - "paypal.com"
+  - "amazon.com"
+  - "ebay.com"
+  - "wikipedia.org"
+  - "wikimedia.org"
+  - "wikidata.org" 
+  - "archive.org"
+  - "web.archive.org"
+  - "aliexpress.com"
+  - "etsy.com"
+  - "twitch.tv"
+  - "alibaba.com"
+  - "medium.com"
+  - "maps.google.com"
+  - "google.com"
+
+max_pages_per_level: 15000     # tetto di sicurezza: alzare per una copertura più ampia
+sleep_seconds: 1.0           # pausa tra le richieste (cortesia verso il server)
+input_filename: "crawl_service_bund.json"
+license: "n/a (harvesting di URL pubblici, nessun contenuto riprodotto)"

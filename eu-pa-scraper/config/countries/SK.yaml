@@ -1,0 +1,74 @@
+country_code: SK
+country_name: "Slovacchia"
+status: ready
+source_type: site_crawl # api_json
+source_name: "RPO - Register pravnickych osob (Statisticky urad SR)"
+source_url: "https://rpo.statistics.sk/api/v1/search"  # verificare endpoint/parametri esatti nella documentazione API corrente
+records_path: "results"
+paginate: true
+page_param: "page"
+page_size_param: "pageSize"
+page_size: 200
+max_pages: 500
+license: "aperta"
+field_mapping:
+  hostname: ""                  # RPO non espone il sito web
+  comune: "obec.nazov"
+  regione: ""
+  codice_ipa: "ico"
+  sector: "esa2010.kod"
+notes: >
+  RPO ha una REST API ufficiale (rpo.statistics.sk): filtrare per "organy
+  verejnej moci" (organi del potere pubblico) tramite i parametri di ricerca
+  documentati. Per gli URL, integrare con slovensko.sk o scraping mirato.
+
+# TLD "di fiducia" per continuare a esplorare un dominio anche se non e'
+# elencato esplicitamente in 'allowed_domains' (si somma ad essa, non la
+# sostituisce): un dominio scoperto durante il crawl e' considerato
+# "interno" (e quindi esplorato anche ai livelli successivi) se il suo
+# TLD nazionale o un label 'gov' compaiono tra i suoi label. Usato solo
+# da source_type: site_crawl; innocuo per gli altri source_type.
+allowed_tlds:
+  - "sk"
+  - "gov"
+
+
+seeds_file: "seeds.txt"
+crawl_depth: 8
+
+# ...poi, a ogni pagina visitata, raccoglie i link USCENTI (siti ufficiali
+# degli enti che hanno pubblicato l'annuncio), escludendo i social:
+exclude_domains:
+exclude_domains:
+  - "facebook.com"
+  - "twitter.com"
+  - "x.com"
+  - "linkedin.com"
+  - "xing.com"
+  - "instagram.com"
+  - "youtube.com"
+  - "tiktok.com"
+  - "pinterest.com"
+  - "reddit.com"
+  - "tumblr.com"
+  - "flickr.com"
+  - "paypal.com"
+  - "amazon.com"
+  - "ebay.com"
+  - "wikipedia.org"
+  - "wikimedia.org"
+  - "wikidata.org" 
+  - "archive.org"
+  - "web.archive.org"
+  - "aliexpress.com"
+  - "etsy.com"
+  - "twitch.tv"
+  - "alibaba.com"
+  - "medium.com"
+  - "maps.google.com"
+  - "google.com"
+
+max_pages_per_level: 15000     # tetto di sicurezza: alzare per una copertura più ampia
+sleep_seconds: 1.0           # pausa tra le richieste (cortesia verso il server)
+input_filename: "crawl_service_bund.json"
+license: "n/a (harvesting di URL pubblici, nessun contenuto riprodotto)"

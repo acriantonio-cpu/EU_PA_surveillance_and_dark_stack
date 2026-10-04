@@ -1,0 +1,1076 @@
+# Lessico del classificatore (src/classify/). Modificabile SENZA toccare il codice.
+#
+# Sintassi delle voci di testo (accenti e maiuscole ignorati):
+#   "comune di"   corrisponde a un INIZIO parola (prefisso): trova anche "comune di milano"
+#   "sindaco!"    con il "!" finale: solo parola INTERA
+# I lessici sono multilingue (24 lingue UE) e volutamente compatti: le liste vanno
+# arricchite guardando i falsi positivi/negativi del vostro gold set, non a priori.
+
+# --------------------------------------------------------------------------
+# Stadio 0 - hostname
+# --------------------------------------------------------------------------
+# Suffissi/host che indicano un ente pubblico (regex sull'host in minuscolo).
+gov_suffix_patterns:
+  - '(^|\.)gov(\.[a-z]{2})?$'
+  - '(^|\.)gob\.[a-z]{2,3}$'
+  - '(^|\.)gouv\.[a-z]{2}$'
+  - '(^|\.)gv\.at$'
+  - '(^|\.)bund\.de$'
+  - '(^|\.)europa\.eu$'
+  - '(^|\.)overheid\.nl$'
+  - '(^|\.)(fgov|gov)\.be$'
+  - '(^|\.)belgium\.be$'
+  - '(^|\.)(vlaanderen|wallonie)\.be$'
+  - '(^|\.)be\.brussels$'
+  - '(^|\.)riik\.ee$'
+  - '(^|\.)(gencat)\.cat$'
+  - '(^|\.)euskadi\.eus$'
+  - '(^|\.)xunta\.gal$'
+  - '(^|\.)admin\.ch$'
+  - '(^|\.)regeringen\.se$'
+  - '(^|\.)gov\.uk$'
+gov_suffix_confidence: 0.9
+
+# Token nei LABEL dell'host (separati da '.' e '-'). Senza "!": il label INIZIA con il token
+# (gemeentehuis, comunedimilano); con "!": il label è ESATTAMENTE il token.
+host_tokens:
+  comune: [comune, gemeente, mairie, ville, ayuntamiento, concello, ajuntament, camara, municipio, municipal, kommun, kommune, kunta, kaupunki, vald!, gmina, um!, ug!, mesto!, obec!, opcina, grad!, obcina, varos, primaria, dimos, gemeinde, stadt, council]
+  regione_provincia: [regione, provincia, region!, regio!, landkreis, kreis!, provincie, county, landsting, diputacion, generalitat, zupanija, megye, judet, wojewodz, powiat, departement]
+  polizia_sicurezza: [polizia, police, policia, politie, polizei, policja, policie, politi!, polis!, poliisi, politsei, policija, rendorseg, politia, gendarmerie, carabinieri, garda!]
+  governo_centrale: [ministero, ministerio, ministere, ministerie, ministerium, ministry, ministerstvo, ministrstvo, miniszterium, regering, regjering, government, governo, gobierno, gouvernement, bundesregierung, vlada!, valitsus, hallitus, rzad!]
+  scuola: [school, schule, skola, szkola, escola, escuela, colegio, lycee, gymnasium, liceo, scuola, ecole, istituto, koulu, kool!, iskola, mokykla, scoala, grundschule]
+  universita: [univ, uni!, hochschule, hogeschool, egyetem, uniwersytet, yliopisto, ulikool, politecnico]
+  sanita: [hospital, ospedale, ziekenhuis, krankenhaus, klinikum, hopital, sjukhus, sairaala, szpital, spital, nemocnice, slimnica, haigla, asl!, asst!, ausl!, chu!, nhs, clinic, clinica, klinik]
+  emergenza: [feuerwehr, brandweer, pompiers, bomberos, bombeiros, hasici, straz, vigilidelfuoco, pompieri]
+  parlamento: [parlament, parlement, bundestag, landtag, senat!, sejm!, riksdag, folketing, eduskunta, riigikogu, saeima, seimas, tweedekamer]
+  giustizia: [justice, justiz, justicia, rechtbank, gericht, tribunal, giustizia, justitie]
+  cultura: [museum, museo, musee, bibliothek, biblioteca, library, bibliotheek, archiv]
+  # Autorità ambientali/idriche: parole di per sé inequivocabili (non collidono con imprese private),
+  # per questo utilizzabili anche come token di HOSTNAME e non solo come testo di pagina.
+  ambiente: [waterschap, hoogheemraadschap, omgevingsdienst]
+# Label che iniziano con questi prefissi NON contano (aziende municipalizzate, banche...).
+host_token_exclusions: [stadtwerke, stadtsparkasse, sparkasse, gemeentewerken, cityhotel, schoolbook, hospitality]
+
+# --------------------------------------------------------------------------
+# Stadio 3 - homepage
+# --------------------------------------------------------------------------
+# Peso di ciascun campo del "pacchetto di evidenza" nel punteggio.
+field_weights:
+  title: 3.0
+  site_name: 3.0
+  h1: 2.0
+  description: 2.0
+  jsonld: 4.0
+  legal: 2.5
+  footer: 1.5
+  nav: 1.0
+  body: 0.5
+# Massimo numero di voci DISTINTE contate per campo (evita che un menu lunghissimo domini).
+max_distinct_per_field: 3
+# Punteggio minimo (grezzo) del tipo migliore perché produca un voto.
+min_type_score: 3.0
+min_nature_marker_score: 3.0
+
+# Tipi schema.org (JSON-LD) -> tipo/natura. Segnale forte e multilingue.
+jsonld_types:
+  GovernmentOrganization: {natura: pubblico}
+  GovernmentBuilding: {natura: pubblico}
+  CityHall: {tipo: comune, natura: pubblico}
+  PoliceStation: {tipo: polizia_sicurezza, natura: pubblico}
+  Courthouse: {tipo: giustizia, natura: pubblico}
+  FireStation: {tipo: emergenza, natura: pubblico}
+  LegislativeBuilding: {tipo: parlamento, natura: pubblico}
+  EmbassyOrConsulate: {tipo: governo_centrale, natura: pubblico}
+  School: {tipo: scuola}
+  ElementarySchool: {tipo: scuola}
+  MiddleSchool: {tipo: scuola}
+  HighSchool: {tipo: scuola}
+  EducationalOrganization: {tipo: scuola}
+  CollegeOrUniversity: {tipo: universita}
+  Hospital: {tipo: sanita}
+  MedicalClinic: {tipo: sanita}
+  MedicalOrganization: {tipo: sanita}
+  Library: {tipo: cultura}
+  Museum: {tipo: cultura}
+  Corporation: {natura: privato}
+  LocalBusiness: {natura: privato}
+  Store: {natura: privato}
+  OnlineStore: {natura: privato}
+  Restaurant: {natura: privato}
+  Hotel: {natura: privato}
+  NGO: {natura: terzo_settore}
+  NewsMediaOrganization: {tipo: altro, natura: privato}
+
+tipo_keywords:
+  comune:
+    - "comune di"
+    - "municipio!"
+    - "amministrazione comunale"
+    - "sindaco!"
+    - "mairie!"
+    - "commune de"
+    - "ville de"
+    - "hotel de ville"
+    - "ayuntamiento"
+    - "concello"
+    - "ajuntament"
+    - "udala!"
+    - "alcalde"
+    - "camara municipal"
+    - "freguesia"
+    - "gemeinde"
+    - "gemeindeverwaltung"
+    - "stadtverwaltung"
+    - "rathaus"
+    - "burgermeister"
+    - "marktgemeinde"
+    - "verbandsgemeinde"
+    - "gemeente"
+    - "gemeentehuis"
+    - "burgemeester"
+    - "stadhuis"
+    - "kommun!"
+    - "kommunen!"
+    - "kommune!"
+    - "kunta!"
+    - "kunnan"
+    - "kaupunki!"
+    - "kaupungin"
+    - "vallavalitsus"
+    - "linnavalitsus"
+    - "pasvaldiba"
+    - "savivaldybe"
+    - "seniunija"
+    - "urzad miasta"
+    - "urzad gminy"
+    - "gmina!"
+    - "burmistrz"
+    - "wojt!"
+    - "ratusz"
+    - "mestsky urad"
+    - "obecni urad"
+    - "obecny urad"
+    - "magistrat"
+    - "primator"
+    - "starosta!"
+    - "obcina!"
+    - "mestna obcina"
+    - "opcina!"
+    - "gradonacelnik"
+    - "gradska uprava"
+    - "onkormanyzat"
+    - "polgarmesteri hivatal"
+    - "primaria!"
+    - "consiliul local"
+    - "municipiul"
+    - "община!"
+    - "кметство"
+    - "δημος"
+    - "δημου"
+    - "kunsill lokali"
+    - "city council"
+    - "town council"
+    - "borough council"
+    - "city hall"
+    - "town hall"
+    - "mayor!"
+    - "municipality of"
+    - "municipal council"
+    # funzioni comunali usate al posto del nome letterale dell'ente (frequente nei comuni olandesi
+    # e tedeschi, la cui homepage nomina raramente "gemeente"/"stadt" per esteso)
+    - "gemeenteraad"
+    - "wethouder"
+    - "college van b en w"
+    - "burgerzaken"
+    - "gemeinderat"
+    - "stadtrat!"
+    - "conseil municipal"
+    - "conseiller municipal"
+    - "comhairle!"
+  ambiente:
+    # autorità di gestione idrica e protezione ambientale: stessa funzione, nomi molto diversi
+    # da paese a paese (l'obiettivo è che finiscano SEMPRE sotto lo stesso 'tipo', non lo stesso lessico)
+    - "waterschap!"
+    - "hoogheemraadschap"
+    - "waterbeheer!"
+    - "dijkgraaf"
+    - "omgevingsdienst"
+    - "milieudienst"
+    - "consorzio di bonifica"
+    - "autorita di bacino"
+    - "arpa!"
+    - "agenzia regionale per la protezione dell ambiente"
+    - "agence de l eau"
+    - "agence de l environnement"
+    - "office francais de la biodiversite"
+    - "wasserverband"
+    - "wasserwirtschaftsamt"
+    - "umweltamt"
+    - "umweltbundesamt"
+    - "confederacion hidrografica"
+    - "agencia del agua"
+    - "environment agency"
+    - "environmental protection agency"
+    - "river basin authority"
+    - "water authority"
+    - "agencia portuguesa do ambiente"
+    - "wody polskie"
+    - "naturvardsverket"
+    - "miljostyrelsen"
+    - "ymparistokeskus"
+    - "povodi!"
+    - "povodie!"
+    - "milieumaatschappij"
+    - "office de l eau"
+  regione_provincia:
+    - "regione!"
+    - "giunta regionale"
+    - "consiglio regionale"
+    - "provincia di"
+    - "citta metropolitana"
+    - "conseil regional"
+    - "departement!"
+    - "conseil departemental"
+    - "comunidad autonoma"
+    - "diputacion provincial"
+    - "diputacion de"
+    - "generalitat"
+    - "xunta"
+    - "gobierno regional"
+    - "landesregierung"
+    - "landkreis"
+    - "kreisverwaltung"
+    - "bezirksregierung"
+    - "regierungsprasidium"
+    - "landratsamt"
+    - "provincie!"
+    - "gewest!"
+    - "regionen!"
+    - "maakunta"
+    - "maavalitsus"
+    - "urzad wojewodzki"
+    - "wojewodztwo"
+    - "urzad marszalkowski"
+    - "starostwo powiatowe"
+    - "krajsky urad"
+    - "zupanija"
+    - "megyei"
+    - "kormanyhivatal"
+    - "consiliul judetean"
+    - "prefectura"
+    - "περιφερεια"
+    - "county council"
+    - "county government"
+    - "regional council"
+    - "regional government"
+    - "provincial government"
+    # buchi trovati in audit: portoghese, sloveno, lettone, bulgaro non avevano una parola propria
+    # per "regione" (le grafie esistenti sono troppo diverse per fare da prefisso)
+    - "regiao"
+    - "pokrajina"
+    - "novads!"
+    - "област"
+  polizia_sicurezza:
+    - "polizia!"
+    - "polizia locale"
+    - "carabinieri"
+    - "guardia di finanza"
+    - "police!"
+    - "policia"
+    - "guardia civil"
+    - "politia"
+    - "policja"
+    - "policie"
+    - "polizei"
+    - "landespolizei"
+    - "bundespolizei"
+    - "gendarmerie"
+    - "politie"
+    - "politi!"
+    - "polisen"
+    - "poliisi"
+    - "politsei"
+    - "policija"
+    - "rendorseg"
+    - "полиция"
+    - "αστυνομια"
+    - "pulizija"
+    - "garda siochana"
+    - "questura"
+    - "law enforcement"
+    - "public safety"
+    - "national police"
+    - "federal police"
+    # forme DEFINITE (con articolo suffisso) delle lingue scandinave: "politi!"/"police!" esatti
+    # NON le intercettano (differiscono per il suffisso), e una versione senza "!" rischierebbe
+    # collisioni pesanti ("politi" prefisso di "politics/political"; "polis" prefisso di "polish")
+    - "politiet!"
+    - "polisen!"
+    - "polismyndigheten"
+  governo_centrale:
+    - "governo!"
+    - "presidenza del consiglio"
+    - "ministero"
+    - "ministry"
+    - "ministere"
+    - "ministerio"
+    - "ministerium"
+    - "bundesministerium"
+    - "bundesregierung"
+    - "ministerie"
+    - "regering"
+    - "regjering"
+    - "hallitus!"
+    - "valitsus!"
+    - "valdiba"
+    - "vyriausybe"
+    - "rzad!"
+    - "ministerstwo"
+    - "vlada!"
+    - "ministerstvo"
+    - "ministrstvo"
+    - "kormany!"
+    - "miniszterium"
+    - "guvern!"
+    - "guvernul"
+    - "министерство"
+    - "правителство"
+    - "κυβερνηση"
+    - "υπουργειο"
+    - "gvern!"
+    - "ministeru"
+    - "prime minister"
+    - "federal government"
+    - "national government"
+    - "chancellery"
+    - "kancelaria premiera"
+    - "taoiseach!"
+  agenzia_authority:
+    # "agenzia!"/"agence!"/"agencia!" da soli erano troppo generici: intercettavano anche
+    # "agenzia di stampa" (AFP, tipo=altro non agenzia_authority!), "agenzia di viaggi",
+    # "agenzia immobiliare"... Trovato con audit_sample.py su un run reale (www.afp.com,
+    # conf 0.90). Sostituiti con le forme specifiche che un ente pubblico usa davvero.
+    - "agenzia nazionale"
+    - "agenzia regionale"
+    - "agenzia pubblica"
+    - "agenzia governativa"
+    - "agenzia delle"
+    - "agence nationale"
+    - "agence publique"
+    - "agence gouvernementale"
+    - "agencia nacional"
+    - "agencia estatal"
+    - "agencia publica"
+    - "agencia gubernamental"
+    - "agentur!"
+    - "bundesamt"
+    - "landesamt"
+    - "agentschap"
+    - "agentuur"
+    - "myndighet!"
+    - "virasto!"
+    - "authority!"
+    - "autorita"
+    - "autoridad"
+    - "regulator!"
+    - "inspectorate"
+    - "instituto nacional"
+    - "istituto nazionale"
+    - "national institute"
+    - "comision nacional"
+    - "ente nazionale"
+    - "ente pubblico"
+    - "public body"
+    - "statistics office"
+    - "central bank"
+    - "banca centrale"
+    - "banque nationale"
+    - "nationale bank"
+    # ispettorati e amministrazione fiscale: la stessa funzione ("autorità di controllo/riscossione
+    # dello stato") sotto nomi molto diversi
+    - "inspectie!"
+    - "rijksinspectie"
+    - "aufsichtsbehorde"
+    - "inspection generale"
+    - "ispettorato!"
+    - "belastingdienst"
+    - "finanzamt!"
+    - "tax authority"
+    - "agenzia delle entrate"
+    - "agencia tributaria"
+    # autorità di protezione dati: categoria distinta, ricorrente, poco coperta finora
+    - "data protection authority"
+    - "garante per la protezione dei dati"
+    - "datenschutzbehorde"
+    - "autorite de protection des donnees"
+    # organismi indipendenti/di controllo che ricorrono spesso in olandese (zelfstandig
+    # bestuursorgaan = "ZBO", la forma giuridica standard di questi enti nei Paesi Bassi) e enti
+    # intercomunali costituiti per legge (Wet gemeenschappelijke regelingen) per una singola
+    # funzione pubblica delegata (lavoro protetto, gestione aree ricreative...)
+    - "adviescollege"
+    - "rekenkamer!"
+    - "ombudsman!"
+    - "kiesraad!"
+    - "toezichthouder!"
+    - "zelfstandig bestuursorgaan"
+    - "werkvoorzieningschap"
+    - "sociale werkvoorziening"
+    - "sociaal werkbedrijf"
+    - "recreatieschap"
+  scuola:
+    - "scuola!"
+    - "istituto comprensivo"
+    - "istituto tecnico"
+    - "istituto professionale"
+    - "liceo!"
+    - "school!"
+    - "primary school"
+    - "secondary school"
+    - "ecole!"
+    - "lycee!"
+    - "groupe scolaire"
+    - "escuela!"
+    - "colegio!"
+    - "instituto de educacion secundaria"
+    - "escola!"
+    - "agrupamento de escolas"
+    - "schule!"
+    - "grundschule"
+    - "gymnasium!"
+    - "realschule"
+    - "gesamtschule"
+    - "berufsschule"
+    - "basisschool"
+    - "middelbare school"
+    - "skola!"
+    - "skolan!"
+    - "skole!"
+    - "koulu!"
+    - "lukio!"
+    - "kool!"
+    - "mokykla"
+    - "szkola"
+    - "zakladni skola"
+    - "gymnazium"
+    - "iskola!"
+    - "gimnazija"
+    - "osnovna skola"
+    - "scoala!"
+    - "liceul"
+    - "училище!"
+    - "гимназия!"
+    - "σχολειο"
+    - "γυμνασιο"
+    - "λυκειο"
+    - "anno scolastico"
+    - "school year"
+    - "schuljahr"
+    - "annee scolaire"
+    - "alunni!"
+    - "pupils!"
+    - "eleves!"
+    # prima infanzia: prima assente dal lessico di stadio 3 (solo Wikidata la conosceva)
+    - "kindergarten!"
+    - "asilo nido"
+    - "scuola dell infanzia"
+    - "kita!"
+    - "kindertagesstatte"
+    - "kleuterschool"
+    - "creche!"
+    - "guarderia"
+    - "scoil!"
+    # sloveno: la parola nuda "šola" spoglia degli accenti diventerebbe "sola", che pero' e' anche
+    # una comunissima parola italiana ("da sola") - uso solo le forme composte, piu' specifiche e sicure
+    - "osnovna sola"
+    - "srednja sola"
+    # scuole di musica: quasi sempre comunali/sovvenzionate, non erano coperte
+    - "muziekschool"
+    - "musikschule"
+    - "ecole de musique"
+    - "scuola di musica"
+    - "escuela de musica"
+  universita:
+    - "universit"
+    - "universid"
+    - "yliopisto"
+    - "ulikool"
+    - "egyetem"
+    - "uniwersytet"
+    - "университет"
+    - "πανεπιστημιο"
+    - "politecnico"
+    - "hochschule"
+    - "fachhochschule"
+    - "hogeschool"
+    - "grande ecole"
+    - "university of applied sciences"
+    - "facolta!"
+    - "faculty of"
+    - "erasmus"
+    - "conservatorio!"
+    - "sveuciliste!"
+  sanita:
+    - "ospedale"
+    - "azienda sanitaria"
+    - "azienda ospedaliera"
+    - "asl!"
+    - "asst!"
+    - "ausl!"
+    - "hospital"
+    - "nhs!"
+    - "national health service"
+    - "health service"
+    - "hopital"
+    - "centre hospitalier"
+    - "chu!"
+    - "centre de sante"
+    - "agence regionale de sante"
+    - "servicio de salud"
+    - "servei de salut"
+    - "centro de salud"
+    - "sanidad"
+    - "krankenhaus"
+    - "klinikum"
+    - "gesundheitsamt"
+    - "ziekenhuis"
+    - "sjukhus"
+    - "sjukvard"
+    - "sygehus"
+    - "sykehus"
+    - "sairaala"
+    - "haigla"
+    - "slimnic"
+    - "ligonine"
+    - "szpital"
+    - "nemocnice"
+    - "nemocnica"
+    - "bolnisnica"
+    - "bolnica"
+    - "korhaz"
+    - "spital!"
+    - "болница"
+    - "νοσοκομειο"
+    - "clinic!"
+    - "clinica"
+    - "clinique"
+    - "klinik!"
+    - "pronto soccorso"
+    - "urgences!"
+    - "urgencias!"
+    - "notaufnahme"
+    - "pazienti!"
+    - "patienten!"
+    - "pacientes!"
+    - "patients!"
+    # servizio sanitario/di sicurezza pubblica REGIONALE (non un singolo ospedale): stessa funzione,
+    # nomi molto diversi da paese a paese (coerenza di tipo, non di lessico)
+    - "ggd!"
+    - "gemeentelijke gezondheidsdienst"
+    - "openbare gezondheidszorg"
+    - "public health service"
+    - "public health authority"
+    - "agence de sante publique"
+    - "sante publique!"
+    - "salute pubblica!"
+    - "folkhalsomyndigheten"
+    - "gezondheidsdienst"
+    - "sundhedsstyrelsen"
+    - "sptar!"
+  giustizia:
+    - "tribunale"
+    - "procura!"
+    - "corte d appello"
+    - "corte di cassazione"
+    - "court!"
+    - "courts!"
+    - "tribunal"
+    - "cour d appel"
+    - "juzgado"
+    - "audiencia provincial"
+    - "audiencia nacional"
+    - "gericht!"
+    - "amtsgericht"
+    - "landgericht"
+    - "staatsanwaltschaft"
+    - "rechtbank"
+    - "openbaar ministerie"
+    - "domstol"
+    - "oikeus!"
+    - "kohus!"
+    - "tiesa!"
+    - "teismas"
+    - "okresni soud"
+    - "soud!"
+    - "sodisce"
+    - "birosag"
+    - "judecatoria"
+    - "съд!"
+    - "δικαστηριο"
+    - "qorti"
+  parlamento:
+    - "parlamento!"
+    - "camera dei deputati"
+    - "senato!"
+    - "parliament"
+    - "parlement"
+    - "assemblee nationale"
+    - "cortes generales"
+    - "congreso de los diputados"
+    - "senado!"
+    - "assembleia da republica"
+    - "bundestag"
+    - "bundesrat"
+    - "landtag"
+    - "tweede kamer"
+    - "eerste kamer"
+    - "riksdag"
+    - "folketing"
+    - "eduskunta"
+    - "riigikogu"
+    - "saeima"
+    - "seimas"
+    - "sejm!"
+    - "poslanecka snemovna"
+    - "snemovna!"
+    - "orszaggyules"
+    - "camera deputatilor"
+    - "парламент"
+    - "βουλη!"
+    - "oireachtas"
+    - "nationalrat!"
+    - "parlament!"
+    - "parlamentul"
+    - "sabor!"
+    - "drzavni zbor"
+    - "narodna rada"
+  emergenza:
+    - "vigili del fuoco"
+    - "protezione civile"
+    - "fire brigade"
+    - "fire department"
+    - "fire and rescue"
+    - "pompiers!"
+    - "sdis!"
+    - "bomberos"
+    - "proteccion civil"
+    - "bombeiros"
+    - "feuerwehr"
+    - "brandweer"
+    - "raddningstjanst"
+    - "brandvaesen"
+    - "pelastuslaitos"
+    - "paasteamet"
+    - "ugunsdzesibas"
+    - "straz pozarna"
+    - "hasici!"
+    - "tuzolto"
+    - "pompieri!"
+    - "πυροσβεστικη"
+    - "emergency services"
+    - "ambulanza"
+    - "civil protection"
+    - "ambulance!"
+    - "search and rescue"
+    - "vatrogasci"
+    - "gasilci"
+    - "priesgaisrine"
+    - "пожарна"
+  cultura:
+    - "museo!"
+    - "museum!"
+    - "musee!"
+    - "biblioteca!"
+    - "library!"
+    - "bibliotheque"
+    - "bibliothek"
+    - "bibliotheek"
+    - "archivio di stato"
+    - "archives!"
+    - "archivo!"
+    - "gallery!"
+    - "galleria!"
+    - "theatre!"
+    - "theater!"
+    - "teatro!"
+    - "cultural heritage"
+    - "patrimonio cultural"
+    - "opera house"
+    # "museo/museum" copriva per coincidenza solo le lingue con grafia simile (IT/EN/DE/FR/NL/scandinave):
+    # boemo/polacco/ungherese/slovacco, croato/sloveno, rumeno, lettone, lituano, estone, bulgaro e
+    # greco hanno una grafia troppo diversa per essere presa come prefisso di "museum!"/"museo!"
+    - "muzeum!"
+    - "muzej!"
+    - "muzeu!"
+    - "muzejs!"
+    - "muziejus!"
+    - "muuseum!"
+    - "muzew!"
+    - "музей"
+    - "μουσειο"
+  trasporti:
+    - "trasporti pubblici"
+    - "public transport"
+    - "transports en commun"
+    - "transporte publico"
+    - "opnv!"
+    - "verkehrsverbund"
+    - "openbaar vervoer"
+    - "kollektivtrafik"
+    - "ferrovie"
+    - "railways!"
+    - "chemins de fer"
+    - "ferrocarril"
+    - "spoorwegen"
+    - "transit authority"
+    - "aeroporto"
+    - "aeropuerto"
+    - "flughafen"
+    - "luchthaven"
+    - "port authority"
+    - "public transit"
+    - "regiotaxi"
+    - "vervoersorganisatie"
+  altro:
+    - "camera di commercio"
+    - "chambre de commerce"
+    - "camara de comercio"
+    - "handelskammer"
+    - "kamer van koophandel"
+    - "chamber of commerce"
+    # "news": agenzie/testate giornalistiche (natura quasi sempre privato o terzo settore, ma il
+    # TIPO va comunque etichettato invece di restare sconosciuto — vedi anche jsonld_types
+    # NewsMediaOrganization qui sotto, che ora porta anche questo tipo)
+    - "news agency"
+    - "press agency"
+    - "nieuwsdienst"
+    - "persbureau"
+    - "agence de presse"
+    - "agenzia di stampa"
+    - "agencia de noticias"
+
+# Marcatori "pubblico" / "privato" (natura), contati come tipo_keywords.
+public_markers:
+  - "sito istituzionale"
+  - "sito ufficiale del comune"
+  - "official website of the"
+  - "official site of the"
+  - "site officiel de la"
+  - "site officiel du"
+  - "sitio oficial"
+  - "sede electronica"
+  - "offizielle website"
+  - "offizielle webseite"
+  - "amtliche"
+  - "korperschaft des offentlichen rechts"
+  - "anstalt des offentlichen rechts"
+  - "public authority"
+  - "public sector"
+  - "government of"
+  - "gouvernement"
+  - "gobierno de"
+  - "overheid"
+  - "rijksoverheid"
+  - "republic of"
+  - "republica"
+  - "republique"
+  - "republik"
+  - "kingdom of"
+  - "koninkrijk"
+  - "royaume"
+  - "transparencia"
+  - "trasparenza"
+  - "albo pretorio"
+  - "open data"
+  - "e government"
+  - "egovernment"
+  - "servizi al cittadino"
+  - "services aux citoyens"
+  - "burgerservice"
+  - "citizens!"
+  - "cittadini!"
+  - "ciudadanos!"
+  # nome ufficiale dello Stato ("Repubblica"/"Regno"...): segnale fortissimo di natura=pubblico,
+  # ma prima copriva solo le lingue romanze e il tedesco/olandese/francese. Mancavano intere
+  # famiglie linguistiche (slava, baltica, ungherese, greca, scandinava).
+  - "republika"
+  - "vabariik"
+  - "koztarsasag"
+  - "република"
+  - "δημοκρατια"
+  - "rzeczpospolita"
+  - "kongeriget"
+  - "konungariket"
+  - "kongeriket"
+  - "reino de"
+  # trovati in audit successivo, mancavano proprio le grafie NAZIONALI del nome ufficiale dello
+  # Stato in tre casi importanti: l'italiano stesso (doppia 'b', non intercettato da "republica"
+  # con una 'b' sola), il lituano (si scrive "Respublika", con una 's' in piu' rispetto a "republika"),
+  # e il finlandese e il maltese, che usano parole di famiglia completamente diversa
+  - "repubblica"
+  - "respublika"
+  - "tasavalta"
+  - "repubblika"
+  - "bundesrepublik!"
+  # marcatori specifici per enti pubblici SPECIALIZZATI (sanità, scuola, cultura, trasporti,
+  # authority...) che di norma non usano mai le parole generiche sopra ("governo", "ministero"...)
+  # nella propria homepage, pur essendo enti pubblici senza ambiguità. A differenza di "ospedale"/
+  # "scuola"/"museo" (che possono benissimo essere privati), questi nomi/sigle SONO l'ente pubblico:
+  # non forzano mai un intero 'tipo' a pubblico (vedi PUBLIC_BY_NATURE nel codice), solo il singolo
+  # marcatore quando compare per davvero nel testo della pagina.
+  - "ggd!"
+  - "veiligheidsregio"
+  - "zelfstandig bestuursorgaan"
+  - "gemeenschappelijke regeling"
+  - "staatsbosbeheer"
+  - "rijksmuseum!"
+private_markers:
+  - "gmbh!"
+  - "srl!"
+  - "ltd!"
+  - "limited!"
+  - "inc!"
+  - "llc!"
+  - "sarl!"
+  - "add to cart"
+  - "shopping cart"
+  - "buy now"
+  - "webshop"
+  - "online shop"
+  - "book now"
+  - "pricing!"
+  - "our clients"
+  - "our customers"
+  - "free trial"
+  - "request a quote"
+  - "get a quote"
+  - "unsere kunden"
+  - "nos clients"
+  - "nuestros clientes"
+  - "i nostri clienti"
+  - "warenkorb"
+  - "panier!"
+  - "carrito"
+  - "carrello"
+
+# Marcatori "terzo settore": associazioni, fondazioni, ODV/APS, ONG, sindacati, club sportivi...
+# Non sono organi statali (non vanno votati 'pubblico'), ma spesso vivono di contributi/sovvenzioni
+# pubbliche e non sono nemmeno un'impresa privata comune: natura A SE', distinta anche da 'incerto'
+# (che resta per i casi in cui davvero non si capisce nulla). Estendere guardando i falsi negativi,
+# come per gli altri lessici.
+terzo_settore_markers:
+  - "associazione!"
+  - "associazione di volontariato"
+  - "associazione di promozione sociale"
+  - "associazione sportiva dilettantistica"
+  - "aps!"
+  - "odv!"
+  - "onlus!"
+  - "asd!"
+  - "ente del terzo settore"
+  - "impresa sociale"
+  - "cooperativa sociale"
+  - "federcaccia"
+  - "federpesca"
+  - "associazione pescatori"
+  - "associazione venatoria"
+  - "vereniging!"
+  - "stichting!"
+  - "vzw!"
+  - "verein!"
+  - "eingetragener verein"
+  - "gemeinnutzig!"
+  - "angelverein"
+  - "jagdverband"
+  - "jagdverein"
+  - "association loi 1901"
+  - "asbl!"
+  - "aisbl!"
+  - "fondation!"
+  - "association de peche"
+  - "federation!"
+  - "fundacion!"
+  - "fundacao!"
+  - "alapitvany!"
+  - "nadace!"
+  - "sihtasutus!"
+  - "ngo!"
+  - "ong!"
+  - "non profit organization"
+  - "nonprofit organization"
+  - "non governmental organization"
+  - "charity!"
+  - "charitable organization"
+  - "voluntary organisation"
+  - "voluntary organization"
+  - "civil society organization"
+  - "third sector"
+  - "sindacato!"
+  - "gewerkschaft!"
+  - "trade union"
+  - "hunting association"
+  - "fishing association"
+  - "angling club"
+  # forme "associazione/società" mancanti: scandinave, baltiche, slave (prima coperte solo
+  # IT/DE/NL/FR/EN) — parole specifiche e non ambigue, non termini generici tipo "unione"
+  - "forening!"
+  - "yhdistys!"
+  - "drustvo!"
+  - "stowarzyszenie!"
+  - "fundacja!"
+  - "egyesulet!"
+  - "udruga!"
+  - "biedriba!"
+  - "сдружение"
+  # "syndicat" da solo è ambiguo in francese (esiste il "syndicat intercommunal", un ente
+  # pubblico): si usa la forma specifica, non la parola nuda
+  - "syndicat professionnel"
+
+# Pagina "legale/chi siamo" da aprire (un solo salto) se la homepage non basta.
+legal_link_patterns:
+  - "impressum"
+  - "mentions legales"
+  - "aviso legal"
+  - "note legali"
+  - "legal notice"
+  - "imprint"
+  - "colofon"
+  - "informativa legale"
+  - "chi siamo"
+  - "about us"
+  - "o nas"
+  - "quienes somos"
+  - "qui sommes nous"
+  - "uber uns"
+  - "over ons"
+
+# --------------------------------------------------------------------------
+# Stadio 2 - classi Wikidata (etichette inglesi delle P31 dell'entità)
+# --------------------------------------------------------------------------
+# Per ogni etichetta di classe vale la voce con la parola chiave PIÙ LUNGA che combacia
+# (così "government agency" batte "government"). natura assente = nessun voto su natura.
+wikidata_class_keywords:
+  - {kw: "public university",   tipo: universita, natura: pubblico, conf: 0.9}
+  - {kw: "state university",    tipo: universita, natura: pubblico, conf: 0.9}
+  - {kw: "national university", tipo: universita, natura: pubblico, conf: 0.85}
+  - {kw: "private university",  tipo: universita, natura: privato,  conf: 0.9}
+  - {kw: "university",          tipo: universita, conf: 0.8}
+  - {kw: "polytechnic",         tipo: universita, conf: 0.8}
+  - {kw: "higher education",    tipo: universita, conf: 0.8}
+  - {kw: "college",             tipo: universita, conf: 0.6}
+  - {kw: "public school",       tipo: scuola, natura: pubblico, conf: 0.9}
+  - {kw: "state school",        tipo: scuola, natura: pubblico, conf: 0.9}
+  - {kw: "private school",      tipo: scuola, natura: privato,  conf: 0.9}
+  - {kw: "school",              tipo: scuola, conf: 0.8}
+  - {kw: "gymnasium",           tipo: scuola, conf: 0.8}
+  - {kw: "lyceum",              tipo: scuola, conf: 0.8}
+  - {kw: "kindergarten",        tipo: scuola, conf: 0.7}
+  - {kw: "public hospital",     tipo: sanita, natura: pubblico, conf: 0.9}
+  - {kw: "private hospital",    tipo: sanita, natura: privato,  conf: 0.9}
+  - {kw: "hospital",            tipo: sanita, conf: 0.8}
+  - {kw: "clinic",              tipo: sanita, conf: 0.7}
+  - {kw: "health authority",    tipo: sanita, natura: pubblico, conf: 0.85}
+  - {kw: "health service",      tipo: sanita, natura: pubblico, conf: 0.8}
+  - {kw: "municipality",        tipo: comune, natura: pubblico, conf: 0.85}
+  - {kw: "commune",             tipo: comune, natura: pubblico, conf: 0.85}
+  - {kw: "borough",             tipo: comune, natura: pubblico, conf: 0.8}
+  - {kw: "city",                tipo: comune, natura: pubblico, conf: 0.7}
+  - {kw: "town",                tipo: comune, natura: pubblico, conf: 0.7}
+  - {kw: "province",            tipo: regione_provincia, natura: pubblico, conf: 0.8}
+  - {kw: "region",              tipo: regione_provincia, natura: pubblico, conf: 0.75}
+  - {kw: "county",              tipo: regione_provincia, natura: pubblico, conf: 0.8}
+  - {kw: "department of france", tipo: regione_provincia, natura: pubblico, conf: 0.85}
+  - {kw: "autonomous community", tipo: regione_provincia, natura: pubblico, conf: 0.85}
+  - {kw: "federated state",     tipo: regione_provincia, natura: pubblico, conf: 0.85}
+  - {kw: "voivodeship",         tipo: regione_provincia, natura: pubblico, conf: 0.85}
+  - {kw: "ministry",            tipo: governo_centrale, natura: pubblico, conf: 0.9}
+  - {kw: "government",          tipo: governo_centrale, natura: pubblico, conf: 0.8}
+  - {kw: "cabinet",             tipo: governo_centrale, natura: pubblico, conf: 0.8}
+  - {kw: "government agency",   tipo: agenzia_authority, natura: pubblico, conf: 0.85}
+  - {kw: "public body",         tipo: agenzia_authority, natura: pubblico, conf: 0.8}
+  - {kw: "regulatory",          tipo: agenzia_authority, natura: pubblico, conf: 0.8}
+  - {kw: "authority",           tipo: agenzia_authority, conf: 0.6}
+  - {kw: "agency",              tipo: agenzia_authority, conf: 0.6}
+  - {kw: "police",              tipo: polizia_sicurezza, natura: pubblico, conf: 0.9}
+  - {kw: "gendarmerie",         tipo: polizia_sicurezza, natura: pubblico, conf: 0.9}
+  - {kw: "law enforcement",     tipo: polizia_sicurezza, natura: pubblico, conf: 0.9}
+  - {kw: "court",               tipo: giustizia, natura: pubblico, conf: 0.85}
+  - {kw: "tribunal",            tipo: giustizia, natura: pubblico, conf: 0.85}
+  - {kw: "prosecutor",          tipo: giustizia, natura: pubblico, conf: 0.85}
+  - {kw: "parliament",          tipo: parlamento, natura: pubblico, conf: 0.85}
+  - {kw: "legislature",         tipo: parlamento, natura: pubblico, conf: 0.85}
+  - {kw: "senate",              tipo: parlamento, natura: pubblico, conf: 0.85}
+  - {kw: "fire department",     tipo: emergenza, natura: pubblico, conf: 0.85}
+  - {kw: "fire brigade",        tipo: emergenza, natura: pubblico, conf: 0.85}
+  - {kw: "fire service",        tipo: emergenza, natura: pubblico, conf: 0.85}
+  - {kw: "civil protection",    tipo: emergenza, natura: pubblico, conf: 0.85}
+  - {kw: "museum",              tipo: cultura, conf: 0.75}
+  - {kw: "library",             tipo: cultura, conf: 0.75}
+  - {kw: "archive",             tipo: cultura, conf: 0.75}
+  - {kw: "theatre",             tipo: cultura, conf: 0.7}
+  - {kw: "public transport",    tipo: trasporti, conf: 0.7}
+  - {kw: "railway",             tipo: trasporti, conf: 0.7}
+  - {kw: "airport",             tipo: trasporti, conf: 0.7}
+  - {kw: "chamber of commerce", tipo: altro, conf: 0.8}
+  - {kw: "news agency",         tipo: altro, natura: privato, conf: 0.75}
+  - {kw: "press agency",        tipo: altro, natura: privato, conf: 0.75}
+  - {kw: "wire service",        tipo: altro, natura: privato, conf: 0.7}
+  - {kw: "environmental protection agency", tipo: ambiente, natura: pubblico, conf: 0.9}
+  - {kw: "river basin authority",           tipo: ambiente, natura: pubblico, conf: 0.9}
+  - {kw: "water board",                     tipo: ambiente, natura: pubblico, conf: 0.85}
+  - {kw: "water authority",                 tipo: ambiente, natura: pubblico, conf: 0.85}
+  - {kw: "environment agency",              tipo: ambiente, natura: pubblico, conf: 0.85}
+  - {kw: "state owned enterprise", natura: incerto, conf: 0.6}
+  - {kw: "state-owned enterprise", natura: incerto, conf: 0.6}
+  - {kw: "public company",      natura: incerto, conf: 0.6}
+  - {kw: "company",             natura: privato, conf: 0.55}
+  - {kw: "business",            natura: privato, conf: 0.55}
+  - {kw: "enterprise",          natura: privato, conf: 0.55}
+  - {kw: "corporation",         natura: privato, conf: 0.55}
+  - {kw: "brand",               natura: privato, conf: 0.55}
+  - {kw: "political party",     natura: privato, conf: 0.6}
+  - {kw: "non-governmental organization", natura: terzo_settore, conf: 0.8}
+  - {kw: "non-governmental",    natura: terzo_settore, conf: 0.6}
+  - {kw: "voluntary association", natura: terzo_settore, conf: 0.7}
+  - {kw: "trade union",         natura: terzo_settore, conf: 0.75}
+  - {kw: "sports club",         natura: terzo_settore, conf: 0.6}
+  - {kw: "hunting association", natura: terzo_settore, conf: 0.75}
+  - {kw: "fishing association", natura: terzo_settore, conf: 0.75}
+  - {kw: "charitable organization", natura: terzo_settore, conf: 0.75}
+  - {kw: "nonprofit organization", natura: terzo_settore, conf: 0.75}
+  - {kw: "foundation",          natura: terzo_settore, conf: 0.6}
+
+# --------------------------------------------------------------------------
+# Override PER PAESE: voci valide solo quando classify_sites.py gira con --country XX, E SOLO se
+# la lingua dichiarata dalla homepage (<html lang="...">) combacia con quella attesa (di default,
+# il codice paese in minuscolo: si può dichiarare esplicitamente con 'lang' se non coincidono,
+# es. un domani per un paese plurilingue). Pagina senza 'lang' dichiarato -> l'override NON scatta:
+# meglio perdere un match vero che rischiare un falso positivo quando non si sa la lingua reale.
+# Servono per parole utili ma troppo rischiose a livello GLOBALE perché collidono con una parola
+# comune di UN'ALTRA lingua (es. "sąd" = tribunale in polacco, ma anche "sad" = triste in inglese):
+# il doppio filtro (country + lang) riduce il rischio residuo quasi a zero.
+# Si sommano al lessico globale, non lo sostituiscono (restano valide anche "tribunale", "court"...).
+country_overrides:
+  PL:
+    lang: pl
+    tipo_keywords:
+      giustizia: ["sad!"]     # "sąd" (tribunale): rischioso globalmente (inglese "sad"=triste)
+  HR:
+    lang: hr
+    tipo_keywords:
+      giustizia: ["sud!"]     # "sud" (tribunale croato): rischioso globalmente (francese "sud"=sud)
+  SK:
+    lang: sk
+    tipo_keywords:
+      giustizia: ["sud!"]     # "súd" (tribunale slovacco): stesso motivo
+  NL:
+    lang: nl
+    # Segnale debole (natura=privato, confidenza 0.35, MAI decisivo da solo) quando il TLD non è
+    # tra questi. Base empirica: campione REALE di 60 host 'sconosciuto' etichettati a mano
+    # (29-30/2026) — .nl/.org erano pubblico/terzo_settore nel 57% dei casi, contro il 2,4% di
+    # .com/.fr/.de/.fi/.uk. Campione ancora piccolo (56 righe valide): da riverificare quando se ne
+    # etichettano altri. '.eu' incluso perché copre organismi/consorzi europei con sede NL.
+    allowed_tlds: [nl, org, eu]
+    tipo_keywords:
+      # sigle olandesi troppo corte per essere sicure a livello globale (RDW/UWV potrebbero essere
+      # le iniziali di qualunque azienda in un'altra lingua), sicure con country+lang insieme
+      agenzia_authority: ["rdw!", "uwv!"]

@@ -1,0 +1,25 @@
+# Ambiente virtuale Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Dati scaricati o generati dalla pipeline (non versionare file grandi/derivati)
+data/raw/*.xlsx
+data/raw/*.json
+data/processed/*.csv
+data/results/*.csv
+data/results/*.json
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/results/.gitkeep
+
+# VSCode locale (tieni versionati solo settings.json/launch.json condivisi)
+.vscode/*.log
+
+# Dati di input voluminosi/rigenerabili (IndicePA, data.gouv.fr, liste siti)
+data/raw/*/
+data/processed/*/
+*_backup-*
+*_scartate_hostname_invalido.csv
+.env

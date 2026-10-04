@@ -1,0 +1,125 @@
+# Regole di classificazione dei cookie impostati dalla homepage
+# (05_scrape_dark_stack.py, sezione cookie_tracker). Ogni regola:
+#   pattern: sottostringa cercata nel NOME del cookie (case-insensitive)
+#   categoria: tecnico | profilazione
+#   vendor: nome leggibile per i report
+#
+# Vince la PRIMA regola che matcha (stesso comportamento di
+# dark_stack_rules.yaml). Un cookie che non matcha nessuna regola finisce
+# nella categoria 'sconosciuto': NON viene contato né come tecnico né come
+# di profilazione, per non gonfiare artificialmente nessuna delle due
+# statistiche — vedi 'n_cookie_sconosciuti' nel report.
+#
+# LIMITE METODOLOGICO (importante): questa è una classificazione euristica
+# sul NOME del cookie, non un'analisi legale ai sensi del GDPR/ePrivacy. La
+# qualificazione giuridica reale di un cookie come "di profilazione"
+# dipende dalla finalità del trattamento dichiarata dal titolare, non solo
+# dal fatto che il nome assomigli a quello di un vendor noto di tracking.
+# Va letta come "cookie il cui nome è tipicamente associato ad attività di
+# tracciamento/profilazione", un forte indizio ma non una prova.
+#
+# File pensato per essere esteso senza toccare il codice Python.
+
+- pattern: "_ga"
+  categoria: profilazione
+  vendor: "Google Analytics"
+- pattern: "_gid"
+  categoria: profilazione
+  vendor: "Google Analytics"
+- pattern: "_gat"
+  categoria: profilazione
+  vendor: "Google Analytics"
+- pattern: "_fbp"
+  categoria: profilazione
+  vendor: "Meta Pixel"
+- pattern: "_fbc"
+  categoria: profilazione
+  vendor: "Meta Pixel"
+- pattern: "fr"
+  categoria: profilazione
+  vendor: "Meta (Facebook) Ads"
+- pattern: "ide"
+  categoria: profilazione
+  vendor: "Google DoubleClick/Ads"
+- pattern: "_hjid"
+  categoria: profilazione
+  vendor: "Hotjar"
+- pattern: "_hjsession"
+  categoria: profilazione
+  vendor: "Hotjar"
+- pattern: "_clck"
+  categoria: profilazione
+  vendor: "Microsoft Clarity"
+- pattern: "_clsk"
+  categoria: profilazione
+  vendor: "Microsoft Clarity"
+- pattern: "_gcl_"
+  categoria: profilazione
+  vendor: "Google Ads (conversion linker)"
+- pattern: "_pk_id"
+  categoria: profilazione
+  vendor: "Matomo (modalità non anonimizzata)"
+- pattern: "muid"
+  categoria: profilazione
+  vendor: "Microsoft Advertising"
+- pattern: "nid"
+  categoria: profilazione
+  vendor: "Google (pubblicità/preferenze)"
+
+- pattern: "phpsessid"
+  categoria: tecnico
+  vendor: "Sessione applicativa (PHP)"
+- pattern: "jsessionid"
+  categoria: tecnico
+  vendor: "Sessione applicativa (Java)"
+- pattern: "asp.net_sessionid"
+  categoria: tecnico
+  vendor: "Sessione applicativa (ASP.NET)"
+- pattern: "csrftoken"
+  categoria: tecnico
+  vendor: "Protezione CSRF"
+- pattern: "csrf_token"
+  categoria: tecnico
+  vendor: "Protezione CSRF"
+- pattern: "xsrf-token"
+  categoria: tecnico
+  vendor: "Protezione CSRF"
+- pattern: "cookieconsent"
+  categoria: tecnico
+  vendor: "Banner cookie (memorizza la scelta dell'utente)"
+- pattern: "cookielawinfo"
+  categoria: tecnico
+  vendor: "Banner cookie (CookieYes/CookieLaw)"
+- pattern: "cookie_notice"
+  categoria: tecnico
+  vendor: "Banner cookie"
+- pattern: "euconsent"
+  categoria: tecnico
+  vendor: "IAB TCF (registra il consenso, non traccia di per sé)"
+- pattern: "wordpress_"
+  categoria: tecnico
+  vendor: "WordPress (autenticazione/sessione)"
+- pattern: "wp-settings"
+  categoria: tecnico
+  vendor: "WordPress (preferenze pannello)"
+- pattern: "cfid"
+  categoria: tecnico
+  vendor: "ColdFusion (sessione)"
+- pattern: "cftoken"
+  categoria: tecnico
+  vendor: "ColdFusion (sessione)"
+- pattern: "lang"
+  categoria: tecnico
+  vendor: "Preferenza lingua"
+- pattern: "cookiesession"
+  categoria: tecnico
+  vendor: "Sessione generica"
+- pattern: "session_id"
+  categoria: tecnico
+  vendor: "Sessione generica"
+- pattern: "sessionid"
+  categoria: tecnico
+  vendor: "Sessione generica"
+- pattern: "remember_token"
+  categoria: tecnico
+  vendor: "Autenticazione persistente"

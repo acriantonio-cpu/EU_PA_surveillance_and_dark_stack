@@ -1,0 +1,155 @@
+# Configurazione per tools/postprocess_checkpoints.py
+#
+# Stesso principio di config.yaml (dst_rev3) e dei file data/rules/*.yaml
+# di quel progetto gemello: le euristiche e le liste qui sotto si possono
+# modificare liberamente SENZA toccare il codice Python. Tutti i valori
+# hanno comunque un default sensato nello script, quindi anche un file
+# parziale (o assente) funziona.
+
+input:
+  # Cartella che contiene, per ogni paese, data/input/{ISO}/crawl_checkpoint.json
+  # e (se presente) crawl_progress.json. Percorso relativo alla cartella
+  # principale del progetto (dove si lancia lo script).
+  data_input_dir: "data/input"
+  # Vuoto = tutti i paesi trovati sotto data_input_dir con un checkpoint
+  # valido. Altrimenti lista di codici ISO, es. ["BE", "DE", "FR"].
+  countries: []
+
+output:
+  output_dir: "data/output/_postprocess"
+
+report_generale:
+  includi_domini_in_pausa: true
+  includi_errori_dettaglio: true
+  max_errori_mostrati_per_paese: 30
+
+link_sospetti:
+  abilitato: true
+
+  # --- soglia per lo "shortlist" prioritario -------------------------------
+  # Un dominio di terza parte visto su un numero di pagine DISTINTE (in
+  # tutto il crawl, tutti i paesi insieme) minore o uguale a questa soglia
+  # entra nello shortlist principale (link_sospetti.*) — un dominio raro,
+  # in mezzo a centinaia di enti, è statisticamente più interessante da
+  # controllare a mano di uno onnipresente (es. Google Fonts). Il file
+  # 'tutte_le_terze_parti.csv' resta comunque completo, senza filtro, per
+  # chi vuole l'intero quadro.
+  soglia_pagine_rarita: 5
+
+  # --- punteggio euristico (NON un verdetto, solo un ordine di lettura) ---
+  peso_tipo_riferimento:
+    script: 3        # dipendenza ESEGUIBILE (Caso B) — il rischio più alto
+    iframe: 3        # dipendenza EMBEDDED (Caso C)
+    link_risorsa: 1  # <link href> — CSS/font/preconnect
+    img: 1           # dipendenza di CONTENUTO (Caso D)
+    link: 1          # semplice <a href> cliccabile (Caso A)
+  peso_no_https: 1
+  peso_ip_letterale: 2
+  peso_punycode: 2
+  peso_tld_sospetto: 2
+  peso_parola_chiave_sospetta: 2
+  peso_rarita_singola_pagina: 2   # bonus se il dominio compare su UNA sola pagina in tutto il crawl
+
+  tld_sospetti:
+    - "zip"
+    - "mov"
+    - "top"
+    - "xyz"
+    - "click"
+    - "gq"
+    - "tk"
+    - "ml"
+    - "cf"
+    - "work"
+    - "loan"
+    - "win"
+    - "rest"
+    - "surf"
+
+  parole_chiave_sospette:
+    - "casino"
+    - "bet"
+    - "poker"
+    - "loan"
+    - "crypto"
+    - "free-"
+    - "prize"
+    - "winner"
+    - "gift-card"
+    - "airdrop"
+    - "wallet-"
+
+  # Domini/vendor noti e legittimi, esclusi SEMPRE dallo shortlist
+  # prioritario (restano comunque visibili in 'tutte_le_terze_parti.csv').
+  # Match per suffisso (es. 'googleapis.com' esclude anche
+  # 'fonts.googleapis.com'). Stesso principio di dark_stack_rules.yaml in
+  # dst_rev3: estendibile senza toccare il codice.
+  domini_esclusi_sempre:
+    - "fonts.googleapis.com"
+    - "fonts.gstatic.com"
+    - "google-analytics.com"
+    - "googletagmanager.com"
+    - "cdnjs.cloudflare.com"
+    - "cdn.jsdelivr.net"
+    - "unpkg.com"
+    - "youtube.com"
+    - "ytimg.com"
+    - "player.vimeo.com"
+    - "maps.googleapis.com"
+    - "maps.gstatic.com"
+    - "connect.facebook.net"
+    - "use.fontawesome.com"
+    - "gravatar.com"
+
+  # File JSON persistente: il campo 'minaccia_confermata_da_umano' e
+  # l'eventuale 'note' di un revisore NON vengono mai sovrascritti da un
+  # run successivo per un dominio già presente — solo riportati avanti e
+  # aggiornati con le pagine/tipi nuovi in cui quel dominio ricompare.
+  # Percorso relativo a output.output_dir.
+  file_persistente: "link_sospetti.json"
+
+# --- Controllo minacce automatico (Google Safe Browsing + VirusTotal) -----
+# Arricchisce OGNI dominio con un verdetto informativo (mai un filtro: un
+# dominio commerciale o pubblicitario resta mappato esattamente come tutti
+# gli altri). Le chiavi API si leggono da variabile d'ambiente (mai da
+# questo file): imposta GOOGLE_SAFE_BROWSING_API_KEY e/o VIRUSTOTAL_API_KEY
+# prima di lanciare lo script (es. in un file .env caricato dalla shell).
+# Se una chiave manca, quel fronte resta semplicemente 'non_controllato' e
+# il resto del post-processing prosegue senza errori.
+controllo_minacce:
+  abilitato: true
+
+  # Cache persistente (percorso relativo a output.output_dir): un dominio
+  # già controllato non viene richiesto di nuovo finché non passano
+  # 'ttl_giorni_cache' giorni. Consuma poca quota anche su run ripetuti.
+  cache_file: "cache_minacce.json"
+  ttl_giorni_cache: 90
+
+  # Google Safe Browsing: applicato a TUTTI i domini non esclusi/non in
+  # cache fresca. Costa 1 richiesta ogni 'gsb_dimensione_batch' domini
+  # (non 1 a dominio). Con 10.000 richieste/giorno gratuite e batch da 500
+  # il limite teorico è 5.000.000 di domini/giorno. 'gsb_limite_batch_giornaliero'
+  # è un tetto esplicito di sicurezza: 5000 batch x 500 = 2.500.000 domini/giorno
+  # (il valore precedente, 15, ne consentiva solo 7.500 al giorno).
+  gsb_dimensione_batch: 500
+  gsb_limite_batch_giornaliero: 5000
+
+  # VirusTotal: tier gratuito molto più stretto (4/minuto, 500/giorno) ->
+  # va usato SOLO su un sottoinsieme di domini, non su tutto l'universo:
+  # quelli con punteggio euristico >= soglia, quelli rari (sotto
+  # 'soglia_pagine_rarita' di link_sospetti), o quelli già flaggati da
+  # Google Safe Browsing in questo stesso run.
+  vt_limite_giornaliero: 480
+  vt_secondi_tra_chiamate: 16
+  # NOTA: ogni tipo di riferimento pesa già >=1 in 'peso_tipo_riferimento'
+  # qui sopra (anche solo <img>/<a href>) -> una soglia di 1 manderebbe a
+  # VT quasi ogni dominio. 3 intercetta solo script/iframe da soli, o più
+  # euristiche minori sommate insieme (es. no-https + TLD sospetto).
+  vt_solo_se_punteggio_euristico_almeno: 3
+  vt_solo_se_raro_sotto_soglia_pagine: true
+  vt_controlla_anche_se_flag_gsb: true
+
+  timeout_secondi: 15
+  nomi_variabili_ambiente:
+    google_safe_browsing: "GOOGLE_SAFE_BROWSING_API_KEY"
+    virustotal: "VIRUSTOTAL_API_KEY"

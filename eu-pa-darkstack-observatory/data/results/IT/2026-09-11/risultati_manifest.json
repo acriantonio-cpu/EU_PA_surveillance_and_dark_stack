@@ -1,0 +1,35 @@
+{
+  "timestamp_utc": "2026-09-11T19:00:53.021647+00:00",
+  "paese": "IT",
+  "run_id": "2026-09-11",
+  "n_righe_input": 500,
+  "n_righe_da_processare_questo_run": 500,
+  "resume": false,
+  "skip_http": false,
+  "misurazioni": {
+    "dns_base": true,
+    "asn_hosting": true,
+    "tls_base": true,
+    "tls_avanzato": true,
+    "http_headers_cdn": true,
+    "tempi_risposta": true,
+    "as_hegemony": false
+  },
+  "asn_metodo": "cymru_bulk",
+  "concorrenza": 15,
+  "concorrenza_per_provider": 3,
+  "chunk_size": 200,
+  "delay_seconds": 0.5,
+  "timeout_seconds": 5.0,
+  "http_timeout_seconds": 6.0,
+  "tls_timeout_seconds": 5.0,
+  "http_user_agent": "Mozilla/5.0 (compatible; osservatorio-infra-pubblica/1.0)",
+  "dnspython_version": "2.8.0",
+  "python_version": "3.12.10",
+  "os": "Windows-11-10.0.22631-SP0",
+  "resolver_nameservers": [
+    "192.168.108.254",
+    "192.168.1.254"
+  ],
+  "script": "02_probe_infra.py"
+}

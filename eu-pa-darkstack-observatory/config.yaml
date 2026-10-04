@@ -1,0 +1,110 @@
+# =============================================================================
+# config.yaml — configurazione unica del Dark Stack Toolkit
+# =============================================================================
+# Tutti gli script della pipeline (02, 03, 05, 06) leggono questo file come
+# sorgente di default. Non serve editare il codice per attivare/disattivare
+# una misurazione: basta cambiare True/False qui sotto e rilanciare.
+#
+# Ogni voce di "misurazioni" corrisponde a una fase di raccolta dati. Alcune
+# sono "gratis" (usano una connessione già aperta per un'altra misurazione),
+# altre aprono connessioni di rete IN PIÙ per ogni sito e quindi allungano
+# sensibilmente il tempo totale su un campione grande: il commento accanto a
+# ciascuna dice il costo relativo, così puoi decidere cosa conviene misurare
+# in base al tempo che hai.
+#
+# Partono tutte a True. Se un run è troppo lento, disattiva prima le voci
+# marcate "LENTO" e tieni quelle marcate "gratis"/"veloce".
+#
+# NOTA: --skip-http da riga di comando (02_probe_infra.py) resta disponibile
+# come scorciatoia e ha la precedenza su questo file: disattiva in un colpo
+# solo tls_base + tls_avanzato + http_headers_cdn + tempi_risposta.
+
+paese: FR
+
+# User-Agent mandato nelle richieste HTTP (02, 05, 06). Lasciato vuoto (o
+# rimuovi la riga) per usare il default onesto/auto-dichiarato di ciascuno
+# script (consigliato: è un progetto di interesse pubblico, dichiararsi è
+# buona pratica). ATTENZIONE: alcuni siti dietro CDN/WAF (soprattutto
+# Cloudflare) rispondono 403 a uno User-Agent che si dichiara come bot —
+# vedi http_status nel risultati.csv. Se ti serve un tasso di blocchi più
+# basso, scommenta e personalizza la riga sotto (è una scelta esplicita di
+# chi lancia lo script, non un default nascosto):
+# http_user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+http_user_agent: null
+
+# OTTIMIZZAZIONE (settembre 2026) — vedi src/asn_bulk.py per il dettaglio.
+# 'cymru_bulk' (default): risolve ASN/operatore in blocco via Team Cymru
+# whois bulk (poche query invece di una per IP) — elimina la quasi totalità
+# dei "..._lookup_failed:HTTPRateLimitError" che si vedono nella colonna
+# 'errori' su un campione grande con RDAP puro. 'rdap': comportamento
+# originale, un lookup RDAP per IP (più lento, più a rischio rate limit;
+# utile solo per confronto o se la rete blocca la porta 43/TCP in uscita).
+asn_metodo: cymru_bulk
+
+# Quanti hostname sondare IN PARALLELO nella fase DNS e nella fase TLS/HTTP
+# (02_probe_infra.py). Alza questo numero per andare più veloce su un
+# campione grande; abbassalo se la tua rete/il tuo router fatica con troppe
+# connessioni simultanee, o se vuoi essere più leggero verso i siti sondati.
+concorrenza: 10
+
+# Tetto massimo di connessioni TLS/HTTP simultanee verso lo STESSO blocco
+# IP (indipendente da 'concorrenza' sopra): protegge un singolo operatore
+# che ospita molti enti del campione dall'essere bombardato tutto insieme.
+# Vedi src/asn_bulk.py (LimitatorePerBlocco) per il dettaglio.
+concorrenza_per_provider: 3
+
+# OTTIMIZZAZIONE (seconda passata, settembre 2026): fallback RIPEstat fra il
+# bulk Cymru e l'RDAP per-IP finale per gli IP che il bulk non risolve —
+# vedi src/asn_bulk.py, resolve_asn_ripestat(). Puramente additivo: se
+# RIPEstat è irraggiungibile o disattivato, il comportamento è identico a
+# prima (fallback diretto su RDAP). Attivo di default.
+asn_ripestat_abilitato: true
+
+# Tetto di richieste al secondo verso i servizi RDAP/RIPEstat CONDIVISI (non
+# il bulk Cymru, che ha il suo protocollo/retry a parte) — vedi
+# src/rate_limiter.py. 0 o un numero negativo disattiva il limite.
+asn_rate_limit_per_secondo: 5
+
+misurazioni:
+  # --- 02_probe_infra.py : DNS / hosting / TLS / HTTP -----------------------
+  dns_base: true            # NS, MX, A/AAAA, DNSSEC, CAA, SPF, DMARC — veloce, query DNS locali
+  asn_hosting: true         # ASN/operatore via RDAP (IP web/mail/NS) — medio, 1-3 lookup RDAP extra per hostname
+  tls_base: true             # emittente/versione/scadenza certificato — veloce, 1 connessione TLS
+  tls_avanzato: true        # LENTO: scansione protocolli deboli attivi (TLS1.0/1.1), cipher, HSTS, tls_grade — fino a 4 connessioni TLS extra per hostname, è la voce più lenta della fase 2
+  http_headers_cdn: true    # header Server/Via, rilevamento CDN — veloce, 1 richiesta HTTP
+  tempi_risposta: true      # gratis: misurato sulla stessa richiesta di http_headers_cdn, richiede http_headers_cdn=true
+
+  # --- 05_scrape_dark_stack.py : terze parti (facoltativo nella pipeline) --
+  dark_stack_terze_parti: true   # LENTO: domini terzi (analytics/CDN/captcha/...) da HTML statico — 1 richiesta HTTP + N lookup RDAP sui domini terzi trovati
+  cookie_tracker: true           # gratis: cookie della homepage, classificati tecnici/profilazione — stessa richiesta di dark_stack_terze_parti, richiede dark_stack_terze_parti=true
+  terze_parti_dettaglio_link: true  # GRATIS se dark_stack_terze_parti è già attivo (nessuna richiesta di rete propria): per ogni dominio di terza parte, la URL ESATTA della prima pagina in cui è stato trovato + l'elenco di tutte le pagine — file separati terze_parti_da_verificare.csv/.md, pensati per la verifica manuale di link sospetti/pagine compromesse (aggiunta su richiesta, settembre 2026)
+
+  # --- 06_fingerprint_cms.py : software/licenza (nuovo script, facoltativo) -
+  cms_fingerprint: true     # MEDIO: rilevamento CMS/software e licenza da fingerprint HTML — 1 richiesta HTTP per hostname (spesso riusa la cache già scaricata se esegui anche 05)
+
+  # --- 03_analyze.py : aggregazioni (seconda passata, settembre 2026) ------
+  tracker_hhi: true         # GRATIS: concentrazione dei tracker/terze parti per organizzazione madre (Google, Meta, ...), calcolata sui dati già raccolti da dark_stack_terze_parti — nessuna richiesta di rete in più, richiede dark_stack_terze_parti=true per avere dati su cui calcolare qualcosa
+  as_hegemony: false        # SPERIMENTALE, SPENTO di default: dipendenza dall'AS di transito via IHR (Internet Health Report, non RIPEstat — vedi src/as_hegemony.py). Una richiesta di rete extra per ASN di origine distinto (cache per-ASN, non per-hostname); non verificato contro il servizio reale in fase di sviluppo, attivare consapevolmente e controllare la colonna 'errori' per 'as_hegemony_failed'
+
+  # --- 07_resilience.py : ridondanza NS/endpoint effettivamente osservabile (terza passata, settembre 2026, opzionale) ---
+  resilienza_dinamica: true  # SPENTO di default: interroga OGNI server NS dichiarato separatamente e testa OGNI indirizzo A/AAAA pubblicato (non solo il primo, a differenza di 02) — LENTO su un campione grande e aggiunge connessioni TCP/TLS oltre a quelle già fatte da 02; attivare consapevolmente. Se true, run_pipeline.py lancia 07_resilience.py subito dopo 02 (vedi anche --skip-resilienza); se false lo salta senza nemmeno avviare il processo.
+
+  # --- 03_analyze.py : indice sintetico di dipendenza tecnologica (terza passata, settembre 2026) ---
+  indice_dipendenza_tecnologica: true  # GRATIS se le misurazioni sottostanti sono già attive: combina hosting_dns, tracker_concentrazione_hhi, software_licenze (già calcolati) + resilience.csv (se presente, vedi resilienza_dinamica sopra) in un indice 0-100 con etichetta di affidabilità. Nessuna richiesta di rete propria.
+
+  # --- 08_classifica_tipo_ente.py : tipo di ente dal testo homepage (quarta passata, settembre 2026) ---
+  tipo_ente_classificazione: true  # COSTO MEDIO/ALTO (un fetch completo della homepage per hostname, come 05/06): classifica comune/provincia/regione/scuola/università/sanità/polizia/vigili del fuoco/camera di commercio/ministero/giustizia dal testo (24 lingue UE, vedi data/rules/tipo_ente_rules.yaml). Include anche, GRATIS sulla stessa richiesta, il tempo di download della pagina COMPLETA e il suo peso in KB (misura diversa da http_response_time_ms di 02, che si ferma agli header) e un segnale di possibile ente NON pubblico (forma societaria privata/e-commerce nella homepage) da rivedere a mano prima di escludere righe.
+
+timeout_secondi:
+  dns: 5.0
+  http: 6.0
+  tls: 5.0
+  tls_avanzato: 5.0
+  dark_stack_http: 8.0
+  dark_stack_dns: 5.0
+  cms_fingerprint_http: 8.0
+
+delay_secondi:
+  probe_infra: 0.5
+  dark_stack: 0.5
+  cms_fingerprint: 0.5

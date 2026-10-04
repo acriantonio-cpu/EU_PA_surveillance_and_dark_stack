@@ -1,0 +1,2336 @@
+{
+  "paese": "IT",
+  "run_id": "2026-09-11",
+  "metodo_operatore": "asn",
+  "n_enti_analizzati": 500,
+  "hosting_dns": {
+    "dimensione_campione": 500,
+    "con_dato_valido": 465,
+    "copertura_pct": 93.0,
+    "affidabilita_copertura": "alta",
+    "n_asn_distinti": 71,
+    "hhi_operatori": 1049.6,
+    "hhi_categoria": "non concentrato",
+    "hhi_affidabile": true,
+    "hhi_nota": null,
+    "top10_operatori": [
+      {
+        "asn": "31034",
+        "organizzazione": "ARUBA-ASN Aruba S.p.A.",
+        "n_enti": 126,
+        "quota_pct": 27.1
+      },
+      {
+        "asn": "16509",
+        "organizzazione": "AMAZON-02 - Amazon.com, Inc.",
+        "n_enti": 57,
+        "quota_pct": 12.3
+      },
+      {
+        "asn": "52030",
+        "organizzazione": "SERVERPLAN-AS Server Plan S.r.l.",
+        "n_enti": 29,
+        "quota_pct": 6.2
+      },
+      {
+        "asn": "13335",
+        "organizzazione": "CLOUDFLARENET - Cloudflare, Inc.",
+        "n_enti": 24,
+        "quota_pct": 5.2
+      },
+      {
+        "asn": "20746",
+        "organizzazione": "ASN-IDC Telecom Italia S.p.A.",
+        "n_enti": 23,
+        "quota_pct": 4.9
+      },
+      {
+        "asn": "16276",
+        "organizzazione": "OVH OVH SAS",
+        "n_enti": 17,
+        "quota_pct": 3.7
+      },
+      {
+        "asn": "12874",
+        "organizzazione": "FASTWEB Fastweb SpA",
+        "n_enti": 16,
+        "quota_pct": 3.4
+      },
+      {
+        "asn": "24940",
+        "organizzazione": "HETZNER-AS Hetzner Online GmbH",
+        "n_enti": 15,
+        "quota_pct": 3.2
+      },
+      {
+        "asn": "60087",
+        "organizzazione": "ASSUPERNOVA Netsons s.r.l.",
+        "n_enti": 11,
+        "quota_pct": 2.4
+      },
+      {
+        "asn": "15169",
+        "organizzazione": "GOOGLE - Google LLC",
+        "n_enti": 11,
+        "quota_pct": 2.4
+      }
+    ]
+  },
+  "hosting_mail": {
+    "dimensione_campione": 500,
+    "con_dato_valido": 466,
+    "copertura_pct": 93.2,
+    "affidabilita_copertura": "alta",
+    "n_asn_distinti": 44,
+    "hhi_operatori": 1939.1,
+    "hhi_categoria": "moderatamente concentrato",
+    "hhi_affidabile": true,
+    "hhi_nota": null,
+    "top10_operatori": [
+      {
+        "asn": "31034",
+        "organizzazione": "ARUBA-ASN Aruba S.p.A.",
+        "n_enti": 127,
+        "quota_pct": 27.3
+      },
+      {
+        "asn": "15169",
+        "organizzazione": "GOOGLE - Google LLC",
+        "n_enti": 118,
+        "quota_pct": 25.3
+      },
+      {
+        "asn": "8075",
+        "organizzazione": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+        "n_enti": 106,
+        "quota_pct": 22.7
+      },
+      {
+        "asn": "39729",
+        "organizzazione": "REGISTER-AS REGISTER S.P.A.",
+        "n_enti": 17,
+        "quota_pct": 3.6
+      },
+      {
+        "asn": "16509",
+        "organizzazione": "AMAZON-02 - Amazon.com, Inc.",
+        "n_enti": 12,
+        "quota_pct": 2.6
+      },
+      {
+        "asn": "52030",
+        "organizzazione": "SERVERPLAN-AS Server Plan S.r.l.",
+        "n_enti": 11,
+        "quota_pct": 2.4
+      },
+      {
+        "asn": "12874",
+        "organizzazione": "FASTWEB Fastweb SpA",
+        "n_enti": 10,
+        "quota_pct": 2.1
+      },
+      {
+        "asn": "60087",
+        "organizzazione": "ASSUPERNOVA Netsons s.r.l.",
+        "n_enti": 6,
+        "quota_pct": 1.3
+      },
+      {
+        "asn": "16276",
+        "organizzazione": "OVH OVH SAS",
+        "n_enti": 4,
+        "quota_pct": 0.9
+      },
+      {
+        "asn": "12637",
+        "organizzazione": "SEEWEB SEEWEB s.r.l.",
+        "n_enti": 4,
+        "quota_pct": 0.9
+      }
+    ]
+  },
+  "dnssec_attivo_pct": 2.0,
+  "spf_presente_pct": 89.8,
+  "dmarc_presente_pct": 60.6,
+  "dmarc_policy_reject_o_quarantine_pct": 11.8,
+  "dmarc_completo": {
+    "dmarc_presente_pct": 60.6,
+    "distribuzione_policy": {
+      "reject": 29,
+      "quarantine": 30,
+      "none": 243,
+      "assente_o_non_determinato": 197
+    },
+    "distribuzione_policy_pct": {
+      "reject": 5.8,
+      "quarantine": 6.0,
+      "none": 48.6,
+      "assente_o_non_determinato": 39.4
+    }
+  },
+  "senza_ridondanza_ns": {
+    "n_enti_con_un_solo_ns_secondlevel": 270,
+    "pct": 54.0
+  },
+  "errori_misurazione": {
+    "n_enti_con_almeno_un_errore": 56,
+    "pct_enti_con_almeno_un_errore": 11.2,
+    "top10_tipi_errore": [
+      {
+        "tipo": "tls_failed",
+        "n_occorrenze": 51
+      },
+      {
+        "tipo": "tls_cipher_failed",
+        "n_occorrenze": 51
+      },
+      {
+        "tipo": "http_failed",
+        "n_occorrenze": 39
+      },
+      {
+        "tipo": "dnssec_check_failed",
+        "n_occorrenze": 10
+      },
+      {
+        "tipo": "asn_ns_lookup_failed",
+        "n_occorrenze": 3
+      },
+      {
+        "tipo": "asn_a_lookup_failed",
+        "n_occorrenze": 2
+      },
+      {
+        "tipo": "asn_mx_lookup_failed",
+        "n_occorrenze": 1
+      }
+    ],
+    "top10_categorie_errore": [
+      {
+        "categoria": "sconosciuto",
+        "n_occorrenze": 68
+      },
+      {
+        "categoria": "connessione_rifiutata",
+        "n_occorrenze": 40
+      },
+      {
+        "categoria": "timeout",
+        "n_occorrenze": 29
+      },
+      {
+        "categoria": "dns_non_risolto",
+        "n_occorrenze": 10
+      },
+      {
+        "categoria": "rate_limited",
+        "n_occorrenze": 6
+      },
+      {
+        "categoria": "tls_fallito",
+        "n_occorrenze": 4
+      }
+    ],
+    "nota": "Un errore su un campo (es. asn_a_lookup_failed) non impedisce le altre misurazioni sulla stessa riga: guarda le colonne specifiche per capire cosa manca su un singolo ente. 'top10_tipi_errore' dice DOVE (quale campo), 'top10_categorie_errore' dice PERCHÉ in termini canonici (rate_limited, timeout, connessione_rifiutata, ...): rate_limited frequente indica rate limiting dei registri RDAP/RIPEstat, non un problema dei siti misurati."
+  },
+  "hosting_dns_per_hostname_unico": {
+    "dimensione_campione": 493,
+    "con_dato_valido": 458,
+    "copertura_pct": 92.9,
+    "affidabilita_copertura": "alta",
+    "n_asn_distinti": 71,
+    "hhi_operatori": 1072.9,
+    "hhi_categoria": "non concentrato",
+    "hhi_affidabile": true,
+    "hhi_nota": null,
+    "top10_operatori": [
+      {
+        "asn": "31034",
+        "organizzazione": "ARUBA-ASN Aruba S.p.A.",
+        "n_enti": 126,
+        "quota_pct": 27.5
+      },
+      {
+        "asn": "16509",
+        "organizzazione": "AMAZON-02 - Amazon.com, Inc.",
+        "n_enti": 57,
+        "quota_pct": 12.4
+      },
+      {
+        "asn": "52030",
+        "organizzazione": "SERVERPLAN-AS Server Plan S.r.l.",
+        "n_enti": 29,
+        "quota_pct": 6.3
+      },
+      {
+        "asn": "13335",
+        "organizzazione": "CLOUDFLARENET - Cloudflare, Inc.",
+        "n_enti": 24,
+        "quota_pct": 5.2
+      },
+      {
+        "asn": "20746",
+        "organizzazione": "ASN-IDC Telecom Italia S.p.A.",
+        "n_enti": 23,
+        "quota_pct": 5.0
+      },
+      {
+        "asn": "12874",
+        "organizzazione": "FASTWEB Fastweb SpA",
+        "n_enti": 16,
+        "quota_pct": 3.5
+      },
+      {
+        "asn": "24940",
+        "organizzazione": "HETZNER-AS Hetzner Online GmbH",
+        "n_enti": 15,
+        "quota_pct": 3.3
+      },
+      {
+        "asn": "60087",
+        "organizzazione": "ASSUPERNOVA Netsons s.r.l.",
+        "n_enti": 11,
+        "quota_pct": 2.4
+      },
+      {
+        "asn": "15169",
+        "organizzazione": "GOOGLE - Google LLC",
+        "n_enti": 11,
+        "quota_pct": 2.4
+      },
+      {
+        "asn": "16276",
+        "organizzazione": "OVH OVH SAS",
+        "n_enti": 10,
+        "quota_pct": 2.2
+      }
+    ],
+    "nota": "Stessa metrica di sopra ma su 493 hostname distinti invece di 500 righe/enti (un hostname condiviso da più enti pesa qui UNA sola volta, non una per ogni ente che lo usa)."
+  },
+  "hosting_mail_per_hostname_unico": {
+    "dimensione_campione": 493,
+    "con_dato_valido": 459,
+    "copertura_pct": 93.1,
+    "affidabilita_copertura": "alta",
+    "n_asn_distinti": 44,
+    "hhi_operatori": 1916.6,
+    "hhi_categoria": "moderatamente concentrato",
+    "hhi_affidabile": true,
+    "hhi_nota": null,
+    "top10_operatori": [
+      {
+        "asn": "31034",
+        "organizzazione": "ARUBA-ASN Aruba S.p.A.",
+        "n_enti": 120,
+        "quota_pct": 26.1
+      },
+      {
+        "asn": "15169",
+        "organizzazione": "GOOGLE - Google LLC",
+        "n_enti": 118,
+        "quota_pct": 25.7
+      },
+      {
+        "asn": "8075",
+        "organizzazione": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+        "n_enti": 106,
+        "quota_pct": 23.1
+      },
+      {
+        "asn": "39729",
+        "organizzazione": "REGISTER-AS REGISTER S.P.A.",
+        "n_enti": 17,
+        "quota_pct": 3.7
+      },
+      {
+        "asn": "16509",
+        "organizzazione": "AMAZON-02 - Amazon.com, Inc.",
+        "n_enti": 12,
+        "quota_pct": 2.6
+      },
+      {
+        "asn": "52030",
+        "organizzazione": "SERVERPLAN-AS Server Plan S.r.l.",
+        "n_enti": 11,
+        "quota_pct": 2.4
+      },
+      {
+        "asn": "12874",
+        "organizzazione": "FASTWEB Fastweb SpA",
+        "n_enti": 10,
+        "quota_pct": 2.2
+      },
+      {
+        "asn": "60087",
+        "organizzazione": "ASSUPERNOVA Netsons s.r.l.",
+        "n_enti": 6,
+        "quota_pct": 1.3
+      },
+      {
+        "asn": "16276",
+        "organizzazione": "OVH OVH SAS",
+        "n_enti": 4,
+        "quota_pct": 0.9
+      },
+      {
+        "asn": "12637",
+        "organizzazione": "SEEWEB SEEWEB s.r.l.",
+        "n_enti": 4,
+        "quota_pct": 0.9
+      }
+    ],
+    "nota": "Stessa metrica di sopra ma su 493 hostname distinti invece di 500 righe/enti (un hostname condiviso da più enti pesa qui UNA sola volta, non una per ogni ente che lo usa)."
+  },
+  "hosting_nameserver": {
+    "dimensione_campione": 500,
+    "con_dato_valido": 478,
+    "copertura_pct": 95.6,
+    "affidabilita_copertura": "alta",
+    "n_asn_distinti": 76,
+    "hhi_operatori": 1260.2,
+    "hhi_categoria": "non concentrato",
+    "hhi_affidabile": true,
+    "hhi_nota": null,
+    "top10_operatori": [
+      {
+        "asn": "31034",
+        "organizzazione": "ARUBA-ASN Aruba S.p.A.",
+        "n_enti": 150,
+        "quota_pct": 31.4
+      },
+      {
+        "asn": "16509",
+        "organizzazione": "AMAZON-02 - Amazon.com, Inc.",
+        "n_enti": 46,
+        "quota_pct": 9.6
+      },
+      {
+        "asn": "24806",
+        "organizzazione": "INTERNET-CZ INTERNET CZ, a.s.",
+        "n_enti": 37,
+        "quota_pct": 7.7
+      },
+      {
+        "asn": "13335",
+        "organizzazione": "CLOUDFLARENET - Cloudflare, Inc.",
+        "n_enti": 32,
+        "quota_pct": 6.7
+      },
+      {
+        "asn": "8622",
+        "organizzazione": "ISIONUK TEAM BLUE INTERNET SERVICES UK LIMITED",
+        "n_enti": 20,
+        "quota_pct": 4.2
+      },
+      {
+        "asn": "52030",
+        "organizzazione": "SERVERPLAN-AS Server Plan S.r.l.",
+        "n_enti": 16,
+        "quota_pct": 3.3
+      },
+      {
+        "asn": "12874",
+        "organizzazione": "FASTWEB Fastweb SpA",
+        "n_enti": 14,
+        "quota_pct": 2.9
+      },
+      {
+        "asn": "39729",
+        "organizzazione": "REGISTER-AS REGISTER S.P.A.",
+        "n_enti": 14,
+        "quota_pct": 2.9
+      },
+      {
+        "asn": "60087",
+        "organizzazione": "ASSUPERNOVA Netsons s.r.l.",
+        "n_enti": 13,
+        "quota_pct": 2.7
+      },
+      {
+        "asn": "16276",
+        "organizzazione": "OVH OVH SAS",
+        "n_enti": 11,
+        "quota_pct": 2.3
+      }
+    ]
+  },
+  "hosting_nameserver_per_hostname_unico": {
+    "dimensione_campione": 493,
+    "con_dato_valido": 471,
+    "copertura_pct": 95.5,
+    "affidabilita_copertura": "alta",
+    "n_asn_distinti": 76,
+    "hhi_operatori": 1205.5,
+    "hhi_categoria": "non concentrato",
+    "hhi_affidabile": true,
+    "hhi_nota": null,
+    "top10_operatori": [
+      {
+        "asn": "31034",
+        "organizzazione": "ARUBA-ASN Aruba S.p.A.",
+        "n_enti": 143,
+        "quota_pct": 30.4
+      },
+      {
+        "asn": "16509",
+        "organizzazione": "AMAZON-02 - Amazon.com, Inc.",
+        "n_enti": 46,
+        "quota_pct": 9.8
+      },
+      {
+        "asn": "24806",
+        "organizzazione": "INTERNET-CZ INTERNET CZ, a.s.",
+        "n_enti": 37,
+        "quota_pct": 7.9
+      },
+      {
+        "asn": "13335",
+        "organizzazione": "CLOUDFLARENET - Cloudflare, Inc.",
+        "n_enti": 32,
+        "quota_pct": 6.8
+      },
+      {
+        "asn": "8622",
+        "organizzazione": "ISIONUK TEAM BLUE INTERNET SERVICES UK LIMITED",
+        "n_enti": 20,
+        "quota_pct": 4.2
+      },
+      {
+        "asn": "52030",
+        "organizzazione": "SERVERPLAN-AS Server Plan S.r.l.",
+        "n_enti": 16,
+        "quota_pct": 3.4
+      },
+      {
+        "asn": "12874",
+        "organizzazione": "FASTWEB Fastweb SpA",
+        "n_enti": 14,
+        "quota_pct": 3.0
+      },
+      {
+        "asn": "39729",
+        "organizzazione": "REGISTER-AS REGISTER S.P.A.",
+        "n_enti": 14,
+        "quota_pct": 3.0
+      },
+      {
+        "asn": "60087",
+        "organizzazione": "ASSUPERNOVA Netsons s.r.l.",
+        "n_enti": 13,
+        "quota_pct": 2.8
+      },
+      {
+        "asn": "16276",
+        "organizzazione": "OVH OVH SAS",
+        "n_enti": 11,
+        "quota_pct": 2.3
+      }
+    ],
+    "nota": "Stessa metrica di sopra ma su 493 hostname distinti invece di 500 righe/enti (un hostname condiviso da più enti pesa qui UNA sola volta, non una per ogni ente che lo usa)."
+  },
+  "cdn_proxy_rilevati": {
+    "n_enti_con_cdn_rilevato": 47,
+    "pct": 9.4,
+    "distribuzione": [
+      {
+        "cdn": "Cloudflare",
+        "n_enti": 26
+      },
+      {
+        "cdn": "Varnish (generico)",
+        "n_enti": 10
+      },
+      {
+        "cdn": "Amazon CloudFront",
+        "n_enti": 10
+      },
+      {
+        "cdn": "Fastly",
+        "n_enti": 1
+      }
+    ]
+  },
+  "giurisdizione_holding_hosting": {
+    "nota": "Euristica su nome operatore RDAP, non un dato giuridico verificato (vedi 02_probe_infra.py)",
+    "distribuzione": [
+      {
+        "giurisdizione": "Italia (Aruba)",
+        "n_enti": 126
+      },
+      {
+        "giurisdizione": "USA (Amazon/AWS)",
+        "n_enti": 58
+      },
+      {
+        "giurisdizione": "Italia (TIM)",
+        "n_enti": 28
+      },
+      {
+        "giurisdizione": "USA (Cloudflare)",
+        "n_enti": 25
+      },
+      {
+        "giurisdizione": "USA (Google)",
+        "n_enti": 20
+      },
+      {
+        "giurisdizione": "Italia (Fastweb)",
+        "n_enti": 19
+      },
+      {
+        "giurisdizione": "Francia (OVH)",
+        "n_enti": 17
+      },
+      {
+        "giurisdizione": "Germania (Hetzner)",
+        "n_enti": 15
+      },
+      {
+        "giurisdizione": "Italia (Seeweb)",
+        "n_enti": 9
+      },
+      {
+        "giurisdizione": "USA (Microsoft/Azure)",
+        "n_enti": 9
+      },
+      {
+        "giurisdizione": "USA (Oracle Cloud)",
+        "n_enti": 6
+      },
+      {
+        "giurisdizione": "USA (Akamai)",
+        "n_enti": 6
+      },
+      {
+        "giurisdizione": "Germania (IONOS)",
+        "n_enti": 1
+      },
+      {
+        "giurisdizione": "Lituania (Hostinger)",
+        "n_enti": 1
+      }
+    ]
+  },
+  "giurisdizione_holding_aggregata": {
+    "nota": "Aggregazione automatica delle etichette di giurisdizione_holding per macro-area geografica.",
+    "n_enti_con_dato": 340,
+    "pct_su_campione": 68.0,
+    "distribuzione": [
+      {
+        "macro_area": "Italia",
+        "n_enti": 182,
+        "pct_su_campione": 36.4
+      },
+      {
+        "macro_area": "USA",
+        "n_enti": 124,
+        "pct_su_campione": 24.8
+      },
+      {
+        "macro_area": "Francia",
+        "n_enti": 17,
+        "pct_su_campione": 3.4
+      },
+      {
+        "macro_area": "Germania",
+        "n_enti": 16,
+        "pct_su_campione": 3.2
+      },
+      {
+        "macro_area": "Lituania",
+        "n_enti": 1,
+        "pct_su_campione": 0.2
+      }
+    ]
+  },
+  "cdn_extra_ue": {
+    "nota": "'Extra-UE' qui = IP del sito (record A) geolocalizzato via RDAP in un Paese fuori dallo Spazio Economico Europeo, incrociato con la presenza di una CDN nota rilevata dagli header HTTP. È un criterio geografico sull'IP, non sulla nazionalità della società che gestisce la CDN (vedi 'giurisdizione_holding_hosting' sopra per quello).",
+    "n_enti_con_cdn_e_ip_extra_see": 0,
+    "pct_su_enti_con_cdn": 0.0,
+    "pct_su_campione_totale": 0.0
+  },
+  "tempi_risposta_http": {
+    "n_enti_con_dato": 461,
+    "pct_su_campione": 92.2,
+    "media_ms": 788.5,
+    "mediana_ms": 446.0,
+    "p95_ms": 2659.5,
+    "max_ms": 7378.1
+  },
+  "tls_robustezza": {
+    "n_enti_con_dato": 449,
+    "distribuzione_grade": {
+      "A": 125,
+      "B": 324,
+      "C": 0,
+      "D": 0
+    },
+    "n_enti_con_protocolli_deboli_attivi": 0,
+    "pct_con_protocolli_deboli_attivi": 0.0,
+    "n_enti_con_hsts": 127,
+    "pct_con_hsts": 25.4
+  },
+  "certificati_tls": {
+    "n_enti_con_certificato_letto": 449,
+    "distribuzione_versione_tls": [
+      {
+        "versione": "TLSv1.3",
+        "n_enti": 400
+      },
+      {
+        "versione": "TLSv1.2",
+        "n_enti": 49
+      }
+    ],
+    "top10_emittenti": [
+      {
+        "emittente": "Let's Encrypt",
+        "n_enti": 251
+      },
+      {
+        "emittente": "Actalis S.p.A.",
+        "n_enti": 93
+      },
+      {
+        "emittente": "Google Trust Services",
+        "n_enti": 25
+      },
+      {
+        "emittente": "DigiCert Inc",
+        "n_enti": 24
+      },
+      {
+        "emittente": "Sectigo Limited",
+        "n_enti": 24
+      },
+      {
+        "emittente": "Amazon",
+        "n_enti": 9
+      },
+      {
+        "emittente": "GlobalSign nv-sa",
+        "n_enti": 5
+      },
+      {
+        "emittente": "ZeroSSL GmbH",
+        "n_enti": 4
+      },
+      {
+        "emittente": "GoDaddy.com, Inc.",
+        "n_enti": 3
+      },
+      {
+        "emittente": "Plesk",
+        "n_enti": 2
+      }
+    ],
+    "certificati_scaduti": {
+      "n_enti": 7,
+      "pct_su_campione": 1.4
+    },
+    "certificati_in_scadenza_entro_30_giorni": {
+      "n_enti": 33,
+      "pct_su_campione": 6.6
+    }
+  },
+  "http_status": {
+    "n_enti_con_risposta": 461,
+    "pct_su_campione": 92.2,
+    "distribuzione_fasce": {
+      "2xx": 438,
+      "3xx": 0,
+      "4xx": 18,
+      "5xx": 5,
+      "nessuna_risposta": 39
+    },
+    "top10_codici": [
+      {
+        "codice": 200,
+        "n_enti": 438
+      },
+      {
+        "codice": 403,
+        "n_enti": 13
+      },
+      {
+        "codice": 503,
+        "n_enti": 3
+      },
+      {
+        "codice": 404,
+        "n_enti": 3
+      },
+      {
+        "codice": 429,
+        "n_enti": 2
+      },
+      {
+        "codice": 502,
+        "n_enti": 1
+      },
+      {
+        "codice": 530,
+        "n_enti": 1
+      }
+    ],
+    "nota": "403/406/429/503 possono indicare un WAF/anti-bot che blocca la richiesta (vedi User-Agent in config.yaml, http_user_agent) invece di un problema reale del sito: non trattare automaticamente come 'sito rotto'."
+  },
+  "per_settore": {
+    "altro": {
+      "n_enti": 226,
+      "hosting_dns": {
+        "dimensione_campione": 226,
+        "con_dato_valido": 208,
+        "copertura_pct": 92.0,
+        "affidabilita_copertura": "alta",
+        "n_asn_distinti": 55,
+        "hhi_operatori": 1015.6,
+        "hhi_categoria": "non concentrato",
+        "hhi_affidabile": true,
+        "hhi_nota": null,
+        "top10_operatori": [
+          {
+            "asn": "31034",
+            "organizzazione": "ARUBA-ASN Aruba S.p.A.",
+            "n_enti": 59,
+            "quota_pct": 28.4
+          },
+          {
+            "asn": "16276",
+            "organizzazione": "OVH OVH SAS",
+            "n_enti": 14,
+            "quota_pct": 6.7
+          },
+          {
+            "asn": "16509",
+            "organizzazione": "AMAZON-02 - Amazon.com, Inc.",
+            "n_enti": 11,
+            "quota_pct": 5.3
+          },
+          {
+            "asn": "12874",
+            "organizzazione": "FASTWEB Fastweb SpA",
+            "n_enti": 9,
+            "quota_pct": 4.3
+          },
+          {
+            "asn": "15169",
+            "organizzazione": "GOOGLE - Google LLC",
+            "n_enti": 9,
+            "quota_pct": 4.3
+          },
+          {
+            "asn": "8075",
+            "organizzazione": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+            "n_enti": 9,
+            "quota_pct": 4.3
+          },
+          {
+            "asn": "24940",
+            "organizzazione": "HETZNER-AS Hetzner Online GmbH",
+            "n_enti": 8,
+            "quota_pct": 3.8
+          },
+          {
+            "asn": "13335",
+            "organizzazione": "CLOUDFLARENET - Cloudflare, Inc.",
+            "n_enti": 8,
+            "quota_pct": 3.8
+          },
+          {
+            "asn": "52030",
+            "organizzazione": "SERVERPLAN-AS Server Plan S.r.l.",
+            "n_enti": 6,
+            "quota_pct": 2.9
+          },
+          {
+            "asn": "31898",
+            "organizzazione": "ORACLE-BMC-31898 - Oracle Corporation",
+            "n_enti": 5,
+            "quota_pct": 2.4
+          }
+        ]
+      }
+    },
+    "camera_commercio": {
+      "n_enti": 143,
+      "hosting_dns": {
+        "dimensione_campione": 143,
+        "con_dato_valido": 136,
+        "copertura_pct": 95.1,
+        "affidabilita_copertura": "alta",
+        "n_asn_distinti": 37,
+        "hhi_operatori": 1244.6,
+        "hhi_categoria": "non concentrato",
+        "hhi_affidabile": true,
+        "hhi_nota": null,
+        "top10_operatori": [
+          {
+            "asn": "31034",
+            "organizzazione": "ARUBA-ASN Aruba S.p.A.",
+            "n_enti": 42,
+            "quota_pct": 30.9
+          },
+          {
+            "asn": "52030",
+            "organizzazione": "SERVERPLAN-AS Server Plan S.r.l.",
+            "n_enti": 13,
+            "quota_pct": 9.6
+          },
+          {
+            "asn": "13335",
+            "organizzazione": "CLOUDFLARENET - Cloudflare, Inc.",
+            "n_enti": 11,
+            "quota_pct": 8.1
+          },
+          {
+            "asn": "16509",
+            "organizzazione": "AMAZON-02 - Amazon.com, Inc.",
+            "n_enti": 9,
+            "quota_pct": 6.6
+          },
+          {
+            "asn": "39729",
+            "organizzazione": "REGISTER-AS REGISTER S.P.A.",
+            "n_enti": 5,
+            "quota_pct": 3.7
+          },
+          {
+            "asn": "12637",
+            "organizzazione": "SEEWEB SEEWEB s.r.l.",
+            "n_enti": 5,
+            "quota_pct": 3.7
+          },
+          {
+            "asn": "24940",
+            "organizzazione": "HETZNER-AS Hetzner Online GmbH",
+            "n_enti": 5,
+            "quota_pct": 3.7
+          },
+          {
+            "asn": "60087",
+            "organizzazione": "ASSUPERNOVA Netsons s.r.l.",
+            "n_enti": 4,
+            "quota_pct": 2.9
+          },
+          {
+            "asn": "16276",
+            "organizzazione": "OVH OVH SAS",
+            "n_enti": 3,
+            "quota_pct": 2.2
+          },
+          {
+            "asn": "47242",
+            "organizzazione": "HOST-SPA Host SpA",
+            "n_enti": 3,
+            "quota_pct": 2.2
+          }
+        ]
+      }
+    },
+    "sanita": {
+      "n_enti": 24,
+      "hosting_dns": {
+        "dimensione_campione": 24,
+        "con_dato_valido": 21,
+        "copertura_pct": 87.5,
+        "affidabilita_copertura": "alta",
+        "n_asn_distinti": 10,
+        "hhi_operatori": 1836.7,
+        "hhi_categoria": "moderatamente concentrato",
+        "hhi_affidabile": true,
+        "hhi_nota": null,
+        "top10_operatori": [
+          {
+            "asn": "20746",
+            "organizzazione": "ASN-IDC Telecom Italia S.p.A.",
+            "n_enti": 7,
+            "quota_pct": 33.3
+          },
+          {
+            "asn": "12874",
+            "organizzazione": "FASTWEB Fastweb SpA",
+            "n_enti": 4,
+            "quota_pct": 19.0
+          },
+          {
+            "asn": "13335",
+            "organizzazione": "CLOUDFLARENET - Cloudflare, Inc.",
+            "n_enti": 3,
+            "quota_pct": 14.3
+          },
+          {
+            "asn": "53292",
+            "organizzazione": "MWAY - ManagedWay",
+            "n_enti": 1,
+            "quota_pct": 4.8
+          },
+          {
+            "asn": "203469",
+            "organizzazione": "PUNTOZERO Puntozero S.c.a.r.l.",
+            "n_enti": 1,
+            "quota_pct": 4.8
+          },
+          {
+            "asn": "44831",
+            "organizzazione": "INSIEL-AS Insiel- Informatica per il sistema degli enti locali S.p.A",
+            "n_enti": 1,
+            "quota_pct": 4.8
+          },
+          {
+            "asn": "8560",
+            "organizzazione": "IONOS-AS IONOS SE",
+            "n_enti": 1,
+            "quota_pct": 4.8
+          },
+          {
+            "asn": "31898",
+            "organizzazione": "ORACLE-BMC-31898 - Oracle Corporation",
+            "n_enti": 1,
+            "quota_pct": 4.8
+          },
+          {
+            "asn": "2594",
+            "organizzazione": "ASN-CSI CSI Piemonte",
+            "n_enti": 1,
+            "quota_pct": 4.8
+          },
+          {
+            "asn": "24940",
+            "organizzazione": "HETZNER-AS Hetzner Online GmbH",
+            "n_enti": 1,
+            "quota_pct": 4.8
+          }
+        ]
+      }
+    },
+    "scuola": {
+      "n_enti": 92,
+      "hosting_dns": {
+        "dimensione_campione": 92,
+        "con_dato_valido": 87,
+        "copertura_pct": 94.6,
+        "affidabilita_copertura": "alta",
+        "n_asn_distinti": 10,
+        "hhi_operatori": 2604.0,
+        "hhi_categoria": "altamente concentrato",
+        "hhi_affidabile": true,
+        "hhi_nota": null,
+        "top10_operatori": [
+          {
+            "asn": "16509",
+            "organizzazione": "AMAZON-02 - Amazon.com, Inc.",
+            "n_enti": 37,
+            "quota_pct": 42.5
+          },
+          {
+            "asn": "31034",
+            "organizzazione": "ARUBA-ASN Aruba S.p.A.",
+            "n_enti": 19,
+            "quota_pct": 21.8
+          },
+          {
+            "asn": "20746",
+            "organizzazione": "ASN-IDC Telecom Italia S.p.A.",
+            "n_enti": 11,
+            "quota_pct": 12.6
+          },
+          {
+            "asn": "52030",
+            "organizzazione": "SERVERPLAN-AS Server Plan S.r.l.",
+            "n_enti": 10,
+            "quota_pct": 11.5
+          },
+          {
+            "asn": "204760",
+            "organizzazione": "MOMIT MOMIT SRL",
+            "n_enti": 3,
+            "quota_pct": 3.4
+          },
+          {
+            "asn": "60087",
+            "organizzazione": "ASSUPERNOVA Netsons s.r.l.",
+            "n_enti": 2,
+            "quota_pct": 2.3
+          },
+          {
+            "asn": "13335",
+            "organizzazione": "CLOUDFLARENET - Cloudflare, Inc.",
+            "n_enti": 2,
+            "quota_pct": 2.3
+          },
+          {
+            "asn": "15169",
+            "organizzazione": "GOOGLE - Google LLC",
+            "n_enti": 1,
+            "quota_pct": 1.1
+          },
+          {
+            "asn": "47242",
+            "organizzazione": "HOST-SPA Host SpA",
+            "n_enti": 1,
+            "quota_pct": 1.1
+          },
+          {
+            "asn": "8855",
+            "organizzazione": "ASN-PROMO OPIQUAD S.P.A.",
+            "n_enti": 1,
+            "quota_pct": 1.1
+          }
+        ]
+      }
+    }
+  },
+  "per_regione": {
+    "Abruzzo": {
+      "n_enti": 17,
+      "hosting_dns": {
+        "dimensione_campione": 17,
+        "con_dato_valido": 16,
+        "copertura_pct": 94.1,
+        "affidabilita_copertura": "alta",
+        "n_asn_distinti": 11,
+        "hhi_operatori": 1328.1,
+        "hhi_categoria": "non concentrato",
+        "hhi_affidabile": true,
+        "hhi_nota": null,
+        "top10_operatori": [
+          {
+            "asn": "31034",
+            "organizzazione": "ARUBA-ASN Aruba S.p.A.",
+            "n_enti": 4,
+            "quota_pct": 25.0
+          },
+          {
+            "asn": "396982",
+            "organizzazione": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+            "n_enti": 3,
+            "quota_pct": 18.8
+          },
+          {
+            "asn": "16509",
+            "organizzazione": "AMAZON-02 - Amazon.com, Inc.",
+            "n_enti": 1,
+            "quota_pct": 6.2
+          },
+          {
+            "asn": "47242",
+            "organizzazione": "HOST-SPA Host SpA",
+            "n_enti": 1,
+            "quota_pct": 6.2
+          },
+          {
+            "asn": "8075",
+            "organizzazione": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+            "n_enti": 1,
+            "quota_pct": 6.2
+          },
+          {
+            "asn": "31898",
+            "organizzazione": "ORACLE-BMC-31898 - Oracle Corporation",
+            "n_enti": 1,
+            "quota_pct": 6.2
+          },
+          {
+            "asn": "202675",
+            "organizzazione": "KELIWEB Keliweb S.R.L",
+            "n_enti": 1,
+            "quota_pct": 6.2
+          },
+          {
+            "asn": "29550",
+            "organizzazione": "SIMPLYTRANSIT Team Blue Carrier Limited",
+            "n_enti": 1,
+            "quota_pct": 6.2
+          },
+          {
+            "asn": "24940",
+            "organizzazione": "HETZNER-AS Hetzner Online GmbH",
+            "n_enti": 1,
+            "quota_pct": 6.2
+          },
+          {
+            "asn": "2635",
+            "organizzazione": "AUTOMATTIC - Automattic, Inc",
+            "n_enti": 1,
+            "quota_pct": 6.2
+          }
+        ]
+      }
+    },
+    "Campania": {
+      "n_enti": 54,
+      "hosting_dns": {
+        "dimensione_campione": 54,
+        "con_dato_valido": 52,
+        "copertura_pct": 96.3,
+        "affidabilita_copertura": "alta",
+        "n_asn_distinti": 15,
+        "hhi_operatori": 1464.5,
+        "hhi_categoria": "non concentrato",
+        "hhi_affidabile": true,
+        "hhi_nota": null,
+        "top10_operatori": [
+          {
+            "asn": "52030",
+            "organizzazione": "SERVERPLAN-AS Server Plan S.r.l.",
+            "n_enti": 12,
+            "quota_pct": 23.1
+          },
+          {
+            "asn": "31034",
+            "organizzazione": "ARUBA-ASN Aruba S.p.A.",
+            "n_enti": 12,
+            "quota_pct": 23.1
+          },
+          {
+            "asn": "16509",
+            "organizzazione": "AMAZON-02 - Amazon.com, Inc.",
+            "n_enti": 8,
+            "quota_pct": 15.4
+          },
+          {
+            "asn": "20746",
+            "organizzazione": "ASN-IDC Telecom Italia S.p.A.",
+            "n_enti": 4,
+            "quota_pct": 7.7
+          },
+          {
+            "asn": "24940",
+            "organizzazione": "HETZNER-AS Hetzner Online GmbH",
+            "n_enti": 3,
+            "quota_pct": 5.8
+          },
+          {
+            "asn": "16276",
+            "organizzazione": "OVH OVH SAS",
+            "n_enti": 2,
+            "quota_pct": 3.8
+          },
+          {
+            "asn": "13335",
+            "organizzazione": "CLOUDFLARENET - Cloudflare, Inc.",
+            "n_enti": 2,
+            "quota_pct": 3.8
+          },
+          {
+            "asn": "12874",
+            "organizzazione": "FASTWEB Fastweb SpA",
+            "n_enti": 2,
+            "quota_pct": 3.8
+          },
+          {
+            "asn": "3302",
+            "organizzazione": "AS-RETELIT-IRIDEOS Retelit Digital Services S.p.A.",
+            "n_enti": 1,
+            "quota_pct": 1.9
+          },
+          {
+            "asn": "34762",
+            "organizzazione": "COMBELL-AS Combell NV",
+            "n_enti": 1,
+            "quota_pct": 1.9
+          }
+        ]
+      }
+    },
+    "Emilia-Romagna": {
+      "n_enti": 25,
+      "hosting_dns": {
+        "dimensione_campione": 25,
+        "con_dato_valido": 24,
+        "copertura_pct": 96.0,
+        "affidabilita_copertura": "alta",
+        "n_asn_distinti": 12,
+        "hhi_operatori": 1250.0,
+        "hhi_categoria": "non concentrato",
+        "hhi_affidabile": true,
+        "hhi_nota": null,
+        "top10_operatori": [
+          {
+            "asn": "31034",
+            "organizzazione": "ARUBA-ASN Aruba S.p.A.",
+            "n_enti": 5,
+            "quota_pct": 20.8
+          },
+          {
+            "asn": "13335",
+            "organizzazione": "CLOUDFLARENET - Cloudflare, Inc.",
+            "n_enti": 4,
+            "quota_pct": 16.7
+          },
+          {
+            "asn": "16509",
+            "organizzazione": "AMAZON-02 - Amazon.com, Inc.",
+            "n_enti": 4,
+            "quota_pct": 16.7
+          },
+          {
+            "asn": "39729",
+            "organizzazione": "REGISTER-AS REGISTER S.P.A.",
+            "n_enti": 2,
+            "quota_pct": 8.3
+          },
+          {
+            "asn": "52030",
+            "organizzazione": "SERVERPLAN-AS Server Plan S.r.l.",
+            "n_enti": 2,
+            "quota_pct": 8.3
+          },
+          {
+            "asn": "15169",
+            "organizzazione": "GOOGLE - Google LLC",
+            "n_enti": 1,
+            "quota_pct": 4.2
+          },
+          {
+            "asn": "8075",
+            "organizzazione": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+            "n_enti": 1,
+            "quota_pct": 4.2
+          },
+          {
+            "asn": "63949",
+            "organizzazione": "AKAMAI-LINODE-AP - Akamai Connected Cloud",
+            "n_enti": 1,
+            "quota_pct": 4.2
+          },
+          {
+            "asn": "20746",
+            "organizzazione": "ASN-IDC Telecom Italia S.p.A.",
+            "n_enti": 1,
+            "quota_pct": 4.2
+          },
+          {
+            "asn": "16276",
+            "organizzazione": "OVH OVH SAS",
+            "n_enti": 1,
+            "quota_pct": 4.2
+          }
+        ]
+      }
+    },
+    "Friuli-Venezia Giulia": {
+      "n_enti": 14,
+      "hosting_dns": {
+        "dimensione_campione": 14,
+        "con_dato_valido": 13,
+        "copertura_pct": 92.9,
+        "affidabilita_copertura": "alta",
+        "n_asn_distinti": 10,
+        "hhi_operatori": 1242.6,
+        "hhi_categoria": "non concentrato",
+        "hhi_affidabile": true,
+        "hhi_nota": null,
+        "top10_operatori": [
+          {
+            "asn": "44831",
+            "organizzazione": "INSIEL-AS Insiel- Informatica per il sistema degli enti locali S.p.A",
+            "n_enti": 3,
+            "quota_pct": 23.1
+          },
+          {
+            "asn": "15169",
+            "organizzazione": "GOOGLE - Google LLC",
+            "n_enti": 2,
+            "quota_pct": 15.4
+          },
+          {
+            "asn": "20746",
+            "organizzazione": "ASN-IDC Telecom Italia S.p.A.",
+            "n_enti": 1,
+            "quota_pct": 7.7
+          },
+          {
+            "asn": "16276",
+            "organizzazione": "OVH OVH SAS",
+            "n_enti": 1,
+            "quota_pct": 7.7
+          },
+          {
+            "asn": "63949",
+            "organizzazione": "AKAMAI-LINODE-AP - Akamai Connected Cloud",
+            "n_enti": 1,
+            "quota_pct": 7.7
+          },
+          {
+            "asn": "12637",
+            "organizzazione": "SEEWEB SEEWEB s.r.l.",
+            "n_enti": 1,
+            "quota_pct": 7.7
+          },
+          {
+            "asn": "16509",
+            "organizzazione": "AMAZON-02 - Amazon.com, Inc.",
+            "n_enti": 1,
+            "quota_pct": 7.7
+          },
+          {
+            "asn": "29550",
+            "organizzazione": "SIMPLYTRANSIT Team Blue Carrier Limited",
+            "n_enti": 1,
+            "quota_pct": 7.7
+          },
+          {
+            "asn": "8220",
+            "organizzazione": "COLT COLT Technology Services Group Limited",
+            "n_enti": 1,
+            "quota_pct": 7.7
+          },
+          {
+            "asn": "24940",
+            "organizzazione": "HETZNER-AS Hetzner Online GmbH",
+            "n_enti": 1,
+            "quota_pct": 7.7
+          }
+        ]
+      }
+    },
+    "Lazio": {
+      "n_enti": 67,
+      "hosting_dns": {
+        "dimensione_campione": 67,
+        "con_dato_valido": 63,
+        "copertura_pct": 94.0,
+        "affidabilita_copertura": "alta",
+        "n_asn_distinti": 26,
+        "hhi_operatori": 702.9,
+        "hhi_categoria": "non concentrato",
+        "hhi_affidabile": true,
+        "hhi_nota": null,
+        "top10_operatori": [
+          {
+            "asn": "31034",
+            "organizzazione": "ARUBA-ASN Aruba S.p.A.",
+            "n_enti": 12,
+            "quota_pct": 19.0
+          },
+          {
+            "asn": "12874",
+            "organizzazione": "FASTWEB Fastweb SpA",
+            "n_enti": 5,
+            "quota_pct": 7.9
+          },
+          {
+            "asn": "20746",
+            "organizzazione": "ASN-IDC Telecom Italia S.p.A.",
+            "n_enti": 4,
+            "quota_pct": 6.3
+          },
+          {
+            "asn": "396982",
+            "organizzazione": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+            "n_enti": 4,
+            "quota_pct": 6.3
+          },
+          {
+            "asn": "39729",
+            "organizzazione": "REGISTER-AS REGISTER S.P.A.",
+            "n_enti": 3,
+            "quota_pct": 4.8
+          },
+          {
+            "asn": "16276",
+            "organizzazione": "OVH OVH SAS",
+            "n_enti": 3,
+            "quota_pct": 4.8
+          },
+          {
+            "asn": "52030",
+            "organizzazione": "SERVERPLAN-AS Server Plan S.r.l.",
+            "n_enti": 3,
+            "quota_pct": 4.8
+          },
+          {
+            "asn": "3269",
+            "organizzazione": "ASN-IBSNAZ Telecom Italia S.p.A.",
+            "n_enti": 3,
+            "quota_pct": 4.8
+          },
+          {
+            "asn": "5394",
+            "organizzazione": "Unidata UNIDATA S.p.A.",
+            "n_enti": 2,
+            "quota_pct": 3.2
+          },
+          {
+            "asn": "24940",
+            "organizzazione": "HETZNER-AS Hetzner Online GmbH",
+            "n_enti": 2,
+            "quota_pct": 3.2
+          }
+        ]
+      }
+    },
+    "Lombardia": {
+      "n_enti": 45,
+      "hosting_dns": {
+        "dimensione_campione": 45,
+        "con_dato_valido": 44,
+        "copertura_pct": 97.8,
+        "affidabilita_copertura": "alta",
+        "n_asn_distinti": 23,
+        "hhi_operatori": 836.8,
+        "hhi_categoria": "non concentrato",
+        "hhi_affidabile": true,
+        "hhi_nota": null,
+        "top10_operatori": [
+          {
+            "asn": "31034",
+            "organizzazione": "ARUBA-ASN Aruba S.p.A.",
+            "n_enti": 9,
+            "quota_pct": 20.5
+          },
+          {
+            "asn": "13335",
+            "organizzazione": "CLOUDFLARENET - Cloudflare, Inc.",
+            "n_enti": 4,
+            "quota_pct": 9.1
+          },
+          {
+            "asn": "52030",
+            "organizzazione": "SERVERPLAN-AS Server Plan S.r.l.",
+            "n_enti": 4,
+            "quota_pct": 9.1
+          },
+          {
+            "asn": "16509",
+            "organizzazione": "AMAZON-02 - Amazon.com, Inc.",
+            "n_enti": 4,
+            "quota_pct": 9.1
+          },
+          {
+            "asn": "16276",
+            "organizzazione": "OVH OVH SAS",
+            "n_enti": 3,
+            "quota_pct": 6.8
+          },
+          {
+            "asn": "60087",
+            "organizzazione": "ASSUPERNOVA Netsons s.r.l.",
+            "n_enti": 2,
+            "quota_pct": 4.5
+          },
+          {
+            "asn": "39729",
+            "organizzazione": "REGISTER-AS REGISTER S.P.A.",
+            "n_enti": 2,
+            "quota_pct": 4.5
+          },
+          {
+            "asn": "34762",
+            "organizzazione": "COMBELL-AS Combell NV",
+            "n_enti": 1,
+            "quota_pct": 2.3
+          },
+          {
+            "asn": "31898",
+            "organizzazione": "ORACLE-BMC-31898 - Oracle Corporation",
+            "n_enti": 1,
+            "quota_pct": 2.3
+          },
+          {
+            "asn": "24940",
+            "organizzazione": "HETZNER-AS Hetzner Online GmbH",
+            "n_enti": 1,
+            "quota_pct": 2.3
+          }
+        ]
+      }
+    },
+    "Marche": {
+      "n_enti": 16,
+      "hosting_dns": {
+        "dimensione_campione": 16,
+        "con_dato_valido": 15,
+        "copertura_pct": 93.8,
+        "affidabilita_copertura": "alta",
+        "n_asn_distinti": 10,
+        "hhi_operatori": 2000.0,
+        "hhi_categoria": "moderatamente concentrato",
+        "hhi_affidabile": true,
+        "hhi_nota": null,
+        "top10_operatori": [
+          {
+            "asn": "31034",
+            "organizzazione": "ARUBA-ASN Aruba S.p.A.",
+            "n_enti": 6,
+            "quota_pct": 40.0
+          },
+          {
+            "asn": "28716",
+            "organizzazione": "RETELIT-AS Retelit Digital Services S.p.A.",
+            "n_enti": 1,
+            "quota_pct": 6.7
+          },
+          {
+            "asn": "16509",
+            "organizzazione": "AMAZON-02 - Amazon.com, Inc.",
+            "n_enti": 1,
+            "quota_pct": 6.7
+          },
+          {
+            "asn": "16276",
+            "organizzazione": "OVH OVH SAS",
+            "n_enti": 1,
+            "quota_pct": 6.7
+          },
+          {
+            "asn": "12637",
+            "organizzazione": "SEEWEB SEEWEB s.r.l.",
+            "n_enti": 1,
+            "quota_pct": 6.7
+          },
+          {
+            "asn": "24940",
+            "organizzazione": "HETZNER-AS Hetzner Online GmbH",
+            "n_enti": 1,
+            "quota_pct": 6.7
+          },
+          {
+            "asn": "200148",
+            "organizzazione": "FIDOKA-AS FIDOKA srl SB",
+            "n_enti": 1,
+            "quota_pct": 6.7
+          },
+          {
+            "asn": "30722",
+            "organizzazione": "VODAFONE-IT-ASN Fastweb SpA",
+            "n_enti": 1,
+            "quota_pct": 6.7
+          },
+          {
+            "asn": "3302",
+            "organizzazione": "AS-RETELIT-IRIDEOS Retelit Digital Services S.p.A.",
+            "n_enti": 1,
+            "quota_pct": 6.7
+          },
+          {
+            "asn": "52030",
+            "organizzazione": "SERVERPLAN-AS Server Plan S.r.l.",
+            "n_enti": 1,
+            "quota_pct": 6.7
+          }
+        ]
+      }
+    },
+    "Piemonte": {
+      "n_enti": 37,
+      "hosting_dns": {
+        "dimensione_campione": 37,
+        "con_dato_valido": 35,
+        "copertura_pct": 94.6,
+        "affidabilita_copertura": "alta",
+        "n_asn_distinti": 18,
+        "hhi_operatori": 1200.0,
+        "hhi_categoria": "non concentrato",
+        "hhi_affidabile": true,
+        "hhi_nota": null,
+        "top10_operatori": [
+          {
+            "asn": "31034",
+            "organizzazione": "ARUBA-ASN Aruba S.p.A.",
+            "n_enti": 10,
+            "quota_pct": 28.6
+          },
+          {
+            "asn": "16509",
+            "organizzazione": "AMAZON-02 - Amazon.com, Inc.",
+            "n_enti": 4,
+            "quota_pct": 11.4
+          },
+          {
+            "asn": "24940",
+            "organizzazione": "HETZNER-AS Hetzner Online GmbH",
+            "n_enti": 2,
+            "quota_pct": 5.7
+          },
+          {
+            "asn": "47242",
+            "organizzazione": "HOST-SPA Host SpA",
+            "n_enti": 2,
+            "quota_pct": 5.7
+          },
+          {
+            "asn": "39729",
+            "organizzazione": "REGISTER-AS REGISTER S.P.A.",
+            "n_enti": 2,
+            "quota_pct": 5.7
+          },
+          {
+            "asn": "60087",
+            "organizzazione": "ASSUPERNOVA Netsons s.r.l.",
+            "n_enti": 2,
+            "quota_pct": 5.7
+          },
+          {
+            "asn": "44920",
+            "organizzazione": "SiTEK Si.TEK Informatica Srl",
+            "n_enti": 2,
+            "quota_pct": 5.7
+          },
+          {
+            "asn": "15830",
+            "organizzazione": "Equinix Equinix (EMEA) Acquisition Enterprises B.V.",
+            "n_enti": 1,
+            "quota_pct": 2.9
+          },
+          {
+            "asn": "31898",
+            "organizzazione": "ORACLE-BMC-31898 - Oracle Corporation",
+            "n_enti": 1,
+            "quota_pct": 2.9
+          },
+          {
+            "asn": "52030",
+            "organizzazione": "SERVERPLAN-AS Server Plan S.r.l.",
+            "n_enti": 1,
+            "quota_pct": 2.9
+          }
+        ]
+      }
+    },
+    "Puglia": {
+      "n_enti": 54,
+      "hosting_dns": {
+        "dimensione_campione": 54,
+        "con_dato_valido": 51,
+        "copertura_pct": 94.4,
+        "affidabilita_copertura": "alta",
+        "n_asn_distinti": 10,
+        "hhi_operatori": 3071.9,
+        "hhi_categoria": "altamente concentrato",
+        "hhi_affidabile": true,
+        "hhi_nota": null,
+        "top10_operatori": [
+          {
+            "asn": "31034",
+            "organizzazione": "ARUBA-ASN Aruba S.p.A.",
+            "n_enti": 24,
+            "quota_pct": 47.1
+          },
+          {
+            "asn": "16509",
+            "organizzazione": "AMAZON-02 - Amazon.com, Inc.",
+            "n_enti": 14,
+            "quota_pct": 27.5
+          },
+          {
+            "asn": "60087",
+            "organizzazione": "ASSUPERNOVA Netsons s.r.l.",
+            "n_enti": 3,
+            "quota_pct": 5.9
+          },
+          {
+            "asn": "20746",
+            "organizzazione": "ASN-IDC Telecom Italia S.p.A.",
+            "n_enti": 3,
+            "quota_pct": 5.9
+          },
+          {
+            "asn": "13335",
+            "organizzazione": "CLOUDFLARENET - Cloudflare, Inc.",
+            "n_enti": 2,
+            "quota_pct": 3.9
+          },
+          {
+            "asn": "15169",
+            "organizzazione": "GOOGLE - Google LLC",
+            "n_enti": 1,
+            "quota_pct": 2.0
+          },
+          {
+            "asn": "52030",
+            "organizzazione": "SERVERPLAN-AS Server Plan S.r.l.",
+            "n_enti": 1,
+            "quota_pct": 2.0
+          },
+          {
+            "asn": "24940",
+            "organizzazione": "HETZNER-AS Hetzner Online GmbH",
+            "n_enti": 1,
+            "quota_pct": 2.0
+          },
+          {
+            "asn": "9104",
+            "organizzazione": "CLIO-AS Clio S.R.L",
+            "n_enti": 1,
+            "quota_pct": 2.0
+          },
+          {
+            "asn": "204760",
+            "organizzazione": "MOMIT MOMIT SRL",
+            "n_enti": 1,
+            "quota_pct": 2.0
+          }
+        ]
+      }
+    },
+    "Sardegna": {
+      "n_enti": 16,
+      "hosting_dns": {
+        "dimensione_campione": 16,
+        "con_dato_valido": 15,
+        "copertura_pct": 93.8,
+        "affidabilita_copertura": "alta",
+        "n_asn_distinti": 9,
+        "hhi_operatori": 1377.8,
+        "hhi_categoria": "non concentrato",
+        "hhi_affidabile": true,
+        "hhi_nota": null,
+        "top10_operatori": [
+          {
+            "asn": "13335",
+            "organizzazione": "CLOUDFLARENET - Cloudflare, Inc.",
+            "n_enti": 3,
+            "quota_pct": 20.0
+          },
+          {
+            "asn": "31034",
+            "organizzazione": "ARUBA-ASN Aruba S.p.A.",
+            "n_enti": 3,
+            "quota_pct": 20.0
+          },
+          {
+            "asn": "31898",
+            "organizzazione": "ORACLE-BMC-31898 - Oracle Corporation",
+            "n_enti": 2,
+            "quota_pct": 13.3
+          },
+          {
+            "asn": "16509",
+            "organizzazione": "AMAZON-02 - Amazon.com, Inc.",
+            "n_enti": 2,
+            "quota_pct": 13.3
+          },
+          {
+            "asn": "8075",
+            "organizzazione": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+            "n_enti": 1,
+            "quota_pct": 6.7
+          },
+          {
+            "asn": "8855",
+            "organizzazione": "ASN-PROMO OPIQUAD S.P.A.",
+            "n_enti": 1,
+            "quota_pct": 6.7
+          },
+          {
+            "asn": "41986",
+            "organizzazione": "SARDEGNAIT-AS Sardegna IT srl",
+            "n_enti": 1,
+            "quota_pct": 6.7
+          },
+          {
+            "asn": "24940",
+            "organizzazione": "HETZNER-AS Hetzner Online GmbH",
+            "n_enti": 1,
+            "quota_pct": 6.7
+          },
+          {
+            "asn": "396982",
+            "organizzazione": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+            "n_enti": 1,
+            "quota_pct": 6.7
+          }
+        ]
+      }
+    },
+    "Sicilia": {
+      "n_enti": 47,
+      "hosting_dns": {
+        "dimensione_campione": 47,
+        "con_dato_valido": 40,
+        "copertura_pct": 85.1,
+        "affidabilita_copertura": "alta",
+        "n_asn_distinti": 12,
+        "hhi_operatori": 2200.0,
+        "hhi_categoria": "moderatamente concentrato",
+        "hhi_affidabile": true,
+        "hhi_nota": null,
+        "top10_operatori": [
+          {
+            "asn": "31034",
+            "organizzazione": "ARUBA-ASN Aruba S.p.A.",
+            "n_enti": 16,
+            "quota_pct": 40.0
+          },
+          {
+            "asn": "16509",
+            "organizzazione": "AMAZON-02 - Amazon.com, Inc.",
+            "n_enti": 8,
+            "quota_pct": 20.0
+          },
+          {
+            "asn": "16276",
+            "organizzazione": "OVH OVH SAS",
+            "n_enti": 3,
+            "quota_pct": 7.5
+          },
+          {
+            "asn": "20746",
+            "organizzazione": "ASN-IDC Telecom Italia S.p.A.",
+            "n_enti": 3,
+            "quota_pct": 7.5
+          },
+          {
+            "asn": "13335",
+            "organizzazione": "CLOUDFLARENET - Cloudflare, Inc.",
+            "n_enti": 2,
+            "quota_pct": 5.0
+          },
+          {
+            "asn": "204760",
+            "organizzazione": "MOMIT MOMIT SRL",
+            "n_enti": 2,
+            "quota_pct": 5.0
+          },
+          {
+            "asn": "60798",
+            "organizzazione": "ASSERVEREASY Servereasy Srl",
+            "n_enti": 1,
+            "quota_pct": 2.5
+          },
+          {
+            "asn": "12637",
+            "organizzazione": "SEEWEB SEEWEB s.r.l.",
+            "n_enti": 1,
+            "quota_pct": 2.5
+          },
+          {
+            "asn": "3269",
+            "organizzazione": "ASN-IBSNAZ Telecom Italia S.p.A.",
+            "n_enti": 1,
+            "quota_pct": 2.5
+          },
+          {
+            "asn": "22611",
+            "organizzazione": "INMOTION - InMotion Hosting, Inc.",
+            "n_enti": 1,
+            "quota_pct": 2.5
+          }
+        ]
+      }
+    },
+    "Toscana": {
+      "n_enti": 30,
+      "hosting_dns": {
+        "dimensione_campione": 30,
+        "con_dato_valido": 28,
+        "copertura_pct": 93.3,
+        "affidabilita_copertura": "alta",
+        "n_asn_distinti": 15,
+        "hhi_operatori": 1683.7,
+        "hhi_categoria": "moderatamente concentrato",
+        "hhi_affidabile": true,
+        "hhi_nota": null,
+        "top10_operatori": [
+          {
+            "asn": "31034",
+            "organizzazione": "ARUBA-ASN Aruba S.p.A.",
+            "n_enti": 10,
+            "quota_pct": 35.7
+          },
+          {
+            "asn": "16509",
+            "organizzazione": "AMAZON-02 - Amazon.com, Inc.",
+            "n_enti": 4,
+            "quota_pct": 14.3
+          },
+          {
+            "asn": "8075",
+            "organizzazione": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+            "n_enti": 2,
+            "quota_pct": 7.1
+          },
+          {
+            "asn": "16276",
+            "organizzazione": "OVH OVH SAS",
+            "n_enti": 1,
+            "quota_pct": 3.6
+          },
+          {
+            "asn": "15169",
+            "organizzazione": "GOOGLE - Google LLC",
+            "n_enti": 1,
+            "quota_pct": 3.6
+          },
+          {
+            "asn": "13335",
+            "organizzazione": "CLOUDFLARENET - Cloudflare, Inc.",
+            "n_enti": 1,
+            "quota_pct": 3.6
+          },
+          {
+            "asn": "14618",
+            "organizzazione": "AMAZON-AES - Amazon.com, Inc.",
+            "n_enti": 1,
+            "quota_pct": 3.6
+          },
+          {
+            "asn": "12637",
+            "organizzazione": "SEEWEB SEEWEB s.r.l.",
+            "n_enti": 1,
+            "quota_pct": 3.6
+          },
+          {
+            "asn": "196892",
+            "organizzazione": "TDGroup-AS TD Group Italia S.r.l.",
+            "n_enti": 1,
+            "quota_pct": 3.6
+          },
+          {
+            "asn": "44747",
+            "organizzazione": "DEVITALIA Dev Italia srl",
+            "n_enti": 1,
+            "quota_pct": 3.6
+          }
+        ]
+      }
+    },
+    "Veneto": {
+      "n_enti": 27,
+      "hosting_dns": {
+        "dimensione_campione": 27,
+        "con_dato_valido": 24,
+        "copertura_pct": 88.9,
+        "affidabilita_copertura": "alta",
+        "n_asn_distinti": 16,
+        "hhi_operatori": 833.3,
+        "hhi_categoria": "non concentrato",
+        "hhi_affidabile": true,
+        "hhi_nota": null,
+        "top10_operatori": [
+          {
+            "asn": "12874",
+            "organizzazione": "FASTWEB Fastweb SpA",
+            "n_enti": 4,
+            "quota_pct": 16.7
+          },
+          {
+            "asn": "31034",
+            "organizzazione": "ARUBA-ASN Aruba S.p.A.",
+            "n_enti": 3,
+            "quota_pct": 12.5
+          },
+          {
+            "asn": "12637",
+            "organizzazione": "SEEWEB SEEWEB s.r.l.",
+            "n_enti": 2,
+            "quota_pct": 8.3
+          },
+          {
+            "asn": "52030",
+            "organizzazione": "SERVERPLAN-AS Server Plan S.r.l.",
+            "n_enti": 2,
+            "quota_pct": 8.3
+          },
+          {
+            "asn": "15169",
+            "organizzazione": "GOOGLE - Google LLC",
+            "n_enti": 2,
+            "quota_pct": 8.3
+          },
+          {
+            "asn": "24940",
+            "organizzazione": "HETZNER-AS Hetzner Online GmbH",
+            "n_enti": 1,
+            "quota_pct": 4.2
+          },
+          {
+            "asn": "3302",
+            "organizzazione": "AS-RETELIT-IRIDEOS Retelit Digital Services S.p.A.",
+            "n_enti": 1,
+            "quota_pct": 4.2
+          },
+          {
+            "asn": "200858",
+            "organizzazione": "RACKONE Rackone Srl",
+            "n_enti": 1,
+            "quota_pct": 4.2
+          },
+          {
+            "asn": "16509",
+            "organizzazione": "AMAZON-02 - Amazon.com, Inc.",
+            "n_enti": 1,
+            "quota_pct": 4.2
+          },
+          {
+            "asn": "16276",
+            "organizzazione": "OVH OVH SAS",
+            "n_enti": 1,
+            "quota_pct": 4.2
+          }
+        ]
+      }
+    }
+  },
+  "dark_stack": {
+    "dimensione_campione": 500,
+    "con_almeno_una_terza_parte": 376,
+    "con_almeno_una_terza_parte_pct": 75.2,
+    "con_almeno_una_chiamata_extra_see": 376,
+    "con_almeno_una_chiamata_extra_see_pct": 75.2,
+    "media_terze_parti_per_sito": 2.4,
+    "top10_categorie": [
+      {
+        "categoria": "altro_terzo_parte",
+        "n_siti": 285
+      },
+      {
+        "categoria": "cdn_font",
+        "n_siti": 197
+      },
+      {
+        "categoria": "analytics",
+        "n_siti": 99
+      },
+      {
+        "categoria": "cookie_banner",
+        "n_siti": 78
+      },
+      {
+        "categoria": "captcha",
+        "n_siti": 49
+      },
+      {
+        "categoria": "sdk_generico",
+        "n_siti": 35
+      },
+      {
+        "categoria": "video",
+        "n_siti": 14
+      },
+      {
+        "categoria": "chat_supporto",
+        "n_siti": 1
+      }
+    ],
+    "top15_domini_terzi": [
+      {
+        "dominio": "fonts.googleapis.com",
+        "n_siti": 157
+      },
+      {
+        "dominio": "gmpg.org",
+        "n_siti": 98
+      },
+      {
+        "dominio": "www.googletagmanager.com",
+        "n_siti": 98
+      },
+      {
+        "dominio": "www.google.com",
+        "n_siti": 58
+      },
+      {
+        "dominio": "fonts.gstatic.com",
+        "n_siti": 55
+      },
+      {
+        "dominio": "cdn.iubenda.com",
+        "n_siti": 53
+      },
+      {
+        "dominio": "purl.org",
+        "n_siti": 31
+      },
+      {
+        "dominio": "api.usercentrics.eu",
+        "n_siti": 28
+      },
+      {
+        "dominio": "app.usercentrics.eu",
+        "n_siti": 28
+      },
+      {
+        "dominio": "cdn.portaleargo.it",
+        "n_siti": 28
+      },
+      {
+        "dominio": "privacy-proxy.usercentrics.eu",
+        "n_siti": 28
+      },
+      {
+        "dominio": "cdnjs.cloudflare.com",
+        "n_siti": 26
+      },
+      {
+        "dominio": "cs.iubenda.com",
+        "n_siti": 26
+      },
+      {
+        "dominio": "code.jquery.com",
+        "n_siti": 19
+      },
+      {
+        "dominio": "consent.cookiebot.com",
+        "n_siti": 19
+      }
+    ],
+    "cookie": {
+      "nota": "Classificazione euristica sul NOME del cookie (vedi data/rules/cookie_rules.yaml), non una valutazione giuridica GDPR/ePrivacy. Cattura solo i cookie impostati dalla prima risposta HTTP, non quelli impostati via JavaScript dopo il consenso.",
+      "con_almeno_un_cookie_di_profilazione": 1,
+      "con_almeno_un_cookie_di_profilazione_pct": 0.2,
+      "media_cookie_totali_per_sito": 0.5,
+      "media_cookie_profilazione_per_sito": 0.0,
+      "top10_cookie_profilazione": [
+        {
+          "nome": "_fbp",
+          "n_siti": 1
+        }
+      ]
+    }
+  },
+  "tracker_concentrazione_hhi": {
+    "dimensione_campione": 500,
+    "con_almeno_un_tracker_di_terze_parti": 376,
+    "copertura_pct": 75.2,
+    "n_organizzazioni_distinte": 319,
+    "hhi_organizzazioni_madri": 678.8,
+    "hhi_categoria": "non concentrato",
+    "hhi_affidabile": true,
+    "hhi_nota": null,
+    "top10_organizzazioni": [
+      {
+        "organizzazione": "Google",
+        "n_enti": 228,
+        "quota_pct": 60.6
+      },
+      {
+        "organizzazione": "https://gmpg.org/xfn/11",
+        "n_enti": 60,
+        "quota_pct": 16.0
+      },
+      {
+        "organizzazione": "iubenda",
+        "n_enti": 59,
+        "quota_pct": 15.7
+      },
+      {
+        "organizzazione": "http://gmpg.org/xfn/11",
+        "n_enti": 38,
+        "quota_pct": 10.1
+      },
+      {
+        "organizzazione": "http://purl.org/dc/terms/",
+        "n_enti": 30,
+        "quota_pct": 8.0
+      },
+      {
+        "organizzazione": "https://app.usercentrics.eu",
+        "n_enti": 28,
+        "quota_pct": 7.4
+      },
+      {
+        "organizzazione": "https://privacy-proxy.usercentrics.eu",
+        "n_enti": 28,
+        "quota_pct": 7.4
+      },
+      {
+        "organizzazione": "https://api.usercentrics.eu",
+        "n_enti": 28,
+        "quota_pct": 7.4
+      },
+      {
+        "organizzazione": "Cloudflare",
+        "n_enti": 27,
+        "quota_pct": 7.2
+      },
+      {
+        "organizzazione": "https://cdn.portaleargo.it/psc/images/didattica-mockup.png",
+        "n_enti": 27,
+        "quota_pct": 7.2
+      }
+    ],
+    "nota_metodologica": "Concentrazione per organizzazione madre (non per singolo dominio/vendor), sullo stesso principio usato da Singh et al. (2026) per i siti governativi. 'organizzazione_madre' è assegnata solo quando la proprietà societaria è nota e non ambigua (vedi data/rules/dark_stack_rules.yaml): i domini senza una regola specifica contano come organizzazione a sé, quindi questo HHI è probabilmente una SOTTOSTIMA della vera concentrazione (più regole aggiunte alla community = stima più precisa nel tempo)."
+  },
+  "software_licenze": {
+    "nota": "Fingerprint da tracce esterne (HTML/header HTTP), non ispezione del codice installato: misura 'software in uso e licenza generale', non conformità legale agli obblighi della licenza. Un mancato riconoscimento non significa 'nessun software', vedi 06_fingerprint_cms.py.",
+    "dimensione_campione": 500,
+    "con_almeno_un_software_riconosciuto": 411,
+    "con_almeno_un_software_riconosciuto_pct": 82.2,
+    "con_tutto_il_software_rilevato_open_source": 391,
+    "con_tutto_il_software_rilevato_open_source_pct": 78.2,
+    "top15_software": [
+      {
+        "software": "WordPress",
+        "n_siti": 268
+      },
+      {
+        "software": "Bootstrap Italia / Design System Italia",
+        "n_siti": 145
+      },
+      {
+        "software": "nginx",
+        "n_siti": 131
+      },
+      {
+        "software": "PHP",
+        "n_siti": 102
+      },
+      {
+        "software": "Apache HTTP Server",
+        "n_siti": 94
+      },
+      {
+        "software": "Microsoft IIS",
+        "n_siti": 20
+      },
+      {
+        "software": "ASP.NET",
+        "n_siti": 19
+      },
+      {
+        "software": "Joomla!",
+        "n_siti": 14
+      },
+      {
+        "software": "Drupal",
+        "n_siti": 13
+      },
+      {
+        "software": "DNN (DotNetNuke)",
+        "n_siti": 2
+      },
+      {
+        "software": "Umbraco",
+        "n_siti": 1
+      },
+      {
+        "software": "TYPO3",
+        "n_siti": 1
+      }
+    ],
+    "distribuzione_licenze": [
+      {
+        "licenza": "GPL-2.0-or-later",
+        "n_siti": 296
+      },
+      {
+        "licenza": "BSD-3-Clause",
+        "n_siti": 145
+      },
+      {
+        "licenza": "BSD-2-Clause",
+        "n_siti": 131
+      },
+      {
+        "licenza": "PHP License 3.01",
+        "n_siti": 102
+      },
+      {
+        "licenza": "Apache-2.0",
+        "n_siti": 94
+      },
+      {
+        "licenza": "MIT",
+        "n_siti": 20
+      },
+      {
+        "licenza": "proprietaria",
+        "n_siti": 20
+      }
+    ]
+  }
+}

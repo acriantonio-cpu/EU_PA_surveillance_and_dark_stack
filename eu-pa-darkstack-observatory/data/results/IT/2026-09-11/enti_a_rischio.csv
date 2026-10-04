@@ -1,0 +1,501 @@
+codice_ipa,hostname,comune,regione,punteggio_rischio,motivi_rischio
+2YOQHVIP,aralspa.it,Alessandria,Piemonte,4,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente; certificato TLS scaduto o in scadenza entro 30 giorni
+a1_na,aslnapoli1centro.it,Napoli,Campania,4,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente; certificato TLS scaduto o in scadenza entro 30 giorni
+8KUY7XYE,ipseoacastrovillari.edu.it,Castrovillari,Calabria,4,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente; certificato TLS scaduto o in scadenza entro 30 giorni
+10KC4JL1,fieresantalucia.it,Santa Lucia di Piave,Veneto,4,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente; certificato TLS scaduto o in scadenza entro 30 giorni
+6Y5X0OIY,trusttechnologies.it,Pomezia,Lazio,4,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente; certificato TLS scaduto o in scadenza entro 30 giorni
+70RBCZQ5,regione.sardegna.it,Cagliari,Sardegna,4,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente; certificato TLS scaduto o in scadenza entro 30 giorni
+11NFGEUX,dunas.it,Cremona,Lombardia,4,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente; certificato TLS scaduto o in scadenza entro 30 giorni
+05TY94LO,monzamobilita.it,Monza,Lombardia,4,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente; certificato TLS scaduto o in scadenza entro 30 giorni
+2M053FUA,portsecuritypiombino.it,Livorno,Toscana,4,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente; certificato TLS scaduto o in scadenza entro 30 giorni
+abaf_048,accademia.firenze.it,Firenze,Toscana,4,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente; certificato TLS scaduto o in scadenza entro 30 giorni
+34WTOIJ0,parcam.it,Milano,Lombardia,4,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente; certificato TLS scaduto o in scadenza entro 30 giorni
+51XXY94X,liceoderuggieri.edu.it,Massafra,Puglia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+55N6KWMK,ecoambientesalerno.it,Salerno,Campania,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+9MQ4OG7D,calabria.zes.gov.it,Lamezia Terme,Calabria,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+9M9DRXI6,liceomontalcini.edu.it,Casarano,Puglia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+4C88A8DV,artwoodacademy.it,Lentate sul Seveso,Lombardia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+4CFJTTLW,asespoleto.it,Spoleto,Umbria,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+56WKLHOX,itsturismo.it,Jesolo,Veneto,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+9JRJHYSM,ipeistituto.it,Napoli,Campania,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+9IDG0APG,liceoleonardo.edu.it,Giarre,Sicilia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+4EMXGJX3,icdonuvacosmai.edu.it,Bisceglie,Puglia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+56FG6XPQ,oirmsantanna.piemonte.it,Torino,Piemonte,3,DMARC non attivo (assente o solo osservazione); DNSSEC assente; certificato TLS scaduto o in scadenza entro 30 giorni
+4FGHPC8A,liceomagistralepanzecacaccamo.edu.it,Caccamo,Sicilia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+9ENSOTX8,atcamatera.it,Matera,Basilicata,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+9EAEVWRB,scherillopirandellosvevo.edu.it,Napoli,Campania,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+50U27N8K,iscasellipalizzi.edu.it,Napoli,Campania,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+4ICNTMCY,regione.sicilia.it,Palermo,Sicilia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+4JTCHUHK,getet.it,Roma,Lazio,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+9AXJSAEX,vepromex.it,Venezia,Veneto,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+47SSOC18,icmondragone2.edu.it,Mondragone,Campania,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+95PB7XFM,gaiaservizi.eu,Bollate,Lombardia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+4PKGIX8K,policlinicogemelli.it,Roma,Lazio,3,DMARC non attivo (assente o solo osservazione); DNSSEC assente; certificato TLS scaduto o in scadenza entro 30 giorni
+954L4IVP,icmadreteresadicalcutta.edu.it,Belpasso,Sicilia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+4QTL3EL5,atb.bergamo.it,Bergamo,Lombardia,3,DMARC non attivo (assente o solo osservazione); DNSSEC assente; certificato TLS scaduto o in scadenza entro 30 giorni
+558BFEXP,tep.pr.it,Parma,Emilia-Romagna,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+4S9LK3NS,its-ictpiemonte.it,Torino,Piemonte,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+53S1QVDP,fondazione.unisa.it,Fisciano,Campania,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+4YP9RIEW,giordanicaserta.edu.it,Caserta,Campania,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+4YQGU40D,itsleonardoacademy.it,Bergamo,Lombardia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+48JYY1FM,ordineveterinaribenevento.it,Benevento,Campania,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+9RNBB1Z2,galcarso.eu,Trieste,Friuli-Venezia Giulia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+446W9J1Y,https:www.ausino.it,Cava de' Tirreni,Campania,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+3M1FNDMP,notarangelorosati-giannonemasi.edu.it,Foggia,Puglia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+34D70TTH,foncoop.coop,Roma,Lazio,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+34QPYWJ0,itsagnesi.it,Roma,Lazio,3,DMARC non attivo (assente o solo osservazione); DNSSEC assente; certificato TLS scaduto o in scadenza entro 30 giorni
+354G06HD,tradelab.it,Milano,Lombardia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+a_088,asp.rg.it,Ragusa,Sicilia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+a_034,rossisidoli.com,Compiano,Emilia-Romagna,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+3CRB3CUM,asiteonline.it,Fermo,Marche,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+3EYJH0BU,asl5oristano.it,Oristano,Sardegna,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+9XSEMYNU,acoset.com,Catania,Sicilia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+9X4DJYVC,leretispa.it,Como,Lombardia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+9WQ8OC8R,adriaferrailservices.com,Trieste,Friuli-Venezia Giulia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+3JN4ZMWH,donmoschetta.it,Caorle,Veneto,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+3JPPAJDM,madoniegal.it,Castellana Sicula,Sicilia,3,DMARC non attivo (assente o solo osservazione); DNSSEC assente; certificato TLS scaduto o in scadenza entro 30 giorni
+3KCOWSBJ,retisrl.it,Novi Ligure,Piemonte,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+3KO8VIGW,acque.net,Empoli,Toscana,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+3MR8D7NT,goriacqua.com,Ercolano,Campania,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+41M5YBG2,cdsangiovannibosco.edu.it,Manfredonia,Puglia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+9UQVTN4B,studioradiologico.com,Varese,Lombardia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+3NSUJWLC,galgargano.com,Monte Sant'Angelo,Puglia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+3PQ9TZW5,velletriservizi.it,Velletri,Lazio,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+3RF8YLNL,enit.it,Roma,Lazio,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+9T6I3DO8,unionedeicomuniareainternaditroina.it,Troina,Sicilia,3,DMARC non attivo (assente o solo osservazione); DNSSEC assente; certificato TLS scaduto o in scadenza entro 30 giorni
+3T9KJCT0,icvalleserinasanpellegrinoterme.edu.it,San Pellegrino Terme,Lombardia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+3VZPQX9H,asmfossano.it,Fossano,Piemonte,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+3WW5MNR3,icfornelligiovannixxiiicorato.edu.it,Corato,Puglia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+9RY1HG7E,tno.camcom.it,Viareggio,Toscana,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+3XOF2207,gorgovivo.it,Serra San Quirico,Marche,3,nessuna ridondanza NS; DNSSEC assente; certificato TLS scaduto o in scadenza entro 30 giorni
+3XXKMLQ8,adriatica.zes.gov.it,Roma,Lazio,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+3YOCS45V,palaexpo.it,Roma,Lazio,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); certificato TLS scaduto o in scadenza entro 30 giorni
+5A0F9XHL,aircampania.it,Napoli,Campania,3,DMARC non attivo (assente o solo osservazione); DNSSEC assente; certificato TLS scaduto o in scadenza entro 30 giorni
+419QPJZE,endaspiemonte.it,Torino,Piemonte,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+58O75BTG,carduccisancataldo.edu.it,San Cataldo,Sicilia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+5DVYPGTK,umbriafilmcommission.it,Perugia,Umbria,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+5AG3ZH7V,veronapadova.it,Vicenza,Veneto,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+798627NV,acda.it,Cuneo,Piemonte,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+6MEKAFH6,ic17angiulli.edu.it,Napoli,Campania,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+8D75X2F2,consorziobimaq.it,Avezzano,Abruzzo,3,DMARC non attivo (assente o solo osservazione); DNSSEC assente; certificato TLS scaduto o in scadenza entro 30 giorni
+6PAVRHY5,ateraq.it,L'Aquila,Abruzzo,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+6TAN6PRP,asemanfredonia.it,Manfredonia,Puglia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+6TIT8ALQ,dmodolomiti.it,Belluno,Veneto,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+6UPF0YUZ,chironisatta.edu.it,Nuoro,Sardegna,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+7ZHXNWHL,consorziostradearcidosso.altervista.org,Arcidosso,Toscana,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+7176DSEB,camera-arbitrale.it,Milano,Lombardia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+7XE4GJP3,autostradestato.it,Roma,Lazio,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+72CDTS77,ater.rovigo.it,Rovigo,Veneto,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+74XC7YU2,icpompei1.edu.it,Pompei,Campania,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+75KEEH9Y,fondazionemarchecultura.it,Ancona,Marche,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+7746IORT,gandhilunigiana.edu.it,Aulla,Toscana,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+7VP4POF9,galcapodileuca.it,Tricase,Puglia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+79OSTV8M,autolineecasciato.it,Borrello,Abruzzo,3,DMARC non attivo (assente o solo osservazione); DNSSEC assente; certificato TLS scaduto o in scadenza entro 30 giorni
+5AHQNT4T,acquirenteunico.it,Roma,Lazio,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+7UG4CTPM,cmcalabresiliquidazioni.it,Reggio di Calabria,Calabria,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+7AD641XZ,formiarifiutizero.it,Formia,Lazio,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+7CWQ8IV2,nuovasalentoenergia.it,Lecce,Puglia,3,DMARC non attivo (assente o solo osservazione); DNSSEC assente; certificato TLS scaduto o in scadenza entro 30 giorni
+7U0QFN0C,provinciasulcisiglesiente.it,Carbonia,Sardegna,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+7T093CG4,asl3nuoro.it,Nuoro,Sardegna,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+7GOVGT25,euromilano.net,Milano,Lombardia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+7H3CLLM0,apricaspa.it,Brescia,Lombardia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+7S7BGX0F,trenitaliatper.it,Bologna,Emilia-Romagna,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+7HSE7NE1,istitutocomprensivo2.edu.it,Piombino,Toscana,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+7IW8ELTH,sandonnino.it,Fidenza,Emilia-Romagna,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+7JD299SA,diocesisanmarcoscalea.it,San Marco Argentano,Calabria,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+7LOZOO0S,icmandes-montidauni.edu.it,Pietramontecorvino,Puglia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+7OGVI29G,edmaretigas.it,Ancona,Marche,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+7PWNLBMQ,istitutodagomari.edu.it,Prato,Toscana,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+6JBIWZ80,scuolabartolena.edu.it,Livorno,Toscana,3,DMARC non attivo (assente o solo osservazione); DNSSEC assente; certificato TLS scaduto o in scadenza entro 30 giorni
+6I7YUOEO,altascuola.org,Perugia,Umbria,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+6GF796UD,direzionesanfrancesco.edu.it,Altamura,Puglia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+6G739KU9,albisolaservizi.it,Albisola Superiore,Liguria,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+8YG3A9B5,afragola1marconirocco.edu.it,Afragola,Campania,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+30ZOZMYY,sgspiombino.it,Piombino,Toscana,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+5B6CJIEW,secif.info,Argenta,Emilia-Romagna,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+5B9J9SUG,iccoriano.edu.it,Coriano,Emilia-Romagna,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+5DNNOS0T,asl1sassari.it,Sassari,Sardegna,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+5DQHOLMZ,datiniprato.edu.it,Prato,Toscana,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+01X13U84,ic1marconidiano.edu.it,Pozzuoli,Campania,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+5EHNYROS,iismeuccimattei.edu.it,Cagliari,Sardegna,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+8XD7AIGW,sirioenergia.it,Frattaminore,Campania,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+8W0Q4VWZ,agenziaitaliameteo.it,Roma,Lazio,3,nessuna ridondanza NS; DNSSEC assente; certificato TLS scaduto o in scadenza entro 30 giorni
+8VK4TQHC,econlivlab.eu,Zevio,Veneto,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+8UYS28RD,scuolecollegno3.edu.it,Collegno,Piemonte,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+5M1SBOLO,pacinottitaranto.edu.it,Taranto,Puglia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+8U5DDGY9,tsm.tn.it,Trento,Trentino-Alto Adige/Südtirol,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+8SH4634M,liceostampacchia.edu.it,Tricase,Puglia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+5QRGRGTP,bmti.it,Roma,Lazio,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+8QHCKCN6,iissdelloliocosmai.edu.it,Bisceglie,Puglia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+8P1G45WH,sun.novara.it,Novara,Piemonte,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); certificato TLS scaduto o in scadenza entro 30 giorni
+8O5HCUTY,casavallardi.it,Appiano Gentile,Lombardia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+5ST98L52,sielte.it,San Gregorio di Catania,Sicilia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+5SY2NIM3,itscasacampania.it,Napoli,Campania,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+8KY9MNU7,itsrossellini.it,Roma,Lazio,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+6006VSSS,https:sistemaambientelucca.it,Lucca,Toscana,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+8HFG1ZY6,aslgallura.it,Olbia,Sardegna,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+641NUAR3,ipsdacquistobagheria.edu.it,Bagheria,Sicilia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+64G6NIHR,its-energiaeambiente.it,Colle di Val d'Elsa,Toscana,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+6CSCG00Q,cstsistemisud.it,Capaccio Paestum,Campania,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+8FL5MZFG,nos.ospedale.siracusa.it,Siracusa,Sicilia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+6D4BRU39,iissgiuliocesare.edu.it,Bari,Puglia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+5B67E3T4,capoterra2.edu.it,Capoterra,Sardegna,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+3KQC0ABI,campaniaict.it,Napoli,Campania,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+2Z7G71Y3,atcbmatera.it,Stigliano,Basilicata,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+1B2LU14W,atcesercizio.it,La Spezia,Liguria,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+1K9JKE4Y,amiu.genova.it,Genova,Liguria,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+1JRW5QXG,icfalconeborsellinocarelli.edu.it,Conversano,Puglia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+aapl_001,turismotorino.org,Torino,Piemonte,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+1FG1N2LG,patrimoniosettimo.it,Settimo Torinese,Piemonte,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+1CMVL,cmvalledelliri.it,Arce,Lazio,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+1C8SJSJP,supercomputing-icsc.it,Casalecchio di Reno,Emilia-Romagna,3,DMARC non attivo (assente o solo osservazione); DNSSEC assente; certificato TLS scaduto o in scadenza entro 30 giorni
+15ZKCDR0,scuolacriscuolopagani.edu.it,Pagani,Campania,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+1KUZ447N,itstela.it,Salerno,Campania,3,DMARC non attivo (assente o solo osservazione); DNSSEC assente; certificato TLS scaduto o in scadenza entro 30 giorni
+15UTHMTL,premiaterme.com,Premia,Piemonte,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+15U5YKAC,savlmarradi.it,Marradi,Toscana,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+aasct_na,inaples.it,Napoli,Campania,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+111WOAN5,icciampino1.edu.it,Ciampino,Lazio,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+aasp,aseaenergia.eu,Benevento,Campania,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+0YNSXWD5,evi-spa.it,Ischia,Campania,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+1KG9Y6D4,adespa.it,Parma,Emilia-Romagna,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+1MF1PZD3,consorziopiave.it,Montebelluna,Veneto,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+1YY999AI,isdecaprariis.edu.it,Atripalda,Campania,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+aacsl1,atoambientecl1.it,Caltanissetta,Sicilia,3,DMARC non attivo (assente o solo osservazione); DNSSEC assente; certificato TLS scaduto o in scadenza entro 30 giorni
+1VO9PWVQ,ramspa.it,Roma,Lazio,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+AA5602E4,icsiragusa.edu.it,Palermo,Sicilia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+1TPZT8B2,deamicisnapoli.edu.it,Napoli,Campania,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+1TISW5ZN,consorziodibonificasudanagni.it,Anagni,Lazio,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+1T08N3AZ,asmv.it,Vigevano,Lombardia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+1R9VQFM0,altapianuraveneta.eu,San Bonifacio,Veneto,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+1QMBM9KB,istitutotecnicomarconipilla.edu.it,Campobasso,Molise,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+1MPXMKGE,potenziamentoreteospedaliera.sicilia.it,Palermo,Sicilia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+1PMKZZPT,jobsfactory.org,Milano,Lombardia,3,DMARC non attivo (assente o solo osservazione); DNSSEC assente; certificato TLS scaduto o in scadenza entro 30 giorni
+1P25K07V,federnuoto.it,Roma,Lazio,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+a_101,asp.crotone.it,Crotone,Calabria,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+aalss,ales-spa.com,Roma,Lazio,3,nessuna ridondanza NS; DNSSEC assente; certificato TLS scaduto o in scadenza entro 30 giorni
+1OASUY2U,icsanmarcobonitocosenza.edu.it,Castellammare di Stabia,Campania,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+1NXXKA3W,itsgreenenergypuglia.it,Troia,Puglia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+aaspa,anconambiente.it,Ancona,Marche,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+0WPRWL10,mercoglianoservizi.av.it,Mercogliano,Campania,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+0WCM8EAW,siespa.net,Catania,Sicilia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+05GYSWFH,casaospitalita.it,Venezia,Veneto,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+0AIQ5Z0T,saprodir.it,Rieti,Lazio,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+093,asfo.sanita.fvg.it,Pordenone,Friuli-Venezia Giulia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+092,aobrotzu.it,Cagliari,Sardegna,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+08RQFFO1,iclevimontalcini.edu.it,Bellaria-Igea Marina,Emilia-Romagna,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+080,asp.rc.it,Reggio di Calabria,Calabria,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+07WB8QXR,dogresrl.it,Perugia,Umbria,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+abac,abacatania.it,Catania,Sicilia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+aastp,aziendaturismopositano.it,Positano,Campania,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+055,uslumbria2.it,Terni,Umbria,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+04UY8I1H,ictitoliviofiorelli.edu.it,Napoli,Campania,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+048X8EU7,bitrigas.it,Biccari,Puglia,3,DMARC non attivo (assente o solo osservazione); DNSSEC assente; certificato TLS scaduto o in scadenza entro 30 giorni
+044QEGSD,montagnebiellesi.it,Casapinta,Piemonte,3,DMARC non attivo (assente o solo osservazione); DNSSEC assente; certificato TLS scaduto o in scadenza entro 30 giorni
+abac_079,abacatanzaro.it,Catanzaro,Calabria,3,DMARC non attivo (assente o solo osservazione); DNSSEC assente; certificato TLS scaduto o in scadenza entro 30 giorni
+02IKT4NA,san-leo.it,San Leo,Emilia-Romagna,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+0BLX4BBP,investimentispa.it,Roma,Lazio,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+0D7QKFH5,parcamservizi.portaletrasparenza.net,Milano,Lombardia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+0DWK5DFK,liceoboccioni.edu.it,Napoli,Campania,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+0E843YSW,agrorisorse.it,Lodi,Lombardia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+0FDQX1EL,tecnopolomediterraneo.it,Taranto,Puglia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+ab,comunebedollo.it,Bedollo,Trentino-Alto Adige/Südtirol,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+0LWWUVBK,acer.re.it,Reggio nell'Emilia,Emilia-Romagna,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+0M9HV9B8,asecospa.com,Bari,Puglia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+aaton_,ato3marche.it,Macerata,Marche,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+aatom,atoacquemessina@pec.it,Messina,Sicilia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+aatolv,consigliodibacinolv.it,Venezia,Veneto,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+0QBSMAW1,fitstic.it,Cesena,Emilia-Romagna,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+aato2mca,aato2.marche.it,Jesi,Marche,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+aato1mnp,ato1acqua.marche.it,Pesaro,Marche,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+0TAQ7B02,msengineering.it,Assago,Lombardia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+aatgr_to,atorifiutitorinese.it,Torino,Piemonte,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+0UE9CQ9Y,fondazionemilano.eu,Milano,Lombardia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+1YI8V232,cbldistribuzionesrl.it,Mede,Lombardia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+7P9NB79B,arapservizi.it,Cepagatti,Abruzzo,3,DMARC non attivo (assente o solo osservazione); DNSSEC assente; certificato TLS scaduto o in scadenza entro 30 giorni
+1Z6GFCFA,scuolaninomartoglio.edu.it,Belpasso,Sicilia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+23QSUC3X,srtspa.it,Novi Ligure,Piemonte,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+A9OYQOCS,geat.it,Riccione,Emilia-Romagna,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+a_ct,aspct.it,Catania,Sicilia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+a13_f952,asl.novara.it,Novara,Piemonte,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+28WXF4F1,salernopompeinapolispa.it,Torino,Piemonte,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+a1_025,aulss1.veneto.it,Belluno,Veneto,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+2QP82DEV,scuolamediacante.edu.it,Giugliano in Campania,Campania,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+A6N7IW0N,ammi.education,Monza,Lombardia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+a1_ss,atssardegna.it,Sassari,Sardegna,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+A6E9WZKL,icsborgesepartannamondello.edu.it,Palermo,Sicilia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+2CYUF4OU,autostradealtoadriatico.it,Trieste,Friuli-Venezia Giulia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+2OYCYTVM,vareserowing.com,Varese,Lombardia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+2NGFCWZO,fapautoservizi.it,San Donà di Piave,Veneto,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+A690_bpe,comune.bascape.pv.it,Bascapè,Lombardia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+a4_te,aslteramo.it,Teramo,Abruzzo,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+2FE009RQ,trieste.aterfvg.it,Trieste,Friuli-Venezia Giulia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+2FF8D5S2,cataniamultiservizi.it,Catania,Sicilia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+1ZEHMGHD,manzonimottola.edu.it,Mottola,Puglia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+2HA2I22L,cemambiente.it,Cavenago di Brianza,Lombardia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+2N6F7AT3,aps.sv.it,Savona,Liguria,3,DMARC non attivo (assente o solo osservazione); DNSSEC assente; certificato TLS scaduto o in scadenza entro 30 giorni
+A3MPM8EP,atam-rc.it,Reggio di Calabria,Calabria,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+2J459ZOC,fondazioneartea.org,Caraglio,Piemonte,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+2JEE5H6J,jac-its.it,Bergamo,Lombardia,3,DMARC non attivo (assente o solo osservazione); DNSSEC assente; certificato TLS scaduto o in scadenza entro 30 giorni
+A1ZKMT58,ambientespa.net,Spoltore,Abruzzo,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+245FNRH5,fondoagricat.it,Roma,Lazio,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+a_sr,asp.sr.it,Siracusa,Sicilia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+2LUUWYB7,millerivoli.it,Rivoli,Piemonte,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+21M650RW,farmaciecomunalicrema.com,Crema,Lombardia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+a_cl,asp.cl.it,Caltanissetta,Sicilia,3,DMARC non attivo (assente o solo osservazione); DNSSEC assente; certificato TLS scaduto o in scadenza entro 30 giorni
+A9PEYSMG,mercurioriscossioni.it,L'Aquila,Abruzzo,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+2TX6NDU6,fondoprofessioni.it,Roma,Lazio,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+217XZ2VA,pascoliaversa.edu.it,Aversa,Campania,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+2US6PK0U,ordine-crotone.cnpi.eu,Crotone,Calabria,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+219TJPHO,latina.cri.it,Latina,Lazio,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+20IURH3M,icsancirodeamicispioxii.edu.it,Foggia,Puglia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+21W263TE,alberghieroerice.edu.it,Erice,Sicilia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+2WTZ8MT1,conservatoriomaderna.it,Cesena,Emilia-Romagna,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+1ZPNFOZP,measpa.it,Melegnano,Lombardia,3,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione); DNSSEC assente
+9VML3M92,masullotheti.edu.it,Nola,Campania,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+85X474AS,cosmarimc.it,Tolentino,Marche,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+aatopa,atoidrico1palermo.it,Palermo,Sicilia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+a_cb,asrem.molise.it,Campobasso,Molise,2,nessuna ridondanza NS; DNSSEC assente
+84IX3L0P,cacip.it,Cagliari,Sardegna,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+7S2HQA9E,solofraservizi.it,Solofra,Campania,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+aatoq,aato4.it,Sant'Elpidio a Mare,Marche,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+876UN3AE,istitutocomprensivodeliceto.edu.it,Deliceto,Puglia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+7RIG1C6B,letunnel.com,Saint-Rhémy-en-Bosses,Valle d'Aosta/Vallée d'Aoste,2,nessuna ridondanza NS; DNSSEC assente
+8ATK48M4,iceboli1matteoripa.edu.it,Eboli,Campania,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+82SGXOP7,regione.basilicata.it,Potenza,Basilicata,2,DNSSEC assente; certificato TLS scaduto o in scadenza entro 30 giorni
+8D20RCTE,agenzia.roma.it,Roma,Lazio,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+7QCUI616,cassamutuacancellieri.it,Roma,Lazio,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+9VU26R0T,asmcastelleone.it,Castelleone,Lombardia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+9Z35T315,tangenzialedinapoli.it,Napoli,Campania,2,nessuna ridondanza NS; DNSSEC assente
+a_077,asmbasilicata.it,Matera,Basilicata,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+AB286R67,agrariavallecupola.it,Rocca Sinibalda,Lazio,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+9YBY9CC5,eutalia.eu,Roma,Lazio,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+aba_090,accademiasironi.it,Sassari,Sardegna,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+7UKG69R2,pluchinotta.edu.it,Sant'Agata li Battiati,Sicilia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+aba_80,abarc.it,Reggio di Calabria,Calabria,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+7VONFACG,misericordiadiantignano.it,Livorno,Toscana,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+7U83R2FL,gruppoandreani.it,Corridonia,Marche,2,nessuna ridondanza NS; DNSSEC assente
+abab_037,ababo.it,Bologna,Emilia-Romagna,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+7TA5W3S2,italyexpo2025osaka.it,Roma,Lazio,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+81J321XP,veloceindustry.it,Argelato,Emilia-Romagna,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+7WO6BFIT,asi-srl.it,Camposampiero,Veneto,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+9WXB6T8O,portoimmobiliare.it,Livorno,Toscana,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+9ZP5G19P,inpsservizi.it,Roma,Lazio,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+abab_072,accademiabelleartiba.it,Bari,Puglia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+9ZSH8PEB,hermesrc.it,Reggio di Calabria,Calabria,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+9W4KE9LW,scarabelli-ghini.edu.it,Imola,Emilia-Romagna,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+7S3QTPXP,ospedalegiglio.it,Cefalù,Sicilia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+abac_045,accademiacarrara.it,Carrara,Toscana,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+aast,termoli.net,Termoli,Molise,2,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione)
+7PJKGTET,ligurcapital.it,Genova,Liguria,2,nessuna ridondanza NS; DNSSEC assente
+A1AOQXZA,studioradiologicobernasconi.it,Seregno,Lombardia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+8Y9TOFFS,fondazioneaquileia.it,Aquileia,Friuli-Venezia Giulia,2,nessuna ridondanza NS; DNSSEC assente
+aamsc,operapiasgobbanoci.it,Noci,Puglia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+9LSXXA51,amgasfoggiaweb.it,Foggia,Puglia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+9K1N4U94,pattonordbareseofantino.it,Barletta,Puglia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+aaill_,arlas.campania.it,Napoli,Campania,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+9H9P0MGS,valenzaretegas.it,Valenza,Piemonte,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+8ZHA4Y1N,itsmeccatronicolazio.it,Frosinone,Lazio,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+91ADN2SF,cavourmazziniconvitto.edu.it,Marsala,Sicilia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+aacsl,atoambiente-cl2.it,Gela,Sicilia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+9H1HPVVP,fondazionecantiere.it,Montepulciano,Toscana,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+91NN57DH,icgiannone.edu.it,Ischitella,Puglia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+aaci_,atocaloreirpino.it,Avellino,Campania,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+aaba_001,albertina.academy,Torino,Piemonte,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+91WAXW2Z,chietisolidale.it,Chieti,Abruzzo,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+92XZZZRE,atcbra.it,San Vito dei Normanni,Puglia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+946EX1QI,fnofi.it,Genova,Liguria,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+94P7AWW0,flaviaservizi.it,Ladispoli,Lazio,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+94WZYBC7,firenzesmart.it,Firenze,Toscana,2,DNSSEC assente; certificato TLS scaduto o in scadenza entro 30 giorni
+A9W40RY5,servizicivicispa.it,Fiumicino,Lazio,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+9BB8MUC4,acquedottiscpa.com,Orta di Atella,Campania,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+955B3556,caan.it,Volla,Campania,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+9NOWRM5S,tecnoborsa.com,Roma,Lazio,2,nessuna ridondanza NS; DNSSEC assente
+8Y6XD6TV,icvaldilana.edu.it,Valdilana,Piemonte,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+A9AHBMJJ,fierafoggia.it,Foggia,Puglia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+8O2ZYX7O,biologitriveneto.it,Padova,Veneto,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+8DLHBH1N,bronistradellapubblica.it,Stradella,Lombardia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+9U4KVE3R,montagnamarsicana.it,Avezzano,Abruzzo,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+8G9SP94T,giffoni.it,Giffoni Valle Piana,Campania,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+9SNABNQ4,iissvieste.edu.it,Vieste,Puglia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+8HZUP2DE,compa.fvg.it,Udine,Friuli-Venezia Giulia,2,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione)
+8JIS2RBA,bonificavenetorientale.it,San Donà di Piave,Veneto,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+8KA77F34,jaci.edu.it,Messina,Sicilia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+9SCBBGBC,costaemontisaraceni.me.it,Piraino,Sicilia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+8N7ZS3K4,andriamultiservice.com,Andria,Puglia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+aasmc,sferisterio.it,Macerata,Marche,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+9NWJC70B,ieo.it,Milano,Lombardia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+9RWGTNVG,icaldomoro.edu.it,Vallo della Lucania,Campania,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+aarspa,altoadigeriscossioni.it,Bolzano,Trentino-Alto Adige/Südtirol,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+A6BF9LF1,aterrieti.it,Rieti,Lazio,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+aaric,areacom.eu,L'Aquila,Abruzzo,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+8UIFPO9K,infrastrutturemilanocortina2026.it,Roma,Lazio,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+9P9LCBMX,1circolomercatosanseverino.edu.it,Mercato San Severino,Campania,2,nessuna ridondanza NS; DNSSEC assente
+A86RQ42W,aspdestrasecchia.it,Ostiglia,Lombardia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+a9_tv,aulss2.veneto.it,Treviso,Veneto,2,nessuna ridondanza NS; DNSSEC assente
+9ODSLB9I,sstchioggia.it,Chioggia,Veneto,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+8Z5P4LQM,donluigisturzobagheria.edu.it,Bagheria,Sicilia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+013E014U,giochi24.it,Milano,Lombardia,2,nessuna ridondanza NS; DNSSEC assente
+7PH1CDSJ,iczimarino.edu.it,Casalbordino,Abruzzo,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+2QR9KMNO,ferrovieudinecividale.it,Udine,Friuli-Venezia Giulia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+35L7OZCL,iisdipascafortunatopz.edu.it,Potenza,Basilicata,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+35GVD3QF,gruppoamag.it,Alessandria,Piemonte,2,nessuna ridondanza NS; DNSSEC assente
+35EC5V1A,fnofi.it,Piacenza,Emilia-Romagna,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+2YNKW2LR,artemedia.srl,Bisceglie,Puglia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+2Y1NXHIH,icsangiovanniboscogiordani.edu.it,Manfredonia,Puglia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+2UCZLMB1,consorzioirriguo-chivasso.it,Chivasso,Piemonte,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+2R3HRI01,apuliadigitalmaker.it,Foggia,Puglia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+2Q3P0F1M,fnofi.it,Palermo,Sicilia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+2CD2IUF8,liceogbvico.edu.it,Laterza,Puglia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+2POFUSZD,ambientetecnologia.it,Enna,Sicilia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+2M9NZFR2,atc3potenza.it,Sant'Arcangelo,Basilicata,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+2LP4NWTB,mercafir.it,Firenze,Toscana,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+2KZ74LLK,icgiovannixxiiimoro.edu.it,Mesagne,Puglia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+2IVU9LJG,nattadeambrosis.edu.it,Sestri Levante,Liguria,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+2FATC529,senigalliaservizi.it,Senigallia,Marche,2,nessuna ridondanza NS; DNSSEC assente
+2EG4IZK1,acerimini.it,Rimini,Emilia-Romagna,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+35OYU5O6,iismatteucci.edu.it,Roma,Lazio,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+38WHGZZB,toscana-aeroporti.com,Firenze,Toscana,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+3BEP4ZAX,comune.moransengotonengo.at.it,,,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+3FZT9K8P,fnofi.it,Caltanissetta,Sicilia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+46BR227J,fondazioneteatrococcia.it,Novara,Piemonte,2,nessuna ridondanza NS; DNSSEC assente
+41ODRLU5,ismea.it,Roma,Lazio,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+7P67KQRT,flynetwork.it,Lustra,Campania,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+3ZDDLRZA,arcasvevaofantina.it,Andria,Puglia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+3XIN54S7,atc1potenza.it,Rionero in Vulture,Basilicata,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+3VMLWXGX,ecolanspa.it,Lanciano,Abruzzo,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+3SBF3PUB,fnofi.it,Cittadella,Veneto,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+3S94F5QD,roccaservizi.it,Roccarainola,Campania,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+3PS17TYB,comune.misiliscemi.tp.it,,,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+3NJRG27J,wabes.it,Vadena,Trentino-Alto Adige/Südtirol,2,nessuna ridondanza NS; DNSSEC assente
+3KJ3AED2,scuolecarduccilivorno.edu.it,Livorno,Toscana,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+3KAFLSAH,brta.camcom.it,Taranto,Puglia,2,nessuna ridondanza NS; DNSSEC assente
+3IMS74Z9,aziendasolidalia.it,Romano di Lombardia,Lombardia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+3I9VYT5F,arena.it,Verona,Veneto,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+3HCVQGVQ,bonificacspuglia.it,Bari,Puglia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+2EFDYO1W,leserre.org,Grugliasco,Piemonte,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+2BLS82OD,comune.jesi.an.it,Jesi,Marche,2,nessuna ridondanza NS; DNSSEC assente
+48MUH68H,beccaristeiner.edu.it,Torino,Piemonte,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+0IIBJU7X,ganenergia.it,Palermo,Sicilia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+0W0FXX80,entesviluppoagricolo.it,Palermo,Sicilia,2,nessuna ridondanza NS; DNSSEC assente
+0TK07ISH,scuoladaostabari.edu.it,Bari,Puglia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+0T2GMPK6,ilvc.it,Potenza,Basilicata,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+0Q81OFDZ,cfi.it,Roma,Lazio,2,nessuna ridondanza NS; DNSSEC assente
+0PYATICV,ptpcatanzaro.edu.it,Catanzaro,Calabria,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+0PH5RCJW,asitaranto.it,Taranto,Puglia,2,nessuna ridondanza NS; DNSSEC assente
+0N7FO552,serics.eu,Fisciano,Campania,2,nessuna ridondanza NS; DNSSEC assente
+0HD8JCF4,biologitoscanaumbria.it,Firenze,Toscana,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+2BLMCDR6,atm.it,Milano,Lombardia,2,nessuna ridondanza NS; DNSSEC assente
+09Q0MK8F,ic2piacenza.edu.it,Piacenza,Emilia-Romagna,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+085AGQ61,comprensivodellatorre.edu.it,Gradisca d'Isonzo,Friuli-Venezia Giulia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+05O9EJDW,capitalelavoro.it,Roma,Lazio,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+05O3YE9M,iiscolomboroma.edu.it,Roma,Lazio,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+056,asl.vt.it,Viterbo,Lazio,2,nessuna ridondanza NS; DNSSEC assente
+03YBQ4C7,fnofi.it,Siena,Toscana,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+02ZMKEL0,cesenaticoservizi.it,Cesenatico,Emilia-Romagna,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+0WHKRWPA,srrcatanianord.it,Acireale,Sicilia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+0XEC4X1B,unionecomunicittadellamaiella.it,San Valentino in Abruzzo Citeriore,Abruzzo,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+109B2JPX,treesseitalia.it,Supino,Lazio,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+11B2JNFL,atervicenza.it,Vicenza,Veneto,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+2A85YKMU,sisamspa.it,Castel Goffredo,Lombardia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+25BSWEKR,liside-cabrini.edu.it,Taranto,Puglia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+22GDHE59,aldrovandirubbiani.edu.it,Bologna,Emilia-Romagna,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+20FCHW7B,aziendaspecialecarlentini.it,Carlentini,Sicilia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+1UMEMOPN,acerravenna.it,Ravenna,Emilia-Romagna,2,nessuna ridondanza NS; DNSSEC assente
+1TDVNB2B,icoutsourcing.it,Padova,Veneto,2,nessuna ridondanza NS; DNSSEC assente
+1TCBA2KR,sisiacque.it,Alba,Piemonte,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+1SCXYSW4,collegiostetricheagcl.it,Agrigento,Sicilia,2,nessuna ridondanza NS; DNSSEC assente
+1R25HBXU,cobon1tp.it,Trapani,Sicilia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+1P3G1MD5,farmacap.info,Roma,Lazio,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+1ODBWQ8Z,odcecvelletri.it,Velletri,Lazio,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+1NQCFG5W,asmmolfetta.it,Molfetta,Puglia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+1G20JNNY,setaspa.com,Settimo Torinese,Piemonte,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+16IODWCU,isontinambiente.it,Gorizia,Friuli-Venezia Giulia,2,nessuna ridondanza NS; DNSSEC assente
+13WYVHQO,ecoennaservizi.it,Enna,Sicilia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+48LQPAQ6,ordinebiologiplv.it,Torino,Piemonte,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+40B59AWR,comune.sovizzo.vi.it,,,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+4A91UEHP,fondirigenti.it,Roma,Lazio,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+6X1RDWV0,rodari-giovanni23.edu.it,Palagiano,Puglia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+6U598X6H,agritechcenter.it,Napoli,Campania,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+6RAXEBMY,innovaprofessioni.it,Milano,Lombardia,2,nessuna ridondanza NS; DNSSEC assente
+6N07RMJW,agenziavalledelsarno.com,Nocera Inferiore,Campania,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+6F18K2W9,icdonmilanigaribaldileone.edu.it,Trinitapoli,Puglia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+682WDFH2,taletespa.eu,Viterbo,Lazio,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+63X8KW43,fnofi.it,Catania,Sicilia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+633CP49E,cittalia.it,Roma,Lazio,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+62XLEE38,steat.it,Fermo,Marche,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+609OPZNV,fpi.it,Roma,Lazio,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+5YV1BPFK,liceocopertino.edu.it,Copertino,Puglia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+4C6P4HP6,bolognaservizicimiteriali.it,Bologna,Emilia-Romagna,2,nessuna ridondanza NS; DNSSEC assente
+5V3ZMCFD,consorziofabre.it,Pisa,Toscana,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+5TX38ION,assoservizi.net,Roma,Lazio,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+5S9EYT2J,arcaregionepuglia.it,Bari,Puglia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+5RY8ZQSZ,sailpost.it,Vecchiano,Toscana,2,nessuna ridondanza NS; DNSSEC assente
+6UZKD69P,teatrovalentinogaravani.it,Voghera,Lombardia,2,nessuna ridondanza NS; DMARC non attivo (assente o solo osservazione)
+6YJWRKS1,ordineveterinariarezzo.it,Arezzo,Toscana,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+5QOB2CIY,galpontelama.it,Bisceglie,Puglia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+6ZTPE07R,unionemonferratopianalto.it,Villanova d'Asti,Piemonte,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+7OB84U7Z,cassaprevidenza-mit.it,Roma,Lazio,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+7LAQH02E,neutalia.it,Busto Arsizio,Lombardia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+7KXPDU26,scitecvita.it,Napoli,Campania,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+7HQKKCIS,itsturismoecultura.it,Mosciano Sant'Angelo,Abruzzo,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+7HP3V1V6,alea-ambiente.it,Forlì,Emilia-Romagna,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+7FKYBH9E,3-i.gov.it,Roma,Lazio,2,nessuna ridondanza NS; DNSSEC assente
+7EIMQDFE,padovattiva.it,Padova,Veneto,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+7DUP2M8Y,secondocircologubbio.edu.it,Gubbio,Umbria,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+7CYTCUK9,donmilanipertinimorante.edu.it,Grottaglie,Puglia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+79URAT5P,acquaenna.it,Enna,Sicilia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+79JAO2H1,icfoscolostoccolma.edu.it,Cagliari,Sardegna,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+79EGY04C,boscogiovanni23carducci.edu.it,Ruvo di Puglia,Puglia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+78EKNPP3,fissw.com,Milano,Lombardia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+72DW9NBP,fnofi.it,Pavia,Lombardia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+710VMN1T,stepservizi.net,Sorso,Sardegna,2,nessuna ridondanza NS; DNSSEC assente
+5QZY1GA0,atcllazio.it,Roma,Lazio,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+5WEQOI7K,alilauro.it,Napoli,Campania,2,nessuna ridondanza NS; DNSSEC assente
+4SK10CDN,commissario.risanamento.me.it,Messina,Sicilia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+52F9D08Y,calso.org,Dogliani,Piemonte,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+4PBKMXZT,itsmarcopolo.it,Venezia,Veneto,2,nessuna ridondanza NS; DNSSEC assente
+4Q7W3LTX,casariposoquaglia.it,Diano Castello,Liguria,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+4I5ECKIA,pasubiotecnologia.it,Schio,Veneto,2,nessuna ridondanza NS; DNSSEC assente
+4QYODNC5,mirabilianetwork.eu,Roma,Lazio,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+4FTGOO9Q,gemeinde.muehlwald.bz.it,Selva dei Molini,Trentino-Alto Adige/Südtirol,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+4FKOGXPC,farmaciesona.it,Sona,Veneto,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+5LWDEPQX,itsagroalimentarepuglia.it,Locorotondo,Puglia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+4VD0KVZ6,aziendaspecialeama.it,Monte Argentario,Toscana,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+4EVBLVBD,gruppohera.it,Trieste,Friuli-Venezia Giulia,2,nessuna ridondanza NS; DNSSEC assente
+4E74TB2S,fondopmi.com,Roma,Lazio,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+4E1NJHKT,fondazionepiccolomini.it,Roma,Lazio,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+4VSXCZLC,rsa-srl.it,Balangero,Piemonte,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+4WH03GS8,ilcastellodinovara.it,Novara,Piemonte,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+4ZKKQNKQ,comune.seriate.bg.it,Seriate,Lombardia,2,nessuna ridondanza NS; DNSSEC assente
+545AQBJC,federpesistica.it,Roma,Lazio,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+59VIG8L0,patrimoniopisa.it,Pisa,Toscana,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+5AMFGRN8,salernosolidale.it,Salerno,Campania,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+5AXRUUI0,reaspa.it,Rosignano Marittimo,Toscana,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+4DCNS5QF,fondazionemessinaperlacultura.it,Messina,Sicilia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+5BWCL08M,laziodigital.it,Roma,Lazio,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+5EYBRCDR,triestetrasporti.it,Trieste,Friuli-Venezia Giulia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+4CTAAQDI,ancona-airport.com,Falconara Marittima,Marche,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+5GCX4M0S,sigspa.com,Penne,Abruzzo,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+5GOPE0AP,ursus.trieste.it,Trieste,Friuli-Venezia Giulia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+5I8RW1NM,icboscomorofioreterlizzi.edu.it,Terlizzi,Puglia,2,DMARC non attivo (assente o solo osservazione); DNSSEC assente
+4KM8UAYZ,enteportogiulianova.it,Giulianova,Abruzzo,2,nessuna ridondanza NS; DNSSEC assente
+4NW5PUS6,grimolise.it,Campobasso,Molise,1,DMARC non attivo (assente o solo osservazione)
+9IDNX1G3,progettoambientespa.it,Aprilia,Lazio,1,DNSSEC assente
+058,aslroma5.it,Tivoli,Lazio,1,DNSSEC assente
+054,uslumbria1.it,Perugia,Umbria,1,DNSSEC assente
+5N2TR557,pagopa.it,Roma,Lazio,1,DNSSEC assente
+0SGNV76C,geropa.it,Frascati,Lazio,1,DNSSEC assente
+721S6ANG,vigilanzasport.it,Roma,Lazio,1,DNSSEC assente
+817BQG20,sirentina.it,Secinaro,Abruzzo,1,DMARC non attivo (assente o solo osservazione)
+102,aspvv.it,Vibo Valentia,Calabria,1,DNSSEC assente
+3FZOB8MI,seab.bz.it,Bolzano,Trentino-Alto Adige/Südtirol,1,DNSSEC assente
+85FQR8X2,5t.torino.it,Torino,Piemonte,1,DNSSEC assente
+6WECXT3I,itsacademysi.it,Salerno,Campania,1,DMARC non attivo (assente o solo osservazione)
+392P3CJB,adriafer.com,Trieste,Friuli-Venezia Giulia,1,DNSSEC assente
+6CY4731G,exegesi.it,Torino,Piemonte,1,DNSSEC assente
+8HTD8P8I,auditorium.com,Roma,Lazio,1,DNSSEC assente
+28B1JW1G,ctmcagliari.it,Cagliari,Sardegna,1,DNSSEC assente
+2QTJX32V,puntozeroscarl.it,Perugia,Umbria,1,DNSSEC assente
+abaf_060,accademiabellearti.fr.it,Frosinone,Lazio,1,DNSSEC assente
+7VKA95UA,casaatcservizi.it,Torino,Piemonte,0,
+3X3CPIT8,asfautolinee.it,Como,Lombardia,0,

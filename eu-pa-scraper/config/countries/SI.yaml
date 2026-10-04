@@ -1,0 +1,71 @@
+country_code: SI
+country_name: "Slovenia"
+status: ready
+source_type: site_crawl # bulk_csv
+source_name: "RPU / iRPU (UJP) - Register proracunskih uporabnikov"
+source_url: "https://podatki.gov.si/dataset/seznam-neposrednih-in-posrednih-proracunskih-uporabnikov"  # sostituire con link diretto al file
+input_filename: "rpu.csv"
+delimiter: ";"
+encoding: "utf-8-sig"
+license: "CC BY 4.0"
+field_mapping:
+  hostname: ""                  # nessun campo URL nel RPU
+  comune: "sedez"
+  regione: ""
+  codice_ipa: "sifra_pu"
+  sector: "tip"                 # tipo A/B
+notes: >
+  RPU non contiene siti web. Fonti complementari: PRS/AJPES (XML, Poslovni
+  register Slovenije) e portale OPSI (podatki.gov.si) per eventuali dataset
+  con contatti/URL. Verificare nomi colonna reali (sloveno).
+
+# TLD "di fiducia" per continuare a esplorare un dominio anche se non e'
+# elencato esplicitamente in 'allowed_domains' (si somma ad essa, non la
+# sostituisce): un dominio scoperto durante il crawl e' considerato
+# "interno" (e quindi esplorato anche ai livelli successivi) se il suo
+# TLD nazionale o un label 'gov' compaiono tra i suoi label. Usato solo
+# da source_type: site_crawl; innocuo per gli altri source_type.
+allowed_tlds:
+  - "si"
+  - "gov"
+
+
+seeds_file: "seeds.txt"
+crawl_depth: 8
+
+# ...poi, a ogni pagina visitata, raccoglie i link USCENTI (siti ufficiali
+# degli enti che hanno pubblicato l'annuncio), escludendo i social:
+exclude_domains:
+exclude_domains:
+  - "facebook.com"
+  - "twitter.com"
+  - "x.com"
+  - "linkedin.com"
+  - "xing.com"
+  - "instagram.com"
+  - "youtube.com"
+  - "tiktok.com"
+  - "pinterest.com"
+  - "reddit.com"
+  - "tumblr.com"
+  - "flickr.com"
+  - "paypal.com"
+  - "amazon.com"
+  - "ebay.com"
+  - "wikipedia.org"
+  - "wikimedia.org"
+  - "wikidata.org" 
+  - "archive.org"
+  - "web.archive.org"
+  - "aliexpress.com"
+  - "etsy.com"
+  - "twitch.tv"
+  - "alibaba.com"
+  - "medium.com"
+  - "maps.google.com"
+  - "google.com"
+
+max_pages_per_level: 15000     # tetto di sicurezza: alzare per una copertura più ampia
+sleep_seconds: 1.0           # pausa tra le richieste (cortesia verso il server)
+input_filename: "crawl_service_bund.json"
+license: "n/a (harvesting di URL pubblici, nessun contenuto riprodotto)"

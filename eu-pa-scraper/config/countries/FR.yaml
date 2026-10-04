@@ -1,0 +1,70 @@
+country_code: FR
+country_name: "Francia"
+status: ready
+custom_module: fr                 # usa src/fetchers/fr.py -> classe FRFetcher
+source_name: "Annuaire de l'administration (DILA / data.gouv.fr) - base de donnees locales"
+
+# L'URL "stable" fa un redirect 302 verso il file reale (un archivio
+# tar.bz2, ~350 MB), verificato nei log del 12/09/2026:
+#   https://www.data.gouv.fr/api/1/datasets/r/73302880-e4df-4d4c-8676-1a61bb997f3d
+#   --302--> https://lecomarquage.service-public.gouv.fr/donnees_locales_v4/all_latest.tar.bz2
+# Teniamo ENTRAMBI gli URL in lista: se il primo redirect dovesse rompersi
+# in futuro, il fetcher prova comunque il secondo (diretto).
+source_urls:
+  - "https://www.data.gouv.fr/api/1/datasets/r/73302880-e4df-4d4c-8676-1a61bb997f3d"
+  - "https://lecomarquage.service-public.gouv.fr/donnees_locales_v4/all_latest.tar.bz2"
+
+input_filename: "annuaire_local.tar.bz2"
+license: "Licence Ouverte / Etalab 2.0"
+
+notes: >
+  FORMATO REALE (scoperto il 12/09/2026 grazie ai log di un run utente):
+  l'URL stable NON serve un JSON direttamente, ma fa un redirect 302 verso
+  un archivio tar.bz2 di circa 350 MB. Dentro l'archivio ci sono due cose:
+    1) un file "{data}-data.gouv_local.json": un oggetto JSON con chiave
+       "service" contenente la lista di tutti gli sportelli/enti. Ogni
+       ente ha "site_internet" come LISTA di {libelle, valeur} (puo' avere
+       PIU' link: sito principale + es. un link di prenotazione
+       appuntamenti). Il fetcher estrae SOLO questo file dall'archivio
+       (in memoria, senza scompattare tutto su disco) e produce UNA RIGA
+       DI OUTPUT PER OGNI LINK trovato (stesso ente, hostname diverso,
+       campo 'tipo_link' con la relativa 'libelle' o "sito ufficiale" se
+       non specificata). Gli enti senza alcun link producono comunque una
+       riga con hostname vuoto (per non perdere il conteggio).
+    2) una cartella "{data}-data.gouv_commune/" con un file per comune
+       (es. "77188.json"): dati anagrafici del comune, VERIFICATO SENZA
+       link utili - il fetcher la ignora completamente.
+
+  CAMPI ESTRATTI: nome_ente=nom, comune=adresse[0].nom_commune,
+  regione=dipartimento (2 cifre, 3 per i DOM 97x/98x, ricavato da
+  code_insee_commune), codice_ipa=id (uuid DILA) o siret/siren se
+  disponibili, sector=categorie/pivot[0].type_service_local (es.
+  "SL/mairie" per una mairie).
+
+  Se in futuro la fonte tornasse a servire JSON semplice o NDJSON invece
+  del tar.bz2, il fetcher lo rileva automaticamente e usa un percorso di
+  parsing alternativo (vedi src/fetchers/fr.py).
+
+  DOVE TROVARE MANUALMENTE IL FILE IN FUTURO (se il download automatico
+  smettesse di funzionare, es. per un firewall aziendale che blocca uno dei
+  due domini): apri nel browser
+  https://www.data.gouv.fr/datasets/service-public-gouv-fr-annuaire-de-ladministration-base-de-donnees-locales
+  poi nella sezione "Fichiers" clicca "Télécharger" sul file **json** (che
+  in realta' e' il tar.bz2): il browser scarichera' "all_latest.tar.bz2".
+  Mettilo in data/input/FR/ con lo stesso nome indicato in
+  'input_filename' sopra, e rilancia 'python main.py --country FR': il
+  fetcher lo trovera' gia' pronto e salterà il download.
+
+  Per le scuole, ripetere lo stesso approccio con l'Annuaire de l'Éducation
+  Nationale (dataset separato su data.gouv.fr, verificarne il formato reale
+  con lo stesso metodo usato qui prima di assumere che sia identico).
+
+# TLD "di fiducia" per continuare a esplorare un dominio anche se non e'
+# elencato esplicitamente in 'allowed_domains' (si somma ad essa, non la
+# sostituisce): un dominio scoperto durante il crawl e' considerato
+# "interno" (e quindi esplorato anche ai livelli successivi) se il suo
+# TLD nazionale o un label 'gov' compaiono tra i suoi label. Usato solo
+# da source_type: site_crawl; innocuo per gli altri source_type.
+allowed_tlds:
+  - "fr"
+  - "gov"

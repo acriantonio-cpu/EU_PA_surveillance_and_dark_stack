@@ -1,0 +1,78 @@
+country_code: PL
+country_name: "Polonia"
+status: ready
+source_type: site_crawl # vecchio type api_json
+source_name: "TERYT (GUS) - servizio web ws1"
+source_url: "https://eteryt.stat.gov.pl/"   # servizio TERYT ws1 richiede credenziali via registrazione email
+records_path: ""
+license: "aperta"
+field_mapping:
+  hostname: ""                  # TERYT non contiene siti web: integrare con BIP / dane.gov.pl
+  comune: "nazwa"
+  regione: "wojewodztwo"
+  codice_ipa: "TERC"
+  sector: ""
+notes: >
+  BLOCCANTE: l'accesso al servizio web TERYT (ws1) richiede registrazione
+  via email per ottenere le credenziali (non è un semplice bulk download
+  pubblico). Registrarsi su eteryt.stat.gov.pl, poi implementare
+  l'autenticazione (probabilmente SOAP/XML, non REST puro) come
+  custom_module 'pl'. Per gli URL dei siti, incrociare con i BIP
+  (Biuletyn Informacji Publicznej) di ogni ente o con dane.gov.pl.
+
+website_search:
+  enabled: true
+  backend: duckduckgo        # oppure: wikidata
+  max_queries: 50
+  sleep_seconds: 2.0
+  language: pl
+
+# TLD "di fiducia" per continuare a esplorare un dominio anche se non e'
+# elencato esplicitamente in 'allowed_domains' (si somma ad essa, non la
+# sostituisce): un dominio scoperto durante il crawl e' considerato
+# "interno" (e quindi esplorato anche ai livelli successivi) se il suo
+# TLD nazionale o un label 'gov' compaiono tra i suoi label. Usato solo
+# da source_type: site_crawl; innocuo per gli altri source_type.
+allowed_tlds:
+  - "pl"
+  - "gov"
+
+seeds_file: "seeds.txt"
+crawl_depth: 8
+
+# ...poi, a ogni pagina visitata, raccoglie i link USCENTI (siti ufficiali
+# degli enti che hanno pubblicato l'annuncio), escludendo i social:
+exclude_domains:
+exclude_domains:
+  - "facebook.com"
+  - "twitter.com"
+  - "x.com"
+  - "linkedin.com"
+  - "xing.com"
+  - "instagram.com"
+  - "youtube.com"
+  - "tiktok.com"
+  - "pinterest.com"
+  - "reddit.com"
+  - "tumblr.com"
+  - "flickr.com"
+  - "paypal.com"
+  - "amazon.com"
+  - "ebay.com"
+  - "wikipedia.org"
+  - "wikimedia.org"
+  - "wikidata.org" 
+  - "archive.org"
+  - "web.archive.org"
+  - "aliexpress.com"
+  - "etsy.com"
+  - "twitch.tv"
+  - "alibaba.com"
+  - "medium.com"
+  - "maps.google.com"
+  - "google.com"
+
+max_pages_per_level: 15000     # tetto di sicurezza: alzare per una copertura più ampia
+sleep_seconds: 1.0           # pausa tra le richieste (cortesia verso il server)
+input_filename: "crawl_service_bund.json"
+license: "n/a (harvesting di URL pubblici, nessun contenuto riprodotto)"

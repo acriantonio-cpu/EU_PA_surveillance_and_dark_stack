@@ -1,0 +1,71 @@
+country_code: IE
+country_name: "Irlanda"
+status: ready
+source_type: site_crawl # bulk_xlsx
+source_name: "Register of Public Sector Bodies (CSO) + gov.ie"
+source_url: "https://www.cso.ie/en/releasesandpublications/ep/p-rpbi/registerofpublicsectorbodies2024-provisional/localgovernment/"  # sostituire con link diretto al file XLS
+input_filename: "register_public_sector_bodies.xlsx"
+sheet_name: null
+header_row: 0
+license: "aperta"
+field_mapping:
+  hostname: ""                  # non presente nel Register CSO: integrare da gov.ie
+  comune: ""
+  regione: ""
+  codice_ipa: ""
+  sector: "NACE_code"
+notes: >
+  Register CSO copre la classificazione (S.1313 local authorities, ecc.) in
+  XLS ma senza URL. gov.ie elenca i 31 local authorities + agenzie CON link:
+  valutare un secondo fetcher html_scrape su gov.ie per completare gli URL.
+  data.gov.ie come portale open data complementare.
+
+# TLD "di fiducia" per continuare a esplorare un dominio anche se non e'
+# elencato esplicitamente in 'allowed_domains' (si somma ad essa, non la
+# sostituisce): un dominio scoperto durante il crawl e' considerato
+# "interno" (e quindi esplorato anche ai livelli successivi) se il suo
+# TLD nazionale o un label 'gov' compaiono tra i suoi label. Usato solo
+# da source_type: site_crawl; innocuo per gli altri source_type.
+allowed_tlds:
+  - "ie"
+  - "gov"
+
+seeds_file: "seeds.txt"
+crawl_depth: 8
+
+# ...poi, a ogni pagina visitata, raccoglie i link USCENTI (siti ufficiali
+# degli enti che hanno pubblicato l'annuncio), escludendo i social:
+exclude_domains:
+exclude_domains:
+  - "facebook.com"
+  - "twitter.com"
+  - "x.com"
+  - "linkedin.com"
+  - "xing.com"
+  - "instagram.com"
+  - "youtube.com"
+  - "tiktok.com"
+  - "pinterest.com"
+  - "reddit.com"
+  - "tumblr.com"
+  - "flickr.com"
+  - "paypal.com"
+  - "amazon.com"
+  - "ebay.com"
+  - "wikipedia.org"
+  - "wikimedia.org"
+  - "wikidata.org" 
+  - "archive.org"
+  - "web.archive.org"
+  - "aliexpress.com"
+  - "etsy.com"
+  - "twitch.tv"
+  - "alibaba.com"
+  - "medium.com"
+  - "maps.google.com"
+  - "google.com"
+
+max_pages_per_level: 15000     # tetto di sicurezza: alzare per una copertura più ampia
+sleep_seconds: 1.0           # pausa tra le richieste (cortesia verso il server)
+input_filename: "crawl_service_bund.json"
+license: "n/a (harvesting di URL pubblici, nessun contenuto riprodotto)"

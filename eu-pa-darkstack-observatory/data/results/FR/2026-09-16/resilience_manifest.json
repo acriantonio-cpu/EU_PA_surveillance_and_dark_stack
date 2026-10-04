@@ -1,0 +1,16 @@
+{
+  "timestamp_utc": "2026-09-16T20:01:36.139382+00:00",
+  "paese": "FR",
+  "run_id": "2026-09-16",
+  "n_hostname_da_sondare": 980,
+  "resume": true,
+  "concorrenza": 10,
+  "concorrenza_per_provider": 3,
+  "dns_timeout_seconds": 5.0,
+  "tcp_timeout_seconds": 5.0,
+  "http_user_agent": "Mozilla/5.0 (compatible; osservatorio-dark-stack-resilienza/1.0)",
+  "dnspython_version": "2.8.0",
+  "python_version": "3.12.10",
+  "os": "Windows-11-10.0.22631-SP0",
+  "script": "07_resilience.py"
+}

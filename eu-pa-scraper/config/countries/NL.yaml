@@ -1,0 +1,64 @@
+country_code: NL
+country_name: "Paesi Bassi"
+status: ready
+source_type: site_crawl # custom_module: nl                 # usa src/fetchers/nl.py -> classe NLFetcher
+source_name: "Register van Overheidsorganisaties (KOOP) + RIO"
+source_url: "https://organisaties.overheid.nl/archive/exportOO.xml"
+input_filename: "exportOO.xml"
+record_tag: "organisatie"         # tag XML di ogni singolo ente (verificare su export corrente)
+license: "CC0 1.0"
+notes: >
+  Export giornaliero. Contiene già il campo sito web (RIO integrato nel ROO).
+  Verificare i nomi esatti dei tag XML aprendo un export recente, perché la
+  struttura non è documentata in modo stabile in inglese.
+
+# TLD "di fiducia" per continuare a esplorare un dominio anche se non e'
+# elencato esplicitamente in 'allowed_domains' (si somma ad essa, non la
+# sostituisce): un dominio scoperto durante il crawl e' considerato
+# "interno" (e quindi esplorato anche ai livelli successivi) se il suo
+# TLD nazionale o un label 'gov' compaiono tra i suoi label. Usato solo
+# da source_type: site_crawl; innocuo per gli altri source_type.
+allowed_tlds:
+  - "nl"
+  - "gov"
+
+
+seeds_file: "seeds.txt"
+crawl_depth: 4
+
+# ...poi, a ogni pagina visitata, raccoglie i link USCENTI (siti ufficiali
+# degli enti che hanno pubblicato l'annuncio), escludendo i social:
+exclude_domains:
+exclude_domains:
+  - "facebook.com"
+  - "twitter.com"
+  - "x.com"
+  - "linkedin.com"
+  - "xing.com"
+  - "instagram.com"
+  - "youtube.com"
+  - "tiktok.com"
+  - "pinterest.com"
+  - "reddit.com"
+  - "tumblr.com"
+  - "flickr.com"
+  - "paypal.com"
+  - "amazon.com"
+  - "ebay.com"
+  - "wikipedia.org"
+  - "wikimedia.org"
+  - "wikidata.org" 
+  - "archive.org"
+  - "web.archive.org"
+  - "aliexpress.com"
+  - "etsy.com"
+  - "twitch.tv"
+  - "alibaba.com"
+  - "medium.com"
+  - "maps.google.com"
+  - "google.com"
+
+max_pages_per_level: 15000     # tetto di sicurezza: alzare per una copertura più ampia
+sleep_seconds: 1.0           # pausa tra le richieste (cortesia verso il server)
+input_filename: "crawl_service_bund.json"
+license: "n/a (harvesting di URL pubblici, nessun contenuto riprodotto)"

@@ -1,0 +1,24 @@
+requests>=2.31
+PyYAML>=6.0
+openpyxl>=3.1
+beautifulsoup4>=4.12
+lxml>=5.0
+# Parser HTML di riserva, più tollerante di 'html.parser' su markup
+# non standard (usato come fallback in SiteCrawlFetcher._extract_links
+# quando 'html.parser' e 'lxml' rifiutano un documento malformato).
+# Non obbligatorio: se manca, il fallback lo salta silenziosamente e
+# la pagina in questione contribuisce 0 link invece di far fallire il crawl.
+html5lib>=1.1
+tldextract>=5.1
+# Rilevamento dell'encoding (già dipendenza di requests; esplicita perché usata
+# direttamente per i CSV/HTML senza charset dichiarato).
+charset-normalizer>=3.0
+# robots.txt con supporto a caratteri jolly (*, $) e Crawl-delay; senza, si ripiega su urllib.robotparser
+# (che non capisce i jolly) con un avviso.
+protego>=0.3
+# Parser XML sicuro contro entity expansion / "billion laughs" (fonti XML remote).
+defusedxml>=0.7
+# Carica il file .env (chiavi GOOGLE_SAFE_BROWSING_API_KEY / VIRUSTOTAL_API_KEY):
+# senza questo pacchetto il .env non veniva mai letto e il controllo minacce
+# restava silenziosamente 'non_controllato'.
+python-dotenv>=1.0

@@ -1,0 +1,71 @@
+country_code: SE
+country_name: "Svezia"
+status: ready
+source_type: site_crawl # bulk_csv
+source_name: "Myndighetsregistret (SCB)"
+source_url: "https://myndighetsregistret.scb.se/"   # sostituire con link diretto al file export
+input_filename: "myndighetsregistret.csv"
+delimiter: ","
+encoding: "utf-8-sig"
+license: "aperta"
+field_mapping:
+  hostname: "webbadress"
+  comune: "sateskommun"
+  regione: ""
+  codice_ipa: "organisationsnummer"
+  sector: "myndighetstyp"
+notes: >
+  Copre SOLO le 449 myndigheter statali (dato al 12/01/2026), non comuni/regioni:
+  per kommuner/regioner integrare con dati SKR/SCB separati (fuori scope di
+  questo config). Verificare formato di export reale (CSV/Excel/open data API)
+  sul sito myndighetsregistret.scb.se.
+
+# TLD "di fiducia" per continuare a esplorare un dominio anche se non e'
+# elencato esplicitamente in 'allowed_domains' (si somma ad essa, non la
+# sostituisce): un dominio scoperto durante il crawl e' considerato
+# "interno" (e quindi esplorato anche ai livelli successivi) se il suo
+# TLD nazionale o un label 'gov' compaiono tra i suoi label. Usato solo
+# da source_type: site_crawl; innocuo per gli altri source_type.
+allowed_tlds:
+  - "se"
+  - "gov"
+
+seeds_file: "seeds.txt"
+crawl_depth: 8
+
+# ...poi, a ogni pagina visitata, raccoglie i link USCENTI (siti ufficiali
+# degli enti che hanno pubblicato l'annuncio), escludendo i social:
+exclude_domains:
+exclude_domains:
+  - "facebook.com"
+  - "twitter.com"
+  - "x.com"
+  - "linkedin.com"
+  - "xing.com"
+  - "instagram.com"
+  - "youtube.com"
+  - "tiktok.com"
+  - "pinterest.com"
+  - "reddit.com"
+  - "tumblr.com"
+  - "flickr.com"
+  - "paypal.com"
+  - "amazon.com"
+  - "ebay.com"
+  - "wikipedia.org"
+  - "wikimedia.org"
+  - "wikidata.org" 
+  - "archive.org"
+  - "web.archive.org"
+  - "aliexpress.com"
+  - "etsy.com"
+  - "twitch.tv"
+  - "alibaba.com"
+  - "medium.com"
+  - "maps.google.com"
+  - "google.com"
+
+max_pages_per_level: 15000     # tetto di sicurezza: alzare per una copertura più ampia
+sleep_seconds: 1.0           # pausa tra le richieste (cortesia verso il server)
+input_filename: "crawl_service_bund.json"
+license: "n/a (harvesting di URL pubblici, nessun contenuto riprodotto)"

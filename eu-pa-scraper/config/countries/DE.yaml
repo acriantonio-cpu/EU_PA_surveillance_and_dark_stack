@@ -1,0 +1,154 @@
+country_code: DE
+country_name: "Germania"
+status: ready
+source_type: site_crawl
+source_name: "service.bund.de — Stellen- und Ausschreibungssuche (crawl a livelli)"
+
+website_search:
+  enabled: true
+  backend: duckduckgo        # oppure: wikidata
+  max_queries: 50
+  sleep_seconds: 2.0
+  language: de
+
+# I SEMI (livello 0) si leggono da data/input/DE/seeds.txt (un URL per
+# riga): modifica QUEL file per cambiare cosa viene "investigato", senza
+# toccare questo YAML. 'seed_urls' qui sotto resta solo come fallback/
+# esempio se il file non esistesse.
+seeds_file: "seeds.txt"
+seed_urls:
+  - "https://www.service.bund.de/Content/DE/Stellen/Suche/Formular.html;jsessionid=2994A437E27F16F4F336CA1CCBD99331.internet621?nn=4641514"
+  - "https://www.service.bund.de/Content/DE/Ausschreibungen/Suche/Formular.html;jsessionid=2994A437E27F16F4F336CA1CCBD99331.internet621?nn=4641514"
+
+# LIVELLO 1-2: resta sullo stesso dominio (service.bund.de) per 2 hop...
+allowed_domains:
+  - "www.service.bund.de"
+  - "service.bund.de"
+
+# TLD "di fiducia" per continuare a esplorare un dominio anche se non e'
+# elencato esplicitamente in 'allowed_domains' (si somma ad essa, non la
+# sostituisce): un dominio scoperto durante il crawl e' considerato
+# "interno" (e quindi esplorato anche ai livelli successivi) se il suo
+# TLD nazionale o un label 'gov' compaiono tra i suoi label. Usato solo
+# da source_type: site_crawl; innocuo per gli altri source_type.
+allowed_tlds:
+  - "de"
+  - "gov"
+  - "nrw"
+
+crawl_depth: 8
+
+# ...poi, a ogni pagina visitata, raccoglie i link USCENTI (siti ufficiali
+# degli enti che hanno pubblicato l'annuncio), escludendo i social:
+exclude_domains:
+  - "facebook.com"
+  - "twitter.com"
+  - "x.com"
+  - "linkedin.com"
+  - "xing.com"
+  - "instagram.com"
+  - "youtube.com"
+  - "tiktok.com"
+  - "pinterest.com"
+  - "reddit.com"
+  - "tumblr.com"
+  - "flickr.com"
+  - "paypal.com"
+  - "amazon.com"
+  - "ebay.com"
+  - "wikipedia.org"
+  - "wikimedia.org"
+  - "wikidata.org" 
+  - "archive.org"
+  - "web.archive.org"
+  - "aliexpress.com"
+  - "etsy.com"
+  - "twitch.tv"
+  - "alibaba.com"
+  - "medium.com"
+  - "maps.google.com"
+  - "google.com"
+
+max_pages_per_level: 15000     # tetto di sicurezza: alzare per una copertura più ampia
+sleep_seconds: 1.0           # pausa tra le richieste (cortesia verso il server)
+input_filename: "crawl_service_bund.json"
+license: "n/a (harvesting di URL pubblici, nessun contenuto riprodotto)"
+
+field_mapping:
+  hostname: "external_url"
+  tipo_link: "scope"          # "seed" (i portali di partenza) o "esterno" (siti scoperti); anche "redirect"
+  dominio_radice: "external_domain"
+  host_osservati: "observed_hosts"   # FQDN realmente linkati per quel dominio (separati da '|'): servono a chi deve aprire il sito
+  found_on: "found_on"        # pagina da cui e' stato trovato il link (utile per audit)
+  source_seed: "source_seed"
+  tls_error: "tls_error"      # "si" se il certificato TLS non era verificabile
+  # 'sector' e 'codice_ipa' NON sono piu' usati dal crawler: prima contenevano
+  # found_on / external_domain, colonne con altro significato. 'sector' e' ora
+  # riservato al tipo di ente (vedi classify_sites.py).
+  sector: ""
+  codice_ipa: ""
+  comune: ""
+  regione: ""
+
+notes: >
+  FIX APPLICATI (13/09/2026) dopo un run reale con alcuni errori:
+  (1) gli header HTTP di default sono stati resi più "da browser" (vedi
+  src/base_fetcher.py) per ridurre i blocchi generici di WAF/firewall che
+  non sono necessariamente un rifiuto deliberato della ricerca, solo un
+  filtro automatico su User-Agent/header non riconosciuti;
+  (2) il crawler ora rispetta il tag HTML <base href="..."> quando presente
+  nella pagina, che ridefinisce dove risolvere i link relativi — alcuni CMS
+  con URL a jsessionid (pattern visto nei log: ".../Suche/Content/DE/Home/
+  ...") lo usano per far funzionare i link indipendentemente dalla
+  profondità della pagina corrente; senza questo fix, i link relativi
+  venivano risolti in URL "innestati" male che rispondevano 404. NOTA: non
+  è stato possibile verificare se service.bund.de usa davvero un <base>
+  (il sito blocca anche i tentativi di verifica automatica), quindi se il
+  404 persiste la causa è probabilmente un'altra (link rotto nella pagina
+  stessa, o dipendente da JavaScript) — in ogni caso non blocca il crawl,
+  la pagina viene solo saltata.
+
+  OUTPUT A LIVELLO DI DOMINIO RADICE (aggiornamento): l'output di questo
+  crawler è ora la lista dei DOMINI RADICE (eTLD+1, calcolati con
+  tldextract) coinvolti, SENZA DUPLICATI — un dominio compare una sola
+  volta anche se scoperto/raggiunto tramite più pagine diverse. Include
+  anche il dominio radice dei due seed stessi (service.bund.de,
+  scope="seed"), oltre alle scoperte esterne (scope="esterno").
+
+  GENERALIZZAZIONE: questo fetcher (site_crawl) ora legge i semi da
+  data/input/DE/seeds.txt anziché solo dallo YAML — vedi §6 nel README
+  per come attivare/riconfigurare la stessa strategia su qualunque altro
+  paese semplicemente creando/modificando quel file, senza toccare codice
+  o config.
+
+  ATTENZIONE — VERIFICATO IL 12/09/2026: service.bund.de restituisce
+  ROBOTS_DISALLOWED per un tentativo di fetch automatico sulle pagine
+  indicate (il robots.txt del sito nega l'accesso automatizzato).
+  DAL 24/09/2026 il crawler LEGGE E RISPETTA robots.txt di default
+  ('respect_robots: true', non impostato qui = default): con questo valore i
+  seed di service.bund.de verranno saltati (pagina vietata) e il crawl non
+  scoprirà nulla. Opzioni: (a) usare l'Anschriftenverzeichnis ufficiale (vedi
+  sotto), (b) contattare il gestore per un accesso concordato, (c) impostare
+  ESPLICITAMENTE 'respect_robots: false' in questo file — scelta e
+  responsabilità di chi esegue lo scraping (verificare robots.txt e le
+  condizioni d'uso di service.bund.de).
+
+  LIMITE STRUTTURALE: le due pagine seed sono "Formular.html", cioè moduli
+  di ricerca. Una semplice GET potrebbe restituire il modulo vuoto (senza
+  risultati) invece di un elenco di annunci: aprire le pagine nel browser,
+  eseguire una ricerca vuota/di default e verificare se l'URL della pagina
+  RISULTATI (spesso con suffisso tipo ".../Trefferliste.html" o parametri
+  di query) è diverso dal modulo. Se sì, usare quell'URL come seed al posto
+  (o in aggiunta) di quello del modulo, altrimenti il crawl_depth=2 potrebbe
+  raccogliere solo link di navigazione del sito e non i singoli annunci.
+
+  FONTE ALTERNATIVA UFFICIALE (Bund, non Länder/Kommunen): service.bund.de
+  pubblica anche un "Anschriftenverzeichnis des Bundes" (elenco indirizzi
+  degli enti federali), aggiornato il primo giorno lavorativo di ogni mese,
+  in XLSX/ODS/CSV/JSON/PDF, anche su GovData
+  (pagina: service.bund.de/Content/DE/Service/OpenData/opendata_node.html).
+  Se serve solo il perimetro degli enti federali (Bund) e non l'intero
+  crawl, questa fonte è più semplice, ufficiale e non pone problemi di
+  robots.txt (è la strada consigliata): valutare un fetcher 'bulk_xlsx' separato su questa fonte come
+  complemento (o sostituto) del crawl per la parte federale.
+

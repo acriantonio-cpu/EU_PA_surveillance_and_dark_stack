@@ -1,0 +1,85 @@
+country_code: ES
+country_name: "Spagna"
+status: ready
+source_type: bulk_xlsx_folder
+source_name: "DIR3 - Unidades Institucionales (Ministerio de Hacienda) - import multi-file"
+
+# Metti in data/input/ES/ TUTTI i file .xlsx DIR3 con la stessa struttura
+# del file di esempio (foglio "Unidades INST V+T", intestazioni in riga 2,
+# dati da riga 3): il tool li legge e li unisce tutti in un colpo solo.
+sheet_name: "Unidades INST V+T"
+data_start_row: 3
+license: "aperta"
+
+# Mapping per LETTERA di colonna Excel (non per nome intestazione: alcune
+# intestazioni sono duplicate nel file, es. "C_DNM_UD_ORGANICA" compare 4
+# volte per unita'/superiore/principale/EDP). Schema verificato sul file
+# "Listado_Unidades_Institucionales.xlsx" caricato il 12/09/2026:
+#   B = C_ID_UD_ORGANICA        (codice unita')
+#   C = C_DNM_UD_ORGANICA       (nome unita')          <- "colonna C"
+#   E = C_ID_TIPO_ENT_PUBLICA   (tipo ente, vedi tabella codici in notes)
+#   P = NIF_CIF                  (NIF dell'unita')
+field_mapping:
+  codice_ipa: "B"
+  nome_ente: "C"
+  sector: "E"
+  hostname: ""          # non presente nel file: colmato dalla ricerca web sotto
+  comune: ""             # non presente in questo file (serve il catalogo "Localidades" DIR3, file separato)
+  regione: ""
+
+# Ricerca automatica del sito ufficiale a partire dal nome (colonna C),
+# eseguita in automatico da main.py al termine dell'import.
+website_search:
+  enabled: true
+  backend: duckduckgo          # scraping best-effort, NON un'API ufficiale: vedi notes e src/website_finder.py
+  query_suffix: "sitio oficial web oficial administracion"
+  max_results: 5
+  sleep_seconds: 2.0
+  max_queries: 50               # ALZARE CON CAUTELA: parti da un run piccolo per verificare la qualita' dei risultati
+
+dedupe_by: codice_ipa            # evita duplicati se piu' file della cartella si sovrappongono
+
+notes: >
+  COME USARLO: copia in data/input/ES/ tutti i file .xlsx DIR3 con la stessa
+  struttura del file di esempio fornito (foglio "Unidades INST V+T",
+  intestazioni in riga 2, dati da riga 3). Il tool li legge TUTTI insieme
+  (uno o piu' file nella stessa cartella), li unisce e deduplica per
+  C_ID_UD_ORGANICA (colonna B).
+
+  SCHEMA VERIFICATO sul file "Listado_Unidades_Institucionales.xlsx" (3
+  fogli: "Unidades INST V+T" con i dati, "Leyenda de campos" con le
+  descrizioni dei campi, "Catalogos de clasificacion" con i codici):
+    B=C_ID_UD_ORGANICA, C=C_DNM_UD_ORGANICA (nome), D=C_ID_NIVEL_ADMON,
+    E=C_ID_TIPO_ENT_PUBLICA, F=N_NIVEL_JERARQUICO, G/H=unita' superiore,
+    I/J=unita' principale, K=B_SW_DEP_EDP_PRINCIPAL, L/M=EDP associata,
+    N=C_ID_ESTADO, O=D_VIG_ALTA_OFICIAL, P=NIF_CIF.
+
+  Catalogo C_ID_TIPO_ENT_PUBLICA (foglio "Catalogos de clasificacion"):
+  AE=Agencia Estatal, AY=Ayuntamiento, CA=Comunidad Autonoma, CI=Cabildo/
+  Consell Insular, CO=Comarca, DP=Diputacion Provincial/Foral, EM=Entidad
+  Local Menor, EP=Entidad de Derecho Publico, MA=Mancomunidad, MN=Ministerio,
+  OA=Organismo Autonomo, UN=Universidad. Catalogo C_ID_NIVEL_ADMON: 1=Estado,
+  2=Autonomica, 3=Local, 4=Universidades, 5=Otras Instituciones. Catalogo
+  C_ID_ESTADO: V=Vigente, E=Extinguido, A=Anulado, T=Transitorio (se vuoi
+  escludere gli enti non vigenti, filtra su N_ (colonna N) = 'V' aggiungendo
+  questa logica in src/fetchers/generic.py -> BulkXlsxFolderFetcher, o in un
+  custom_module 'es' se preferisci non toccare il codice generico).
+
+  QUESTO FILE NON CONTIENE comune/provincia ne' sito web: per il comune
+  serve il catalogo "Localidades" DIR3 (file separato — verificarne prima lo
+  schema, perche' potrebbe non coincidere con quello delle Unidades e
+  richiedere un fetcher a parte). Per il sito web, il tool esegue una
+  RICERCA WEB EURISTICA a partire dal nome (colonna C): vedi 'website_search'
+  sopra e il modulo src/website_finder.py per dettagli e limiti (backend
+  DuckDuckGo non ufficiale, adatto a volumi moderati; per uso intensivo
+  sostituire con un'API di ricerca vera, es. Bing/Google/SerpApi).
+
+# TLD "di fiducia" per continuare a esplorare un dominio anche se non e'
+# elencato esplicitamente in 'allowed_domains' (si somma ad essa, non la
+# sostituisce): un dominio scoperto durante il crawl e' considerato
+# "interno" (e quindi esplorato anche ai livelli successivi) se il suo
+# TLD nazionale o un label 'gov' compaiono tra i suoi label. Usato solo
+# da source_type: site_crawl; innocuo per gli altri source_type.
+allowed_tlds:
+  - "es"
+  - "gov"

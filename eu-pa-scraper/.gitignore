@@ -1,0 +1,33 @@
+.venv/
+__pycache__/
+*.pyc
+logs/*.log
+data/input/*/*.xml
+data/input/*/*.csv
+data/input/*/*.xlsx
+data/input/*/*.json
+data/input/*/*.html
+!data/input/*/.gitkeep
+data/output/*/*.csv
+!data/output/*/.gitkeep
+.env
+# file grandi / temporanei
+data/input/*/*.bz2
+data/input/*/*.bz
+data/input/*/*.tar
+data/input/*/*.gz
+data/input/*/*.part
+data/input/*/*.tmp
+data/input/*/*.jsonl
+data/output/*/*.bak
+data/output/*/*.tmp
+data/output/*.json
+*.bak
+*.tmp
+*.part
+
+# stato incrementale del crawler (SQLite, WAL)
+data/input/*/*.sqlite
+data/input/*/*.sqlite-wal
+data/input/*/*.sqlite-shm
+.pytest_cache/
