@@ -1,3 +1,5 @@
+# EN: Country configuration for ES. status: ready (runnable); source: bulk_xlsx_folder. Comments are in Italian;
+#     'seeds_file' = crawler start URLs in data/input/{ISO}/seeds.txt, 'notes' = data-source notes. See GLOSSARY.md.
 country_code: ES
 country_name: "Spagna"
 status: ready

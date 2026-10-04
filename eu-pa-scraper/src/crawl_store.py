@@ -1,3 +1,5 @@
+# EN: Incremental crawler state (checkpoint) on SQLite in WAL mode: constant cost per page,
+# transactional, used for --resume; still exports the legacy crawl_checkpoint.json.
 """
 Persistenza incrementale dello stato del crawler (checkpoint) su SQLite.
 

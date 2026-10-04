@@ -1,5 +1,7 @@
 # Come scaricare i siti della Pubblica Amministrazione italiana
 
+> **English summary.** This guide explains how to download the list of Italian public-administration websites from **IndicePA**, the official registry run by AgID under CC-BY 4.0. `01_fetch_ipa_comuni.py` downloads the "Enti" dataset automatically to `data/raw/IT/enti.xlsx`. The guide also explains how to download it by hand (XLSX format) and where to put the auxiliary `comuni.json` file.
+
 La fonte è **IndicePA**, il registro ufficiale gestito dall'Agenzia per
 l'Italia Digitale (AgID), licenza Creative Commons CC-BY 4.0. Contiene
 oltre 20.000 enti (comuni, ASL, scuole, università...) con il loro sito

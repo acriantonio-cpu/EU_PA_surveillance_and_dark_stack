@@ -1,5 +1,11 @@
 # Registro delle modifiche — 24/09/2026 (due tornate + audit finale)
 
+> **English summary: changelog of 24 September 2026.** The numbers in brackets refer to the 30 failure modes found by the initial audit.
+> - **Round 2**: robots.txt and Crawl-delay respected by default, with an identifiable User-Agent; a crawler that runs in parallel per host; an incremental SQLite checkpoint in place of a JSON file rewritten after every page; documentation; a final audit with its findings and residual risks.
+> - **Round 1**: fixes to the HTTP session (size and read limits), TLD matching, URL canonicalisation, 404 handling, detection of redirects, challenges and JS-rendered pages, atomic CSV writes, and the new `classify_sites.py`.
+>
+> Each item also says what was deliberately **not** changed.
+
 Riferimenti: i numeri tra parentesi sono quelli della tabella dei 30 failure modes dell'audit iniziale.
 Guida operativa: `GUIDA_PASSO_PASSO.md`.
 

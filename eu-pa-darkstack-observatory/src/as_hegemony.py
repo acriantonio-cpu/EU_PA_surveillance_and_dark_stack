@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# EN: EXPERIMENTAL, off by default - transit-AS dependency (AS Hegemony) via the IHR (Internet
+# Health Report) API, per origin ASN.
 """
 as_hegemony.py
 

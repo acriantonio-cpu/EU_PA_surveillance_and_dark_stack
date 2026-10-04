@@ -1,3 +1,4 @@
+# EN: Tests for the site classifier (stages 0, 2, 3, 4) against local fake servers.
 """Test del classificatore (stadi 0, 2, 3, 4) contro server locali finti."""
 
 from __future__ import annotations

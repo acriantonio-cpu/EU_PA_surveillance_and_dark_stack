@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# EN: Post-process crawler checkpoints (no new requests): general report, every third-party
+# occurrence with its HTML reference type, and the link_sospetti shortlist (suspicious links)
+# for human review, enriched with Google Safe Browsing/VirusTotal verdicts and a persistent
+# human-confirmed-threat flag.
 """
 tools/postprocess_checkpoints.py
 

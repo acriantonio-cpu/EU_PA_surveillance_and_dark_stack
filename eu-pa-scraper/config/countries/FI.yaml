@@ -1,3 +1,5 @@
+# EN: Country configuration for FI. status: ready (runnable); source: api_json. Comments are in Italian;
+#     'seeds_file' = crawler start URLs in data/input/{ISO}/seeds.txt, 'notes' = data-source notes. See GLOSSARY.md.
 country_code: FI
 country_name: "Finlandia"
 status: ready

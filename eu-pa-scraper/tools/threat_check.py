@@ -1,3 +1,5 @@
+# EN: Reputation enrichment (never a filter) of third-party domains via Google Safe Browsing
+# (batched) and VirusTotal, with cache and daily quota; API keys read from .env.
 """
 tools/threat_check.py
 

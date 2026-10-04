@@ -1,3 +1,4 @@
+# EN: Shared test fixtures: local multi-host HTTP server (no real network).
 """Fixture condivise: server HTTP locale multi-host (nessuna rete reale)."""
 
 from __future__ import annotations

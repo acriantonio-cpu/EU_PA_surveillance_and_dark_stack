@@ -1,3 +1,5 @@
+# EN: Crawler engine tests: robots.txt, per-host concurrency, User-Agent, incremental SQLite
+# checkpoint.
 """Motore del crawler: robots.txt, concorrenza per host, User-Agent, checkpoint incrementale SQLite."""
 
 from __future__ import annotations

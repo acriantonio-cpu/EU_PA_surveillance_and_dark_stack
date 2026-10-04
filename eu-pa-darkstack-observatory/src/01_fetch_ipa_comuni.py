@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# EN: Step 01 - download/load the Italian IndicePA registry (all entity types, CC-BY 4.0),
+# normalise the official website field and write the site list
+# (data/processed/<country>/siti.csv) used by the probes.
 """
 01_fetch_ipa_comuni.py
 

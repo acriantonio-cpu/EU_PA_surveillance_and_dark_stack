@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# EN: Run the whole pipeline in sequence: 01 -> 02 -> 07 -> 05 -> 06 -> 08 -> 03 -> 04; which
+# measurements run is decided by config.yaml.
 """
 run_pipeline.py
 

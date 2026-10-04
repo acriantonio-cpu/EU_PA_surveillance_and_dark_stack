@@ -1,3 +1,4 @@
+# EN: Labels (nature, entity types), stage votes and vote combination.
 """Etichette, voti e combinazione dei voti dei vari stadi."""
 
 from __future__ import annotations

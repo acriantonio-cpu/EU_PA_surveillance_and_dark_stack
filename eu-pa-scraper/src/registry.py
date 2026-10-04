@@ -1,3 +1,5 @@
+# EN: Read config/countries/{ISO}.yaml and instantiate the right fetcher (generic or custom
+# module).
 """
 Registry centrale: legge config/countries/{ISO}.yaml e istanzia il fetcher
 giusto — generico (pilotato da YAML) oppure custom (modulo dedicato in

@@ -1,3 +1,4 @@
+# EN: Netherlands - Register van Overheidsorganisaties (KOOP) daily XML export parser.
 """
 Paesi Bassi — Register van Overheidsorganisaties (KOOP).
 Export XML giornaliero: https://organisaties.overheid.nl/archive/exportOO.xml

@@ -1,5 +1,13 @@
 # Mappatura domini, gap analysis e piano di implementazione — per README.md / proposta Restack
 
+> **English summary.** This document maps the project to the Restack call (NLnet / Open Internet Stack) and was the basis for the application.
+> - **§1** is a table of every measurement domain: what it produces, where it lives in the code, and **why it matters for Restack** (operator concentration, hidden third-party dependencies, supply chain, resilience).
+> - **§2** lists signals that can be measured but are not yet, grouped by cost:
+>   - free in post-processing;
+>   - almost free during the crawl (same HTTP response), e.g. Subresource Integrity, mixed content, security headers, IPv6, TLS-issuer concentration;
+>   - signals that need new requests.
+> - **§3** is the phased implementation plan (Phase 0 is already done in the scraper; Phases 1–3 are planned).
+
 Questo documento serve da materiale grezzo per il `README.md` che accompagnerà
 la proposta al fondo **Restack** (NLnet / Open Internet Stack, prima call:
 apertura 3 settembre 2026, scadenza 3 novembre 2026 12:00 CET). Copre tre

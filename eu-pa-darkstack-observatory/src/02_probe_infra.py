@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# EN: Step 02 - infrastructure probe per entity: DNS (NS/MX/A/AAAA/DNSSEC/CAA/SPF/DMARC), hosting
+# ASN/operator (Team Cymru bulk, RIPEstat, RDAP fallback), TLS (issuer/expiry/weak
+# protocols/cipher/HSTS/grade), HTTP headers/CDN/response time. Output: risultati.csv.
 """
 02_probe_infra.py
 

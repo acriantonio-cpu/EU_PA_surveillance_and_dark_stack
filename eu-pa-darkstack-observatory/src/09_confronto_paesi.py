@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# EN: Step 09 - cross-country comparison: reads the latest report.json of every country and builds
+# the entity-type x country matrix and comparative indicators.
 """
 09_confronto_paesi.py
 

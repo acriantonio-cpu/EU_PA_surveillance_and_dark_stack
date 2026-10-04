@@ -1,3 +1,4 @@
+# EN: Older copy of the generic fetchers, NOT imported anywhere. The active code is src/fetchers/generic.py.
 """
 Fetcher generici, pilotati interamente dal config YAML di ciascun paese.
 Coprono la maggior parte dei casi (Fascia B/C della relazione): un unico

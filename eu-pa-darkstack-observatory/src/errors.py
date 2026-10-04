@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# EN: Shared helpers: map exception names to a small canonical error taxonomy (rate_limited,
+# timeout, connection refused, DNS not resolved, TLS failed, HTTP blocked, unknown) and a
+# generic retry/backoff.
 """
 errors.py
 

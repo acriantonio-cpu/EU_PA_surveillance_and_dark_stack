@@ -1,3 +1,6 @@
+# EN: Classify a country's sites by nature (public/private/non-profit/uncertain/infrastructure)
+# and entity type, via optional stages: 0 hostname rules, 2 Wikidata, 3 homepage multilingual
+# rules, 4 local LLM (Ollama). All stages are off by default.
 """
 Classifica i siti di un paese: natura (pubblico / privato / terzo_settore / incerto / infrastruttura) e tipo di
 ente (comune, regione_provincia, governo_centrale, polizia_sicurezza, scuola, universita, sanita,

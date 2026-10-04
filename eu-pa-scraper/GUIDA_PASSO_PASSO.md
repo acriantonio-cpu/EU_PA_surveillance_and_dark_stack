@@ -1,5 +1,17 @@
 # Guida passo passo — come eseguire il progetto
 
+> **English summary: step-by-step guide.** It covers the whole workflow, from installation to the first `siti.csv`:
+> - a first run on a country with automatic download (§5);
+> - countries whose files must be copied by hand, such as Spain (§6);
+> - the layered crawler: seeds, launching, interrupting and resuming with `--resume`, output files, all options, time estimates (§7);
+> - robots.txt and User-Agent policy (`respect_robots`, default **true**) (§8);
+> - the official-website finder (§9);
+> - site classification with its stages, Ollama, the lexicon and `audit_sample.py` validation (§10);
+> - post-processing and the Google Safe Browsing/VirusTotal threat check (§11);
+> - a complete end-to-end recipe for Belgium (§12), troubleshooting (§13), a security reminder (§14) and the roadmap (§15).
+>
+> Each step states **what to run**, **what should happen** and **what to do if it does not**.
+
 Questa guida ti porta dall'installazione al primo `siti.csv`, poi al crawl, alla classificazione, alla sua
 convalida e ai controlli finali. Ogni passo dice **cosa lanciare**, **cosa deve succedere** e **cosa fare se non
 succede**. Per il dettaglio di ogni singolo paese vedi `README.md` §5; per la lista delle modifiche `CHANGES.md`.

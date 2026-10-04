@@ -1,3 +1,5 @@
+# EN: Country configuration for FR. status: ready (runnable); source: custom module src/fetchers/fr.py. Comments are in Italian;
+#     'seeds_file' = crawler start URLs in data/input/{ISO}/seeds.txt, 'notes' = data-source notes. See GLOSSARY.md.
 country_code: FR
 country_name: "Francia"
 status: ready

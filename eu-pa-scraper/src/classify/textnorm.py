@@ -1,3 +1,4 @@
+# EN: Text normalisation (case/accent folding) and multilingual lexicon matching.
 """Normalizzazione del testo e matching di lessici multilingue."""
 
 from __future__ import annotations

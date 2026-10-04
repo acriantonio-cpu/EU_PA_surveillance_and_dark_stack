@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# EN: Step 05 - 'dark stack': fetch each homepage and list third-party dependencies in its static
+# HTML (CDN/fonts, analytics, captcha, chat, video, SDKs; rules in
+# data/rules/dark_stack_rules.yaml), resolve their country and flag non-EEA ones; classify
+# homepage cookies (technical vs profiling).
 """
 05_scrape_dark_stack.py
 

@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# EN: Step 04 - export the full IndicePA registry joined with every measurement (02/05/06/08) into
+# a single spreadsheet (enti_esteso.xlsx) for statistical tools such as Minitab.
 """
 04_export_enti_esteso.py
 

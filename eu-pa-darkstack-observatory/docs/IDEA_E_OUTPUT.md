@@ -1,5 +1,12 @@
 # L'idea, spiegata semplice
 
+> **English summary: the idea in plain words.** Every municipality, hospital or school website depends on third-party technical providers: hosting, DNS and mail. Nobody has mapped these providers at national scale, or what would happen if one of them failed. The project builds that map from public technical data only. It does not log in, does not touch personal data, and measures the site, not the people. It reports:
+> - who runs DNS and mail, and how many operators each entity has (one operator means no backup);
+> - where servers are hosted, by company and country;
+> - whether basic protections are active (DNSSEC, SPF, DMARC).
+>
+> The output is per-entity data (`risultati.csv`) plus headline indicators (`report.json`): the HHI concentration index (0–10,000, above 2,500 counts as highly concentrated), the top-10 operators (the "blast radius" if one fails), adoption rates of the protections, and the share of entities without redundancy. The last section says what the tool does **not** do. *(Written at an early stage: third-party tracker detection, mentioned there as future work, has since been implemented in `05_scrape_dark_stack.py`.)*
+
 ## Il problema
 
 Ogni sito web di un comune, ospedale o scuola pubblica italiana si appoggia

@@ -1,3 +1,5 @@
+# EN: URL utilities: canonicalisation for deduplication, robust host extraction, IDNA
+# normalisation.
 """
 Utility URL condivise da crawler, fetcher e classificatore.
 

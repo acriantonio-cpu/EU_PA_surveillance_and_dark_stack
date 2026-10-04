@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# EN: Step 06 - software/licence census: recognise CMS/framework/web server from HTML markup and
+# HTTP headers (data/rules/cms_signatures.yaml), with version when exposed and licence (open
+# source or proprietary).
 """
 06_fingerprint_cms.py
 

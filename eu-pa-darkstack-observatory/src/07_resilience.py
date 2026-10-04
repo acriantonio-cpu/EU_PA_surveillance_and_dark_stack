@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# EN: Step 07 (optional) - observable redundancy: query EVERY declared nameserver separately and
+# test EVERY published A/AAAA address (TCP -> TLS -> HTTP HEAD), measuring real rather than
+# declared resilience. Output: resilience.csv.
 """
 07_resilience.py
 

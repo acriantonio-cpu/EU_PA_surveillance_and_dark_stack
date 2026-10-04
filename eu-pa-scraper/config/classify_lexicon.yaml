@@ -1,3 +1,8 @@
+# EN: Multilingual lexicon of the site classifier (src/classify/): words and phrases per
+#     language mapped to nature (pubblico = public, privato = private, terzo_settore = non-
+#     profit, ...) and entity type, with weights. Editable without touching the code; accents
+#     and case are ignored.
+#
 # Lessico del classificatore (src/classify/). Modificabile SENZA toccare il codice.
 #
 # Sintassi delle voci di testo (accenti e maiuscole ignorati):

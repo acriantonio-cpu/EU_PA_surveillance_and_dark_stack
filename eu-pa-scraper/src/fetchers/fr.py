@@ -1,3 +1,5 @@
+# EN: France - Annuaire de l'administration et des services publics (DILA): downloads and parses
+# the tar.bz2 bulk export.
 """
 Francia — Annuaire de l'administration et des services publics (DILA).
 

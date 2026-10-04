@@ -1,3 +1,4 @@
+# EN: Model of a 'site to classify' and loading of inputs (output CSV or crawler JSON).
 """Modello 'sito da classificare' e caricamento degli input (CSV di output o JSON del crawl)."""
 
 from __future__ import annotations

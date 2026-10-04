@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# EN: Step 08 - classify the entity TYPE (municipality, province, region, school, university,
+# health, police, fire service, chamber of commerce, ministry, justice) from homepage text,
+# using keywords in all 24 EU languages (data/rules/tipo_ente_rules.yaml); also measures page
+# weight/download time and flags probably non-public sites.
 """
 08_classifica_tipo_ente.py
 

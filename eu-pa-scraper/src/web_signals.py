@@ -1,3 +1,6 @@
+# EN: Detect HTTP 200 responses that are not real content (anti-bot challenge, JS-only page,
+# parked domain, default server page) and a blocklist of infrastructure domains (CDN, social,
+# shorteners...).
 """
 Riconoscimento di situazioni in cui una risposta HTTP "riuscita" (200) NON è
 il contenuto reale del sito, più la blocklist di domini infrastrutturali.

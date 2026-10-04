@@ -1,3 +1,5 @@
+# EN: Base classes shared by all country fetchers: download() -> parse() -> normalize() into the
+# common output schema; HTTP session with browser-like headers, size limits and retries.
 """
 Classi base condivise da tutti i fetcher (uno per paese, ma pilotati dalla
 stessa engine generica + config YAML).

@@ -1,5 +1,14 @@
 # Osservatorio concentrazione/resilienza infrastruttura pubblica italiana
 
+> **English overview.** This is the updated, most complete README of the measurement pipeline. It is a superset of `README.md`. The extra sections are:
+> - *Terza passata*: integration of externally proposed extensions. It adds `07_resilience.py` (observable redundancy across nameservers and endpoints) and the technology-dependency index in `03_analyze.py`. A proposed vulnerability-lookup script was reviewed and deliberately **not** integrated.
+> - *Quarta passata*: entity-type classification in 24 EU languages (`08_classifica_tipo_ente.py`) and the cross-country comparison (`09_confronto_paesi.py`).
+> - *Verifica manuale di link sospetti*: manual verification of suspicious third-party links (`terze_parti_da_verificare.*`).
+> - *Protezione dei checkpoint*: checkpoint protection, with automatic timestamped backups before any overwrite.
+> - *Limiti noti*: the **known limitations** section, quoted in the Restack application.
+>
+> The [glossary](../GLOSSARY.md) translates file and column names.
+
 Kit di partenza per misurare da chi dipende, tecnicamente, il sito di un
 ente pubblico italiano (comuni, ASL, scuole, università, ecc. — tutti gli
 enti di IndicePA, non solo i comuni) — quali aziende gestiscono il suo DNS,

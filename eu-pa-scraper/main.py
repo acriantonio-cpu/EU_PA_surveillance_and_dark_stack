@@ -1,3 +1,5 @@
+# EN: Entry point of the EU PA site-discovery tool for the 26 EU countries other than Italy:
+# python main.py --list | --country XX | --all [--resume].
 """
 Osservatorio infrastruttura tecnica PA UE — tool unico di scraping/estrazione
 per i 26 paesi UE (esclusa Italia, coperta da IndicePA).

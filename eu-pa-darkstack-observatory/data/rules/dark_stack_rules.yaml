@@ -1,3 +1,9 @@
+# EN: Third-party domain classification rules for 05_scrape_dark_stack.py: pattern (substring
+#     of the resource domain), categoria (cdn_font, analytics, captcha, cookie_banner,
+#     chat_supporto = support chat, video, sdk_generico = generic SDK, altro_terzo_parte =
+#     other), vendor, organizzazione_madre (parent company, only when a verified fact; used
+#     for tracker HHI). First matching rule wins.
+#
 # Regole di classificazione dei domini di terze parti rilevati nell'HTML dei
 # siti sondati (05_scrape_dark_stack.py). Ogni regola:
 #   pattern: sottostringa cercata nel dominio della risorsa (case-insensitive)

@@ -1,5 +1,7 @@
 # Uso di IA generativa in questo progetto
 
+> **English summary.** This is the provenance log of generative-AI use in this code, following the NLnet GenAI policy. It records the date, the model (Claude, Anthropic), what was generated, and the status of human review. The tests listed were mostly run against mocked network services. The log states explicitly that real small-scale runs (`--limit 20`) are needed to validate them. Those real runs were then carried out on the Italian and French samples in `data/results/`.
+
 Questo file documenta dove e come è stata usata IA generativa (LLM) nella
 preparazione di questo codice, seguendo lo spirito della policy NLnet sulla
 trasparenza nell'uso di GenAI nei progetti finanziati

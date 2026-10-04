@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# EN: Bulk IP -> ASN/operator resolution via Team Cymru whois (with RIPEstat and per-IP RDAP
+# fallbacks) to avoid RDAP rate limits on large samples; also a per-IP-block connection
+# limiter (LimitatorePerBlocco).
 """
 asn_bulk.py
 

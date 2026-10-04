@@ -1,3 +1,6 @@
+# EN: Generic YAML-driven fetchers (bulk_csv, bulk_xlsx, bulk_xlsx_folder, bulk_xml, api_json,
+# html_scrape) and the layered crawler SiteCrawlFetcher (site_crawl) with per-host scheduling,
+# robots.txt and checkpointing.
 """
 Fetcher generici, pilotati interamente dal config YAML di ciascun paese.
 Coprono la maggior parte dei casi (Fascia B/C della relazione): un unico

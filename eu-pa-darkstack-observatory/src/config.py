@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# EN: Load the single project configuration file (config.yaml): measurement on/off flags
+# ('misurazioni'), default timeouts and delays. Command-line arguments override it.
 """
 config.py
 

@@ -1,3 +1,5 @@
+# EN: Heuristic search of an entity's official website from its name (used for Spain/DIR3);
+# pluggable search backend, intended for modest volumes.
 """
 Ricerca euristica del sito ufficiale di un ente a partire dal suo nome
 (usato per Spagna/DIR3, ma riutilizzabile per qualunque paese in cui il

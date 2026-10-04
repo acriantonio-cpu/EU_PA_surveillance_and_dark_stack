@@ -1,3 +1,5 @@
+# EN: Draw a stratified random sample (per nature x type) of classify_sites.py output for manual
+# human audit of the classification.
 """
 Campiona a caso righe da un output di classify_sites.py (siti_classificati.csv) per la revisione
 manuale: l'unico modo onesto per sapere se una classificazione è corretta è guardarne un campione

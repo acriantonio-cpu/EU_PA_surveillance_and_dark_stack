@@ -1,3 +1,5 @@
+# EN: Polite crawling: robots.txt (RFC 9309) and Crawl-delay compliance, identifiable User-Agent;
+# controlled by the respect_robots flag (default true).
 """
 Comportamento "educato" verso i siti visitati: robots.txt, Crawl-delay, User-Agent identificabile.
 

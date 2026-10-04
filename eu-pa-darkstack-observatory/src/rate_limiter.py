@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# EN: Thread-safe token-bucket rate limiter for shared external services (RDAP, RIPEstat).
 """
 rate_limiter.py
 

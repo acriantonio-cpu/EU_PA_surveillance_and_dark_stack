@@ -1,5 +1,7 @@
 # Terze parti trovate — da verificare
 
+> **English note.** "Third parties found, to be verified": every third-party domain found on the analysed homepages, with the first exact page where it appeared and all the pages where it is present. The list is sorted from the rarest domain to the most common, because rare domains are usually the most interesting to check by hand. **Appearing here does not mean a domain is malicious.** The list is an aid to manual review, not a verdict. Field labels: *Categoria* = category, *organizzazione madre* = parent organisation, *Trovato per la prima volta il … su* = first found on … at.
+
 Elenco di ogni dominio di terza parte trovato nelle homepage analizzate, con la PRIMA pagina esatta in cui è comparso e l'elenco completo delle pagine in cui è presente. Ordinato dal dominio più raro (visto su meno pagine — di solito il più interessante da controllare a mano) al più diffuso. Aprire la pagina indicata e cercare il dominio nel sorgente per verificare/certificare la presenza.
 
 **Nota**: comparire in questo elenco non significa che un dominio sia malevolo — fornitori di font, mappe, video o analytics compaiono legittimamente su moltissimi siti. È un elenco pensato per aiutare la revisione manuale, non un verdetto automatico.

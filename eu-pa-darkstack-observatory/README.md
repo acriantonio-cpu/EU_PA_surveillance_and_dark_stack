@@ -1,5 +1,21 @@
 # Osservatorio concentrazione/resilienza infrastruttura pubblica italiana
 
+> **English overview.** This is the infrastructure-measurement pipeline of the EU-PA DarkStack Observatory. The internal working name is `dst` ("dark stack toolkit"). It was first built for Italian public bodies, using the IndicePA registry, and is now parametrised per country (`--paese IT|FR|...`). For each public entity it measures DNS, mail, hosting ASN and jurisdiction, TLS, HTTP/CDN, third-party "dark stack" dependencies and cookies, CMS/licence, and real nameserver redundancy. It then computes HHI concentration and a composite risk score.
+>
+> What the sections below cover:
+> - *Setup su Windows 11 + VSCode*: installation.
+> - *Configurazione (config.yaml)*: switching each measurement on or off.
+> - *Quickstart da terminale*: always start with a 20-host test, then a medium run, then the national run.
+> - *Tempi di esecuzione*: runtimes.
+> - *Dove trovare i risultati*: where the outputs are written.
+> - *Struttura del progetto*: project layout.
+> - *Ottimizzazioni*: changelog of the optimisation passes.
+> - *Limiti noti*: **known limitations**, worth reading.
+>
+> `README_aggiornato.md` is the **more recent and complete** version of this file. It adds the entity-type classification, the cross-country comparison, manual verification of suspicious links, and checkpoint protection.
+>
+> Main command: `python src/run_pipeline.py --paese IT --limit 20`. Results go to `data/results/<COUNTRY>/<RUN_DATE>/`. The [glossary](../GLOSSARY.md) translates file and column names; [`data/results/README.md`](data/results/README.md) describes the published runs.
+
 Kit di partenza per misurare da chi dipende, tecnicamente, il sito di un
 ente pubblico italiano (comuni, ASL, scuole, università, ecc. — tutti gli
 enti di IndicePA, non solo i comuni) — quali aziende gestiscono il suo DNS,

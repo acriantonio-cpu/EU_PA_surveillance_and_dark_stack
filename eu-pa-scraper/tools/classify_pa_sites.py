@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# EN: Classify domains discovered by the layered crawler as public / to verify / probably not
+# public, and detect entity type, writing a siti.csv in the common schema.
 """
 classify_pa_sites.py — classifica i domini scoperti dal crawler a livelli
 (SiteCrawlFetcher, source_type: site_crawl) come "pubblico"/"da verificare"/

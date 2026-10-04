@@ -1,3 +1,6 @@
+# EN: Stage 3 - homepage: collect an evidence bundle (title, meta, h1, menu, footer, text) and
+# score it with weighted multilingual rules; explicit page states (ok, needs_js, blocked,
+# parked, ...).
 """Stadio 3 - homepage: raccolta di un "pacchetto di evidenza" + regole pesate multilingue.
 
 La raccolta (collect_evidence) è separata dalla valutazione (score_evidence): le evidenze

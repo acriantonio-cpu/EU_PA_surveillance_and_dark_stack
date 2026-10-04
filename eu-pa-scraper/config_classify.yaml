@@ -1,3 +1,7 @@
+# EN: Configuration of classify_sites.py (site nature + entity type). ALL stages are disabled
+#     by default: enable them here (enabled: true) or with --stages 0,2,3,4. Stage 0 =
+#     hostname rules, 2 = Wikidata, 3 = homepage, 4 = local LLM (Ollama).
+#
 # Configurazione di classify_sites.py (classificazione natura + tipo di ente).
 #
 # TUTTI gli stadi sono DISATTIVATI per default: si attivano qui (enabled: true) oppure a riga

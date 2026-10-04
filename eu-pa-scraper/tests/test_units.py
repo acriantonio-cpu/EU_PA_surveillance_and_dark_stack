@@ -1,3 +1,4 @@
+# EN: Unit tests of the fixes listed in CHANGES.md (no real network).
 """Test unitari delle correzioni (nessuna rete reale)."""
 
 from __future__ import annotations

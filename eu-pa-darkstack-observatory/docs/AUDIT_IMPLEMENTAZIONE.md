@@ -1,5 +1,14 @@
 # Audit implementazione — config.yaml + 5 nuove misurazioni
 
+> **English summary.** This is the implementation audit log, written in three rounds (9–11 September 2026). For each round it records:
+> - how the changes were verified, and what could not be verified offline;
+> - what was tested;
+> - which bugs were found and fixed before delivery;
+> - what was deliberately not implemented;
+> - what to check during the next real run.
+>
+> It covers `config.yaml` and the five new measurements, the bulk ASN resolution and concurrency work, and the "PICO" round: the error taxonomy, the rate limiter, the RIPEstat fallback, timestamped runs, tracker HHI and the experimental AS Hegemony.
+
 Data: 2026-09-09
 Ambito: risposta alla richiesta di (1) un config.yaml unico con flag
 True/False per attivare/disattivare ogni misurazione, tutti impostati a

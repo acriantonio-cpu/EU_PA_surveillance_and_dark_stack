@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# EN: Step 03 - analysis: HHI operator concentration (by ASN) for hosting/mail/NS and third-party
+# trackers, adoption rates, composite 0-5 per-entity risk score (enti_a_rischio.csv),
+# technology-dependency index, report.json and plain-language report_sintesi.md.
 """
 03_analyze.py
 

@@ -1,3 +1,5 @@
+# EN: Stage 2 - Wikidata: match the host against official-website (P856) entities and map their
+# classes (P31) to nature/type.
 """Stadio 2 - Wikidata. Per ogni host cerca entità il cui sito ufficiale (P856) coincide e
 mappa le etichette delle loro classi (P31) su natura/tipo tramite il lessico.
 

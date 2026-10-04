@@ -1,3 +1,4 @@
+# EN: Stage 0 - hostname/suffix rules: no network, high precision, low coverage.
 """Stadio 0 - regole su hostname/suffisso. Zero rete, alta precisione, bassa copertura."""
 
 from __future__ import annotations

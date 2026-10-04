@@ -1,3 +1,6 @@
+# EN: Cookie classification rules for 05_scrape_dark_stack.py: pattern matched on the cookie
+#     NAME, categoria = tecnico (technical) | profilazione (profiling/tracking).
+#
 # Regole di classificazione dei cookie impostati dalla homepage
 # (05_scrape_dark_stack.py, sezione cookie_tracker). Ogni regola:
 #   pattern: sottostringa cercata nel NOME del cookie (case-insensitive)

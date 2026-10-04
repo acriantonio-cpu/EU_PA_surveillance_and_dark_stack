@@ -1,3 +1,9 @@
+# EN: Single configuration file of the measurement pipeline. 'paese' = country to measure;
+#     'misurazioni' = on/off flag for each measurement (comments mark the cost of each:
+#     'gratis' = free, 'veloce' = fast, 'MEDIO' = medium, 'LENTO' = slow); 'concorrenza' =
+#     parallelism; 'timeout_secondi' / 'delay_secondi' = timeouts and politeness delays in
+#     seconds. Command-line flags override this file.
+#
 # =============================================================================
 # config.yaml — configurazione unica del Dark Stack Toolkit
 # =============================================================================

@@ -1,3 +1,5 @@
+# EN: Small helpers shared by base_fetcher and fetchers (registrable domain via the bundled Public
+# Suffix List, no runtime network).
 """Piccole funzioni condivise tra base_fetcher e i fetcher (evita import circolari)."""
 
 from __future__ import annotations

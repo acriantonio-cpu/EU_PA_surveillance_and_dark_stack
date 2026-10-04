@@ -1,3 +1,8 @@
+# EN: Keywords to recognise the entity TYPE (municipality, province, region, school,
+#     university, health, police, fire service, chamber of commerce, ministry, justice) from
+#     homepage text, in all 24 official EU languages plus English, for
+#     08_classifica_tipo_ente.py.
+#
 # tipo_ente_rules.yaml — parole chiave per riconoscere il TIPO DI ENTE
 # (comune, provincia, scuola, ospedale, polizia, ecc.) dal testo della
 # homepage, in tutte le 24 lingue ufficiali UE + inglese come lingua franca.

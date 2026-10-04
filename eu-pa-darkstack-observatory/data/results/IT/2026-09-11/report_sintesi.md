@@ -1,5 +1,7 @@
 # Sintesi — osservatorio infrastruttura pubblica (IT)
 
+> **English version:** see [`report_summary_EN.md`](report_summary_EN.md) in this folder.
+
 Generato il 2026-09-11 20:51 UTC su 500 enti misurati.
 
 **Hosting web**: 71 operatori distinti, indice di concentrazione HHI 1049.6 (non concentrato). Copertura del dato: 93.0% (alta).

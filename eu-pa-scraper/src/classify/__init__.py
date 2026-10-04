@@ -1,3 +1,5 @@
+# EN: Site classification package: nature + entity type, as a cascade of optional stages (0
+# hostname, 2 Wikidata, 3 homepage, 4 local LLM).
 """
 Classificazione dei siti: natura (pubblico/privato/...) + tipo di ente
 (comune, regione, polizia, governo, scuola, università, sanità...).

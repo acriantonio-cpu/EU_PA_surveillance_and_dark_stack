@@ -1,3 +1,5 @@
+# EN: Common output schema for all countries (columns of data/output/{ISO}/siti.csv) and atomic
+# CSV writing.
 """
 Schema comune di output per tutti i paesi.
 

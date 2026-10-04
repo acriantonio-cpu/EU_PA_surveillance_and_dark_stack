@@ -1,3 +1,8 @@
+# EN: Configuration of tools/postprocess_checkpoints.py: heuristics and lists used to build
+#     the suspicious-link shortlist (rarity threshold, suspicious TLDs/keywords, known vendors
+#     to exclude, scoring weights) and the optional Google Safe Browsing / VirusTotal threat
+#     check (API keys are read from environment variables / .env, never stored here).
+#
 # Configurazione per tools/postprocess_checkpoints.py
 #
 # Stesso principio di config.yaml (dst_rev3) e dei file data/rules/*.yaml

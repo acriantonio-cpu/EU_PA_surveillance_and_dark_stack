@@ -1,3 +1,5 @@
+# EN: Orchestrate the classification cascade (stages 0, 2, 3, 4), combine votes, cache evidence
+# and write siti_classificati.csv.
 """Orchestrazione della cascata di classificazione (stadi 0, 2, 3, 4 opzionali)."""
 
 from __future__ import annotations

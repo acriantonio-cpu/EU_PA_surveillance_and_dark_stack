@@ -1,3 +1,4 @@
+# EN: End-to-end crawler tests against a local fake web (no real network).
 """Test end-to-end del crawler contro un web finto locale (nessuna rete reale)."""
 
 from __future__ import annotations

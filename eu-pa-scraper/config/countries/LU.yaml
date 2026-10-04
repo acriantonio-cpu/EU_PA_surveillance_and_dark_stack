@@ -1,3 +1,5 @@
+# EN: Country configuration for LU. status: todo (manual steps still needed, see README section 5); source: html_scrape. Comments are in Italian;
+#     'seeds_file' = crawler start URLs in data/input/{ISO}/seeds.txt, 'notes' = data-source notes. See GLOSSARY.md.
 country_code: LU
 country_name: "Lussemburgo"
 status: todo

@@ -1,3 +1,5 @@
+# EN: Re-run only the official-website search (entity name -> website) on an existing siti.csv
+# output, without re-importing.
 """
 Rilancia SOLO la ricerca del sito ufficiale su un CSV di output già
 generato (data/output/{ISO}/siti.csv), senza rifare l'intero import.

@@ -1,5 +1,21 @@
 # EU PA Scraper — Osservatorio infrastruttura tecnica PA (UE, esclusa Italia)
 
+> **English overview.** `eu-pa-scraper` builds the list of public-administration websites for the **26 EU countries other than Italy**, which already has the official IndicePA registry. One engine (`main.py` + `src/`) is driven by one YAML file per country (`config/countries/{ISO}.yaml`). The available source types are `bulk_csv`, `bulk_xlsx`, `bulk_xlsx_folder`, `bulk_xml`, `api_json`, `html_scrape` and `site_crawl`, the generic layered crawler that starts from `seeds.txt`. There are also custom fetchers for France and the Netherlands.
+>
+> Output: `data/output/{ISO}/siti.csv`, in a common schema (`src/schema.py`).
+>
+> Sections, in order:
+> - *0 / 0-bis*: changelog (the full log is in `CHANGES.md`).
+> - *1 Setup*: installation.
+> - *2 Uso*: usage (`python main.py --list`, `--country XX`, `--all --skip-todo`, `--resume`).
+> - *3 Stato per paese*: status per country (`ready` or `todo`).
+> - *4–5*: how to complete a country, with a per-country guide.
+> - *6*: the layered crawler.
+> - *7*: automatic search for an entity's official website.
+> - *10*: site classification (`classify_sites.py`).
+>
+> The threat-screening post-processor is `tools/postprocess_checkpoints.py`. The [glossary](../GLOSSARY.md) translates the terms; `GUIDA_PASSO_PASSO.md` is the step-by-step guide. Tests: `python -m pytest tests -q`, 109 tests that run offline.
+
 Tool unico in Python per estrarre, da 26 paesi UE (tutti tranne l'Italia,
 già coperta da IndicePA), l'elenco degli enti pubblici con:
 

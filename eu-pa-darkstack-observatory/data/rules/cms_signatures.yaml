@@ -1,3 +1,7 @@
+# EN: Software fingerprint rules for 06_fingerprint_cms.py: pattern (substring), fonte (where
+#     to look: html / Server header / X-Powered-By header), software name, categoria (cms /
+#     framework / server_web), licenza (licence). Extendable without touching the code.
+#
 # Firme per il riconoscimento del software (CMS/framework/server) usato dal
 # sito, lette da 06_fingerprint_cms.py. Ogni regola:
 #   pattern: sottostringa cercata (case-insensitive) nella fonte indicata

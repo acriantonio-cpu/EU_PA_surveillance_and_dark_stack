@@ -1,3 +1,4 @@
+# EN: Load and compile the multilingual classifier lexicon (config/classify_lexicon.yaml).
 """Caricamento e compilazione di config/classify_lexicon.yaml."""
 
 from __future__ import annotations

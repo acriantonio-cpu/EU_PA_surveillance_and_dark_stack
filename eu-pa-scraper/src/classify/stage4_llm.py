@@ -1,3 +1,5 @@
+# EN: Stage 4 - local LLM (Ollama) on the compact evidence bundle, only for still-unresolved
+# sites; closed labels, JSON-schema output, temperature 0, fixed conservative confidence.
 """Stadio 4 - LLM locale (Ollama) sul pacchetto di evidenza, solo sul residuo.
 
 Principi:

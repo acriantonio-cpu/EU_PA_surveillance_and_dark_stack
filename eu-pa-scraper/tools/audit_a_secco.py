@@ -1,3 +1,5 @@
+# EN: Dry-run audit (no real network) of the threat check: simulated responses to verify dedup,
+# vendor exclusion, cache persistence and daily quota.
 """
 Audit a secco (nessuna chiamata di rete vera) del controllo minacce.
 Monkeypatcha le funzioni HTTP di basso livello con risposte simulate per
